@@ -1,0 +1,16 @@
+.verde {
+  height: 100px;
+  background: linear-gradient(to right, orange, yellow 25%, red);
+}
+
+#logoProgBr {
+  width: 500;
+}
+
+.divAzul {
+  background-color: blue;
+  width: 500px;
+  height: 250px;
+  font-size: 100px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
