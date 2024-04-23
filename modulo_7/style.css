@@ -1,0 +1,78 @@
+html, body{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ff6b28;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li, ul {
+  margin-bottom: 14px;
+}
+
+.top-bar{
+  background-color: #ff6b28;
+  padding: 15px;
+  text-align: center;
+}
+
+#header{
+  background-image: url(./images/hero_bolo.jpg);
+  background-size: cover;
+  background-position: top;
+  height: 400px;
+}
+
+.content {
+  padding: 0 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.card{
+  padding: 70px;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+
+.card:hover{
+  box-shadow: 8px 8px 15px  rgba(205, 205, 205, 0.5);
+}
+
+.ingredient {
+  cursor: url("./images/cursor_ingredientes.png"), default;
+}
+
+.preparation {
+  cursor: url("./images/cursor_intrucoes.png"), default;
+}
+
+.btn-comprar {
+  background-color: #ff6b28;
+  padding: 16px;
+  border-radius: 20px;
+  color: white;
+}
+
+.ingredient-list{
+  margin-bottom: 50px;
+}
