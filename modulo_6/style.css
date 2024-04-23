@@ -11,6 +11,23 @@ h1,h2 {
 
 a {
   text-decoration: none;
+  color: #ff9321;
+  font-weight: bold;
+}
+
+p {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+figure {
+  padding: 0;
+  margin: 40px 0;
+  font-size: 12px;
+}
+
+figure>img {
+  width: 100%;
 }
 
 .top-bar{
@@ -51,4 +68,21 @@ a {
 .social-icon{
   width: 20px;
   padding: 10px 10px 10px 0;
+}
+
+.content{
+  max-width: 650px;
+  margin: auto;
+}
+
+.cta {
+  font-size: 20px;
+  margin: 30px 0;
+}
+
+.footer{
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  height: 100px;
 }
