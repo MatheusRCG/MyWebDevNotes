@@ -29,6 +29,10 @@ li, ul {
   margin-bottom: 14px;
 }
 
+p, li{
+  line-height: 28px;
+}
+
 .top-bar{
   background-color: #ff6b28;
   padding: 15px;
@@ -70,9 +74,30 @@ li, ul {
   background-color: #ff6b28;
   padding: 16px;
   border-radius: 20px;
-  color: white;
 }
 
 .ingredient-list{
   margin-bottom: 50px;
+}
+
+.instructions {
+  cursor: url("./images/cursor_intrucoes.png"), auto;
+}
+
+.footer {
+  background-color: #ff6b28;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.footer-text {
+  max-width: 500px;
+  margin: auto;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.text-white {
+  color: white;
 }
