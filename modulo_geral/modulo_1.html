@@ -9,19 +9,22 @@
   <body>
     <h1>Módulo 1</h1>
 
-    <pre><code>
-      &lt;html lang="pt-br"&gt;
-        &lt;head&gt;
-          &lt;meta charset="UTF-8" /&gt;
-          &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
-          &lt;title&gt;Exemplo de código HTML5&lt;/title&gt;
-        &lt;/head&gt;
-        &lt;body&gt;
-          &lt;h1&gt;Titulo&lt;/h1&gt;
-          &lt;p&gt;Isso é um parágrafo.&lt;/p&gt;
-        &lt;/body&gt;
-      &lt;/html&gt;
-    </code></pre>
+    <pre>
+      <code>
+        &lt;html lang="pt-br"&gt;
+          &lt;head&gt;
+            &lt;meta charset="UTF-8" /&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+            &lt;title&gt;Exemplo de código HTML5&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;Titulo&lt;/h1&gt;
+            &lt;p&gt;Isso é um parágrafo.&lt;/p&gt;
+            &lt;!-- comentario --&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
 
     <p>
       Essa é a estrutura basica do HTML5. Na primeira linha temos a tag <code>&lt;html&gt;</code> indicando que o documento é HTML seguido pelo parametro <code>lang="pt-br</code>" que indica que a página será escrita em português do Brasil (perceba que lang indica a linguagem em relação ao conteúdo e não em relação ao código).
@@ -68,6 +71,40 @@
       Um paragrafo pode ser quebrado usando a tag <code>&lt;br&gt;</code> e linhas horizontais são feitas usando a tag <code>&lt;hr&gt;</code>
     </p>
 
+    <p>
+      Comentarios são Textos no código que não aparecem na página (são feito para desenvolvedores lerem), em html, comentarios são feito assim: <code>&lt;!-- seu comentario --&gt;</code>
+    </p>
+
+    <hr>
+
+    <h2>Em html podemos fazer algumas formatações:</h2>
+    <p>
+      <b>Negrito:</b> <code>&lt;b&gt;texto&lt;/b&gt;</code>, tambem podemos usar a tag <code>&lt;strong&gt;texto&lt;/strong&gt;</code>, ambas tem o mesmo resultado visual porem usando <code>strong</code> acrescenta um pouco mais de semantica (dizendo que o texto tem mais força) para o navegador e mecanismos de busca. 
+    </p>
+    <p>
+      <i>Italico:</i> <code>&lt;i&gt;texto&lt;/i&gt;</code> e tambem podemos usar a tag <code>&lt;em&gt;texto&lt;/em&gt;</code>, ambas tem o mesmo resultado visual porem usando <code>strong</code> acrescenta um pouco mais de semantica (dizendo que o texto tem enfase) para o navegador e mecanismos de busca.
+    </p>
+    <p>
+      <mark>Marcação:</mark> <code>&lt;mark&gt;texto&lt;/mark&gt;</code>, usado para deixar o texto marcado
+    </p>
+    <p>
+      <small>nota de rodapé:</small>: <code>&lt;small&gt;texto&lt;/small&gt;</code> Usado para deixar o texto um pouquinho menor, pode ser usado em notas de rodapé
+    </p>
+    <p>
+      <sub>Subscrito:</sub> <code>H&lt;sub&gt;2&lt;/sub&gt;</code>O Usado para deixar o texto subscrito (H<sub>2</sub>O)
+    </p>
+    <p>
+      <sup>Superscrito:</sup> <code>2&lt;sup&gt;2&lt;/sup&gt;</code>=4 Usado para deixar o texto subscrito (2<sup>2</sup>=4)
+    </p>
+    
+    <hr>
+
+    <h2>Links, imgs, etc</h2>
+
+    <p>
+      <a href="./modulo_1.html">
+      Isso é um Link:</a> Links são como meios de navegação entre paginas, cada link possui um endereço pra onde quer ir, e um texto <code>&lt;a href="./endereco"&gt;texto do link&lt;/a&gt;</code>
+    </p>
   </body>
 
 </html>
