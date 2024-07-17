@@ -26,24 +26,44 @@
       </code>
     </pre>
 
-    <p>
-      Essa é a estrutura basica do HTML5. Na primeira linha temos a tag <code>&lt;html&gt;</code> indicando que o documento é HTML seguido pelo parametro <code>lang="pt-br</code>" que indica que a página será escrita em português do Brasil (perceba que lang indica a linguagem em relação ao conteúdo e não em relação ao código).
-    </p>
+    <p>Essa é a estrutura basica do HTML5.</p>
 
-    <p>
-      Em seguida temos a abertuda da tag <code>&lt;head&gt;</code>, dentro dessa tag colocamos as informações meta, title, links, stylesheets e etc.
-      <br>
-      No exemplo temos <code>&lt;meta charset="UTF-8"/&gt;</code>. A tag <code>&lt;meta&gt;</code> é uma tag que abre e fecha em si mesma e fornece metadados sobre o documento (informações que descrevem outros dados e não são exibidos diretamente na página, mas influenciam como a página é apresentada e interpretada). Nesse no caso, indica que o conteúdo da pagina será escrito usando os padrões de digitação UTF-8. 
-      <br>
-      Em sequência temos <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</code> que é usada no HTML para controlar a forma como uma página web é exibida em diferentes dispositivos, O atributo <code>name</code> com o valor <code>"viewport"</code> especifica que esta meta tag está definindo as propriedades da "janela de visualização" (viewport) da página. O atributo content contém uma lista de propriedades e valores separados por vírgulas que controlam a escala e a largura da viewport, 
-      <code>width=device-width</code> define a largura da viewport para ser igual à largura da tela do dispositivo. Isso significa que a largura da página será ajustada automaticamente para se adequar à largura do dispositivo em que está sendo visualizada. É especialmente útil para garantir que a página seja corretamente dimensionada em dispositivos móveis. Enquanto <code>initial-scale=1.0</code> define o nível inicial de zoom da página quando carregada pela primeira vez. Um valor de 1.0 significa que a página será exibida com um zoom de 100%, ou seja, sem ampliação ou redução.
-      <br>
-      Por fim temos a tag <code>&lt;title&gt;Exemplo de código HTML5&lt;/title&gt;</code>, que dita qual o titulo da página, esse tituço ficará escrito na aba do navegador.
-    </p>
-
-    <p>
-      Apos fecharmos a tag <code>&lt;head&gt;</code>, é aberto a tag &lt;body&gt;, nessa ficará todo o conteúdo da página. No exemplo temos um titulo e um parágrafo, ambos serão explicados a seguir:
-    </p>
+    <ul>
+      <li>
+        Na primeira linha temos a tag <code>&lt;html&gt;</code> indicando que o documento é HTML seguido pelo parametro <code>lang="pt-br</code>" que indica que a página será escrita em português do Brasil (perceba que lang indica a linguagem em relação ao conteúdo e não em relação ao código).
+      </li>
+      <li>
+        Em seguida temos a abertuda da tag <code>&lt;head&gt;</code>, dentro dessa tag colocamos as informações meta, title, links, stylesheets e etc.
+      </li>
+      <li>
+        No exemplo temos <code>&lt;meta charset="UTF-8"/&gt;</code>. A tag <code>&lt;meta&gt;</code> é uma tag que abre e fecha em si mesma e fornece metadados sobre o documento (informações que descrevem outros dados e não são exibidos diretamente na página, mas influenciam como a página é apresentada e interpretada). Nesse no caso, indica que o conteúdo da pagina será escrito usando os padrões de digitação UTF-8.
+      </li>
+      <li>
+        Em sequência temos <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</code> que é usada no HTML para controlar a forma como uma página web é exibida em diferentes dispositivos, 
+        <ul>
+          <li>
+            O atributo <code>name</code> com o valor <code>"viewport"</code> especifica que esta meta tag está definindo as propriedades da "janela de visualização" (viewport) da página.
+          </li>
+          <li>
+            O atributo <code>content</code> contém uma lista de propriedades e valores separados por vírgulas que controlam a escala e a largura da viewport
+            <ul>
+              <li>
+                <code>width=device-width</code> define a largura da viewport para ser igual à largura da tela do dispositivo. Isso significa que a largura da página será ajustada automaticamente para se adequar à largura do dispositivo em que está sendo visualizada. É especialmente útil para garantir que a página seja corretamente dimensionada em dispositivos móveis.
+              <li>
+                Enquanto <code>initial-scale=1.0</code> define o nível inicial de zoom da página quando carregada pela primeira vez. Um valor de 1.0 significa que a página será exibida com um zoom de 100%, ou seja, sem ampliação ou redução.
+              </li>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        Por fim temos a tag <code>&lt;title&gt;Exemplo de código HTML5&lt;/title&gt;</code>, que dita qual o titulo da página, esse tituço ficará escrito na aba do navegador.
+      </li>
+      <li>
+        Após fecharmos a tag <code>&lt;head&gt;</code>, é aberto a tag &lt;body&gt;, nesta ficará todo o conteúdo da página. No exemplo temos um titulo, um parágrafo e um comentário, que serão explicados a seguir:
+      </li>
+    </ul>
 
     <hr>
 
@@ -64,6 +84,8 @@
     <h6>Título de nível 6</h6>
 
     <hr>
+
+    <h2>Paragráfos, linhas, quebras e comentários</h2>
     
     <p>Isso é um paragráfo, é feito usando a tag <code>&lt;p&gt;</code> texto do parágrafo <code>&lt;/p&gt;</code></p>
 
@@ -78,11 +100,12 @@
     <hr>
 
     <h2>Em html podemos fazer algumas formatações:</h2>
+
     <p>
       <b>Negrito:</b> <code>&lt;b&gt;texto&lt;/b&gt;</code>, tambem podemos usar a tag <code>&lt;strong&gt;texto&lt;/strong&gt;</code>, ambas tem o mesmo resultado visual porem usando <code>strong</code> acrescenta um pouco mais de semantica (dizendo que o texto tem mais força) para o navegador e mecanismos de busca. 
     </p>
     <p>
-      <i>Italico:</i> <code>&lt;i&gt;texto&lt;/i&gt;</code> e tambem podemos usar a tag <code>&lt;em&gt;texto&lt;/em&gt;</code>, ambas tem o mesmo resultado visual porem usando <code>strong</code> acrescenta um pouco mais de semantica (dizendo que o texto tem enfase) para o navegador e mecanismos de busca.
+      <i>Italico:</i> <code>&lt;i&gt;texto&lt;/i&gt;</code> e tambem podemos usar a tag <code>&lt;em&gt;texto&lt;/em&gt;</code>, ambas tem o mesmo resultado visual porem usando <code>em</code> acrescenta um pouco mais de semantica (dizendo que o texto tem enfase) para o navegador e mecanismos de busca.
     </p>
     <p>
       <mark>Marcação:</mark> <code>&lt;mark&gt;texto&lt;/mark&gt;</code>, usado para deixar o texto marcado
@@ -99,12 +122,124 @@
     
     <hr>
 
-    <h2>Links, imgs, etc</h2>
+    <h2>Links e Imagens</h2>
 
     <p>
-      <a href="./modulo_1.html">
-      Isso é um Link:</a> Links são como meios de navegação entre paginas, cada link possui um endereço pra onde quer ir, e um texto <code>&lt;a href="./endereco"&gt;texto do link&lt;/a&gt;</code>
+      <a href="./modulo_1.html">Isso é um Link:</a> 
+      <code>&lt;a href="./endereco"&gt;texto do link&lt;/a&gt;</code> 
+      Links são como meios de navegação entre paginas, cada link possui um endereço pra onde quer ir, e um texto. 
     </p>
+    <img src="./Images/html-logo.png" alt="Logo do HTML" width="75px"> 
+    <p>
+      <code>&lt;img src="./Images/html-logo.png" alt="Logo do HTML"&gt;</code> imagens são inseridas através da tag <code>img</code>, nela temos o parametro <code>src</code> que será passado o endereço da imagem (seja da internet ou dos próprios arquivos), outro parametro a ser passado é o <code>alt</code> que é um texto alternativo normalmente descrevendo a imagem, esse texto aparecerá no caso do endereço não ser encontrado. podemos tambem passar <code>width</code> e <code>height</code> para redimencionar a imagem (porém é mais indicado que isso seja feito usando CSS)
+    </p>
+    <figure>
+      <img src="./Images/html-logo.png" alt="Logo do HTML" width="75px">
+      <figcaption>
+        Imagens com legendas são feitas usando a tag <code>&lt;figure&gt;conteúdo&lt;/figure&gt;</code>
+      </figcaption>
+    </figure>
+    <p>
+      dentro dessa tag colocamos a imagem com a tag <code>img</code> e a legenda é feita com <code>&lt;figcaption&gt;legenda&lt;/figcaption&gt;</code>, o resultado fica assim:
+    </p>
+    <pre>
+      <code>
+        &lt;figure&gt;
+          &lt;img src="./Images/html-logo.png" alt="Logo do HTML" width="100px"&gt;
+          &lt;figcaption&gt;
+            Texto da legenda
+          &lt;/figcaption&gt;
+        &lt;/figure&gt;
+      </code>
+    </pre>
+    <a href="./modulo_1.html">
+      <img src="./Images/html-logo.png" alt="Logo do Html" width="75px">
+    </a>
+    <p>
+      É possivel também inserir uma imagem com link, pra isso precisamos colocar a tag <code>&lt;img&gt;</code> no conteúdo da tag <code>&lt;a&gt;</code>, o codígo ficaria assim: 
+    </p>
+    <pre>
+      <code>
+        &lt;a href="./endereco/do-link"&gt;
+          &lt;img src="./endereco/da/imagem.extencao" alt="texto alternativo"&gt;
+        &lt;/a&gt;
+      </code>
+    </pre>
+
+    <hr>
+
+    <h2>Listas</h2>
+
+    <p>
+      Existem 2 Tipos de listas, as listas ordenadas e as não ordenadas:
+    </p>
+    <ol>
+      <li>
+        Listas ordenadas são feitas usando a tag <code>&lt;ol&gt;itens&lt;/ol&gt;</code>
+      </li>
+      <li>
+        Listas não ordenadas são feitas usando a tag <code>&lt;ul&gt;itens&lt;/ul&gt;</code>
+      </li>
+      <li>
+        Para inserir itens em ambas as listas precisamos usar a tag <code>&lt;li&gt;conteúdo&lt;/li&gt;</code>
+      </li>
+    </ol>
+    <ol reversed>
+      <li>
+        Para inverter a lista podemos usar o parametro <code>reversed</code> 
+      </li>
+      <li>o codigo fica assim: <code>&lt;ol reversed&gt;itens&lt;/ol&gt;</code></li>
+    </ol>
+    <ol start="15">
+      <li>podemos tambem dizer onde a lista iniciará usando o parametro <code>start</code></li>
+      <li>o codigo fica assim: <code>&lt;ol start="15"&gt;itens&lt;/ol&gt;</code></li>
+    </ol>
+    <ol type="a">
+      <li>
+        Há a possibilidade também de dizer o tipo de listaque queremos usando <code>start</code>
+      </li>
+      <li>
+        o codigo fica assim: <code>&lt;ol type="a"&gt;itens&lt;/ol&gt;</code>
+      </li>
+      <li>
+        Os tipos de listas que podemos ter são:
+        <ol type="A">
+          <li>Alfabeto maiusculo usando <code>Type="A"</code></li>
+        </ol>
+        <ol type="a">
+          <li>Alfabeto minusculo usando <code>Type="a"</code></li>
+        </ol>
+        <ol type="I">
+          <li>Numeros romano maiusculo usando <code>Type="I"</code></li>
+        </ol>
+        <ol type="i">
+          <li>Numeros romano minusculo usando <code>Type="i"</code></li>
+        </ol>
+        <ol>
+          <li>E o que ja conhecemos que é o numeral</li>
+        </ol>
+      </li>
+      <li>
+        Pra fazer hierarquia de itens precisamos colocar uma lista dentro de outra, o código fica assim:
+      </li>
+    </ol>
+    <pre>
+      <code>
+        &lt;ul&gt;
+          &lt;li&gt;
+            item
+            &lt;ul&gt;
+              &lt;li&gt;
+                item dentro do item
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      </code>
+    </pre>
+
+    <hr>
+
   </body>
 
 </html>
