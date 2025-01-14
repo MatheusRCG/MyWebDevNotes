@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Módulo 5 CSS Básico</title>
 
   <style>
-    #css_interno{
+    #css_interno {
       background-color: blue;
       color: white;
     }
@@ -14,6 +15,7 @@
 
   <link rel="stylesheet" href="./modulo_5.css">
 </head>
+
 <body>
   <div id="header">
     <a href="/">Início</a>
@@ -34,7 +36,8 @@
     <div id="inline">
       <h2>CSS Inline</h2>
       <p style="background-color: red; color: white;">
-        Podemos adicionar um estilo na própria criação do elemento, pra isso usamos o parâmetro <code>style="codigo css"</code>
+        Podemos adicionar um estilo na própria criação do elemento, pra isso usamos o parâmetro
+        <code>style="codigo css"</code>
       </p>
       <pre>
         <code>
@@ -51,7 +54,10 @@
     <div id="interno">
       <h2>CSS Interno</h2>
       <p id="css_interno">
-        Usar css direto no elemento nem sempre é interessante, uma vez que se tivermos diversos elementos que queremos que o mesmo estilo seja aplicado, teriamos que repetir o mesmo <code>style</code> na criação de todos, uma forma de contornar isso é usando o css interno, pra que isso seja feito, usamos a tag <code>&lt;style&gt;codigo css&gt;/style&gt;</code> dentro da tag <code>head</code> de nossa página.
+        Usar css direto no elemento nem sempre é interessante, uma vez que se tivermos diversos elementos que queremos
+        que o mesmo estilo seja aplicado, teriamos que repetir o mesmo <code>style</code> na criação de todos, uma forma
+        de contornar isso é usando o css interno, pra que isso seja feito, usamos a tag
+        <code>&lt;style&gt;codigo css&gt;/style&gt;</code> dentro da tag <code>head</code> de nossa página.
       </p>
       <pre>
         <code>
@@ -70,14 +76,17 @@
           &lt;/body&gt;
         </code>
       </pre>
-      <p>Dessa forma, todos os paragrafos dessa página teriam o mesmo estilo. Isso também poderia ser feito com outras tags html como <code>&lt;h1&gt;</code> ou <code>&lt;div&gt;</code> por exemplo.</p>
+      <p>Dessa forma, todos os paragrafos dessa página teriam o mesmo estilo. Isso também poderia ser feito com outras
+        tags html como <code>&lt;h1&gt;</code> ou <code>&lt;div&gt;</code> por exemplo.</p>
     </div>
     <div id="externo">
       <h2>CSS Externo</h2>
       <p id="css_externo">
-        Para usarmos o css externo precisamos criar um arquivo <code>.css</code> que terá todo o codigo de estilo, depois precisamos usar a tag <code>&lt;link rel="stylesheet" href="./endereco_do_arquivo.css"&gt;</code> dentro do <code>&lt;head&gt;</code>
+        Para usarmos o css externo precisamos criar um arquivo <code>.css</code> que terá todo o codigo de estilo,
+        depois precisamos usar a tag <code>&lt;link rel="stylesheet" href="./endereco_do_arquivo.css"&gt;</code> dentro
+        do <code>&lt;head&gt;</code>
       </p>
-      
+
       <h3>Arquivo style.css</h3>
       <pre>
         <code>
@@ -111,9 +120,11 @@
           &lt;/html&gt;
       </pre>
       <p>
-        Dessa forma, podemos usar o mesmo arquivo em quantas paginas html quisermos passando apenas o link do arquivo <code>css</code>.
+        Dessa forma, podemos usar o mesmo arquivo em quantas paginas html quisermos passando apenas o link do arquivo
+        <code>css</code>.
       </p>
     </div>
   </div>
 </body>
+
 </html>
