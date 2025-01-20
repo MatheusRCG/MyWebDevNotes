@@ -11,9 +11,25 @@
       background-color: blue;
       color: white;
     }
-  </style>
 
-  <link rel="stylesheet" href="./modulo_5.css">
+    .yellow {
+      background-color: yellow;
+    }
+    
+    .red {
+      background-color: red;
+      color: white;
+    }
+
+    .green {
+      background-color: green;
+    }
+    
+    .blue {
+      background-color: blue;
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
@@ -21,29 +37,40 @@
     <a href="/">Início</a>
     <h1>Módulo 5 CSS Básico</h1>
   </div>
+
   <div id="content">
+
     <div id="indice">
       <h3>Índice</h3>
       <ul>
         <li><a href="#inline">CSS Inline</a></li>
         <li><a href="#interno">CSS Interno</a></li>
         <li><a href="#externo">CSS Externo</a></li>
+        <li><a href="#elemento_classes_e_ids">Elemento, Classes e Id's</a></li>
       </ul>
     </div>
+
     <p>
       Para acrescentar estilo a nossa pagina usamos o CSS, basicamente temos 3 formas de usa-lo:
     </p>
+
     <div id="inline">
       <h2>CSS Inline</h2>
-      <p style="background-color: red; color: white;">
+      <p>
         Podemos adicionar um estilo na própria criação do elemento, pra isso usamos o parâmetro
         <code>style="codigo css"</code>
       </p>
+
+      <h3>Código:</h3>
       <pre>
         <code>
           &lt;p style="background-color: red; color: white;"&gt;texto do paragrafo&lt;/p&gt;
         </code>
       </pre>
+
+      <h3>Resultado:</h3>
+      <p class="red">texto do paragrafo</p>
+
       <ul>
         <li>Para modificarmos a cor do fundo usamos: <code>background-color: cor_desejada</code></li>
         <li>E para modificarmos a cor da letra usamos: <code>color: cor_desejada</code></li>
@@ -51,14 +78,18 @@
         <li>Com css podemos modificar muito mais do que apenas cores...</li>
       </ul>
     </div>
+
     <div id="interno">
       <h2>CSS Interno</h2>
-      <p id="css_interno">
-        Usar css direto no elemento nem sempre é interessante, uma vez que se tivermos diversos elementos que queremos
-        que o mesmo estilo seja aplicado, teriamos que repetir o mesmo <code>style</code> na criação de todos, uma forma
-        de contornar isso é usando o css interno, pra que isso seja feito, usamos a tag
+      <p>
+        Usar css direto no elemento nem sempre é interessante, uma vez que se tivermos
+        diversos elementos que queremos que o mesmo estilo seja aplicado, teriamos que
+        repetir o mesmo <code>style</code> na criação de todos, uma forma de contornar
+        isso é usando o css interno, pra que isso seja feito, usamos a tag
         <code>&lt;style&gt;codigo css&gt;/style&gt;</code> dentro da tag <code>head</code> de nossa página.
       </p>
+
+      <h3>Código:</h3>
       <pre>
         <code>
           &lt;head&gt;
@@ -76,18 +107,29 @@
           &lt;/body&gt;
         </code>
       </pre>
-      <p>Dessa forma, todos os paragrafos dessa página teriam o mesmo estilo. Isso também poderia ser feito com outras
-        tags html como <code>&lt;h1&gt;</code> ou <code>&lt;div&gt;</code> por exemplo.</p>
+
+      <h3>Resultado:</h3>
+      <p class="blue">texto do paragrafo 2</p>
+      <p class="blue">texto do paragrafo 1</p>
+      <p class="blue">texto do paragrafo 3</p>
+
+      <p>Dessa forma, todos os paragrafos dessa página teriam o mesmo estilo.
+        Isso também poderia ser feito com outras tags html como
+        <code>&lt;h1&gt;</code> ou <code>&lt;div&gt;</code> por exemplo.
+      </p>
     </div>
+
     <div id="externo">
       <h2>CSS Externo</h2>
-      <p id="css_externo">
-        Para usarmos o css externo precisamos criar um arquivo <code>.css</code> que terá todo o codigo de estilo,
-        depois precisamos usar a tag <code>&lt;link rel="stylesheet" href="./endereco_do_arquivo.css"&gt;</code> dentro
-        do <code>&lt;head&gt;</code>
+      <p>
+        Para usarmos o css externo precisamos criar um arquivo <code>.css</code>
+        que terá todo o codigo de estilo, depois precisamos usar a tag
+        <code>&lt;link rel="stylesheet" href="./endereco_do_arquivo.css"&gt;</code>
+        dentro do <code>&lt;head&gt;</code>
       </p>
 
-      <h3>Arquivo style.css</h3>
+      <h3>Código:</h3>
+      <h4>Arquivo style.css</h4>
       <pre>
         <code>
           p{
@@ -95,7 +137,7 @@
           }
         </code>
       </pre>
-      <h3>Arquivo pagina_1.html</h3>
+      <h4>Arquivo pagina_1.html</h4>
       <pre>
         <code>
           &lt;html&gt;
@@ -108,7 +150,7 @@
           &lt;/html&gt;
         </code>
       </pre>
-      <h3>Arquivo pagina_2.html</h3>
+      <h4>Arquivo pagina_2.html</h4>
       <pre>
         &lt;html&gt;
             &lt;head&gt;
@@ -119,11 +161,65 @@
             &lt;/body&gt;
           &lt;/html&gt;
       </pre>
+
+      <h3>Resultado:</h3>
+      <p class="yellow">texto do paragrafo da página 1</p>
+      <p class="yellow">texto do paragrafo da página 2</p>
+
       <p>
-        Dessa forma, podemos usar o mesmo arquivo em quantas paginas html quisermos passando apenas o link do arquivo
-        <code>css</code>.
+        Dessa forma, podemos usar o mesmo arquivo em quantas paginas <code>html</code>
+        quisermos passando apenas o link do arquivo <code>css</code> dentro da tag
+        <code>head</code> em cada uma das páginas.
       </p>
     </div>
+
+    <div id="elemento_classes_e_ids">
+      <h2>Elemento, Classes e Id's</h2>
+      <p>
+        Além de modificar o estilo de tags html, podemos criar classes e id's
+        para que possamos modificar o estilo de um grupo de elementos ou de um
+        elemento específico.
+      </P>
+      
+      <h3>Código</h3>
+      <h4>Arquivo index.html</h4>
+      <pre>
+        <code>
+          &lt;html&gt;
+            &lt;head&gt;
+              &lt;link rel="stylesheet" href="./style.css"&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+              &lt;p&gt;texto do paragrafo 1&lt;/p&gt;
+              &lt;p class="paragrafo"&gt;texto do paragrafo 2&lt;/p&gt;
+              &lt;p id="paragrafo_3"&gt;texto do paragrafo 3&lt;/p&gt;
+            &lt;/body&gt;
+          &lt;/html&gt;
+        </code>
+      </pre>
+
+      <h4>Arquivo style.css</h4>
+      <pre>
+        <code>
+          p{
+            background-color: yellow;
+          }
+          .paragrafo{
+            background-color: green;
+          }
+          #paragrafo_3{
+            background-color: blue;
+            color: white;
+          }
+        </code>
+      </pre>
+
+      <h3>Resultado</h3>
+      <p class="yellow">texto do paragrafo 1</p>
+      <p class="green">texto do paragrafo 2</p>
+      <p class="blue">texto do paragrafo 3</p>
+    </div>
+
   </div>
 </body>
 
