@@ -6,30 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Módulo 5 CSS Básico</title>
 
-  <style>
-    #css_interno {
-      background-color: blue;
-      color: white;
-    }
-
-    .yellow {
-      background-color: yellow;
-    }
-
-    .red {
-      background-color: red;
-      color: white;
-    }
-
-    .green {
-      background-color: green;
-    }
-
-    .blue {
-      background-color: blue;
-      color: white;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -228,65 +205,177 @@
         usamos a propriedade <code>color: cor_desejada</code>
       </p>
 
-      <h3>Cores Padrões</h3>
-      <p>
-        a primeira forma de modificar a cor é usando uma das cores padrões
-        (red, blue, yellow, green, etc...) Ao todo são 140 cores prontas para serem usadas.
-      </p>
-      <pre>
-        <code>&lt;p style="background-color: yellow;"&gt;paragrafo amarelo&lt;/p&gt;</code>.
-      </pre>
+      <div id="default_colors">
+        <h3>Cores Padrões</h3>
+        <p>
+          a primeira forma de modificar a cor é usando uma das cores padrões
+          (red, blue, yellow, green, etc...) Ao todo são 140 cores prontas para serem usadas.
+        </p>
+        <pre>
+          <code>&lt;p style="background-color: yellow;"&gt;paragrafo amarelo&lt;/p&gt;</code>.
+        </pre>
 
-      <h4>Resultado</h4>
-      <p class="yellow">paragrafo amarelo</p>
+        <h4>Resultado</h4>
+        <p class="yellow">paragrafo amarelo</p>
+      </div>
 
-      <h3>Cores usando RGB</h3>
-      <p>
-        Outra forma de modificar a cor é usando o RGB, que é uma forma de representar
-        a cor através de 3 valores, o primeiro é a quantidade de vermelho, o segundo
-        é a quantidade de verde e o terceiro é a quantidade de azul, cada um desses
-        valores varia de 0 a 255.
-      </p>
+      <div id="rgb_colors">
+        <h3>Cores usando RGB</h3>
+        <p>
+          Outra forma de modificar a cor é usando o RGB, que é uma forma de representar
+          a cor através de 3 valores, o primeiro é a quantidade de vermelho, o segundo
+          é a quantidade de verde e o terceiro é a quantidade de azul, cada um desses
+          valores varia de 0 a 255.
+        </p>
 
-      <pre>
-        <code>&lt;p style="background-color: rgb(255, 0, 0);"&gt;paragrafo vermelho&lt;/p&gt;</code>
-      </pre>
+        <pre>
+          <code>&lt;p style="background-color: rgb(255, 0, 0);"&gt;paragrafo vermelho&lt;/p&gt;</code>
+        </pre>
 
-      <h4>Resultado</h4>
-      <p class="red">paragrafo vermelho</p>
+        <h4>Resultado</h4>
+        <p class="red">paragrafo vermelho</p>
+      </div>
 
-      <h3>Opacidade</h3>
-      <p>
-        Podemos também modificar a opacidade da cor, para isso usamos o RGBA, que é
-        a mesma coisa que o RGB, mas com um quarto valor que representa a opacidade,
-        esse valor varia de 0 a 1.
-      </p>
-      <pre>
-        <code>
-          &lt;p style="background-color: rgba(0, 255, 0, 0.5);"&gt;paragrafo verde com opacidade&lt;/p&gt;
-        </code>
-      </pre>
-      <h4>Resultado</h4>
-      <p class="green">paragrafo verde com opacidade</p>
+      <div id="rgba_colors">
+        <h3>Opacidade</h3>
+        <p>
+          Podemos também modificar a opacidade da cor, para isso usamos o RGBA, que é
+          a mesma coisa que o RGB, mas com um quarto valor que representa a opacidade,
+          esse valor varia de 0 a 1.
+        </p>
+        <pre>
+          <code>
+            &lt;p style="background-color: rgba(0, 255, 0, 0.5);"&gt;paragrafo verde com opacidade&lt;/p&gt;
+          </code>
+        </pre>
+        <h4>Resultado</h4>
+        <p class="green">paragrafo verde com opacidade</p>
+      </div>
 
-      <h3>Cores usando HEXdecimal</h3>
-      <p>
-        A ultima forma de modificar a cor é usando o HEX, que é uma forma de representar
-        a cor através de 6 valores, os 2 primeiros representam a quantidade de vermelho,
-        os 2 do meio representam a quantidade de verde e os 2 últimos representam a quantidade
-        de azul, cada um desses valores varia de 00 a FF.
-      </p>
+      <div id="hex_colors">
+        <h3>Cores usando HEXdecimal</h3>
+        <p>
+          A ultima forma de modificar a cor é usando o HEX, que é uma forma de representar
+          a cor através de 6 valores, os 2 primeiros representam a quantidade de vermelho,
+          os 2 do meio representam a quantidade de verde e os 2 últimos representam a quantidade
+          de azul, cada um desses valores varia de 00 a FF.
+        </p>
 
-      <pre>
-        <code>&lt;p style="background-color: #00FF00;"&gt;paragrafo verde&lt;/p&gt;</code>
-      </pre>
+        <pre>
+          <code>&lt;p style="background-color: #00FF00;"&gt;paragrafo verde&lt;/p&gt;</code>
+        </pre>
 
-      <h4>Resultado</h4>
-      <p class="green">paragrafo verde</p>
+        <h4>Resultado</h4>
+        <p class="green">paragrafo verde</p>
+      </div>
     </div>
 
+    <div id="backgrounds">
+      <h2>Backgrounds</h2>
+      <p>
+        Além de modificar a cor de fundo de um elemento, podemos adicionar imagens
+        como fundo de um elemento.
+      </p>
 
+      <div id="backgroud_repeat_div">
+        <h3>Background Padrão</h3>
+        <img src="images/Ceramica.jpg" alt="imagem de ceramica">
+        <p>
+          a imagem acima será utilizada, como fundo de uma <code>div</code> pra isso usamos a propriedade
+          <code>background-image: url('./endereco/da/imagem')</code> no <code>CSS</code>, o resultado fica assim:
+        </p>
 
+        <div id="background_default_result"></div>
+
+        <p>
+          Perceba que a imagem por padrão se repete tanto na vertical quanto na horizontal,
+          isso acontece graças a propriedade <code>background-repeat</code>
+          que tem como padrão o valor <code>repeat</code>
+        </p>
+      </div>
+
+      <div id="background_cover_div">
+        <h3>Background Cover</h3>
+        <img src="./images/Fundo_abstrato.jpg" alt="imagem abstrata" style="height: 50px;">
+        <p>
+          usaremos agora esta imagem como fundo para o mesmo tamanho de <code>div</code>, poderiamos também
+          usar o <code>background-repeat: no-repeat</code> para a imagem não se repetir mas caso o fundo
+          seja maior que a imagem, ela não preencherá o espaço todo, utilizaremos então o parametro
+          <code>background-size: cover</code> para que a imagem preencha toda a <code>div</code>
+        </p>
+        <div id="background_cover_result"></div>
+        <p>
+          Dessa forma a imagem não se repete nem na vertical nem na horizontal. Porem fica claro que a
+          imagem está sendo cortada, isso acontece porque o tamanho da <code>div</code> não é proporcional
+          ao da imagem.
+        </p>
+      </div>
+
+      <div id="background_contain_div">
+        <h3>Background Contain</h3>
+        <p>
+          Utilizando a mesma imagem e o mesmo tamanho de <code>div</code>, podemos fazer com
+          que a imagem se ajuste ao tamanho da <code>div</code> usando a propriedade
+          <code>background-size: contain</code>
+        </p>
+        <div id="background_contain_result"></div>
+
+        <p>
+          A imagem se ajusta ao tamanho da <code>div</code> porém assim que a imagem alcançar a proporção
+          da <code>div</code> ela começará a se repetir.
+        </p>
+      </div>
+
+      <div id="background_position_div">
+        <h3>Background Position</h3>
+        <img src="./images/BackgroundImage.png" alt="log progBR" style="height: 50px;">
+        <p>
+          Utilizando agora essa logo e o mesmo tamanho de <code>div</code>, agora com fundo amarelo,
+          podemos dizer onde queremos que a imagem fique localizada na <code>div</code> usando a
+          propriedade <code>background-position: top left</code> somado ao
+          <code>background-repeat: no-repeat</code> para que a imagem fique no canto inferior direito,
+          o resultado fica assim:
+        </p>
+        <div id="background_position"></div>
+      </div>
+
+      <div id="background_fixed_div">
+        <h3>Background Fixed</h3>
+        <p>
+          Por fim, podemos fazer com que o <code>background</code> fique fixo, enquanto rolamos a tela,
+          pra isso usamos a propriedade <code>background-attachment: fixed</code>.
+        </p>
+        <div id="background_fixed">
+          <h4>Foque no exemplo, ignore o texto</h4>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, eligendi possimus totam
+            dolore nihil ab a nam. Quam dolor optio amet rerum sunt. Error quia numquam ratione,
+            perferendis quisquam repellendus.Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Fuga, eligendi possimus totam dolore nihil ab a nam. Quam dolor optio amet rerum sunt.
+            Error quia numquam ratione, perferendis quisquam repellendus.
+          </p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa molestias modi
+            iste a quia, quasi ex laudantium, repellendus, debitis consequuntur vitae adipisci
+            reprehenderit asperiores magnam quas enim nemo aut!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa molestias modi
+            iste a quia, quasi ex laudantium, repellendus, debitis consequuntur vitae adipisci
+            reprehenderit asperiores magnam quas enim nemo aut!Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Ratione odio similique tempore temporibus laborum vero dicta! Id,
+            numquam fuga iste fugit, deleniti esse, nobis inventore consequatur nemo delectus
+            perspiciatis officia!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione odio similique tempore
+            temporibus laborum vero dicta! Id, numquam fuga iste fugit, deleniti esse, nobis inventore consequatur nemo
+            delectus perspiciatis officia!</p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, eligendi possimus totam
+            dolore nihil ab a nam. Quam dolor optio amet rerum sunt. Error quia numquam ratione,
+            perferendis quisquam repellendus.Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Fuga, eligendi possimus totam dolore nihil ab a nam. Quam dolor optio amet rerum sunt.
+            Error quia numquam ratione, perferendis quisquam repellendus.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 

@@ -1,0 +1,59 @@
+#css_interno {
+  background-color: blue;
+  color: white;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.red {
+  background-color: red;
+  color: white;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+  color: white;
+}
+
+#background_default_result {
+  background-image: url('./images/Ceramica.jpg');
+  width: 400px;
+  height: 100px;
+}
+
+#background_cover_result {
+  background-image: url('./images/Fundo_abstrato.jpg');
+  width: 400px;
+  height: 100px;
+  background-size: cover;
+}
+
+#background_contain_result {
+  background-image: url('./images/Fundo_abstrato.jpg');
+  width: 400px;
+  height: 100px;
+  background-size: contain;
+}
+
+#background_position {
+  background-image: url('./images/BackgroundImage.png');
+  width: 400px;
+  height: 100px;
+  background-color: yellow;
+  background-size: 75px;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+#background_fixed {
+  background-image: url('./images/Fundo_abstrato.jpg');
+  width: 400px;
+  background-size: cover;
+  background-attachment: fixed;
+}
