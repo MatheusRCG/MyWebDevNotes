@@ -665,7 +665,7 @@
           Podemos modificar a fonte de um elemento usando a propriedade <code>font-family: fonte</code>,
           podemos passar mais de uma fonte, caso a primeira não seja encontrada, a segunda será usada.
         </p>
-        
+
         <p style="font-family: 'Times New Roman', Times, serif;">
           Texto com fonte com serifa (<code>font-family: 'Times New Roman', Times, serif</code>)</p>
         <p style="font-family: Arial, sans-serif;">
@@ -689,11 +689,61 @@
         <h3>Font Weight</h3>
         <p>
           Usando a propriedade <code>font-weight: valor</code> podemos modificar o peso da fonte,
-          para negrito podemos usar o valor <code>bold</code> ou também podemos passar valores de 
-          100 a 900, sendo 100 o mais fino e 900 
+          para negrito podemos usar o valor <code>bold</code> ou também podemos passar valores de
+          100 a 900, sendo 100 o mais fino e 900
           o mais grosso.
         </p>
         <p style="font-weight: bold;">Texto em negrito usando <code>font-weight: bold</code></p>
+      </div>
+    </div>
+
+    <div id="border">
+      <h2>Bordas</h2>
+      <div id="borderDefault">
+        <p>
+          Podemos adicionar bordas a um elemento usando a propriedade <code>border: valor</code>, onde
+          o valor pode ser <code>largura</code>, <code>estilo</code> e <code>cor</code>.
+        </p>
+        <div style="border: 2px solid red; display: inline-block; padding: 5px;">
+          <p>esta borda foi adicionada usando <code>border: 2px solid red</code></p>
+        </div>
+        <div style="border: 2px dashed red; display: inline-block; padding: 5px;">
+          <p>esta borda foi adicionada usando <code>border: 2px dashed red</code></p>
+        </div>
+
+        <div style="border: 2px dotted red; display: inline-block; padding: 5px;">
+          <p>esta borda foi adicionada usando <code>border: 2px dotted red</code></p>
+        </div>
+      </div>
+
+      <div id="borderRadius">
+        <h3>Border Radius</h3>
+        <p>
+          Podemos arredondar as bordas de um elemento usando a propriedade <code>border-radius: valor</code>,
+          onde o valor pode ser um número em <code>px</code> ou em <code>%</code>.
+        </p>
+        <div style="border: 2px solid red; border-radius: 10px; display: inline-block; padding: 5px;">
+          <p>esta borda foi arredondada usando <code>border-radius: 10px</code></p>
+        </div>
+
+        <p>Podemos também criar uma elipse ou círculo com essa propriedade</p>
+
+        <div id="resultBorderRadius" style="display: flex; width: 500px; height: 500px; text-align: center;">
+          
+          <div id="circle" style="display: flex; align-items: center; flex-direction: column;">
+            <p>
+              circulo com <code>border: 2px solid red; border-radius: 50%; width: 100px; height: 100px;</code>
+            </p>
+            <div style="border: 2px solid red; border-radius: 50%; width: 100px; height: 100px;"></div>
+          </div>
+          
+          <div id="elipse" style="display: flex; align-items: center; flex-direction: column;">
+            <p>
+              elipse com <code>border: 2px solid red; border-radius: 50%; width: 250px; height: 100px;</code>
+            </p>
+              <div style="border: 2px solid red; border-radius: 50%; width: 250px; height: 100px;"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
