@@ -823,18 +823,56 @@
       </p>
       <div style="width: 300px; padding: 20px; border: 2px solid black; margin-bottom: 2px;">
         <p>
-          Este elemento tem uma largura de 300px, um preenchimento de 20px e uma borda de 2px. como por padrão está usando o <code>content-box</code> então totaliza 344px de largura.
+          Este elemento tem uma largura de 300px, um preenchimento de 20px e uma borda de 2px.
+          Como por padrão está usando o <code>content-box</code> então totaliza 344px de largura.
         </p>
       </div>
       <div style="width: 300px; padding: 20px; border: 2px solid black; box-sizing: border-box;">
         <p>
-          Este elemento tem uma largura de 300px, um preenchimento de 20px e uma borda de 2px. 
-          como está utilizando o <code>border-box</code> então totaliza o conteúdo é ajustado para 
+          Este elemento tem uma largura de 300px, um preenchimento de 20px e uma borda de 2px.
+          como está utilizando o <code>border-box</code> então totaliza o conteúdo é ajustado para
           que o total seja 300px de largura e 300px de altura.
         </p>
       </div>
     </div>
-    
+
+    <div id="overflow">
+      <h2>Overflow</h2>
+      <p>
+        A propriedade <code>overflow</code> é usada para controlar o que acontece se o conteúdo de
+        um elemento for maior do que a caixa que o contém. Ela pode ter os seguintes valores:
+      </p>
+      <ul>
+        <li><code>visible</code> - O conteúdo é exibido fora da caixa.</li>
+        <li><code>hidden</code> - O conteúdo é cortado e não é exibido fora da caixa.</li>
+        <li><code>scroll</code> - O conteúdo é cortado, mas um scroll é adicionado para ver o resto
+          do conteúdo.</li>
+        <li><code>auto</code> - Caso o conteúdo for maior que a caixa, um scroll é adicionado para
+          ver o resto do conteúdo.</li>
+      </ul>
+      <p>
+        Usando <code>overflow: hidden</code> podemos fazer com que o conteúdo que ultrapassa a caixa
+        seja cortada e não seja exibida fora da caixa.
+      </p>
+      <div style="width: 200px; height: 100px; overflow: hidden; border: 2px solid black;">
+        <p>
+          Este elemento tem uma largura de 200px e uma altura de 100px. O conteúdo que ultrapassa
+          a caixa é cortado, mas usando o <code>overflow: auto</code>, um scroll é adicionado para
+          ver o resto do conteúdo e caso o conteúdo não ultrapasse a caixa, o scroll não é exibido.
+        </p>
+      </div>
+      <p>
+        Usando <code>overflow: auto</code> podemos fazer com que o conteúdo que ultrapassa a caixa
+        seja cortado e um scroll seja adicionado para ver o resto do conteúdo.
+      </p>
+      <div style="width: 200px; height: 100px; overflow: auto; border: 2px solid black;">
+        <p>
+          Este elemento tem uma largura de 200px e uma altura de 100px. O conteúdo que ultrapassa
+          a caixa é cortado, mas usando o <code>overflow: auto</code>, um scroll é adicionado para
+          ver o resto do conteúdo e caso o conteúdo não ultrapasse a caixa, o scroll não é exibido.
+        </p>
+      </div>
+    </div>
   </div>
 </body>
 
