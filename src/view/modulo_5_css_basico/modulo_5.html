@@ -245,11 +245,11 @@
         </p>
         <pre>
           <code>
-            &lt;p style="background-color: rgba(0, 255, 0, 0.5);"&gt;paragrafo verde com opacidade&lt;/p&gt;
+            &lt;p style="background-color: rgba(0, 128, 0, 0.8);"&gt;paragrafo verde com opacidade&lt;/p&gt;
           </code>
         </pre>
         <h4>Resultado</h4>
-        <p class="green">paragrafo verde com opacidade</p>
+        <p style="background-color: rgba(0, 128, 0, 0.5)">paragrafo verde com opacidade</p>
       </div>
 
       <div id="hex_colors">
@@ -407,47 +407,82 @@
         <div id="background_gradient_example_6"></div>
       </div>
 
-      <div id="unitMeasurements">
-        <h2>Unidades de medidas</h2>
+    </div>
+
+    <div id="unitMeasurements">
+      <h2>Unidades de medidas</h2>
+      <p>
+        Além de cores e imagens, podemos modificar o tamanho de um elemento, para isso usamos a propriedade
+        <code>width</code> e <code>height</code> no <code>css</code>, podemos passar valores em <code>px</code>,
+        <code>em</code>, <code>rem</code>, <code>%</code>, <code>vh</code> e <code>vw</code>.
+      </p>
+
+      <div id="px_example">
+        <h3>Pixel</h3>
         <p>
-          Além de cores e imagens, podemos modificar o tamanho de um elemento, para isso usamos a propriedade
-          <code>width</code> e <code>height</code> no <code>css</code>, podemos passar valores em <code>px</code>,
-          <code>em</code>, <code>rem</code>, <code>%</code>, <code>vh</code> e <code>vw</code>.
+          O <code>px</code> é a unidade de medida mais comum, ela é fixa e não muda de acordo com o
+          tamanho da tela. porem 2 telas podem ter o mesmo tamanho (cemtimetros) mas resoluções
+          diferentes, fazendo com que o mesmo elemento tenha tamanhos diferentes. ou seja, 50px em uma
+          tela de 800px de largura é diferente de 50px em uma tela de 1600px de largura quando visto
+          a olho nu.
         </p>
+        <pre>
+          <code>
+            &lt;div style="width: 100px; height: 100px"&gt;&lt;/div&gt;
+          </code>
+        </pre>
+        <div id="divBlue"></div>
+      </div>
 
-        <div id="px_example">
-          <h3>Pixel</h3>
-          <p>
-            O <code>px</code> é a unidade de medida mais comum, ela é fixa e não muda de acordo com o
-            tamanho da tela. porem 2 telas podem ter o mesmo tamanho (cemtimetros) mas resoluções
-            diferentes, fazendo com que o mesmo elemento tenha tamanhos diferentes. ou seja, 50px em uma
-            tela de 800px de largura é diferente de 50px em uma tela de 1600px de largura quando visto
-            a olho nu.
-          </p>
-          <pre>
-            <code>
-              &lt;div style="width: 100px; height: 100px"&gt;&lt;/div&gt;
-            </code>
-          </pre>
-          <div id="divBlue"></div>
+      <div id="%_exemple">
+        <h3>Porcentagem</h3>
+        <p>
+          A porcentagem é uma unidade de medida relativa, ou seja, ela é calculada com base em
+          outra unidade de medida, por exemplo, se um elemento tem 50% de largura, ele terá
+          metade da largura do elemento pai.
+        </p>
+        <pre>
+          <code>
+            #divVermelha { 
+              width: 200px; 
+              height: 100px"
+            }
+            #divAzul { 
+              width: 100px; 
+              height: 100px"
+            }
+            #divAmarela {
+              width: 50%;
+              height: 50%"
+            }
+          </code>
+        </pre>
+        <div id="divRed" >
+          <div id="divYellow"></div>
         </div>
+        <div id="divBlue">
+          <div id="divYellow"></div>
+        </div>
+        <p>
+          Perceba que a <code>div</code> amarela ocupa 50% do tamanho da <code>div</code> PAI tanto horizontalmente quanto verticalmente.
+        </p>
+      </div>
 
-        <div id="%_exemple">
-          <h3>Porcentagem</h3>
+      <div id="unitViewPort">
+          <h3>Viewport</h3>
           <p>
-            A porcentagem é uma unidade de medida relativa, ou seja, ela é calculada com base em
-            outra unidade de medida, por exemplo, se um elemento tem 50% de largura, ele terá
-            metade da largura do elemento pai.
+            A unidade <code>vh</code> e <code>vw</code> são relativas ao tamanho da tela, <code>1vh</code> é 1% da altura da tela
+            e <code>1vw</code> é 1% da largura da tela.
           </p>
           <pre>
             <code>
               #divVermelha { 
-                width: 200px; 
-                height: 100px"
+                width: 20vw; 
+                height: 10vh"
               }
               #divAzul { 
-                width: 100px; 
-                height: 100px"
+                width: 10vw; 
+                height: 10vh"
               }
               #divAmarela {
                 width: 50%;
@@ -455,51 +490,46 @@
               }
             </code>
           </pre>
-          <div id="divRed" >
+          <div id="divRedVP" >
             <div id="divYellow"></div>
           </div>
-          <div id="divBlue">
+          <div id="divBlueVP">
             <div id="divYellow"></div>
           </div>
           <p>
-            Perceba que a <code>div</code> amarela ocupa 50% do tamanho da <code>div</code> PAI tanto horizontalmente quanto verticalmente.
+            Esse exemplo só pode ser observado a medida que a tela é redimensionada, pois as <code>div</code> vermelha e azul tem tamanhos relativos a tela(navegador). assim que o navegador e redimencionado as <code>div</code> vermelha e azul mudam de tamanho por estarem relacionadas ao tamanho da tela e consequentemente a <code>div</code> amarela também muda de tamanho por estar usando a porcentagem relacionada a <code>div</code> pai.
           </p>
-        </div>
+      </div>
 
-        <div id="unitViewPort">
-            <h3>Viewport</h3>
-            <p>
-              A unidade <code>vh</code> e <code>vw</code> são relativas ao tamanho da tela, <code>1vh</code> é 1% da altura da tela
-              e <code>1vw</code> é 1% da largura da tela.
-            </p>
-            <pre>
-              <code>
-                #divVermelha { 
-                  width: 20vw; 
-                  height: 10vh"
-                }
-                #divAzul { 
-                  width: 10vw; 
-                  height: 10vh"
-                }
-                #divAmarela {
-                  width: 50%;
-                  height: 50%"
-                }
-              </code>
-            </pre>
-            <div id="divRedVP" >
-              <div id="divYellow"></div>
-            </div>
-            <div id="divBlueVP">
-              <div id="divYellow"></div>
-            </div>
-            <p>
-              Esse exemplo só pode ser observado a medida que a tela é redimensionada, pois as <code>div</code> vermelha e azul tem tamanhos relativos a tela(navegador). assim que o navegador e redimencionado as <code>div</code> vermelha e azul mudam de tamanho por estarem relacionadas ao tamanho da tela e consequentemente a <code>div</code> amarela também muda de tamanho por estar usando a porcentagem relacionada a <code>div</code> pai.
-            </p>
+      <div id="unitText">
+        <h3>Unidade de medida para Texto</h3>
+        <p>
+          Podemos utilizar o pixel para definir o tamanho da fonte, mas também podemos usar o <code>em</code> e o <code>rem</code>, o <code>em</code> é relativo ao tamanho da fonte do elemento pai, já o <code>rem</code> é relativo ao tamanho da fonte do elemento raiz.
+        </p>
+        <pre>
+          <code>
+            #divVermelha { 
+              font-size: 20px;
+            }
+            #divAzul { 
+              font-size: 2em;
+            }
+            #divAmarela {
+              font-size: 2rem;
+            }
+          </code>
+        </pre>
+        <div id="divRedText" >
+          O texto dessa div está com 20px
+          <div id="divBlueText">O texto dessa div está com 2em = 40px</div>
+          <div id="divYellowText">O texto dessa div está com 2rem = 32px</div>
         </div>
+        <p>
+          Perceba que a <code>div</code> azul tem o dobro do tamanho da fonte da <code>div</code> vermelha, pois o <code>em</code> é relativo ao tamanho da fonte do elemento pai, já a <code>div</code> amarela tem o dobro do tamanho da fonte da <code>div</code> vermelha, pois o <code>rem</code> é relativo ao tamanho da fonte do elemento raiz que por padrão é 16px.
+        </p>
       </div>
     </div>
+    
   </div>
 </body>
 
