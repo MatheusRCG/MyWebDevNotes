@@ -95,3 +95,38 @@
   height: 100px;
 }
 
+#px_result {
+  width: 400px;
+  height: 100px;
+  background-color: yellow;
+}
+
+#divRed {
+  background-color: red;
+  width: 200px;
+  height: 100px;
+}
+
+#divBlue {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+}
+
+#divYellow {
+  background-color: yellow;
+  width: 50%;
+  height: 50%;
+}
+
+#divRedVP { 
+  background-color: red;
+  width: 20vw; 
+  height: 10vh;
+}
+
+#divBlueVP { 
+  background-color: blue;
+  width: 10vw; 
+  height: 10vh;
+}
