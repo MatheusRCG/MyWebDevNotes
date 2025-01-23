@@ -342,10 +342,10 @@
       <div id="background_fixed_div">
         <h3>Background Fixed</h3>
         <p>
-          Por fim, podemos fazer com que o <code>background</code> fique fixo, enquanto rolamos a tela,
+          Por fim, podemos fazer com que a imagem de um <code>background</code> fique fixo, enquanto rolamos a tela,
           pra isso usamos a propriedade <code>background-attachment: fixed</code>.
         </p>
-        <div id="background_fixed">
+        <div id="background_fixed_example">
           <h4>Foque no exemplo, ignore o texto</h4>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, eligendi possimus totam
@@ -357,23 +357,54 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa molestias modi
             iste a quia, quasi ex laudantium, repellendus, debitis consequuntur vitae adipisci
             reprehenderit asperiores magnam quas enim nemo aut!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsa molestias modi
-            iste a quia, quasi ex laudantium, repellendus, debitis consequuntur vitae adipisci
-            reprehenderit asperiores magnam quas enim nemo aut!Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Ratione odio similique tempore temporibus laborum vero dicta! Id,
-            numquam fuga iste fugit, deleniti esse, nobis inventore consequatur nemo delectus
-            perspiciatis officia!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione odio similique tempore
-            temporibus laborum vero dicta! Id, numquam fuga iste fugit, deleniti esse, nobis inventore consequatur nemo
-            delectus perspiciatis officia!</p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, eligendi possimus totam
-            dolore nihil ab a nam. Quam dolor optio amet rerum sunt. Error quia numquam ratione,
-            perferendis quisquam repellendus.Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Fuga, eligendi possimus totam dolore nihil ab a nam. Quam dolor optio amet rerum sunt.
-            Error quia numquam ratione, perferendis quisquam repellendus.
           </p>
         </div>
+      </div>
+
+      <div id="background_color_gradient">
+        <h3>Background Gradient</h3>
+        <p>
+          Além de imagens, podemos usar gradientes como fundo de um elemento, formando um degrade com as cores, para
+          isso usamos a propriedade <code>background</code> no <code>css</code> passando a função
+          <code>linear-gradient</code> como valor.
+          <code>background: linear-gradient(direção, cor1, cor2)</code>
+        </p>
+        <h4>Exemplos</h4>
+        <p>
+          Usando <code>background: linear-gradient(to right, red, yellow)</code> temos um degradê da equerda para a
+          direita do vermelho ao amarelo
+        </p>
+        <div id="background_gradient_example_1"></div>
+
+        <p>
+          Usando <code>background: linear-gradient(to right, red, 20%, yellow)</code> podemos dizer onde iniciará a cor
+          amarela, no exemplo ela começa em 20% da largura do elemento.
+        </p>
+        <div id="background_gradient_example_2"></div>
+
+        <p>
+          Usando <code>background: linear-gradient(to right, red, yellow 20%)</code> podemos dizer onde ficará a parte
+          mais forte da cor amarela, no exemplo ela começa/fica mais forte em 20% da largura do elemento.
+        </p>
+        <div id="background_gradient_example_3"></div>
+
+        <p>
+          Usando <code>background: linear-gradient(to left bottom, red, yellow)</code> posso modificar a direção do
+          degradê, nesse caso ele vai da direita para a esquerda e de cima para baixo.
+        </p>
+        <div id="background_gradient_example_4"></div>
+
+        <p>
+          Usando <code>background: linear-gradient(to right, red, rgb(0,200,0), #FFFF00)</code> posso selecionar mais de
+          uma cor para o degradê. Alem disso posso passar rgb ou hex como cor.
+        </p>
+        <div id="background_gradient_example_5"></div>
+
+        <p>
+          por fim se não for passado direção para o degradê, <code>background: linear-gradient(red, yellow)</code> ele
+          será feito de cima para baixo. sendo equivalente a <code>to bottom</code> como direção
+        </p>
+        <div id="background_gradient_example_6"></div>
       </div>
     </div>
   </div>
