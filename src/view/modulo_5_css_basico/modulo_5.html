@@ -457,24 +457,25 @@
             }
           </code>
         </pre>
-        <div id="divRed" >
+        <div id="divRed">
           <div id="divYellow"></div>
         </div>
         <div id="divBlue">
           <div id="divYellow"></div>
         </div>
         <p>
-          Perceba que a <code>div</code> amarela ocupa 50% do tamanho da <code>div</code> PAI tanto horizontalmente quanto verticalmente.
+          Perceba que a <code>div</code> amarela ocupa 50% do tamanho da <code>div</code> PAI tanto
+          horizontalmente quanto verticalmente.
         </p>
       </div>
 
       <div id="unitViewPort">
-          <h3>Viewport</h3>
-          <p>
-            A unidade <code>vh</code> e <code>vw</code> são relativas ao tamanho da tela, <code>1vh</code> é 1% da altura da tela
-            e <code>1vw</code> é 1% da largura da tela.
-          </p>
-          <pre>
+        <h3>Viewport</h3>
+        <p>
+          A unidade <code>vh</code> e <code>vw</code> são relativas ao tamanho da tela, <code>1vh</code>
+          é 1% da altura da tela e <code>1vw</code> é 1% da largura da tela.
+        </p>
+        <pre>
             <code>
               #divVermelha { 
                 width: 20vw; 
@@ -490,21 +491,27 @@
               }
             </code>
           </pre>
-          <div id="divRedVP" >
-            <div id="divYellow"></div>
-          </div>
-          <div id="divBlueVP">
-            <div id="divYellow"></div>
-          </div>
-          <p>
-            Esse exemplo só pode ser observado a medida que a tela é redimensionada, pois as <code>div</code> vermelha e azul tem tamanhos relativos a tela(navegador). assim que o navegador e redimencionado as <code>div</code> vermelha e azul mudam de tamanho por estarem relacionadas ao tamanho da tela e consequentemente a <code>div</code> amarela também muda de tamanho por estar usando a porcentagem relacionada a <code>div</code> pai.
-          </p>
+        <div id="divRedVP">
+          <div id="divYellow"></div>
+        </div>
+        <div id="divBlueVP">
+          <div id="divYellow"></div>
+        </div>
+        <p>
+          Esse exemplo só pode ser observado a medida que a tela é redimensionada, pois as
+          <code>div</code> vermelha e azul tem tamanhos relativos a tela(navegador). assim que o
+          navegador e redimencionado as <code>div</code> vermelha e azul mudam de tamanho por
+          estarem relacionadas ao tamanho da tela e consequentemente a <code>div</code> amarela
+          também muda de tamanho por estar usando a porcentagem relacionada a <code>div</code> pai.
+        </p>
       </div>
 
       <div id="unitText">
         <h3>Unidade de medida para Texto</h3>
         <p>
-          Podemos utilizar o pixel para definir o tamanho da fonte, mas também podemos usar o <code>em</code> e o <code>rem</code>, o <code>em</code> é relativo ao tamanho da fonte do elemento pai, já o <code>rem</code> é relativo ao tamanho da fonte do elemento raiz.
+          Podemos utilizar o pixel para definir o tamanho da fonte, mas também podemos usar o
+          <code>em</code> e o <code>rem</code>, o <code>em</code> é relativo ao tamanho da fonte do
+          elemento pai, já o <code>rem</code> é relativo ao tamanho da fonte do elemento raiz.
         </p>
         <pre>
           <code>
@@ -519,17 +526,124 @@
             }
           </code>
         </pre>
-        <div id="divRedText" >
+        <div id="divRedText">
           O texto dessa div está com 20px
           <div id="divBlueText">O texto dessa div está com 2em = 40px</div>
           <div id="divYellowText">O texto dessa div está com 2rem = 32px</div>
         </div>
         <p>
-          Perceba que a <code>div</code> azul tem o dobro do tamanho da fonte da <code>div</code> vermelha, pois o <code>em</code> é relativo ao tamanho da fonte do elemento pai, já a <code>div</code> amarela tem o dobro do tamanho da fonte da <code>div</code> vermelha, pois o <code>rem</code> é relativo ao tamanho da fonte do elemento raiz que por padrão é 16px.
+          Perceba que a <code>div</code> azul tem o dobro do tamanho da fonte da <code>div</code>
+          vermelha, pois o <code>em</code> é relativo ao tamanho da fonte do elemento pai, já a
+          <code>div</code> amarela tem o dobro do tamanho da fonte da <code>div</code> vermelha,
+          pois o <code>rem</code> é relativo ao tamanho da fonte do elemento raiz que por padrão é 16px.
         </p>
       </div>
     </div>
-    
+
+    <div id="textAdjust">
+      <h2>Ajustes de Texto</h2>
+      <p>
+        Temos algumas modificações que podemos fazer no texto, como alinhamento, espaçamento,
+        decoração, transformação e sombra.
+      </p>
+      <div id="text-transform">
+        <h3>Text-Transform</h3>
+        <p>Usando a propriedade <code>text-transform</code> temos os seguintes resultados pra cada valor
+          <code>text-transform: valor</code>
+        </p>
+        <p style="text-decoration: line-through;">Usando o valor <code>line-through</code> temos o
+          texto riscado
+        </p>
+        <p style="text-decoration: overline;">Usando o valor <code>overline</code> temos o texto com
+          sobrelinha
+        </p>
+        <p style="text-decoration: underline;">Usando o valor <code>underline</code> temos o texto
+          sublinhado
+        </p>
+      </div>
+
+      <div id="alinhamento">
+        <h3>Alinhamento de texto</h3>
+        <p>
+          Podemos alinhar o texto de um elemento de 4 formas, usando a propriedade
+          <code>text-align: valor</code> onde o valor pode ser <code>left</code>, <code>right</code>,
+          <code>center</code> e <code>justify</code>.
+        </p>
+        <h4>Texto alinhado a esquerda</h4>
+        <p style="text-align: left; width: 300px;">Lorem ipsum dolor sit amet consectetur, adipisicing
+          elit. Autem, aliquam suscipit neque aperiam repudiandae odio reiciendis cum quam impedit,
+          accusamus vitae itaque officia non totam. Cupiditate sunt voluptatem nemo possimus!
+        </p>
+
+        <h4>Texto alinhado a direita</h4>
+        <p style="text-align: right; width: 300px;">Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit. Autem, aliquam suscipit neque aperiam repudiandae odio reiciendis
+          cum quam impedit, accusamus vitae itaque officia non totam. Cupiditate sunt voluptatem
+          nemo possimus!
+        </p>
+
+        <h4>Texto centralizado</h4>
+        <p style="text-align: center; width: 300px;">Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit. Autem, aliquam suscipit neque aperiam repudiandae odio reiciendis cum
+          quam impedit, accusamus vitae itaque officia non totam. Cupiditate sunt voluptatem nemo
+          possimus!
+        </p>
+        <h4>Texto Justificado</h4>
+        <p style="text-align: justify; width: 300px;">Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit. Autem, aliquam suscipit neque aperiam repudiandae odio reiciendis cum
+          quam impedit, accusamus vitae itaque officia non totam. Cupiditate sunt voluptatem nemo
+          possimus!
+        </p>
+      </div>
+      <div id="styling">
+        <h3>Embelezamento</h3>
+        <h4>letter-spacing</h4>
+        <p>
+          usando a propriedade <code>letter-spacing: valor</code> podemos aumentar ou diminuir o
+          espaço entre as letras
+        </p>
+        <p style="letter-spacing: -1px;">Texto com espaçamento reduzido entre as letras em -1px</p>
+        <p style="letter-spacing: 2px;">Texto com espaçamento aumentado entre as letras em 2px</p>
+
+        <h4>word-spacing</h4>
+        <p>
+          Usando a propriedade <code>word-spacing: valor</code> podemos aumentar ou diminuir o espaço
+          entre as palavras
+        </p>
+        <p style="word-spacing: -4px;">Texto com espaçamento reduzido entre as palavras em -4px</p>
+        <p style="word-spacing: 4px;">Texto com espaçamento aumentado entre as palavras em 4px</p>
+
+        <h4>line-height</h4>
+        <p>
+          Usando a propriedade <code>line-height: 2</code> podemos aumentar espaço entre as linhas
+          em dobro, ou o quanto desejar dependendo do valor passado.
+        </p>
+        <p style="line-height: 2; width: 400px;">Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Consequuntur, eum magni nobis voluptatem sequi iure impedit maiores voluptatum
+          distinctio quae molestiae in, cum labore illum voluptate deleniti accusamus! Temporibus,
+          quas!
+        </p>
+      </div>
+
+      <h4>text-indent</h4>
+      <p>
+        Usando a propriedade <code>text-indent: 50px</code> aumentamos o espaço
+        da primeira linha de um parágrafo em 50px.
+      </p>
+      <p style="text-indent: 50px; width: 400px;">Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Consequuntur, eum magni nobis voluptatem sequi iure impedit maiores voluptatum
+        distinctio quae molestiae in, cum labore illum voluptate deleniti accusamus! Temporibus, quas!
+      </p>
+
+      <h4>Text-Shadow</h4>
+      <p>
+        Usando a propriedade <code>text-shadow: 3px 3px 2px gray</code> podemos adicionar uma sombra
+        ao texto, onde o primeiro valor é a distancia horizontal, o segundo é a distancia vertical, o
+        terceiro é o blur e o quarto é a cor da sombra.
+      </p>
+      <p style="text-shadow: 3px 3px 2px gray; font-size: 2em;">Texto com sombra</p>
+    </div>
+
   </div>
 </body>
 
