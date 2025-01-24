@@ -2,6 +2,7 @@ body {
   font-family: "Open Sans", sans-serif, monospace;
   color: #555;
   margin: 0;
+  font-size: 32px;
 }
 
 a {
@@ -26,7 +27,6 @@ h4 {
 #top-bar h2 {
   margin: 0;
   color: #fff;
-  font-size: 2em;
 }
 
 #container {
@@ -35,13 +35,34 @@ h4 {
 }
 
 #header {
-  text-align: center;
-  
-  
+  border-bottom: 1px solid #333;
 }
 
 #header h1 {
-  font-size: 3.5em;
+  text-align: center;
+}
+
+#header h3{
+  font-size: 0.5em;
+  margin: 0;
+}
+
+#header h5 {
+  margin-top: 0;
+  font-size: 0.4em;
+  font-weight: 300;
+  border-top: 1px solid lightblue;
+  width: 19em;
+}
+
+#header ul {
+  display: flex;
+  padding: 0px;
+  list-style: none;
+}
+
+#header li {
+  margin-right: 20px;
 }
 
 #content {
