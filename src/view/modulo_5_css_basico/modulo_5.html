@@ -941,6 +941,225 @@
         Clique em mim novamente
       </a>
     </div>
+
+    <div id="listas">
+      <h2>Listas</h2>
+      <p>
+        Listas são usadas para agrupar itens relacionados. Existem dois tipos principais de listas
+        em HTML: listas ordenadas e listas não ordenadas.
+      </p>
+
+      <div id="unordered_list">
+        <h3>Listas Não Ordenadas</h3>
+        <p>
+          Listas não ordenadas são usadas para agrupar itens sem uma ordem específica. Elas são
+          criadas com a tag <code>&lt;ul&gt;</code> e cada item da lista é criado com a tag
+          <code>&lt;li&gt;</code>.
+        </p>
+        <pre>
+          <code>
+            &lt;ul&gt;
+              &lt;li&gt;Item 1&lt;/li&gt;
+              &lt;li&gt;Item 2&lt;/li&gt;
+              &lt;li&gt;Item 3&lt;/li&gt;
+            &lt;/ul&gt;
+          </code>
+        </pre>
+        <h4>Resultado:</h4>
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ul>
+      </div>
+
+      <div id="ordered_list">
+        <h3>Listas Ordenadas</h3>
+        <p>
+          Listas ordenadas são usadas para agrupar itens em uma ordem específica. Elas são criadas
+          com a tag <code>&lt;ol&gt;</code> e cada item da lista é criado com a tag
+          <code>&lt;li&gt;</code>.
+        </p>
+        <pre>
+          <code>
+            &lt;ol&gt;
+              &lt;li&gt;Item 1&lt;/li&gt;
+              &lt;li&gt;Item 2&lt;/li&gt;
+              &lt;li&gt;Item 3&lt;/li&gt;
+            &lt;/ol&gt;
+          </code>
+        </pre>
+        <h4>Resultado:</h4>
+        <ol>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ol>
+      </div>
+
+      <div id="list_styling">
+        <h3>Estilizando Listas</h3>
+
+        <p>
+          Podemos modificar o estilo das listas usando CSS. Por exemplo, modificar os marcadores
+          das listas não ordenadas ou os números das listas ordenadas.
+        </p>
+
+        <h4>Listas Não Ordenadas</h4>
+        <div id="naoOrdenadaExemplo">
+          <div style="display: flex; gap: 10px;">
+            <div>
+              <h4>list-style-type: circle</h4>
+              <ul style="list-style-type: circle;">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+              </ul>
+            </div>
+            <div>
+              <h4>list-style-type: square</h4>
+              <ul style="list-style-type: square;">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h4>Listas Ordenadas</h4>
+        <div id="naoOrdenadaExemplo" style="display: flex; gap: 10px;">
+          <div>
+            <h4>list-style-type: upper-roman</h4>
+            <ol style="list-style-type: upper-roman;">
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4>list-style-type: lower-roman</h4>
+            <ol style="list-style-type: lower-roman;">
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4>list-style-type: decimal-leading-zero</h4>
+            <ol style="list-style-type: decimal-leading-zero;">
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4>list-style-type: lower-alpha</h4>
+            <ol style="list-style-type: lower-alpha;">
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+            </ol>
+          </div>
+
+          <div>
+            <h4>list-style-type: upper-alpha</h4>
+            <ol style="list-style-type: upper-alpha">
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+            </ol>
+          </div>
+        </div>
+
+        <p>Tambem podemos remover os marcadores de uma lista ordenada ou não ordenada usando a
+          propriedade <code>list-style-type: none;</code>.</p>
+        <pre>
+          <code>
+            ul {
+              list-style-type: none;
+            }
+          </code>
+        </pre>
+        <h4>Resultado:</h4>
+        <ul style="list-style-type: none;">
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ul>
+      </div>
+
+      <div id="custom_list_styling">
+        <h3>Estilizando Listas com Imagens</h3>
+        <p>
+          Podemos usar imagens como marcadores de lista usando a propriedade
+          <code>list-style-image</code> e passando o caminho da imagem. O problema é que essas
+          imagens não são responsivas, então é nescessário usar uma imagem do tamnho da fonte,
+          no caso estamos usando uma fonte de 16px então precisamos de uma imagem de 16x16px.
+        </p>
+        <pre>
+          <code>
+            ul {
+              list-style-image: url('caminho/para/imagem.png');
+            }
+          </code>
+        </pre>
+        <h4>Resultado:</h4>
+        <ul style="list-style-image: url('./images/logo-16.png');">
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ul>
+      </div>
+
+      <div id="listaBemEstilizada">
+        <h3>Lista estilizada</h3>
+        <p>
+          Podemos estilizar as listas de várias maneiras, como alterar a cor, o tamanho e o
+          estilo da fonte, adicionar margens e preenchimentos, adicionar bordas e muito mais.
+        </p>
+        <pre>
+          <code>
+            ul {
+              list-style: none;
+              padding: 0;
+              max-width: 400px;
+              margin: 20px auto;
+              overflow: hidden;
+              box-shadow: 4px 4px 10px #717e88;
+              border-radius: 15px;
+            
+            }
+            
+            ul li {
+              padding: 15px 20px;
+              background-color: #4fb7fc;
+              border: 1px solid #007ff7;
+              margin: 5px;
+              border-radius: 25px;
+              font-size: 18px;
+              color: black;
+            }
+            
+            ul li:hover {
+              background-color: #007ff7;
+              color: white;
+              margin: 10px;
+            }
+          </code>
+        </pre>
+
+        <h4>Resultado:</h4>
+        <ul class="listaBemEstilizada">
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </body>
 
