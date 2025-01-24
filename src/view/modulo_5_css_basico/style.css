@@ -180,27 +180,25 @@
 
 ul.listaBemEstilizada {
   list-style: none;
-  padding: 0;
+  padding: 5px;
   max-width: 400px;
-  margin: 20px auto;
-  overflow: hidden;
   box-shadow: 4px 4px 10px #717e88;
   border-radius: 15px;
-
 }
 
 ul.listaBemEstilizada li {
-  padding: 15px 20px;
-  background-color: #4fb7fc;
-  border: 1px solid #007ff7;
+  padding: 10px 20px;
   margin: 5px;
-  border-radius: 25px;
   font-size: 18px;
   color: black;
+  background-color: #4fb7fc;
+  border: 1px solid #007ff7;
+  border-radius: 25px;
 }
 
 ul.listaBemEstilizada li:hover {
-  background-color: #007ff7;
   color: white;
-  margin: 10px;
+  background-color: #007ff7;
+  margin: 0px;
+  cursor: pointer;
 }
