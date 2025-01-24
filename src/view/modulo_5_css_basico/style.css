@@ -1,0 +1,204 @@
+#css_interno {
+  background-color: blue;
+  color: white;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.red {
+  background-color: red;
+  color: white;
+}
+
+.green {
+  background-color: rgb(0, 128, 0);
+}
+
+.blue {
+  background-color: blue;
+  color: white;
+}
+
+#background_default_result {
+  background-image: url("./images/Ceramica.jpg");
+  width: 400px;
+  height: 100px;
+}
+
+#background_cover_result {
+  background-image: url("./images/Fundo_abstrato.jpg");
+  width: 400px;
+  height: 100px;
+  background-size: cover;
+}
+
+#background_contain_result {
+  background-image: url("./images/Fundo_abstrato.jpg");
+  width: 400px;
+  height: 100px;
+  background-size: contain;
+}
+
+#background_position {
+  background-image: url("./images/BackgroundImage.png");
+  width: 400px;
+  height: 100px;
+  background-color: yellow;
+  background-size: 75px;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+#background_fixed_example {
+  background-image: url("./images/Fundo_abstrato.jpg");
+  width: 400px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#background_gradient_example_1 {
+  background: linear-gradient(to right, red, yellow);
+  width: 400px;
+  height: 100px;
+}
+
+#background_gradient_example_2 {
+  background: linear-gradient(to right, red, 20%, yellow);
+  width: 400px;
+  height: 100px;
+}
+
+#background_gradient_example_3 {
+  background: linear-gradient(to right, red, yellow 20%);
+  width: 400px;
+  height: 100px;
+}
+
+#background_gradient_example_4 {
+  background: linear-gradient(to left bottom, red, yellow);
+  width: 400px;
+  height: 100px;
+}
+
+#background_gradient_example_5 {
+  background: linear-gradient(to right, red, rgb(0, 200, 0), #ffff00);
+  width: 400px;
+  height: 100px;
+}
+
+#background_gradient_example_6 {
+  background: linear-gradient(red, yellow);
+  width: 400px;
+  height: 100px;
+}
+
+#px_result {
+  width: 400px;
+  height: 100px;
+  background-color: yellow;
+}
+
+#divRed {
+  background-color: red;
+  width: 200px;
+  height: 100px;
+}
+
+#divBlue {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+}
+
+#divYellow {
+  background-color: yellow;
+  width: 50%;
+  height: 50%;
+}
+
+#divRedVP {
+  background-color: red;
+  width: 20vw;
+  height: 10vh;
+}
+
+#divBlueVP {
+  background-color: blue;
+  width: 10vw;
+  height: 10vh;
+}
+
+#divRedText {
+  background-color: red;
+  font-size: 20px;
+  width: 700px;
+  height: 150px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#divBlueText {
+  background-color: blue;
+  color: white;
+  font-size: 2em;
+  width: 650px;
+}
+
+#divYellowText {
+  background-color: yellow;
+  font-size: 2rem;
+  width: 650px;
+}
+
+.linkButtomExample {
+  background-color: darkcyan;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 200px;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.linkButtomExample2:hover {
+  background-color: darkgreen;
+}
+
+.linkButtomExample3:active {
+  background-color: darkred;
+}
+
+.linkButtomExample4:visited {
+  background-color: darkblue;
+}
+
+ul.listaBemEstilizada {
+  list-style: none;
+  padding: 5px;
+  max-width: 400px;
+  box-shadow: 4px 4px 10px #717e88;
+  border-radius: 15px;
+}
+
+ul.listaBemEstilizada li {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 18px;
+  color: black;
+  background-color: #4fb7fc;
+  border: 1px solid #007ff7;
+  border-radius: 25px;
+}
+
+ul.listaBemEstilizada li:hover {
+  color: white;
+  background-color: #007ff7;
+  margin: 0px;
+  cursor: pointer;
+}
