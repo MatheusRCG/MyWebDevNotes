@@ -155,3 +155,25 @@
   font-size: 2rem;
   width: 650px;
 }
+
+.linkButtomExample {
+  background-color: darkcyan;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 200px;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.linkButtomExample2:hover {
+  background-color: darkgreen;
+}
+
+.linkButtomExample3:active {
+  background-color: darkred;
+}
+
+.linkButtomExample4:visited {
+  background-color: darkblue;
+}

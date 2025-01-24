@@ -873,6 +873,74 @@
         </p>
       </div>
     </div>
+
+    <div id="Links">
+      <h2>Links</h2>
+      <p>
+        Links são elementos que permitem que os usuários naveguem de uma página para outra e por isso
+        são fundamentais para a web. Muitas vezes queremos personalizar a aparência dos links, dando
+        a eles aparencias como a de botões por exemplo. Pra que coisas assim sejam feitas usaremos
+        pseudo-classes do <code>css</code>, que são classes que não são definidas no <code>html</code>
+        mas sim no <code>css</code> e são usadas para estilizar elementos em estados específicos.
+      </p>
+      <p>Este é meu link estilizado para parecer um botão:</p>
+
+      <pre>
+          <code>
+            a {
+              background-color: darkcyan;
+              color: white;
+              text-align: center;
+              padding: 10px;
+              width: 200px;
+              border-radius: 20px;
+            }
+          </code>
+        </pre>
+      <a class="linkButtomExample" href="#nada">Olhe para mim</a>
+
+      <p>
+        Para modificar o estilo do link quando eu estiver passando o mouse por cima, usamos a
+        pseudo-classe <code>hover</code>
+      </p>
+      <pre>
+        <code>
+          a:hover {
+            background-color: darkgreen;
+          }
+        </code>
+      </pre>
+      <a class="linkButtomExample linkButtomExample2" href="#nada">Passe o mouse por cima</a>
+
+      <p>
+        Para modificar o estilo do link quando ele estiver ativo, usamos a pseudo-classe
+        <code>active</code>
+      </p>
+      <pre>
+        <code>
+          a:active {
+            background-color: darkred;
+          }
+        </code>
+      </pre>
+      <a class="linkButtomExample linkButtomExample2 linkButtomExample3" href="#nada">Clique em mim</a>
+
+      <p>
+        Caso eu queira modificar o estilo do link quando ele estiver visitado, usamos a pseudo-classe
+        <code>visited</code>
+      </p>
+
+      <pre>
+        <code>
+          a:visited {
+            background-color: darkblue;
+          }
+        </code>
+      </pre>
+      <a class="linkButtomExample linkButtomExample2 linkButtomExample3 linkButtomExample4" href="#nada">
+        Clique em mim novamente
+      </a>
+    </div>
   </div>
 </body>
 
