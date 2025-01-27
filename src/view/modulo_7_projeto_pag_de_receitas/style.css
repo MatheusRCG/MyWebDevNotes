@@ -10,11 +10,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #top-bar {
-  color: #ff6b28;
+  background-color: #ff6b28;
+  text-align: center;
+  padding: 10px;
 }
 
 #header {
-  
+
 }
 
 #content {
@@ -22,5 +24,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #footer {
-  color: #ff6b28;
+  
 }
