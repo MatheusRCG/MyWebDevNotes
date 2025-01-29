@@ -34,6 +34,12 @@
       border: 2px solid green;
       text-align: center;
     }
+
+    @media screen and (max-width: 600px){
+      .responsivity-box {
+        background-color: red;
+      }
+    }
   </style>
 </head>
 
@@ -41,6 +47,11 @@
   <div id="top-bar">
     <a href="/">Voltar</a>
     <h1>Módulo 8 - CSS Intermediário</h1>
+    <ul>
+      <li>Geral</li>
+      <li>Conteúdos</li>
+      <li>Projetos</li>
+    </ul>
   </div>
 
   <div id="index">
@@ -280,11 +291,16 @@
             }
           </code>
         </pre>
-        <div class="result">
-          <div class="box blue" style="float: right;"></div>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptate at
+        <div class="result" style="text-align: justify;">
+          <div class="box blue" style="float: right; margin: 2px;"></div>
+          <p style="margin: 0;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptate at
             praesentium, perspiciatis, officiis quibusdam qui dolore, modi recusandae sit animi
-            minus. Blanditiis autem eius voluptatibus sinteaque nam!
+            minus. Blanditiis autem eius voluptatibus sinteaque nam! Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Ea alias cupiditate voluptate odit quis. Repellendus dolor
+            ea vero ipsum iusto in, obcaecati excepturi! Voluptatum soluta vero neque deserunt
+            earum suscipit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet vero ad
+            expedita a corrupti consectetur debitis, magnam ullam fugit reiciendis velit ab maxime
+            minima dolores aliquid. Veniam ratione error non!
           </p>
         </div>
       </div>
@@ -315,9 +331,40 @@
         </div>
       </div>
     </div>
+    <div id="responsivity" class="card">
+      <h2>Responsividade</h2>
+      <p>
+        Responsividade é a capacidade de um site se adaptar a diferentes tamanhos de tela. Para
+        criar um site responsivo, podemos usar media queries, que são regras CSS que se aplicam
+        apenas quando determinadas condições são atendidas.
+      </p>
+      <p>
+        No exemplo abaixo, a cor de fundo de um elemento será vermelho em telas menores que 600px e azul
+        em telas maiores ou iguais a 600px.
+      </p>
+      <pre>
+        <code>
+          @media screen and (max-width: 600px){
+            .responsivity-box {
+              background-color: red;
+            }
+          }
+        </code>
+      </pre>
+      <p>Diminua a tela pra 600px ou menos pra ver o efeito acontecer</p>
+      <div class="result">
+        <div class="box blue responsivity-box"></div>
+      </div>
+    </div>
   </div>
-
-  <div id="footer"></div>
+  <div id="footer">
+    <a href="https://github.com/MatheusRCG" target="_blank">
+      <img src="/src/Images/github-logo.png" alt="logo github">
+    </a>
+    <a href="https://www.linkedin.com/in/matheusrcg/" target="_blank">
+      <img src="/src/Images/linkedin-logo.png" alt="linkedin logo">
+    </a>
+  </div>
 </body>
 
 </html>
