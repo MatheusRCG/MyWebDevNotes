@@ -13,14 +13,26 @@
       width: 100px;
       height: 100px;
     }
+
     .red {
       background-color: red;
     }
+
     .blue {
       background-color: blue;
     }
+
     .green {
       background-color: green;
+    }
+
+    .card-result {
+      position: relative;
+      float: left;
+      width: 200px;
+      height: 300px;
+      border: 2px solid green;
+      text-align: center;
     }
   </style>
 </head>
@@ -132,7 +144,7 @@
     </div>
 
     <div id="positions" class="card">
-      <h2>Tipos de Position</h2>
+      <h2>Tipos de Posicionamentos</h2>
       <p>
         A propriedade <code>position</code> define como um elemento é posicionado na página. Existem
         vários valores possíveis para essa propriedade, mas os mais comuns são <code>static</code>,
@@ -222,9 +234,13 @@
             }
           </code>
         </pre>
-        <button  onclick="document.getElementById('result-position-fixed').style.visibility = 'visible';">Mostrar div azul</button>
-        
-        <div id="result-position-fixed" style="visibility: hidden; position: fixed; right: 0; top: 50px; background-color: blue; width: 100px; height: 100px;"></div>
+        <button onclick="document.getElementById('result-position-fixed').style.visibility = 'visible';">
+          Mostrar div azul
+        </button>
+
+        <div id="result-position-fixed"
+          style="visibility: hidden; position: fixed; right: 0; top: 50px; background-color: blue; width: 100px; height: 100px;">
+        </div>
       </div>
 
       <div id="position_sticky">
@@ -247,6 +263,54 @@
             <div class="box red"></div>
             <div class="box blue" style="position: sticky; top: 0px;"></div>
             <div class="box green"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="float">
+        <h3>Float</h3>
+        <p>
+          A propriedade <code>float</code> é usada para alinhar elementos lado a lado. Ela pode
+          receber os valores <code>left</code> e <code>right</code>.
+        </p>
+        <pre>
+          <code>
+            .div-azul {
+              float: right;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="box blue" style="float: right;"></div>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptate at
+            praesentium, perspiciatis, officiis quibusdam qui dolore, modi recusandae sit animi
+            minus. Blanditiis autem eius voluptatibus sinteaque nam!
+          </p>
+        </div>
+      </div>
+
+      <div id="vertical-position">
+        <h3>Centralizando Verticalmente</h3>
+        <p id="explicacao">
+          Para centralizar um elemento verticalmente, podemos usar a propriedade <code>position</code>
+          com o valor <code>absolute</code> e as propriedades <code>top</code> e <code>left</code>
+          com o valor de 50% para centralizar, nisso teremos o ponto inicial do objeto centralizado,
+          alinharmos o centro do objeto com a centralização usamos o <code>transform</code> com o valor
+          <code>translate</code> passando o eixo vertical e horizontal (é possivel usar somente
+          <code>translateY</code> ou <code>translateX</code>, mas nunca os dois ao mesmo tempo).
+        </p>
+        <pre>
+          <code>
+            .div-azul {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%)
+            }
+          </code>
+        </pre>
+        <div class="result" style="position: relative; height: 200px;">
+          <div class="box blue" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
           </div>
         </div>
       </div>
