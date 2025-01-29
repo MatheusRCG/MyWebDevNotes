@@ -24,7 +24,14 @@ h6 {
 }
 
 #top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background-color: #080946;
+}
+
+#top-bar h1 {
+  display: inline;
 }
 
 
