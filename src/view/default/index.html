@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 8 - CSS Intermediário</title>
+
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div id="top-bar">
+    <a href="/">Voltar</a>
+    <h1>Título da página</h1>
+    <ul>
+      <li>Geral</li>
+      <li>Conteúdos</li>
+      <li>Projetos</li>
+    </ul>
+  </div>
+
+  <div id="index">
+    <ul>
+      <li>
+        <a href="#displays">Tipos de Display</a>
+        <ul>
+          <li><a href="#display_block">Display Block</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#positions">Tipos de Position</a>
+      </li>
+    </ul>
+  </div>
+
+  <div id="content">
+    <div id="displays" class="card">
+      <h2>Tipos de Display</h2>
+      <p>
+        A propriedade <code>display</code> define como um elemento é exibido na página.
+        Existem vários valores possíveis para essa propriedade, mas os mais comuns são
+        <code>block</code>, <code>inline</code>, <code>inline-block</code> e <code>none</code>.
+      </p>
+
+      <div id="display_block">
+        <h3>Display Block</h3>
+        <p>
+          Um elemento com <code>display: block</code> ocupa toda a largura disponível e começa em
+          uma nova linha. Exemplos de elementos block são <code>&lt;div&gt;</code>,
+          <code>&lt;p&gt;</code> e <code>&lt;h1&gt;</code>.
+        </p>
+        <pre>
+          <code>
+            &lt;div style="display: block; background-color: lightblue;"&gt;
+              Elemento Block
+            &lt;/div&gt;
+          </code>
+        </pre>
+        <div class="result">
+          <div style="display: block; background-color: lightblue; width: 100px;">Elemento Block</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="positions" class="card">
+      <h2>Tipos de Position</h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci cupiditate
+        provident quis illum amet corporis aliquam suscipit aperiam consequuntur!
+      </p>
+    </div>
+  </div>
+
+  <div id="footer">
+    <a href="https://github.com/MatheusRCG" target="_blank">
+      <img src="/src/Images/github-logo.png" alt="logo github">
+    </a>
+    <a href="https://www.linkedin.com/in/matheusrcg/" target="_blank">
+      <img src="/src/Images/linkedin-logo.png" alt="linkedin logo">
+    </a>
+  </div>
+</body>
+
+</html>
