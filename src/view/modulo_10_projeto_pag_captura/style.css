@@ -93,3 +93,18 @@ select {
 .footer img {
   width: 160px;
 }
+
+@media screen and (max-width: 516px) {
+  .header {
+    font-size: 0.8em;
+  }
+
+  .card {
+    margin: auto;
+    float: none;
+  }
+  
+  .description {
+    max-width: 100%;
+  }
+}
