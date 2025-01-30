@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 9 - HTML Intermediário</title>
+
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <header id="top-bar">
+    <a href="/">Voltar</a>
+    <h1>Módulo 9 - HTML Intermediário</h1>
+    <ul>
+      <li>Geral</li>
+      <li>Conteúdos</li>
+      <li>Projetos</li>
+    </ul>
+  </header>
+
+  <nav id="index">
+
+  </nav>
+
+  <main id="content">
+    <article id="forms" class="card">
+      <h2>Formulários</h2>
+      <p>
+        Formulários são elementos HTML que permitem a coleta de informações do usuário.
+        Um formulário HTML é definido pela tag <code>&lt;form&gt;</code>, que pode incluir atributos
+        como <code>action</code> e <code>method</code>. O atributo <code>action</code> especifica para
+        onde os dados doformulário serão enviados, enquanto o atributo <code>method</code> define o
+        método <code>HTTP</code> usado para enviar os dados
+        (geralmente <code>GET</code> ou <code>POST</code>).
+      </p>
+      <p>
+        Dentro do formulário, usamos a tag <code>&lt;input&gt;</code> para criar campos de entrada.
+        Por exemplo, um campo de entrada do tipo texto é definido com <code>&lt;input type="text" 
+        name="nome"&gt;</code>, onde <code>type="text"</code> especifica que o campo é de texto e
+        <code>name="nome"</code> define o nome do campo, que será usado para identificar os dados
+        enviados.
+      </p>
+      <p>
+        Para enviar o formulário, usamos um botão de envio, definido com <code>&lt;input type="submit"
+        name="enviar"&gt;</code>. O atributo <code>type="submit"</code> cria um botão que, quando
+        clicado, envia os dados do formulário, e o atributo <code>name="enviar"</code> define o
+        nome do botão de envio.
+      </p>
+      <p>
+        No exemplo abaixo, temos um formulário simples que coleta um texto e faz uma requisição
+        para o youtube usando o método GET. quando o botão de envio é clicado uma pesquisa é feita
+        no youtube com o texto inserido no campo de texto.
+      </p>
+      <pre>
+          <code>
+            &lt;form action="https://www.youtube.com/results"&gt;
+              &lt;input method="GET" type=&quot;text&quot; name="search_query"&gt;
+              &lt;input type="submit" value="pesquisar no Youtube"&gt;
+            &lt;/form&gt;
+          </code>
+        </pre>
+      <div class="result">
+        <form method="GET" action="https://www.youtube.com/results">
+          <input type="text" name="search_query">
+          <input type="submit" value="pesquisar no Youtube">
+        </form>
+      </div>
+    </article>
+
+    <article id="inputs" class="card">
+      <h2>Tipos de Input</h2>
+      <p>
+        Existem vários tipos de inputs que podem ser usados em formulários HTML, cada um com
+        uma finalidade específica:
+      </p>
+
+      <section id="senha">
+        <h3>Senha</h3>
+        <p>
+          O input do tipo <code>password</code> é usado para campos onde o usuário deve digitar uma senha.
+          O texto digitado é mascarado para garantir a privacidade. É importante não usar o método
+          <code>GET</code> ao enviar formulários que contenham senhas, pois os dados enviados pelo
+          método <code>GET</code> são visíveis na URL, o que pode comprometer a segurança.
+        </p>
+      </section>
+
+      <section id="checkbox">
+        <h3>Checkbox</h3>
+        <p>
+          O input do tipo <code>checkbox</code> permite que o usuário selecione uma ou mais opções de um conjunto.
+          Cada checkbox pode ter um atributo <code>value</code> que define o valor enviado quando o checkbox está
+          marcado.
+        </p>
+      </section>
+      <section id="radio">
+        <h3>Radio</h3>
+        <p>
+          O input do tipo <code>radio</code> permite que o usuário selecione apenas uma opção de um conjunto.
+          Todos os inputs do tipo <code>radio</code> que pertencem ao mesmo grupo devem ter o mesmo atributo
+          <code>name</code>. Cada opção deve ter um atributo <code>value</code> que define o valor enviado quando a
+          opção está selecionada. O atributo <code>checked</code> pode ser usado para definir qual opção está
+          selecionada por padrão.
+        </p>
+      </section>
+      <section id="reset">
+        <h3>Reset</h3>
+        <p>
+          O input do tipo <code>reset</code> cria um botão que, quando clicado, redefine todos os campos do formulário
+          para seus valores iniciais.
+        </p>
+      </section>
+      <pre>
+        <code>
+          &lt;form&gt;
+            Senha &lt;input type="password" name="senha"&gt;
+            &lt;input type="checkbox" name="opcao1" value="opcao1"&gt; Opção 1 &lt;br&gt;
+            &lt;input type="checkbox" name="opcao2" value="opcao2"&gt; Opção 2 &lt;br&gt;
+            &lt;input type="radio" name="opcao" value="opcao1"&gt; Masculino
+            &lt;input type="radio" name="opcao" value="opcao2"&gt; Feminino
+            &lt;input type="radio" name="opcao" value="opcao3"&gt; Outro &lt;br&gt;
+            &lt;input type="reset" value="Limpar"&gt;
+          &lt;/form&gt;
+        </code>
+      </pre>
+      <div class="result">
+        <form>
+          Senha <input type="password" name="senha"><br>
+          <input type="checkbox" name="opcao1" value="opcao1">Opção 1 <br>
+          <input type="checkbox" name="opcao2" value="opcao2">Opção 2 <br>
+          <input type="radio" name="opcao" value="opcao1">Masculino
+          <input type="radio" name="opcao" value="opcao2">Feminino
+          <input type="radio" name="opcao" value="opcao3" checked>Outro <br>
+          <input type="reset" value="Limpar">
+        </form>
+      </div>
+    </article>
+    <article id="select" class="card">
+      <h2>Select</h2>
+      <p>
+        A tag <code>&lt;select&gt;</code> é usada para criar uma lista suspensa em um formulário HTML. O atributo
+        <code>name</code> define o nome do campo que será enviado quando o formulário for submetido. O atributo
+        <code>size</code> especifica o número de opções visíveis na lista suspensa. O atributo <code>multiple</code>
+        permite que o usuário selecione mais de uma opção na lista.
+      </p>
+      <p>
+        Dentro da tag <code>&lt;select&gt;</code>, usamos a tag <code>&lt;option&gt;</code> para definir cada opção da
+        lista. O atributo <code>value</code> de <code>&lt;option&gt;</code> define o valor que será enviado quando a
+        opção for selecionada. O atributo <code>selected</code> pode ser usado para definir qual opção está
+        selecionada por padrão.
+      </p>
+      <pre>
+        <code>
+          &lt;select name="opcoes" size="4" multiple&gt;
+            &lt;option value="opcao1"&gt;Opção 1&lt;/option&gt;
+            &lt;option value="opcao2" selected&gt;Opção 2&lt;/option&gt;
+            &lt;option value="opcao3"&gt;Opção 3&lt;/option&gt;
+            &lt;option value="opcao4"&gt;Opção 4&lt;/option&gt;
+          &lt;/select&gt;
+        </code>
+      </pre>
+      <div class="result">
+        <form>
+          <select name="opcoes">
+            <option value="opcao1">Opção 1</option>
+            <option value="opcao2">Opção 2</option>
+            <option value="opcao3">Opção 3</option>
+            <option value="opcao4" selected>Opção 4</option>
+          </select>
+          <select name="opcoes" size="4" multiple>
+            <option value="opcao1">Opção 1</option>
+            <option value="opcao2" selected>Opção 2</option>
+            <option value="opcao3">Opção 3</option>
+            <option value="opcao4">Opção 4</option>
+          </select>
+        </form>
+      </div>
+    </article>
+    <article id="textarea" class="card">
+      <h2>Textarea</h2>
+      <p>
+        A tag <code>&lt;textarea&gt;</code> é usada para criar um campo de texto de várias linhas em um formulário
+        HTML. O atributo <code>name</code> define o nome do campo que será enviado quando o formulário for submetido.
+        O atributo <code>rows</code> especifica o número de linhas visíveis no campo, e o atributo <code>cols</code>
+        especifica o número de colunas visíveis.
+      </p>
+      <pre>
+        <code>
+          &lt;textarea name="comentario" rows="4" cols="50"&gt;
+            Escreva seu comentário aqui...
+          &lt;/textarea&gt;
+        </code>
+      </pre>
+      <div class="result">
+        <form>
+          <textarea name="comentario" rows="4" cols="50">
+            Escreva seu comentário aqui...
+          </textarea>
+        </form>
+      </div>
+    </article>
+    <article id="inputs-html5" class="card">
+      <h2>Novos Inputs com HTML5</h2>
+      <p>
+        O HTML5 introduziu vários novos tipos de inputs que facilitam a coleta de dados específicos e melhoram a
+        experiência do usuário. Aqui estão alguns dos novos tipos de inputs:
+      </p>
+      <section id="color">
+        <h3>Color</h3>
+        <p>
+          O input do tipo <code>color</code> permite que o usuário selecione uma cor a partir de um seletor de cores.
+          O valor enviado é um código hexadecimal representando a cor escolhida.
+        </p>
+      </section>
+      <section id="date">
+        <h3>Date</h3>
+        <p>
+          O input do tipo <code>date</code> permite que o usuário selecione uma data a partir de um calendário. Os
+          atributos <code>min</code> e <code>max</code> podem ser usados para definir o intervalo de datas permitidas.
+        </p>
+      </section>
+      <section id="datetime-local">
+        <h3>Datetime-local</h3>
+        <p>
+          O input do tipo <code>datetime-local</code> permite que o usuário selecione uma data e hora local. Assim
+          como o tipo <code>date</code>, os atributos <code>min</code> e <code>max</code> podem ser usados para
+          definir o intervalo permitido.
+        </p>
+      </section>
+      <section id="file">
+        <h3>File</h3>
+        <p>
+          O input do tipo <code>file</code> permite que o usuário selecione arquivos para upload. É recomendado usar o
+          método <code>POST</code> para enviar arquivos, pois o método <code>GET</code> não é seguro para transferir
+          dados binários e pode resultar em URLs muito longas.
+        </p>
+      </section>
+      <section id="number">
+        <h3>Number</h3>
+        <p>
+          O input do tipo <code>number</code> permite que o usuário insira um valor numérico. Os atributos
+          <code>min</code> e <code>max</code> podem ser usados para definir o intervalo de valores permitidos.
+        </p>
+      </section>
+      <section id="range">
+        <h3>Range</h3>
+        <p>
+          O input do tipo <code>range</code> permite que o usuário selecione um valor dentro de um intervalo usando um
+          controle deslizante. Os atributos <code>min</code>, <code>max</code> e <code>value</code> podem ser usados
+          para definir o intervalo e o valor padrão.
+        </p>
+      </section>
+      <section id="tel">
+        <h3>Tel</h3>
+        <p>
+          O input do tipo <code>tel</code> permite que o usuário insira um número de telefone. Este tipo de input é
+          vantajoso em dispositivos móveis, pois exibe um teclado numérico, facilitando a digitação do número.
+        </p>
+      </section>
+      <section id="email">
+        <h3>Email</h3>
+        <p>
+          O input do tipo <code>email</code> permite que o usuário insira um endereço de email. Este tipo de input
+          realiza verificações básicas para garantir que o valor inserido esteja no formato de um endereço de email
+          válido.
+        </p>
+      </section>
+      <pre>
+        <code>
+          &lt;form&gt;
+            Cor: &lt;input type="color" name="cor"&gt;&lt;br&gt;
+            Data: &lt;input type="date" name="data"&gt;&lt;br&gt;
+            Data e Hora: &lt;input type="datetime-local" name="datahora"&gt;&lt;br&gt;
+            Arquivo: &lt;input type="file" name="arquivo"&gt;&lt;br&gt;
+            Número: &lt;input type="number" name="numero" min="1" max="10"&gt;&lt;br&gt;
+            Intervalo: &lt;input type="range" name="intervalo" min="0" max="100"&gt;&lt;br&gt;
+            Telefone: &lt;input type="tel" name="telefone"&gt;&lt;br&gt;
+            Email: &lt;input type="email" name="email"&gt;&lt;br&gt;
+            &lt;input type="reset" value="Limpar"&gt;
+          &lt;/form&gt;
+        </code>
+      </pre>
+      <div class="result">
+        <form>
+          Cor: <input type="color" name="cor"><br>
+          Data: <input type="date" name="data"><br>
+          Data e Hora: <input type="datetime-local" name="datahora"><br>
+          Arquivo: <input type="file" name="arquivo"><br>
+          Número: <input type="number" name="numero" min="1" max="10"><br>
+          Intervalo: <input type="range" name="intervalo" min="0" max="100"><br>
+          Telefone: <input type="tel" name="telefone"><br>
+          Email: <input type="email" name="email"><br>
+          <input type="reset" value="Limpar">
+        </form>
+      </div>
+    </article>
+    <article id="tags-semanticas" class="card">
+      <h2>Tags Semanticas do HTML5</h2>
+      <p>
+        O HTML5 introduziu várias novas tags semânticas que ajudam a definir a estrutura e o significado do conteúdo
+        de uma página web. Aqui estão algumas das principais tags semânticas:
+      </p>
+      <section id="header">
+        <h3>header</h3>
+        <p>
+          A tag <code>&lt;header&gt;</code> é usada para definir o cabeçalho de uma
+          seção ou página. O cabeçalho geralmente contém elementos como logotipos, títulos, menus de navegação e outros
+          elementos introdutórios.
+        </p>
+      </section>
+      <section id="nav">
+        <h3>nav</h3>
+        <p>
+          A tag <code>&lt;nav&gt;</code> é usada para definir uma seção de navegação. Esta
+          tag é usada para agrupar links de navegação importantes, como menus de site ou links de navegação interna.
+        </p>
+      </section>
+      <section id="main">
+        <h3>main</h3>
+        <p>
+          A tag <code>&lt;main&gt;</code> é usada para definir o conteúdo principal de um
+          documento. O conteúdo dentro desta tag deve ser único e relevante para o documento, excluindo cabeçalhos,
+          rodapés e barras laterais.
+        </p>
+      </section>
+      <section id="section">
+        <h3>section</h3>
+        <p>
+          A tag <code>&lt;section&gt;</code> é usada para definir seções temáticas
+          dentro de um documento. Cada seção deve ser identificada por um título e pode conter subseções.
+        </p>
+      </section>
+      <section id="article">
+        <h3>article</h3>
+        <p>
+          A tag <code>&lt;article&gt;</code> é usada para definir um conteúdo
+          independente e auto-contido, como artigos de notícias, postagens de blog, comentários ou qualquer outro
+          conteúdo que possa ser distribuído de forma independente.
+        </p>
+      </section>
+      <section id="footer-section">
+        <h3>footer</h3>
+        <p>
+          A tag <code>&lt;footer&gt;</code> é usada para definir o rodapé de uma seção
+          ou página. O rodapé geralmente contém informações de rodapé, como direitos autorais, links de contato, mapas
+          do site e outros elementos relacionados.
+        </p>
+      </section>
+    </article>
+  </main>
+
+  <footer id="footer">
+    <a href="https://github.com/MatheusRCG" target="_blank">
+      <img src="/src/Images/github-logo.png" alt="logo github">
+    </a>
+    <a href="https://www.linkedin.com/in/matheusrcg/" target="_blank">
+      <img src="/src/Images/linkedin-logo.png" alt="linkedin logo">
+    </a>
+  </footer>
+</body>
+
+</html>

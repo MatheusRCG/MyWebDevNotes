@@ -1,0 +1,121 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif, monospace;
+}
+
+h1 {
+  margin: 0;
+  color: #fff;
+}
+h2 {
+  margin: 0;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #0808d8;
+  text-transform: capitalize;
+}
+
+#top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #080946;
+  text-align: center;
+  color: #fff;
+}
+
+#top-bar h1 {
+  display: inline;
+}
+
+
+#top-bar a {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  text-decoration: none;
+}
+
+#top-bar ul {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#top-bar ul li {
+  display: inline;
+}
+
+#content {
+  width: 60%;
+  margin: auto;
+}
+
+.card {
+  width: 80%;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 5px;
+  text-align: justify;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 10px #00000050;
+}
+
+code {
+  font-family: monospace;
+  background-color: #e5e5e5;
+  padding: 2px 4px;
+  border-radius: 5px;
+}
+
+pre {
+  background-color: #2e3440;
+  padding: 10px 10px 10px 0;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+pre code {
+  background-color: transparent;
+  color: #fff;
+}
+
+.result {
+  background-color: #e5e5e5;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#footer {
+  padding: 6px 0 2px 0;
+  background-color: #080946;
+  text-align: center;
+}
+
+#footer img {
+  width: 40px;
+  background-color: white; 
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+#footer a {
+  text-decoration: none;
+}
