@@ -1,20 +1,28 @@
-html,
-body {
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
 }
 
 .header {
-  background-color: blue;
+  background-color: #48C5CE;
   color: white;
   padding: 6px;
   text-align: center;
+  text-transform: uppercase;
+}
+
+.uppercase {
   text-transform: uppercase;
 }
 
@@ -22,50 +30,66 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url('./images/people.jpg');
   background-size: cover;
   padding: 20px;
+  overflow: hidden;
 }
 
 .card {
-  width: 300px;
+  max-width: 230px;
   padding: 15px;
-  background-color: #d3d3d380;
+  background-color: #FFFFFF90;
+  float: right;
 }
 
-.card p, .card input, .card select {
-  margin: 0 0 10px 0;
+.card p, h2, input, select {
+  margin-bottom: 10px;
 }
 
-.bold {
-  font-weight: bold;
+.card h2 {
+  font-size: 1.1em;
 }
 
-.uppercase {
-  text-transform: uppercase;
-}
-
-.card input, .card select {
+input, select {
+  width: 100%;
   padding: 10px;
+  box-sizing: border-box;
+  border: none;
 }
 
-.card .button {
-  background-color: lightskyblue;
+input[type="submit"] {
+  background-color: #48C5CE;
   color: white;
-  border: none;
+  font-weight: bold;
   display: inline-block;
   margin: 0;
 }
 
-.footer {
-  background-color: gray;
-  padding: 10px;
+select {
+  appearance: none; 
+  -webkit-appearance: none; /* faz com que o appearance fique none nos navegadores webkit */
+  -moz-appearance: none; /* faz com que o appearance fique none nos navegadores mozilla */
+  background-image: url('./images/arrow.jpg');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) center;
 }
 
-.footer div {
-  width: 50%;
-  margin: auto;
+.footer {
+  background-color: #202121;
+  padding: 40px;
+  text-align: center;
+}
+
+.description {
+  display: inline-block;
+  color: white;
+  max-width: 40%;
+  margin-left: 40px;
+  text-align: left;
+}
+
+.description p, .description h3 {
+  margin-bottom: 10px;
 }
 
 .footer img {
-  width: 100px;
-  margin-right: 10px;
-  float: left;
+  width: 160px;
 }
