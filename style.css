@@ -21,6 +21,7 @@ h4,
 h5,
 h6 {
   color: #0808d8;
+  text-transform: capitalize;
 }
 
 #top-bar {
@@ -103,9 +104,9 @@ pre code {
 }
 
 #footer {
+  padding: 6px 0 2px 0;
   background-color: #080946;
   text-align: center;
-  padding: 6px 0 2px 0;
 }
 
 #footer img {
