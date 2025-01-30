@@ -5,7 +5,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
 }
@@ -16,4 +16,40 @@ h1, h2, h3, h4, h5, h6 {
   padding: 6px;
   text-align: center;
   text-transform: uppercase;
+}
+
+.content {
+  background-image: url('./images/people.jpg');
+  background-size: cover;
+  padding: 20px;
+}
+
+.card {
+  width: 300px;
+  padding: 15px;
+  background-color: #d3d3d380;
+}
+
+.card p, .card input, .card select {
+  margin-bottom: 10px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.card input, .card select {
+  padding: 10px;
+}
+
+.card .button {
+  background-color: lightskyblue;
+  color: white;
+  border: none;
+  display: inline-block;
+  margin: 0;
 }
