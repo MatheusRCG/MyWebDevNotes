@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 11 e 12 - JavaScript Básico</title>
+
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    // alert("Hello World!")  // descomentar quando finalizar a página
+    console.log("Hello World!")
+  </script>
+</head>
+
+<body>
+  <header id="top-bar">
+    <a href="/">Voltar</a>
+    <h1>Módulo 11 e 12 - JavaScript Básico</h1>
+    <ul>
+      <li>Geral</li>
+      <li>Conteúdos</li>
+      <li>Projetos</li>
+    </ul>
+  </header>
+
+  <nav id="index">
+    <ul>
+      <li>
+
+      </li>
+    </ul>
+  </nav>
+
+  <main id="content">
+    <article id="displays" class="card">
+      <h2>Hello World!</h2>
+
+      <p>
+        O JavaScript é usado em sites para adicionar interatividade e dinamismo. Ele permite
+        criar funcionalidades como validação de formulários, animações, manipulação de elementos
+        HTML e comunicação assíncrona com servidores, tornando a experiência do usuário mais
+        rica e envolvente.
+      </p>
+
+      <section id="alert">
+        <h3>alert</h3>
+        <p>
+          O código abaixo exibe um alerta com a mensagem "Hello World!" ao carregar a página.
+        </p>
+  
+        <pre>
+          <code>
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;script&gt;
+                 alert('Hello World!');
+                &lt;/script&gt;
+              &lt;/head&gt;
+            &lt;/html&gt;
+          </code>
+        </pre>
+  
+        <p>
+          Podemos também criar um arquivo JavaScript separado e incluí-lo no HTML usando a tag <code>&lt;script&gt;</code>. Isso é útil para manter o código organizado e reutilizável.
+        </p>
+  
+        <h4>index.html</h4>
+        <pre>
+          <code>
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;script src="script.js"&gt;&lt;/script&gt;
+              &lt;/head&gt;
+            &lt;/html&gt;
+          </code>
+        </pre>
+        <h4>script.js</h4>
+        <pre>
+          <code>
+            alert('Hello World!');
+          </code>
+        </pre>
+      </section>
+      <section>
+        <h3>console.log</h3>
+        <p>
+          O método <code>console.log()</code> é usado para exibir mensagens no console do navegador. Ele é útil para depurar e testar o código JavaScript.
+        </p>
+  
+        <pre>
+          <code>
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;script&gt;
+                  console.log('Hello World!');
+                &lt;/script&gt;
+              &lt;/head&gt;
+            &lt;/html&gt;
+          </code>
+        </pre>
+  
+        <p>
+          Para abrir o console do navegador, pressione <code>F12</code> ou clique com o botão direito do mouse na página e selecione "Inspecionar" ou "Inspeção".
+        </p>
+      </section>
+    </article>
+     
+  </main>
+
+  <footer id="footer">
+    <a href="https://github.com/MatheusRCG" target="_blank">
+      <img src="/src/Images/github-logo.png" alt="logo github">
+    </a>
+    <a href="https://www.linkedin.com/in/matheusrcg/" target="_blank">
+      <img src="/src/Images/linkedin-logo.png" alt="linkedin logo">
+    </a>
+  </footer>
+</body>
+
+</html>
