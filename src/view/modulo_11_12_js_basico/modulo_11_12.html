@@ -34,7 +34,7 @@
 
   <main id="content">
     <article id="displays" class="card">
-      <h2>Hello World!</h2>
+      <h2>Hello World! JavaScript</h2>
 
       <p>
         O JavaScript é usado em sites para adicionar interatividade e dinamismo. Ele permite
@@ -48,7 +48,7 @@
         <p>
           O código abaixo exibe um alerta com a mensagem "Hello World!" ao carregar a página.
         </p>
-  
+
         <pre>
           <code>
             &lt;html&gt;
@@ -60,11 +60,12 @@
             &lt;/html&gt;
           </code>
         </pre>
-  
+
         <p>
-          Podemos também criar um arquivo JavaScript separado e incluí-lo no HTML usando a tag <code>&lt;script&gt;</code>. Isso é útil para manter o código organizado e reutilizável.
+          Podemos também criar um arquivo JavaScript separado e incluí-lo no HTML usando a tag
+          <code>&lt;script&gt;</code>. Isso é útil para manter o código organizado e reutilizável.
         </p>
-  
+
         <h4>index.html</h4>
         <pre>
           <code>
@@ -85,9 +86,10 @@
       <section>
         <h3>console.log</h3>
         <p>
-          O método <code>console.log()</code> é usado para exibir mensagens no console do navegador. Ele é útil para depurar e testar o código JavaScript.
+          O método <code>console.log()</code> é usado para exibir mensagens no console do navegador.
+          Ele é útil para depurar e testar o código JavaScript.
         </p>
-  
+
         <pre>
           <code>
             &lt;html&gt;
@@ -99,13 +101,151 @@
             &lt;/html&gt;
           </code>
         </pre>
-  
+
         <p>
-          Para abrir o console do navegador, pressione <code>F12</code> ou clique com o botão direito do mouse na página e selecione "Inspecionar" ou "Inspeção".
+          Para abrir o console do navegador, pressione <code>F12</code> ou clique com o
+          botão direito do mouse na página e selecione "Inspecionar" ou "Inspeção".
         </p>
       </section>
+
+      <section id="comentarios">
+        <h3>comentários</h3>
+        <p>
+          Os comentários são usados para documentar o código e torná-lo mais legível. Eles são
+          ignorados pelo interpretador JavaScript e não afetam o funcionamento do programa.
+        </p>
+        <h4>Comentando uma linha</h4>
+        <pre>
+          <code>
+            // Este é um comentário de uma linha
+          </code>
+        </pre>
+        <h4>Comentando várias linhas</h4>
+        <pre>
+          <code>
+            /*
+            Este é um comentário
+            de várias linhas
+            */
+          </code>
+        </pre>
+      </section>
     </article>
-     
+
+    <article id="variaveis" class="card">
+      <h2>Variaveis em JavaScript</h2>
+
+      <p>
+        As variáveis são usadas para armazenar valores e dados em JavaScript.
+        Elas são declaradas usando a palavra-chave <code>var</code>, <code>let</code> ou
+        <code>const</code>, seguida pelo nome da variável e, opcionalmente, um valor inicial.
+      </p>
+
+      <p>
+        Existem diferentes convenções para nomear variáveis em JavaScript:
+      </p>
+      <ul>
+        <li>
+          camelCase: A primeira letra é minúscula e cada nova palavra começa com uma letra maiúscula.
+          Exemplo: <code>minhaVariavel</code>.
+        </li>
+        <li>
+          snake_case: Todas as letras são minúsculas e as palavras são separadas por underscores.
+          Exemplo: <code>minha_variavel</code>.
+        </li>
+        <li>
+          PascalCase: Similar ao camelCase, mas a primeira letra também é maiúscula.
+          Exemplo: <code>MinhaVariavel</code>.
+        </li>
+        <li>
+          kebab-case: Todas as letras são minúsculas e as palavras são separadas por hifens.
+          Exemplo: <code>minha-variavel</code>.
+        </li>
+      </ul>
+
+      <p>
+        Além disso, é importante seguir algumas regras ao nomear variáveis:
+      </p>
+      <ul>
+        <li>
+          Os nomes devem começar com uma letra, underscore (_) ou cifrão ($).
+        </li>
+        <li>
+          Os nomes não podem começar com números.
+        </li>
+        <li>
+          Os nomes podem conter letras, números, underscores e cifrões.
+        </li>
+        <li>
+          Os nomes são case-sensitive, ou seja, <code>minhaVariavel</code> e
+          <code>minhavarivel</code> são variáveis diferentes.
+        </li>
+      </ul>
+
+      <h4>Declarando uma variável e reatribuindo um valor</h4>
+      <pre>
+        <code>
+          var nome = "João";
+          console.log(nome); // Saída: João
+
+          nome = "Maria";
+          console.log(nome); // Saída: Maria
+        </code>
+      </pre>
+
+
+      <h4>Copiando o valor de uma variável para outra</h4>
+      <pre>
+        <code>
+          var nome2 = "Pedro";
+          var nome3 = nome2;
+          console.log(nome3); // Saída: Pedro
+        </code>
+      </pre>
+
+      <h4>Declarando variáveis sem valor inicial e atribuindo valor posteriormente</h4>
+      <pre>
+        <code>
+          var pais;
+          console.log(pais); // Saída: undefined
+
+          pais = "Brasil";
+          console.log(pais); // Saída: Brasil
+        </code>
+      </pre>
+
+      <section id="tipodedados">
+        <h3>Tipo de dados</h3>
+        <p>
+          JavaScript é uma linguagem de programação dinamicamente tipada, o que significa que as
+          variáveis não têm um tipo de dados fixo. O tipo de dados de uma variável é determinado
+          automaticamente com base no valor atribuído a ela.
+        </p>
+        <p>
+          Existem vários tipos de dados em JavaScript, incluindo:
+        </p>
+        <ul>
+          <li>String: Sequência de caracteres, como "Hello World!"</li>
+          <li>Number: Números inteiros ou decimais, como 42 ou 3.14</li>
+          <li>Boolean: Valores verdadeiro ou falso, como true ou false</li>
+          <li>Array: Coleção ordenada de valores, como [1, 2, 3]</li>
+          <li>Object: Coleção de pares chave-valor, como {nome: "João", idade: 30}</li>
+          <li>Undefined: Valor atribuído a variáveis não inicializadas</li>
+          <li>Null: Valor nulo, indicando a ausência de valor</li>
+        </ul>
+        <pre>
+          <code>
+            var nome = "João"; // String
+            var idade = 30; // Number
+            var casado = false; // Boolean
+            var numeros = [1, 2, 3]; // Array
+            var pessoa = {nome: "João", idade: 30}; // Object
+            var vazio = undefined; // Undefined
+            var nulo = null; // Null
+          </code>
+        </pre>
+      </section>
+    </article>
   </main>
 
   <footer id="footer">
