@@ -285,6 +285,104 @@
         </pre>
       </section>
     </article>
+
+    <article id="operacoes" class="card">
+      <h2>Operações Aritméticas</h2>
+      <p>
+        JavaScript suporta várias operações aritméticas para realizar cálculos matemáticos.
+        Os operadores aritméticos mais comuns são:
+      </p>
+      <ul>
+        <li>Soma (+): Adiciona dois valores.</li>
+        <li>Subtração (-): Subtrai um valor de outro.</li>
+        <li>Multiplicação (*): Multiplica dois valores.</li>
+        <li>Divisão (/): Divide um valor por outro.</li>
+        <li>Módulo (%): Retorna o resto da divisão de um valor por outro.</li>
+        <li>Incremento (++): Adiciona 1 a um valor.</li>
+        <li>Decremento (--): Subtrai 1 de um valor.</li>
+      </ul>
+      <p>
+        Exemplo de operações aritméticas em JavaScript:
+      </p>
+      <pre>
+        <code>
+          var x = 10;
+          var y = 5;
+
+          var soma = x + y;
+          var subtracao = x - y;
+          var multiplicacao = x * y;
+          var divisao = x / y;
+          var modulo = x % y;
+          var incremento = x++;
+          var preIncremento = ++x;
+          var decremento = y--;
+          var preDecremento = --y;
+
+          console.log(soma); // Saída: 15
+          console.log(subtracao); // Saída: 5
+          console.log(multiplicacao); // Saída: 50
+          console.log(divisao); // Saída: 2
+          console.log(modulo); // Saída: 0
+          console.log(incremento); // Saída: 10
+          console.log(decremento); // Saída: 5
+        </code>
+      </pre>
+      <section>
+        <h3>Módulo</h3>
+        <p>
+          O operador módulo (%) retorna o resto da divisão de um número pelo outro. Ele é útil para
+          verificar se um número é divisível por outro ou para obter o último dígito de um número.
+        </p>
+        <pre>
+          <code>
+            var x = 10;
+            var y = 5;
+
+            var modulo = x % y;
+            console.log(modulo); // Saída: 0
+
+            var modulo = y % x;
+            console.log(modulo); // Saída: 5
+          </code>
+      </section>
+      <section>
+        <h3>Incremento e Decremento</h3>
+        <p>
+          Os operadores de incremento (++) e decremento (--) são usados para adicionar ou subtrair 1
+          de uma variável, respectivamente. Eles são úteis para atualizar o valor de uma variável de
+          forma rápida e concisa.
+        </p>
+        <pre>
+          <code>
+            var x = 5;
+
+            var incremento = x++;
+            console.log(incremento); // x=6 mas a saída: 5
+
+            var preIncremento = ++x;
+            console.log(preIncremento); // x=7 e saída: 7
+
+            var y = 5;
+
+            var decremento = y--;
+            console.log(decremento); // x=4 mas a saída: 5
+
+            var preDecremento = --y;
+            console.log(preDecremento); // x=3 e saída: 3
+          </code>
+        </pre>
+      </section>
+      <p>
+        A diferença entre colocar os operadores de incremento (++) ou decremento (--)
+        antes ou depois da variável está no momento em que a operação é realizada.
+        Quando o operador é colocado antes da variável (pré-incremento ou pré-decremento),
+        o valor da variável é incrementado ou decrementado antes de ser utilizado na expressão.
+        Por outro lado, quando o operador é colocado depois da variável (pós-incremento ou
+        pós-decremento), o valor da variável é utilizado na expressão antes de ser incrementado
+        ou decrementado.
+      </p>
+    </article>
   </main>
 
   <footer id="footer">
