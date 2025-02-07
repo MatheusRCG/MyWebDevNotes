@@ -328,7 +328,7 @@
           console.log(decremento); // Saída: 5
         </code>
       </pre>
-      <section>
+      <section id="module">
         <h3>Módulo</h3>
         <p>
           O operador módulo (%) retorna o resto da divisão de um número pelo outro. Ele é útil para
@@ -346,7 +346,7 @@
             console.log(modulo); // Saída: 5
           </code>
       </section>
-      <section>
+      <section id="incremento-decremento">
         <h3>Incremento e Decremento</h3>
         <p>
           Os operadores de incremento (++) e decremento (--) são usados para adicionar ou subtrair 1
@@ -372,15 +372,133 @@
             console.log(preDecremento); // x=3 e saída: 3
           </code>
         </pre>
+        <p>
+          A diferença entre colocar os operadores de incremento (++) ou decremento (--)
+          antes ou depois da variável está no momento em que a operação é realizada.
+          Quando o operador é colocado antes da variável (pré-incremento ou pré-decremento),
+          o valor da variável é incrementado ou decrementado antes de ser utilizado na expressão.
+          Por outro lado, quando o operador é colocado depois da variável (pós-incremento ou
+          pós-decremento), o valor da variável é utilizado na expressão antes de ser incrementado
+          ou decrementado.
+        </p>
       </section>
+    </article>
+
+    <article id="atribuicao" class="card">
+      <h2>operador de Atribuições</h2>
       <p>
-        A diferença entre colocar os operadores de incremento (++) ou decremento (--)
-        antes ou depois da variável está no momento em que a operação é realizada.
-        Quando o operador é colocado antes da variável (pré-incremento ou pré-decremento),
-        o valor da variável é incrementado ou decrementado antes de ser utilizado na expressão.
-        Por outro lado, quando o operador é colocado depois da variável (pós-incremento ou
-        pós-decremento), o valor da variável é utilizado na expressão antes de ser incrementado
-        ou decrementado.
+        Em JavaScript, os operadores de atribuição combinados são usados para realizar uma
+        operação aritmética e atribuir o resultado à mesma variável. Esses operadores são
+        úteis para simplificar o código e torná-lo mais conciso.
+      </p>
+
+      <table>
+        <tr>
+          <th>Operador</th>
+          <th>Descrição</th>
+          <th>Exemplo</th>
+          <th>Equivalente a</th>
+        </tr>
+        <tr>
+          <td>+=</td>
+          <td>Adição</td>
+          <td>x += 5;</td>
+          <td>x = x + 5;</td>
+        </tr>
+        <tr>
+          <td>-=</td>
+          <td>Subtração</td>
+          <td>x -= 5;</td>
+          <td>x = x - 5;</td>
+        </tr>
+        <tr>
+          <td>*=</td>
+          <td>Multiplicação</td>
+          <td>x *= 5;</td>
+          <td>x = x * 5;</td>
+        </tr>
+        <tr>
+          <td>/=</td>
+          <td>Divisão</td>
+          <td>x /= 5;</td>
+          <td>x = x / 5;</td>
+        </tr>
+        <tr>
+          <td>%=</td>
+          <td>Módulo</td>
+          <td>x %= 5;</td>
+          <td>x = x % 5;</td>
+        </tr>
+      </table>
+
+      <pre>
+        <code>
+          var x = 10;
+          x += 5; // Equivalente: x = x + 5
+          console.log(x); // Saída: 15
+
+          var y = 10;
+          y -= 5; // Equivalente: y = y - 5
+          console.log(y); // Saída: 5
+
+          var z = 10;
+          z *= 5; // Equivalente: z = z * 5
+          console.log(z); // Saída: 50
+
+          var w = 10;
+          w /= 5; // Equivalente:  w = w / 5
+          console.log(w); // Saída: 2
+
+          var v = 10;
+          v %= 3; // Equivalente: v = v % 3
+          console.log(v); // Saída: 1
+        </code>
+      </pre>
+    </article>
+
+    <article id="condicionais" class="card">
+      <h2>Operadores de comparação</h2>
+      <p>
+        Os operadores de comparação são usados para comparar dois valores e retornar um valor
+        booleano (true ou false) com base no resultado da comparação.
+      </p>
+
+      <ul>
+        <li>== : Igual a</li>
+        <li>=== : Estritamente igual a</li>
+        <li>!= : Diferente de</li>
+        <li>!== : Estritamente diferente de</li>
+        <li>&gt; : Maior que</li>
+        <li>&lt; : Menor que</li>
+        <li>&gt;= : Maior ou igual a</li>
+        <li>&lt;= : Menor ou igual a</li>
+      </ul>
+
+      <pre>
+        <code>
+          var a = 5;
+          var b = "5";
+          var c = 10;
+
+          console.log(a == b);  // true
+          console.log(a === b); // false
+          console.log(a != c);  // true
+          console.log(a !== b); // true
+          console.log(a &gt; c);   // false
+          console.log(a &lt; c);   // true
+          console.log(a &gt;= 5);  // true
+          console.log(a &lt;= 4);  // false
+        </code>
+      </pre>
+
+      <p>
+        O operador <code>===</code> (estritamente igual a) compara dois valores e retorna true
+        se eles são iguais em valor e tipo. Por exemplo, <code>5 === 5</code> retorna true, mas
+        <code>5 === "5"</code> retorna false porque os tipos são diferentes. O operador
+        <code>!==</code> (estritamente diferente de) compara dois valores e retorna true se
+        eles são diferentes em valor ou tipo. Por exemplo, <code>5 !== "5"</code> retorna true
+        porque os tipos são diferentes, enquanto <code>5 !== 5</code> retorna false porque os
+        valores e tipos são iguais.
       </p>
     </article>
   </main>
