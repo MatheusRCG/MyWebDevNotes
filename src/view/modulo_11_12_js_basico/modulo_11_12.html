@@ -771,6 +771,140 @@
         </pre>
       </section>
     </article>
+
+    <article id="repeticao" class="card">
+      <h2>Estrutura de Repetição</h2>
+      <p>
+        As estruturas de repetição são usadas para executar um bloco de código várias vezes.
+        Em JavaScript, as estruturas de repetição mais comuns são:
+      </p>
+      <ul>
+        <li>for: Executa um bloco de código um número específico de vezes.</li>
+        <li>while: Executa um bloco de código enquanto a condição for verdadeira.</li>
+        <li>
+          do...while: Executa um bloco de código pelo menos uma vez e depois enquanto a
+          condição for verdadeira.
+        </li>
+        <li>for...in: Itera sobre as propriedades de um objeto.</li>
+        <li>for...of: Itera sobre os elementos de um objeto iterável, como um array.</li>
+      </ul>
+      <section id="for">
+        <h3>for</h3>
+        <p>
+          A estrutura <code>for</code> é usada para executar um bloco de código um número
+          específico de vezes.
+        </p>
+        <pre>
+          <code>
+            for (var i = 0; i &lt; 5; i++) {
+              console.log(i);
+            }
+          </code>
+        </pre>
+      </section>
+
+      <section id="while">
+        <h3>while</h3>
+        <p>
+          A estrutura <code>while</code> é usada para executar um bloco de código enquanto a
+          condição for verdadeira.
+        </p>
+        <pre>
+          <code>
+            var i = 0;
+  
+            while (i &lt; 5) {
+              console.log(i);
+              i++;
+            }
+          </code>
+        </pre>
+      </section>
+
+      <section id="do-while">
+        <h3>do...while</h3>
+        <p>
+          A estrutura <code>do...while</code> é usada para executar um bloco de código pelo
+          menos uma vez e depois enquanto a condição for verdadeira.
+        </p>
+        <pre>
+          <code>
+            var i = 0;
+  
+            do {
+              console.log(i);
+              i++;
+            } while (i &lt; 5);
+          </code>
+        </pre>
+      </section>
+
+      <section id="for-in">
+        <h3>for...in</h3>
+        <p>
+          A estrutura <code>for...in</code> é usada para iterar sobre as propriedades de um objeto.
+        </p>
+        <pre>
+          <code>
+            var pessoa = {nome: "João", idade: 30, cidade: "São Paulo"};
+  
+            for (var propriedade in pessoa) {
+              console.log(propriedade + ": " + pessoa[propriedade]);
+            }
+          </code>
+        </pre>
+      </section>
+
+      <section id="for-of">
+        <h3>for...of</h3>
+        <p>
+          A estrutura <code>for...of</code> é usada para iterar sobre os elementos de um objeto
+          iterável, como um array.
+        </p>
+        <pre>
+          <code>
+            var numeros = [1, 2, 3, 4, 5];
+  
+            for (var numero of numeros) {
+              console.log(numero);
+            }
+          </code>
+        </pre>
+      </section>
+
+      <section id="break-continue">
+        <h3>break e continue</h3>
+        <p>
+          Os comandos <code>break</code> e <code>continue</code> são usados para controlar o
+          fluxo de execução de um loop.
+        </p>
+        <p>
+          O comando <code>break</code> interrompe a execução do loop e sai dele imediatamente.
+          O comando <code>continue</code> interrompe a execução do loop atual e continua para
+          a próxima iteração.
+        </p>
+        <pre>
+          <code>
+            for (var i = 0; i &lt; 5; i++) {
+              if (i === 3) {
+                break;
+              }
+              console.log(i);
+            }
+          </code>
+        </pre>
+        <pre>
+          <code>
+            for (var i = 0; i &lt; 5; i++) {
+              if (i === 3) {
+                continue;
+              }
+              console.log(i);
+            }
+          </code>
+        </pre>
+      </section>
+    </article>
   </main>
 
   <footer id="footer">
