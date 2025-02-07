@@ -635,6 +635,142 @@
         </pre>
       </section>
     </article>
+
+    <article id="estruturas" class="card">
+      <h2>Estruturas Condicionais</h2>
+      <p>
+        As estruturas condicionais são usadas para tomar decisões com base em condições específicas.
+        Em JavaScript, as estruturas condicionais mais comuns são:
+      </p>
+      <ul>
+        <li>if: Executa um bloco de código se a condição for verdadeira.</li>
+        <li>else: Executa um bloco de código se a condição for falsa.</li>
+        <li>
+          else if: Executa um bloco de código se a condição anterior for falsa e a nova
+          condição for verdadeira.
+        </li>
+        <li>switch: Executa um bloco de código com base em múltiplas condições.</li>
+      </ul>
+
+      <section id="if">
+        <h3>if</h3>
+        <p>
+          A estrutura <code>if</code> é usada para executar um bloco de código se a condição
+          for verdadeira.
+        </p>
+        <pre>
+          <code>
+            var idade = 18;
+  
+            if (idade &gt;= 18) {
+              console.log("Você é maior de idade.");
+            }
+          </code>
+        </pre>
+      </section>
+
+      <section id="else">
+        <h3>else</h3>
+        <p>
+          A estrutura <code>else</code> é usada para executar um bloco de código se a condição
+          for falsa.
+        </p>
+        <pre>
+          <code>
+            var idade = 16;
+  
+            if (idade &gt;= 18) {
+              console.log("Você é maior de idade.");
+            } else {
+              console.log("Você é menor de idade.");
+            }
+          </code>
+        </pre>
+      </section>
+
+      <section id="else-if">
+        <h3>else if</h3>
+        <p>
+          A estrutura <code>else if</code> é usada para executar um bloco de código se a
+          condição anterior for falsa e a nova condição for verdadeira.
+        </p>
+        <pre>
+          <code>
+            var hora = 14;
+  
+            if (hora &lt; 12) {
+              console.log("Bom dia!");
+            } else if (hora &lt; 18) {
+              console.log("Boa tarde!");
+            } else {
+              console.log("Boa noite!");
+            }
+          </code>
+        </pre>
+      </section>
+
+      <section id="ternary">
+        <h3>Operador ternário</h3>
+        <p>
+          O operador ternário é uma forma abreviada de escrever uma estrutura condicional
+          <code>if...else</code>. Ele é usado para atribuir um valor a uma variável com base
+          em uma condição.
+        </p>
+        <p>
+          a estrutura do operador ternário é:
+          <code>condição ? valorSeVerdadeiro : valorSeFalso</code>
+        </p>
+        <pre>
+          <code>
+            var idade = 18;
+            var mensagem = idade &gt;= 18 ? "Maior de idade" : "Menor de idade";
+            console.log(mensagem);
+          </code>
+        </pre>
+      </section>
+
+      <section id="switch">
+        <h3>switch</h3>
+        <p>
+          A estrutura <code>switch</code> é usada para executar um bloco de código com base
+          em múltiplas condições.
+        </p>
+        <pre>
+          <code>
+            var dia = 3;
+            var nomeDia;
+  
+            switch (dia) {
+              case 1:
+                nomeDia = "Domingo";
+                break;
+              case 2:
+                nomeDia = "Segunda-feira";
+                break;
+              case 3:
+                nomeDia = "Terça-feira";
+                break;
+              case 4:
+                nomeDia = "Quarta-feira";
+                break;
+              case 5:
+                nomeDia = "Quinta-feira";
+                break;
+              case 6:
+                nomeDia = "Sexta-feira";
+                break;
+              case 7:
+                nomeDia = "Sábado";
+                break;
+              default:
+                nomeDia = "Dia inválido";
+            }
+  
+            console.log("Hoje é " + nomeDia);
+          </code>
+        </pre>
+      </section>
+    </article>
   </main>
 
   <footer id="footer">
