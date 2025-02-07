@@ -501,8 +501,8 @@
         valores e tipos são iguais.
       </p>
     </article>
-    
-    <article>
+
+    <article id="logic" class="card">
       <h2>Operadores Lógicos</h2>
       <p>
         Os operadores lógicos são usados para combinar expressões booleanas e retornar um valor
@@ -524,6 +524,116 @@
           console.log(!b);     // true
         </code>
       </pre>
+    </article>
+
+    <article id="strings" class="card">
+      <h2>Strings</h2>
+      <p>
+        Uma string é uma sequência de caracteres, como "Hello World!". Em JavaScript, as strings
+        são representadas por valores entre aspas simples (' ') ou aspas duplas (" ").
+      </p>
+      <p>
+        Existem várias operações que podem ser realizadas em strings, como concatenação, extração
+        de substrings, busca de padrões e substituição de texto.
+      </p>
+      <h3>Concatenação de Strings</h3>
+      <p>
+        A concatenação de strings é a operação de combinar duas ou mais strings em uma única string.
+        Em JavaScript, a concatenação de strings é feita usando o operador de adição (+).
+      </p>
+      <pre>
+        <code>
+          var nome = "João";
+          var sobrenome = "Silva";
+          var nomeCompleto = nome + " " + sobrenome;
+          console.log(nomeCompleto); // Saída: João Silva
+        </code>
+      </pre>
+
+      <section id="length">
+        <h3>Comprimento de uma String</h3>
+        <p>
+          O comprimento de uma string é o número de caracteres que ela contém. Em JavaScript, o
+          comprimento de uma string pode ser obtido usando a propriedade <code>length</code>.
+        </p>
+        <pre>
+          <code>
+            var texto = "Hello World!";
+            console.log(texto.length); // Saída: 12
+          </code>
+        </pre>
+      </section>
+
+      <section id="substring">
+        <h3>Extração de Substrings</h3>
+        <p>
+          Uma substring é uma parte de uma string. Em JavaScript, as substrings podem ser extraídas
+          usando o método <code>substring(pos inicial, pos final)</code> ou a notação de colchetes [].
+        </p>
+        <pre>
+          <code>
+            var texto = "Hello World!";
+            var substring = texto.substring(6, 11);
+            console.log(substring); // Saída: World
+  
+            var primeiraLetra = texto[0];
+            console.log(primeiraLetra); // Saída: H
+          </code>
+        </pre>
+      </section>
+
+      <section id="search">
+        <h3>Busca de Padrões</h3>
+        <p>
+          A busca de padrões em uma string é feita usando o método <code>indexOf()</code>.
+          O método <code>indexOf()</code> retorna a posição da primeira ocorrência de um padrão
+          na string, caso contrário retorna -1. É possivel também usar um segundo argumento
+          para indicar a posição inicial da busca.
+        </p>
+        <pre>
+          <code>
+            var texto = "Hello World!";
+            var posicao = texto.indexOf("World");
+            console.log(posicao); // Saída: 6
+            
+            var posicao2 = texto.indexOf("World", 8); // Começa a busca a partir da posição 7
+            console.log(posicao2); // Saída: -1 (não encontrado)
+          </code>
+        </pre>
+      </section>
+
+      <section id="replace">
+        <h3>Substituição de Texto</h3>
+        <p>
+          A substituição de texto em uma string é feita usando o método <code>replace()</code>.
+          Este método substitui uma parte da string por outra.
+        </p>
+        <pre>
+          <code>
+            var texto = "Hello World!";
+            var novoTexto = texto.replace("World", "JavaScript");
+            console.log(novoTexto); // Saída: Hello JavaScript!
+          </code>
+        </pre>
+      </section>
+
+      <section id="transform">
+        <h3>Transformando string em numeros</h3>
+        <p>
+          Em JavaScript, é possível converter uma string em um número usando as funções
+          <code>parseInt()</code> e <code>parseFloat()</code>.
+        </p>
+        <pre>
+          <code>
+            var numero = "42";
+            var numeroInteiro = parseInt(numero);
+            console.log(numeroInteiro); // Saída: 42
+
+            var numeroDecimal = parseFloat("3.14");
+            console.log(numeroDecimal); // Saída: 3.14
+          </code>
+        </pre>
+      </section>
     </article>
   </main>
 
