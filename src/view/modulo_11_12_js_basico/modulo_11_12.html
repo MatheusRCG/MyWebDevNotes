@@ -1225,6 +1225,48 @@
           </code>
         </pre>
       </section>
+
+      <section id="date">
+        <h2>Datas</h2>
+        <p>
+          Em JavaScript, as datas são representadas pelo objeto <code>Date</code>. O objeto
+          <code>Date</code> é usado para trabalhar com datas e horas em JavaScript.
+        </p>
+        <p>
+          Para criar uma nova data, você pode usar o construtor <code>Date()</code> sem
+          argumentos, que cria um objeto <code>Date</code> com a data e hora atuais.
+        </p>
+        <pre>
+          <code>
+            var dataAtual = new Date();
+            console.log(dataAtual);
+          </code>
+        </pre>
+        <p>
+          O objeto <code>Date</code> possui vários métodos para obter e definir os valores
+          de data e hora, como <code>getDate()</code>, <code>getMonth()</code>,
+          <code>getFullYear()</code>, <code>getHours()</code>, <code>getMinutes()</code>,
+          <code>getSeconds()</code>, etc.
+        </p>
+        <pre>
+          <code>
+            var data = new Date();
+            var dia = data.getDate();
+            var mes = data.getMonth() + 1;
+            var ano = data.getFullYear();
+            var hora = data.getHours();
+            var minutos = data.getMinutes();
+            var segundos = data.getSeconds();
+
+            console.log(dia + "/" + (mes) + "/" + ano + " " + hora + ":" + minutos + ":" + segundos);
+          </code>
+        </pre>
+        <p>
+          O método <code>getMonth()</code> retorna o mês de 0 a 11, onde 0 representa janeiro
+          e 11 representa dezembro. Por isso, é necessário adicionar 1 ao valor retornado para
+          obter o mês correto.
+        </p>
+      </section>
     </article>
   </main>
 
