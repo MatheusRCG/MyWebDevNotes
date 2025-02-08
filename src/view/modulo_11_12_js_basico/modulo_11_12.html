@@ -1268,6 +1268,46 @@
         </p>
       </section>
     </article>
+    
+    <article id="let-const" class="card">
+      <h3>Let e Const</h3>
+      <p>
+        Em JavaScript, as variáveis podem ser declaradas usando as palavras-chave <code>var</code>,
+        <code>let</code> e <code>const</code>. A diferença entre elas está no escopo e na
+        mutabilidade da variável.
+      </p>
+      <ul>
+        <li><code>var</code>: Escopo global, pode ser redeclarada e reatribuída.</li>
+        <li><code>let</code>: Escopo de bloco, não pode ser redeclarada, mas pode ser reatribuída.</li>
+        <li><code>const</code>: Escopo de bloco, não pode ser redeclarada e nem reatribuída.</li>
+      </ul>
+      <pre>
+        <code>
+          var a = 10;
+          const b = 30;
+
+          if (true) {
+            a = 20;
+            let c = 40;
+            // b = 50; // Erro: Assignment to constant variable.
+          }
+
+          console.log(a); // Saída: 20
+          console.log(b); // Saída: 30
+          // console.log(c); // Erro: c is not defined
+        </code>
+      </pre>
+      <p>
+        No exemplo acima, a variável <code>a</code> é declarada com <code>var</code> e pode ser
+        acessada dentro e fora do bloco <code>if</code>. A variável <code>b</code> é declarada com
+        <code>const</code> e não pode ser reatribuída. A variável <code>c</code> é declarada com
+        <code>let</code> e só pode ser acessada no escopo onde foi declarada, no caso dentro do bloco <code>if</code>.
+      </p>
+      <p>
+        O uso de <code>let</code> e <code>const</code> é recomendado em vez de <code>var</code>
+        para evitar problemas de escopo e mutabilidade.
+      </p>
+    </article>
   </main>
 
   <footer id="footer">
