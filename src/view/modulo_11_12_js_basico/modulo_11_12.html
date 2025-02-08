@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 11 e 12 - JavaScript Básico</title>
+
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    // alert("Hello World!")  // descomentar quando finalizar a página
+    console.log("Hello World!")
+  </script>
+</head>
+
+<body>
+  <header id="top-bar">
+    <a href="/">Voltar</a>
+    <h1>Módulo 11 e 12 - JavaScript Básico</h1>
+    <ul>
+      <li>Geral</li>
+      <li>Conteúdos</li>
+      <li>Projetos</li>
+    </ul>
+  </header>
+
+  <nav id="index">
+    <ul>
+      <li>
+
+      </li>
+    </ul>
+  </nav>
+
+  <main id="content">
+    <article id="displays" class="card">
+      <h2>Hello World! JavaScript</h2>
+
+      <p>
+        O JavaScript é usado em sites para adicionar interatividade e dinamismo. Ele permite
+        criar funcionalidades como validação de formulários, animações, manipulação de elementos
+        HTML e comunicação assíncrona com servidores, tornando a experiência do usuário mais
+        rica e envolvente.
+      </p>
+
+      <section id="alert">
+        <h3>alert</h3>
+        <p>
+          O código abaixo exibe um alerta com a mensagem "Hello World!" ao carregar a página.
+        </p>
+
+        <pre>
+          <code>
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;script&gt;
+                 alert('Hello World!');
+                &lt;/script&gt;
+              &lt;/head&gt;
+            &lt;/html&gt;
+          </code>
+        </pre>
+
+        <p>
+          Podemos também criar um arquivo JavaScript separado e incluí-lo no HTML usando a tag
+          <code>&lt;script&gt;</code>. Isso é útil para manter o código organizado e reutilizável.
+        </p>
+
+        <h4>index.html</h4>
+        <pre>
+          <code>
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;script src="script.js"&gt;&lt;/script&gt;
+              &lt;/head&gt;
+            &lt;/html&gt;
+          </code>
+        </pre>
+        <h4>script.js</h4>
+        <pre>
+          <code>
+            alert('Hello World!');
+          </code>
+        </pre>
+      </section>
+      <section>
+        <h3>console.log</h3>
+        <p>
+          O método <code>console.log()</code> é usado para exibir mensagens no console do navegador.
+          Ele é útil para depurar e testar o código JavaScript.
+        </p>
+
+        <pre>
+          <code>
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;script&gt;
+                  console.log('Hello World!');
+                &lt;/script&gt;
+              &lt;/head&gt;
+            &lt;/html&gt;
+          </code>
+        </pre>
+
+        <p>
+          Para abrir o console do navegador, pressione <code>F12</code> ou clique com o
+          botão direito do mouse na página e selecione "Inspecionar" ou "Inspeção".
+        </p>
+      </section>
+
+      <section id="comentarios">
+        <h3>comentários</h3>
+        <p>
+          Os comentários são usados para documentar o código e torná-lo mais legível. Eles são
+          ignorados pelo interpretador JavaScript e não afetam o funcionamento do programa.
+        </p>
+        <h4>Comentando uma linha</h4>
+        <pre>
+          <code>
+            // Este é um comentário de uma linha
+          </code>
+        </pre>
+        <h4>Comentando várias linhas</h4>
+        <pre>
+          <code>
+            /*
+            Este é um comentário
+            de várias linhas
+            */
+          </code>
+        </pre>
+      </section>
+    </article>
+
+    <article id="variaveis" class="card">
+      <h2>algoritmo</h2>
+      <p>
+        Um algoritmo é um conjunto de instruções passo a passo para resolver um problema ou
+        realizar uma tarefa. Ele é a base da programação e é usado para criar programas de
+        computador que automatizam processos e tomam decisões com base em dados.
+      </p>
+
+      <h4>algoritmo de Receita de Miojo</h4>
+      <ol>
+        <li>Ferva 500ml de água em uma panela.</li>
+        <li>Adicione o miojo na água fervente.</li>
+        <li>Cozinhe por 3 minutos.</li>
+        <li>Escorra a água.</li>
+        <li>Adicione o tempero do miojo e misture bem.</li>
+        <li>Sirva e aproveite.</li>
+      </ol>
+
+      <h4>algoritmo Atravessar a Rua</h4>
+      <ol>
+        <li>Pare na calçada e olhe para os dois lados.</li>
+        <li>Verifique se não há veículos se aproximando.</li>
+        <li>Se houver faixa de pedestres, utilize-a.</li>
+        <li>Comece a atravessar a rua com cuidado.</li>
+        <li>Continue olhando para os dois lados enquanto atravessa.</li>
+        <li>Chegue ao outro lado da rua em segurança.</li>
+      </ol>
+
+      <h4>algoritmo matemático</h4>
+      <ol>
+        <li>Comece com um número inicial.</li>
+        <li>Some 5 ao número inicial.</li>
+        <li>Multiplique o resultado por 2.</li>
+        <li>Subtraia 4 do resultado.</li>
+        <li>Divida o resultado por 2.</li>
+        <li>Exiba o resultado final.</li>
+      </ol>
+    </article>
+
+    <article id="variaveis" class="card">
+      <h2>Variaveis em JavaScript</h2>
+
+      <p>
+        As variáveis são usadas para armazenar valores e dados em JavaScript.
+        Elas são declaradas usando a palavra-chave <code>var</code>, <code>let</code> ou
+        <code>const</code>, seguida pelo nome da variável e, opcionalmente, um valor inicial.
+      </p>
+
+      <p>
+        Existem diferentes convenções para nomear variáveis em JavaScript:
+      </p>
+      <ul>
+        <li>
+          camelCase: A primeira letra é minúscula e cada nova palavra começa com uma letra maiúscula.
+          Exemplo: <code>minhaVariavel</code>.
+        </li>
+        <li>
+          snake_case: Todas as letras são minúsculas e as palavras são separadas por underscores.
+          Exemplo: <code>minha_variavel</code>.
+        </li>
+        <li>
+          PascalCase: Similar ao camelCase, mas a primeira letra também é maiúscula.
+          Exemplo: <code>MinhaVariavel</code>.
+        </li>
+        <li>
+          kebab-case: Todas as letras são minúsculas e as palavras são separadas por hifens.
+          Exemplo: <code>minha-variavel</code>.
+        </li>
+      </ul>
+
+      <p>
+        Além disso, é importante seguir algumas regras ao nomear variáveis:
+      </p>
+      <ul>
+        <li>
+          Os nomes devem começar com uma letra, underscore (_) ou cifrão ($).
+        </li>
+        <li>
+          Os nomes não podem começar com números.
+        </li>
+        <li>
+          Os nomes podem conter letras, números, underscores e cifrões.
+        </li>
+        <li>
+          Os nomes são case-sensitive, ou seja, <code>minhaVariavel</code> e
+          <code>minhavarivel</code> são variáveis diferentes.
+        </li>
+      </ul>
+
+      <h4>Declarando uma variável e reatribuindo um valor</h4>
+      <pre>
+        <code>
+          var nome = "João";
+          console.log(nome); // Saída: João
+
+          nome = "Maria";
+          console.log(nome); // Saída: Maria
+        </code>
+      </pre>
+
+
+      <h4>Copiando o valor de uma variável para outra</h4>
+      <pre>
+        <code>
+          var nome2 = "Pedro";
+          var nome3 = nome2;
+          console.log(nome3); // Saída: Pedro
+        </code>
+      </pre>
+
+      <h4>Declarando variáveis sem valor inicial e atribuindo valor posteriormente</h4>
+      <pre>
+        <code>
+          var pais;
+          console.log(pais); // Saída: undefined
+
+          pais = "Brasil";
+          console.log(pais); // Saída: Brasil
+        </code>
+      </pre>
+
+      <section id="tipodedados">
+        <h3>Tipo de dados</h3>
+        <p>
+          JavaScript é uma linguagem de programação dinamicamente tipada, o que significa que as
+          variáveis não têm um tipo de dados fixo. O tipo de dados de uma variável é determinado
+          automaticamente com base no valor atribuído a ela.
+        </p>
+        <p>
+          Existem vários tipos de dados em JavaScript, incluindo:
+        </p>
+        <ul>
+          <li>String: Sequência de caracteres, como "Hello World!"</li>
+          <li>Number: Números inteiros ou decimais, como 42 ou 3.14</li>
+          <li>Boolean: Valores verdadeiro ou falso, como true ou false</li>
+          <li>Array: Coleção ordenada de valores, como [1, 2, 3]</li>
+          <li>Object: Coleção de pares chave-valor, como {nome: "João", idade: 30}</li>
+          <li>Undefined: Valor atribuído a variáveis não inicializadas</li>
+          <li>Null: Valor nulo, indicando a ausência de valor</li>
+        </ul>
+        <pre>
+          <code>
+            var nome = "João"; // String
+            var idade = 30; // Number
+            var casado = false; // Boolean
+            var numeros = [1, 2, 3]; // Array
+            var pessoa = {nome: "João", idade: 30}; // Object
+            var vazio = undefined; // Undefined
+            var nulo = null; // Null
+          </code>
+        </pre>
+      </section>
+    </article>
+
+    <article id="operacoes" class="card">
+      <h2>Operações Aritméticas</h2>
+      <p>
+        JavaScript suporta várias operações aritméticas para realizar cálculos matemáticos.
+        Os operadores aritméticos mais comuns são:
+      </p>
+      <ul>
+        <li>Soma (+): Adiciona dois valores.</li>
+        <li>Subtração (-): Subtrai um valor de outro.</li>
+        <li>Multiplicação (*): Multiplica dois valores.</li>
+        <li>Divisão (/): Divide um valor por outro.</li>
+        <li>Módulo (%): Retorna o resto da divisão de um valor por outro.</li>
+        <li>Incremento (++): Adiciona 1 a um valor.</li>
+        <li>Decremento (--): Subtrai 1 de um valor.</li>
+      </ul>
+      <p>
+        Exemplo de operações aritméticas em JavaScript:
+      </p>
+      <pre>
+        <code>
+          var x = 10;
+          var y = 5;
+
+          var soma = x + y;
+          var subtracao = x - y;
+          var multiplicacao = x * y;
+          var divisao = x / y;
+          var modulo = x % y;
+          var incremento = x++;
+          var preIncremento = ++x;
+          var decremento = y--;
+          var preDecremento = --y;
+
+          console.log(soma); // Saída: 15
+          console.log(subtracao); // Saída: 5
+          console.log(multiplicacao); // Saída: 50
+          console.log(divisao); // Saída: 2
+          console.log(modulo); // Saída: 0
+          console.log(incremento); // Saída: 10
+          console.log(decremento); // Saída: 5
+        </code>
+      </pre>
+      <section id="module">
+        <h3>Módulo</h3>
+        <p>
+          O operador módulo (%) retorna o resto da divisão de um número pelo outro. Ele é útil para
+          verificar se um número é divisível por outro ou para obter o último dígito de um número.
+        </p>
+        <pre>
+          <code>
+            var x = 10;
+            var y = 5;
+
+            var modulo = x % y;
+            console.log(modulo); // Saída: 0
+
+            var modulo = y % x;
+            console.log(modulo); // Saída: 5
+          </code>
+      </section>
+      <section id="incremento-decremento">
+        <h3>Incremento e Decremento</h3>
+        <p>
+          Os operadores de incremento (++) e decremento (--) são usados para adicionar ou subtrair 1
+          de uma variável, respectivamente. Eles são úteis para atualizar o valor de uma variável de
+          forma rápida e concisa.
+        </p>
+        <pre>
+          <code>
+            var x = 5;
+
+            var incremento = x++;
+            console.log(incremento); // x=6 mas a saída: 5
+
+            var preIncremento = ++x;
+            console.log(preIncremento); // x=7 e saída: 7
+
+            var y = 5;
+
+            var decremento = y--;
+            console.log(decremento); // x=4 mas a saída: 5
+
+            var preDecremento = --y;
+            console.log(preDecremento); // x=3 e saída: 3
+          </code>
+        </pre>
+        <p>
+          A diferença entre colocar os operadores de incremento (++) ou decremento (--)
+          antes ou depois da variável está no momento em que a operação é realizada.
+          Quando o operador é colocado antes da variável (pré-incremento ou pré-decremento),
+          o valor da variável é incrementado ou decrementado antes de ser utilizado na expressão.
+          Por outro lado, quando o operador é colocado depois da variável (pós-incremento ou
+          pós-decremento), o valor da variável é utilizado na expressão antes de ser incrementado
+          ou decrementado.
+        </p>
+      </section>
+    </article>
+
+    <article id="atribuicao" class="card">
+      <h2>operador de Atribuições</h2>
+      <p>
+        Em JavaScript, os operadores de atribuição combinados são usados para realizar uma
+        operação aritmética e atribuir o resultado à mesma variável. Esses operadores são
+        úteis para simplificar o código e torná-lo mais conciso.
+      </p>
+
+      <table>
+        <tr>
+          <th>Operador</th>
+          <th>Descrição</th>
+          <th>Exemplo</th>
+          <th>Equivalente a</th>
+        </tr>
+        <tr>
+          <td>+=</td>
+          <td>Adição</td>
+          <td>x += 5;</td>
+          <td>x = x + 5;</td>
+        </tr>
+        <tr>
+          <td>-=</td>
+          <td>Subtração</td>
+          <td>x -= 5;</td>
+          <td>x = x - 5;</td>
+        </tr>
+        <tr>
+          <td>*=</td>
+          <td>Multiplicação</td>
+          <td>x *= 5;</td>
+          <td>x = x * 5;</td>
+        </tr>
+        <tr>
+          <td>/=</td>
+          <td>Divisão</td>
+          <td>x /= 5;</td>
+          <td>x = x / 5;</td>
+        </tr>
+        <tr>
+          <td>%=</td>
+          <td>Módulo</td>
+          <td>x %= 5;</td>
+          <td>x = x % 5;</td>
+        </tr>
+      </table>
+
+      <pre>
+        <code>
+          var x = 10;
+          x += 5; // Equivalente: x = x + 5
+          console.log(x); // Saída: 15
+
+          var y = 10;
+          y -= 5; // Equivalente: y = y - 5
+          console.log(y); // Saída: 5
+
+          var z = 10;
+          z *= 5; // Equivalente: z = z * 5
+          console.log(z); // Saída: 50
+
+          var w = 10;
+          w /= 5; // Equivalente:  w = w / 5
+          console.log(w); // Saída: 2
+
+          var v = 10;
+          v %= 3; // Equivalente: v = v % 3
+          console.log(v); // Saída: 1
+        </code>
+      </pre>
+    </article>
+
+    <article id="condicionais" class="card">
+      <h2>Operadores de comparação</h2>
+      <p>
+        Os operadores de comparação são usados para comparar dois valores e retornar um valor
+        booleano (true ou false) com base no resultado da comparação.
+      </p>
+
+      <ul>
+        <li>== : Igual a</li>
+        <li>=== : Estritamente igual a</li>
+        <li>!= : Diferente de</li>
+        <li>!== : Estritamente diferente de</li>
+        <li>&gt; : Maior que</li>
+        <li>&lt; : Menor que</li>
+        <li>&gt;= : Maior ou igual a</li>
+        <li>&lt;= : Menor ou igual a</li>
+      </ul>
+
+      <pre>
+        <code>
+          var a = 5;
+          var b = "5";
+          var c = 10;
+
+          console.log(a == b);  // true
+          console.log(a === b); // false
+          console.log(a != c);  // true
+          console.log(a !== b); // true
+          console.log(a &gt; c);   // false
+          console.log(a &lt; c);   // true
+          console.log(a &gt;= 5);  // true
+          console.log(a &lt;= 4);  // false
+        </code>
+      </pre>
+
+      <p>
+        O operador <code>===</code> (estritamente igual a) compara dois valores e retorna true
+        se eles são iguais em valor e tipo. Por exemplo, <code>5 === 5</code> retorna true, mas
+        <code>5 === "5"</code> retorna false porque os tipos são diferentes. O operador
+        <code>!==</code> (estritamente diferente de) compara dois valores e retorna true se
+        eles são diferentes em valor ou tipo. Por exemplo, <code>5 !== "5"</code> retorna true
+        porque os tipos são diferentes, enquanto <code>5 !== 5</code> retorna false porque os
+        valores e tipos são iguais.
+      </p>
+    </article>
+
+    <article id="logic" class="card">
+      <h2>Operadores Lógicos</h2>
+      <p>
+        Os operadores lógicos são usados para combinar expressões booleanas e retornar um valor
+        booleano com base no resultado da combinação. Os operadores lógicos mais comuns são:
+      </p>
+      <ul>
+        <li>&& : E lógico</li>
+        <li>|| : OU lógico</li>
+        <li>! : NÃO lógico</li>
+      </ul>
+      <pre>
+        <code>
+          var a = true;
+          var b = false;
+
+          console.log(a && b); // false
+          console.log(a || b); // true
+          console.log(!a);     // false
+          console.log(!b);     // true
+        </code>
+      </pre>
+    </article>
+
+    <article id="strings" class="card">
+      <h2>Strings</h2>
+      <p>
+        Uma string é uma sequência de caracteres, como "Hello World!". Em JavaScript, as strings
+        são representadas por valores entre aspas simples (' ') ou aspas duplas (" ").
+      </p>
+      <p>
+        Existem várias operações que podem ser realizadas em strings, como concatenação, extração
+        de substrings, busca de padrões e substituição de texto.
+      </p>
+      <h3>Concatenação de Strings</h3>
+      <p>
+        A concatenação de strings é a operação de combinar duas ou mais strings em uma única string.
+        Em JavaScript, a concatenação de strings é feita usando o operador de adição (+).
+      </p>
+      <pre>
+        <code>
+          var nome = "João";
+          var sobrenome = "Silva";
+          var nomeCompleto = nome + " " + sobrenome;
+          console.log(nomeCompleto); // Saída: João Silva
+        </code>
+      </pre>
+
+      <section id="length">
+        <h3>Comprimento de uma String</h3>
+        <p>
+          O comprimento de uma string é o número de caracteres que ela contém. Em JavaScript, o
+          comprimento de uma string pode ser obtido usando a propriedade <code>length</code>.
+        </p>
+        <pre>
+          <code>
+            var texto = "Hello World!";
+            console.log(texto.length); // Saída: 12
+          </code>
+        </pre>
+      </section>
+
+      <section id="substring">
+        <h3>Extração de Substrings</h3>
+        <p>
+          Uma substring é uma parte de uma string. Em JavaScript, as substrings podem ser extraídas
+          usando o método <code>substring(pos inicial, pos final)</code> ou a notação de colchetes [].
+        </p>
+        <pre>
+          <code>
+            var texto = "Hello World!";
+            var substring = texto.substring(6, 11);
+            console.log(substring); // Saída: World
+  
+            var primeiraLetra = texto[0];
+            console.log(primeiraLetra); // Saída: H
+          </code>
+        </pre>
+      </section>
+
+      <section id="search">
+        <h3>Busca de Padrões</h3>
+        <p>
+          A busca de padrões em uma string é feita usando o método <code>indexOf()</code>.
+          O método <code>indexOf()</code> retorna a posição da primeira ocorrência de um padrão
+          na string, caso contrário retorna -1. É possivel também usar um segundo argumento
+          para indicar a posição inicial da busca.
+        </p>
+        <pre>
+          <code>
+            var texto = "Hello World!";
+            var posicao = texto.indexOf("World");
+            console.log(posicao); // Saída: 6
+            
+            var posicao2 = texto.indexOf("World", 8); // Começa a busca a partir da posição 7
+            console.log(posicao2); // Saída: -1 (não encontrado)
+          </code>
+        </pre>
+      </section>
+
+      <section id="replace">
+        <h3>Substituição de Texto</h3>
+        <p>
+          A substituição de texto em uma string é feita usando o método <code>replace()</code>.
+          Este método substitui uma parte da string por outra.
+        </p>
+        <pre>
+          <code>
+            var texto = "Hello World!";
+            var novoTexto = texto.replace("World", "JavaScript");
+            console.log(novoTexto); // Saída: Hello JavaScript!
+          </code>
+        </pre>
+      </section>
+
+      <section id="transform">
+        <h3>Transformando string em numeros</h3>
+        <p>
+          Em JavaScript, é possível converter uma string em um número usando as funções
+          <code>parseInt()</code> e <code>parseFloat()</code>.
+        </p>
+        <pre>
+          <code>
+            var numero = "42";
+            var numeroInteiro = parseInt(numero);
+            console.log(numeroInteiro); // Saída: 42
+
+            var numeroDecimal = parseFloat("3.14");
+            console.log(numeroDecimal); // Saída: 3.14
+          </code>
+        </pre>
+      </section>
+    </article>
+
+    <article id="estruturas" class="card">
+      <h2>Estruturas Condicionais</h2>
+      <p>
+        As estruturas condicionais são usadas para tomar decisões com base em condições específicas.
+        Em JavaScript, as estruturas condicionais mais comuns são:
+      </p>
+      <ul>
+        <li>if: Executa um bloco de código se a condição for verdadeira.</li>
+        <li>else: Executa um bloco de código se a condição for falsa.</li>
+        <li>
+          else if: Executa um bloco de código se a condição anterior for falsa e a nova
+          condição for verdadeira.
+        </li>
+        <li>switch: Executa um bloco de código com base em múltiplas condições.</li>
+      </ul>
+
+      <section id="if">
+        <h3>if</h3>
+        <p>
+          A estrutura <code>if</code> é usada para executar um bloco de código se a condição
+          for verdadeira.
+        </p>
+        <pre>
+          <code>
+            var idade = 18;
+  
+            if (idade &gt;= 18) {
+              console.log("Você é maior de idade.");
+            }
+          </code>
+        </pre>
+      </section>
+
+      <section id="else">
+        <h3>else</h3>
+        <p>
+          A estrutura <code>else</code> é usada para executar um bloco de código se a condição
+          for falsa.
+        </p>
+        <pre>
+          <code>
+            var idade = 16;
+  
+            if (idade &gt;= 18) {
+              console.log("Você é maior de idade.");
+            } else {
+              console.log("Você é menor de idade.");
+            }
+          </code>
+        </pre>
+      </section>
+
+      <section id="else-if">
+        <h3>else if</h3>
+        <p>
+          A estrutura <code>else if</code> é usada para executar um bloco de código se a
+          condição anterior for falsa e a nova condição for verdadeira.
+        </p>
+        <pre>
+          <code>
+            var hora = 14;
+  
+            if (hora &lt; 12) {
+              console.log("Bom dia!");
+            } else if (hora &lt; 18) {
+              console.log("Boa tarde!");
+            } else {
+              console.log("Boa noite!");
+            }
+          </code>
+        </pre>
+      </section>
+
+      <section id="ternary">
+        <h3>Operador ternário</h3>
+        <p>
+          O operador ternário é uma forma abreviada de escrever uma estrutura condicional
+          <code>if...else</code>. Ele é usado para atribuir um valor a uma variável com base
+          em uma condição.
+        </p>
+        <p>
+          a estrutura do operador ternário é:
+          <code>condição ? valorSeVerdadeiro : valorSeFalso</code>
+        </p>
+        <pre>
+          <code>
+            var idade = 18;
+            var mensagem = idade &gt;= 18 ? "Maior de idade" : "Menor de idade";
+            console.log(mensagem);
+          </code>
+        </pre>
+      </section>
+
+      <section id="switch">
+        <h3>switch</h3>
+        <p>
+          A estrutura <code>switch</code> é usada para executar um bloco de código com base
+          em múltiplas condições.
+        </p>
+        <pre>
+          <code>
+            var dia = 3;
+            var nomeDia;
+  
+            switch (dia) {
+              case 1:
+                nomeDia = "Domingo";
+                break;
+              case 2:
+                nomeDia = "Segunda-feira";
+                break;
+              case 3:
+                nomeDia = "Terça-feira";
+                break;
+              case 4:
+                nomeDia = "Quarta-feira";
+                break;
+              case 5:
+                nomeDia = "Quinta-feira";
+                break;
+              case 6:
+                nomeDia = "Sexta-feira";
+                break;
+              case 7:
+                nomeDia = "Sábado";
+                break;
+              default:
+                nomeDia = "Dia inválido";
+            }
+  
+            console.log("Hoje é " + nomeDia);
+          </code>
+        </pre>
+      </section>
+    </article>
+
+    <article id="repeticao" class="card">
+      <h2>Estrutura de Repetição</h2>
+      <p>
+        As estruturas de repetição são usadas para executar um bloco de código várias vezes.
+        Em JavaScript, as estruturas de repetição mais comuns são:
+      </p>
+      <ul>
+        <li>for: Executa um bloco de código um número específico de vezes.</li>
+        <li>while: Executa um bloco de código enquanto a condição for verdadeira.</li>
+        <li>
+          do...while: Executa um bloco de código pelo menos uma vez e depois enquanto a
+          condição for verdadeira.
+        </li>
+        <li>for...in: Itera sobre as propriedades de um objeto.</li>
+        <li>for...of: Itera sobre os elementos de um objeto iterável, como um array.</li>
+      </ul>
+      <section id="for">
+        <h3>for</h3>
+        <p>
+          A estrutura <code>for</code> é usada para executar um bloco de código um número
+          específico de vezes.
+        </p>
+        <pre>
+          <code>
+            for (var i = 0; i &lt; 5; i++) {
+              console.log(i);
+            }
+          </code>
+        </pre>
+      </section>
+
+      <section id="while">
+        <h3>while</h3>
+        <p>
+          A estrutura <code>while</code> é usada para executar um bloco de código enquanto a
+          condição for verdadeira.
+        </p>
+        <pre>
+          <code>
+            var i = 0;
+  
+            while (i &lt; 5) {
+              console.log(i);
+              i++;
+            }
+          </code>
+        </pre>
+      </section>
+
+      <section id="do-while">
+        <h3>do...while</h3>
+        <p>
+          A estrutura <code>do...while</code> é usada para executar um bloco de código pelo
+          menos uma vez e depois enquanto a condição for verdadeira.
+        </p>
+        <pre>
+          <code>
+            var i = 0;
+  
+            do {
+              console.log(i);
+              i++;
+            } while (i &lt; 5);
+          </code>
+        </pre>
+      </section>
+
+      <section id="for-in">
+        <h3>for...in</h3>
+        <p>
+          A estrutura <code>for...in</code> é usada para iterar sobre as propriedades de um objeto.
+        </p>
+        <pre>
+          <code>
+            var pessoa = {nome: "João", idade: 30, cidade: "São Paulo"};
+  
+            for (var propriedade in pessoa) {
+              console.log(propriedade + ": " + pessoa[propriedade]);
+            }
+          </code>
+        </pre>
+      </section>
+
+      <section id="for-of">
+        <h3>for...of</h3>
+        <p>
+          A estrutura <code>for...of</code> é usada para iterar sobre os elementos de um objeto
+          iterável, como um array.
+        </p>
+        <pre>
+          <code>
+            var numeros = [1, 2, 3, 4, 5];
+  
+            for (var numero of numeros) {
+              console.log(numero);
+            }
+          </code>
+        </pre>
+      </section>
+
+      <section id="break-continue">
+        <h3>break e continue</h3>
+        <p>
+          Os comandos <code>break</code> e <code>continue</code> são usados para controlar o
+          fluxo de execução de um loop.
+        </p>
+        <p>
+          O comando <code>break</code> interrompe a execução do loop e sai dele imediatamente.
+          O comando <code>continue</code> interrompe a execução do loop atual e continua para
+          a próxima iteração.
+        </p>
+        <pre>
+          <code>
+            for (var i = 0; i &lt; 5; i++) {
+              if (i === 3) {
+                break;
+              }
+              console.log(i);
+            }
+          </code>
+        </pre>
+        <pre>
+          <code>
+            for (var i = 0; i &lt; 5; i++) {
+              if (i === 3) {
+                continue;
+              }
+              console.log(i);
+            }
+          </code>
+        </pre>
+      </section>
+    </article>
+
+    <article id="arrays" class="card">
+      <h2>Arrays</h2>
+      <p>
+        Um array é uma coleção ordenada de valores, onde cada valor é identificado por um índice.
+        Em JavaScript, os arrays são objetos que podem armazenar múltiplos valores em uma única
+        variável.
+      </p>
+      <p>
+        Os arrays em JavaScript são dinâmicos, o que significa que eles podem crescer ou encolher
+        dinamicamente à medida que novos elementos são adicionados ou removidos.
+      </p>
+
+      <section id="criacao">
+        <h3>Criando um Array</h3>
+        <p>
+          Um array em JavaScript é criado usando colchetes [] e os elementos são separados
+          por vírgulas.
+        </p>
+        <pre>
+          <code>
+            var numeros = [1, 2, 3, 4, 5];
+            var nomes = ["João", "Maria", "Pedro"];
+          </code>
+        </pre>
+      </section>
+
+      <section id="acesso">
+        <h3>Acessando Elementos de um Array</h3>
+        <p>
+          Os elementos de um array são acessados usando o índice do elemento, que começa em 0.
+        </p>
+        <pre>
+          <code>
+            var numeros = [1, 2, 3, 4, 5];
+            console.log(numeros[0]); // Saída: 1
+            console.log(numeros[2]); // Saída: 3
+          </code>
+        </pre>
+      </section>
+
+      <section id="alteracao">
+        <h3>Alterando Elementos de um Array</h3>
+        <p>
+          Os elementos de um array podem ser alterados atribuindo um novo valor ao índice do elemento.
+        </p>
+        <pre>
+          <code>
+            var numeros = [1, 2, 3, 4, 5];
+            numeros[2] = 10;
+            console.log(numeros); // Saída: [1, 2, 10, 4, 5]
+          </code>
+        </pre>
+      </section>
+
+      <section id="adicao">
+        <h3>Adicionando Elementos a um Array</h3>
+        <p>
+          Novos elementos podem ser adicionados a um array usando o método <code>push()</code>.
+        </p>
+        <pre>
+          <code>
+            var numeros = [1, 2, 3, 4, 5];
+            numeros.push(6);
+            console.log(numeros); // Saída: [1, 2, 3, 4, 5, 6]
+          </code>
+        </pre>
+      </section>
+
+      <section id="remocao">
+        <h3>Removendo Elementos de um Array</h3>
+        <p>
+          Elementos de um array podem ser removidos usando o método <code>pop()</code>.
+        </p>
+        <pre>
+          <code>
+            var numeros = [1, 2, 3, 4, 5];
+            numeros.pop();
+            console.log(numeros); // Saída: [1, 2, 3, 4]
+          </code>
+        </pre>
+      </section>
+
+      <section id="iteracao">
+        <h3>Iterando sobre um Array</h3>
+        <p>
+          Os elementos de um array podem ser iterados usando um loop <code>for</code> ou
+          <code>for...of</code>.
+        </p>
+        <pre>
+          <code>
+            var numeros = [1, 2, 3, 4, 5];
+  
+            for (var i = 0; i &lt; numeros.length; i++) {
+              console.log(numeros[i]);
+            }
+          </code>
+        </pre>
+        <pre>
+          <code>
+            var numeros = [1, 2, 3, 4, 5];
+  
+            for (var numero of numeros) {
+              console.log(numero);
+            }
+          </code>
+        </pre>
+      </section>
+    </article>
+
+    <article id="funcoes" class="card">
+      <h2>Funções</h2>
+      <p>
+        Uma função é um bloco de código projetado para executar uma tarefa específica.
+        Em JavaScript, as funções são definidas usando a palavra-chave <code>function</code>,
+        seguida pelo nome da função, parênteses e um bloco de código entre chaves.
+      </p>
+
+      <section id="definicao">
+        <h3>Definindo uma Função</h3>
+
+        <pre>
+          <code>
+            function saudacao() {
+              console.log("Olá, Mundo!");
+            }
+          </code>
+        </pre>
+
+        <p>
+          Para executar o código dentro de uma função, você deve chamar a função pelo seu nome
+          seguido de parênteses.
+        </p>
+
+        <pre>
+          <code>
+            saudacao(); // Saída: Olá, Mundo!
+          </code>
+        </pre>
+      </section>
+
+      <section id="parametros">
+        <h3>Funções com Parâmetros</h3>
+        <p>
+          As funções podem receber valores de entrada chamados parâmetros.
+          Esses parâmetros são definidos dentro dos parênteses na definição da função.
+        </p>
+        <pre>
+          <code>
+            function saudacao(nome) {
+              console.log("Olá, " + nome + "!");
+            }
+  
+            saudacao("João"); // Saída: Olá, João!
+          </code>
+        </pre>
+      </section>
+
+      <section id="retorno">
+        <h3>Funções com Retorno</h3>
+        <p>
+          As funções podem retornar um valor usando a palavra-chave <code>return</code>.
+          O valor retornado pode ser armazenado em uma variável ou usado diretamente.
+        </p>
+        <pre>
+          <code>
+            function soma(a, b) {
+              return a + b;
+            }
+  
+            var resultado = soma(5, 3);
+            console.log(resultado); // Saída: 8
+          </code>
+        </pre>
+      </section>
+
+      <section id="funcoes-anonimas">
+        <h3>funções anônimas</h3>
+        <p>
+          As funções anônimas são funções sem nome que podem ser atribuídas a variáveis ou
+          passadas como argumentos para outras funções.
+        </p>
+        <pre>
+          <code>
+            var saudacao = function(nome) {
+              console.log("Olá, " + nome + "!");
+            };
+  
+            saudacao("Maria"); // Saída: Olá, Maria!
+          </code>
+        </pre>
+      </section>
+    </article>
+
+    <article id="objetos" class="card">
+      <h2>Objetos</h2>
+      <p>
+        Um objeto é uma coleção de propriedades, onde cada propriedade é uma chave-valor.
+        Em JavaScript, os objetos são usados para armazenar dados de forma estruturada e
+        acessá-los facilmente.
+      </p>
+
+      <section id="criacao-objetos">
+        <h3>Criando um Objeto</h3>
+        <p>
+          Um objeto em JavaScript é criado usando chaves {} e as propriedades são definidas
+          como pares chave-valor.
+        </p>
+        <pre>
+          <code>
+            var pessoa = {
+              nome: "João",
+              idade: 30,
+              cidade: "São Paulo"
+            };
+          </code>
+        </pre>
+      </section>
+
+      <section id="acesso-objetos">
+        <h3>Acessando Propriedades de um Objeto</h3>
+        <p>
+          As propriedades de um objeto podem ser acessadas usando a notação de ponto ou a
+          notação de colchetes.
+        </p>
+        <pre>
+          <code>
+            var nome = pessoa.nome;
+            console.log(nome); // Saída: João
+
+            var idade = pessoa["idade"];
+            console.log(idade); // Saída: 30
+          </code>
+        </pre>
+      </section>
+
+      <section id="alteracao-objetos">
+        <h3>Alterando Propriedades de um Objeto</h3>
+        <p>
+          As propriedades de um objeto podem ser alteradas atribuindo um novo valor à
+          chave da propriedade.
+        </p>
+        <pre>
+          <code>
+            pessoa.nome = "Maria";
+            console.log(pessoa.nome); // Saída: Maria
+
+            pessoa["idade"] = 25;
+            console.log(pessoa["idade"]); // Saída: 25
+          </code>
+        </pre>
+      </section>
+
+      <section id="metodos-objetos">
+        <h3>Métodos de um Objeto</h3>
+        <p>
+          Um método é uma função que é uma propriedade de um objeto. Os métodos são
+          definidos como funções dentro do objeto.
+        </p>
+        <pre>
+          <code>
+            var pessoa = {
+              nome: "João",
+              idade: 30,
+              
+              saudacao: function() {
+                console.log("Olá, meu nome é " + this.nome);
+              }
+            };
+
+            pessoa.saudacao(); // Saída: Olá, meu nome é João
+          </code>
+        </pre>
+        <p>
+          A palavra-chave <code>this</code> é uma referência ao objeto atual e é
+          usada para acessar suas propriedades e métodos.
+        </p>
+      </section>
+
+      <section id="construtores">
+        <h2>Construtores</h2>
+        <p>
+          Um construtor é uma função usada para criar novos objetos. Em JavaScript, os
+          construtores são definidos usando a palavra-chave <code>function</code> seguida
+          pelo nome do construtor.
+        </p>
+        <pre>
+          <code>
+            function Pessoa(nome, idade, cidade) {
+              this.nome = nome;
+              this.idade = idade;
+              this.cidade = cidade;
+            }
+
+            var pessoa1 = new Pessoa("João", 30, "São Paulo");
+            var pessoa2 = new Pessoa("Maria", 25, "Rio de Janeiro");
+          </code>
+        </pre>
+        <p>
+          A palavra-chave <code>new</code> é usada para criar uma nova instância de um
+          objeto usando um construtor.
+        </p>
+      </section>
+
+      <section id="forEach">
+        <h2>ForEach</h2>
+        <p>
+          O método <code>forEach()</code> é usado para executar uma função em cada elemento
+          de um array.
+        </p>
+        <pre>
+          <code>
+            var numeros = [1, 2, 3, 4, 5];
+
+            numeros.forEach(function(numero) {
+              console.log(numero);
+            });
+          </code>
+        </pre>
+      </section>
+
+      <section id="date">
+        <h2>Datas</h2>
+        <p>
+          Em JavaScript, as datas são representadas pelo objeto <code>Date</code>. O objeto
+          <code>Date</code> é usado para trabalhar com datas e horas em JavaScript.
+        </p>
+        <p>
+          Para criar uma nova data, você pode usar o construtor <code>Date()</code> sem
+          argumentos, que cria um objeto <code>Date</code> com a data e hora atuais.
+        </p>
+        <pre>
+          <code>
+            var dataAtual = new Date();
+            console.log(dataAtual);
+          </code>
+        </pre>
+        <p>
+          O objeto <code>Date</code> possui vários métodos para obter e definir os valores
+          de data e hora, como <code>getDate()</code>, <code>getMonth()</code>,
+          <code>getFullYear()</code>, <code>getHours()</code>, <code>getMinutes()</code>,
+          <code>getSeconds()</code>, etc.
+        </p>
+        <pre>
+          <code>
+            var data = new Date();
+            var dia = data.getDate();
+            var mes = data.getMonth() + 1;
+            var ano = data.getFullYear();
+            var hora = data.getHours();
+            var minutos = data.getMinutes();
+            var segundos = data.getSeconds();
+
+            console.log(dia + "/" + (mes) + "/" + ano + " " + hora + ":" + minutos + ":" + segundos);
+          </code>
+        </pre>
+        <p>
+          O método <code>getMonth()</code> retorna o mês de 0 a 11, onde 0 representa janeiro
+          e 11 representa dezembro. Por isso, é necessário adicionar 1 ao valor retornado para
+          obter o mês correto.
+        </p>
+      </section>
+    </article>
+
+    <article id="let-const" class="card">
+      <h3>Let e Const</h3>
+      <p>
+        Em JavaScript, as variáveis podem ser declaradas usando as palavras-chave <code>var</code>,
+        <code>let</code> e <code>const</code>. A diferença entre elas está no escopo e na
+        mutabilidade da variável.
+      </p>
+      <ul>
+        <li><code>var</code>: Escopo global, pode ser redeclarada e reatribuída.</li>
+        <li><code>let</code>: Escopo de bloco, não pode ser redeclarada, mas pode ser reatribuída.</li>
+        <li><code>const</code>: Escopo de bloco, não pode ser redeclarada e nem reatribuída.</li>
+      </ul>
+      <pre>
+        <code>
+          var a = 10;
+          const b = 30;
+
+          if (true) {
+            a = 20;
+            let c = 40;
+            // b = 50; // Erro: Assignment to constant variable.
+          }
+
+          console.log(a); // Saída: 20
+          console.log(b); // Saída: 30
+          // console.log(c); // Erro: c is not defined
+        </code>
+      </pre>
+      <p>
+        No exemplo acima, a variável <code>a</code> é declarada com <code>var</code> e pode ser
+        acessada dentro e fora do bloco <code>if</code>. A variável <code>b</code> é declarada com
+        <code>const</code> e não pode ser reatribuída. A variável <code>c</code> é declarada com
+        <code>let</code> e só pode ser acessada no escopo onde foi declarada, no caso dentro
+        do bloco <code>if</code>.
+      </p>
+      <p>
+        O uso de <code>let</code> e <code>const</code> é recomendado em vez de <code>var</code>
+        para evitar problemas de escopo e mutabilidade.
+      </p>
+    </article>
+  </main>
+
+  <footer id="footer">
+    <a href="https://github.com/MatheusRCG" target="_blank">
+      <img src="/src/Images/github-logo.png" alt="logo github">
+    </a>
+    <a href="https://www.linkedin.com/in/matheusrcg/" target="_blank">
+      <img src="/src/Images/linkedin-logo.png" alt="linkedin logo">
+    </a>
+  </footer>
+</body>
+
+</html>
