@@ -224,6 +224,51 @@
         </code>
       </pre>
     </article>
+
+    <article id="biblioteca-math" class="card">
+      <h2>Biblioteca Math</h2>
+      <p>
+        A biblioteca Math é uma biblioteca nativa do JavaScript que contém métodos matemáticos
+        para realizar operações matemáticas.
+      </p>
+      <p>
+        Alguns métodos da biblioteca Math são:
+      </p>
+      <ul>
+        <li><code>Math.abs()</code>: retorna o valor absoluto de um número.</li>
+        <li><code>Math.ceil()</code>: arredonda um número para cima.</li>
+        <li><code>Math.floor()</code>: arredonda um número para baixo.</li>
+        <li><code>Math.round()</code>: arredonda um número para o inteiro mais próximo.</li>
+        <li><code>Math.max()</code>: retorna o maior número de uma lista de números.</li>
+        <li><code>Math.min()</code>: retorna o menor número de uma lista de números.</li>
+        <li><code>Math.pow()</code>: retorna a base elevada ao expoente.</li>
+        <li><code>Math.sqrt()</code>: retorna a raiz quadrada de um número.</li>
+        <li><code>Math.random()</code>: retorna um numero aleatório entre 0 e 1</li>
+      </ul>
+      <p>
+        Para utilizar os métodos da biblioteca Math, você deve chamar o método Math seguido
+        de um ponto e o nome do método.
+      </p>
+      <pre>
+        <code>
+          const numero = -10;
+          console.log(Math.abs(numero)); // 10
+
+          let aleatorio = Math.random()*10; // número aleatório entre 0 e 10
+          console.log(Math.round(aleatorio)); // usa math.floor para arredondar o numero
+
+          let elevado = Math.pow(2, 3); // 2 elevado a 3
+
+          let numeros = [10, 20, 30];
+          let maximo = Math.max(...numeros); // 30
+        </code>
+      </pre>
+      <p>
+        em <code>Math.max()</code> o spread operator (...) é utilizado para passar os
+        elementos do array como argumentos para o método <code>Math.max()</code> ja que
+        esse método não aceita um array como argumento.
+      </p>
+    </article>
   </main>
 
   <footer id="footer">
