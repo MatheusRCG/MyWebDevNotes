@@ -269,14 +269,14 @@
         esse método não aceita um array como argumento.
       </p>
     </article>
-    
+
     <article id="json" class="card">
       <h2>JSON</h2>
       <p>
         JSON (JavaScript Object Notation) é um formato de dados que é utilizado para
-        representar objetos JavaScript em formato de texto. É muito utilizado para 
+        representar objetos JavaScript em formato de texto. É muito utilizado para
         enviar e receber dados de servidores, pois é um formato
-        de dados leve e fácil de ser lido e interpretado. Além disso, JSON é um formato 
+        de dados leve e fácil de ser lido e interpretado. Além disso, JSON é um formato
         de dados independente de linguagem, ou seja, pode ser utilizado
         em qualquer linguagem de programação.
       </p>
@@ -374,6 +374,118 @@
           console.log(pessoa); // {nome: 'Matheus', idade: 25, cidade: 'São Paulo'}
         </code>
       </pre>
+    </article>
+
+    <article id="timer-intervalo" class="card">
+      <h2>Timer e Intervalo</h2>
+      <p>
+        O JavaScript possui dois métodos para execut
+        ar código de forma assíncrona: <code>setTimeout()</code> e <code>setInterval()</code>.
+      </p>
+      <p>
+        O método <code>setTimeout()</code> executa uma função após um determinado tempo, que é
+        especificado em milissegundos.
+      </p>
+      <pre>
+        <code>
+          setTimeout(() => {
+            console.log('Executou após 2 segundos');
+          }, 2000);
+        </code>
+      </pre>
+      <p>
+        O método <code>setInterval()</code> executa uma função repetidamente em um intervalo de
+        tempo especificado.
+      </p>
+      <pre>
+        <code>
+          setInterval(() => {
+            console.log('Executou a cada 2 segundos');
+          }, 2000);
+        </code>
+      </pre>
+      <p>
+        Para parar a execução de um intervalo, você pode utilizar o método <code>clearInterval()</code>,
+        que recebe como parâmetro o ID do intervalo que você deseja parar.
+      </p>
+      <pre>
+        <code>
+          const intervalo = setInterval(() => {
+            console.log('Executou a cada 2 segundos');
+          }, 2000);
+
+          clearInterval(intervalo);
+        </code>
+      </pre>
+
+      <section id="contador-segundos">
+        <h3>Contador Segundos</h3>
+        <pre>
+          <code>
+            const numero = document.getElementById('numero');
+            const iniciar = document.getElementById('iniciar');
+            const parar = document.getElementById('parar');
+            const zerar = document.getElementById('zerar');
+
+            let segundos = 0;
+            let intervalo = null;
+
+            iniciar.addEventListener('click', () => {
+              if (intervalo) return;
+              intervalo = setInterval(() => {
+                segundos++;
+                numero.textContent = `${segundos.toString()} segundos`;
+              }, 1000);
+            });
+
+            parar.addEventListener('click', () => {
+              clearInterval(intervalo);
+              intervalo = null;
+            });
+
+            zerar.addEventListener('click', () => {
+              clearInterval(intervalo);
+              intervalo = null;
+              segundos = 0;
+              numero.textContent = `${segundos.toString()} segundos`;
+            });
+          </code>
+        </pre>
+        <h4 id="numero">0 segundos</h4>
+        <button id="iniciar">iniciar</button>
+        <button id="parar">parar</button>
+        <button id="zerar">zerar</button>
+
+        <script>
+          const numero = document.getElementById('numero');
+          const iniciar = document.getElementById('iniciar');
+          const parar = document.getElementById('parar');
+          const zerar = document.getElementById('zerar');
+
+          let segundos = 0;
+          let intervalo = null;
+
+          iniciar.addEventListener('click', () => {
+            if (intervalo) return;
+            intervalo = setInterval(() => {
+              segundos++;
+              numero.textContent = `${segundos.toString()} segundos`;
+            }, 1000);
+          });
+
+          parar.addEventListener('click', () => {
+            clearInterval(intervalo);
+            intervalo = null;
+          });
+
+          zerar.addEventListener('click', () => {
+            clearInterval(intervalo);
+            intervalo = null;
+            segundos = 0;
+            numero.textContent = `${segundos.toString()} segundos`;
+          });
+        </script>
+      </section>
     </article>
   </main>
 
