@@ -10,8 +10,9 @@ body {
 main {
   background-color: lightcyan;
   width: 500px;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 15px;
+  border-radius: 10px;
 }
 
 main * {
