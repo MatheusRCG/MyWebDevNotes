@@ -304,6 +304,77 @@
         O método <code>JSON.parse()</code> converte uma string JSON em um objeto JavaScript.
       </p>
     </article>
+
+    <article id="local-storage" class="card">
+      <h2>Persistência de dados</h2>
+      <p>
+        O Local Storage é uma forma de armazenar dados no navegador do usuário. Os dados
+        armazenados no Local Storage ficam disponíveis mesmo após o usuário fechar o navegador
+        ou desligar o computador.
+      </p>
+      <p>
+        Para armazenar dados no Local Storage, você pode utilizar o método <code>setItem()</code>,
+        que recebe como parâmetro o nome da chave e o valor que você deseja armazenar.
+      </p>
+      <pre>
+        <code>
+          localStorage.setItem('nome', 'Matheus');
+        </code>
+      </pre>
+      <p>
+        Para recuperar dados do Local Storage, você pode utilizar o método <code>getItem()</code>,
+        que recebe como parâmetro o nome da chave que você deseja recuperar.
+      </p>
+      <pre>
+        <code>
+          const nome = localStorage.getItem('nome');
+          console.log(nome); // Matheus
+        </code>
+      </pre>
+      <p>
+        Para remover um item do Local Storage, você pode utilizar o método <code>removeItem()</code>,
+        que recebe como parâmetro o nome da chave que você deseja remover.
+      </p>
+      <pre>
+        <code>
+          localStorage.removeItem('nome');
+        </code>
+      </pre>
+      <p>
+        Para remover todos os itens do Local Storage, você pode utilizar o método <code>clear()</code>.
+      </p>
+      <pre>
+        <code>
+          localStorage.clear();
+        </code>
+      </pre>
+      <p>
+        O Local Storage armazena os dados em pares chave-valor, onde a chave e o valor são
+        strings. Para armazenar objetos no Local Storage, você deve convertê-los para JSON
+        utilizando o método <code>JSON.stringify()</code>.
+      </p>
+      <pre>
+        <code>
+          const pessoa = {
+            nome: 'Matheus',
+            idade: 25,
+            cidade: 'São Paulo'
+          };
+
+          localStorage.setItem('pessoa', JSON.stringify(pessoa));
+        </code>
+      </pre>
+      <p>
+        Para recuperar um objeto do Local Storage, você deve converter a string JSON para um
+        objeto JavaScript utilizando o método <code>JSON.parse()</code>.
+      </p>
+      <pre>
+        <code>
+          const pessoa = JSON.parse(localStorage.getItem('pessoa'));
+          console.log(pessoa); // {nome: 'Matheus', idade: 25, cidade: 'São Paulo'}
+        </code>
+      </pre>
+    </article>
   </main>
 
   <footer id="footer">
