@@ -1,19 +1,28 @@
-let adultos = document.getElementById('adultos');
-let criancas = document.getElementById('criancas');
-let duracao = document.getElementById('duracao');
+const calc_btn = document.getElementById('calc_btn');
 
-let calc_btn = document.getElementById('calc_btn');
-
-let carne = document.getElementById('carne');
-let cerveja = document.getElementById('cerveja');
-let bebida = document.getElementById('refri');
+const carne = document.getElementById('carne');
+const cerveja = document.getElementById('cerveja');
+const bebida = document.getElementById('refri');
 
 function calcular() {
-  let qtd_carne = adultos.value + criancas.value * (duracao.value / 2);
+  let adultos = document.getElementById('adultos').value;
+  let criancas = document.getElementById('criancas').value;
+  let duracao = document.getElementById('duracao').value;
+  if (duracao < 6) {
+    var gm_carne = 400;
+    var gm_cerveja = 1200;
+    var gm_bebida = 1000;
+  } else {
+    var gm_carne = 650;
+    var gm_cerveja = 2000;
+    var gm_bebida = 1500;
+  }
 
-  let qtd_cerveja = adultos.value * duracao.value;
+  criancas *= 0.5;
 
-  let qtd_bebida = adultos.value * duracao.value + criancas.value * (duracao.value / 2);
+  let qtd_carne = (adultos + criancas) * gm_carne;
+  let qtd_cerveja = adultos * gm_cerveja;
+  let qtd_bebida = (adultos + criancas) * gm_bebida;
 
   carne.innerHTML = `${qtd_carne / 1000} Kg de Carne`;
   cerveja.innerHTML = `${Math.ceil(qtd_cerveja / 355)} Latas de Cerveja`;
