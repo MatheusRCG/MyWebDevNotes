@@ -104,7 +104,7 @@
       </p>
     </article>
 
-    <article id="querySelector" class="card">
+    <article id="modfy" class="card">
       <h2>Modificando elementos</h2>
       <p>
         Para modificar um elemento HTML, você pode utilizar as propriedades do objeto
@@ -138,6 +138,66 @@
       </pre>
       <p>
         O código acima altera a cor do texto do elemento com o id elementId para vermelho.
+      </p>
+    </article>
+
+    <article id="envents" class="card">
+      <h2>eventos</h2>
+      <p>
+        Eventos são ações que ocorrem em um elemento HTML, como um clique, um hover, um scroll, etc.
+        Você pode adicionar eventos a um elemento HTML utilizando o método <code>addEventListener()</code>.
+      </p>
+      <pre>
+        <code>
+          const element = document.getElementById('elementId');
+          element.addEventListener('click', () => {
+            console.log('Clicou no elemento');
+          });
+        </code>
+      </pre>
+      <p>
+        O código acima adiciona um evento de clique ao elemento com o id elementId, que exibe a
+        mensagem 'Clicou no elemento' no console quando o elemento é clicado.
+      </p>
+      <p>
+        Outra forma de fazer o codigo acima é passando uma função como segundo parâmetro do método,
+        ao invés de uma arrow function.
+      </p>
+      <pre>
+        <code>
+          const element = document.getElementById('elementId');
+          element.addEventListener('click', printar()) 
+          
+          function printar() {
+            console.log('Clicou no elemento');
+          };
+        </code>
+      </pre>
+      <p>
+        Usando o this dentro de um evento, você pode acessar o elemento que disparou o evento.
+        Isso é útil quando você deseja acessar o elemento que disparou o evento dentro da função
+        que trata o evento.
+      </p>
+      <pre>
+        <code>
+          const element = document.getElementById('elementId');
+          element.addEventListener('click', maiusculo) 
+          
+          function maiusculo() {
+            this.innerHTML = this.innerHTML.toUpperCase();
+          };
+        </code>
+      </pre>
+      <p>
+        O código acima adiciona um evento de clique ao elemento com o id elementId, que transforma
+        o texto do elemento em maiúsculo quando o elemento é clicado. Usando o this, você pode
+        acessar o elemento que disparou o evento. Nesse caso, o this se refere ao elemento com o id
+        elementId.
+      </p>
+      <p>
+        Podemos também adicionar eventos a um elemento HTML é utilizando os atributos de eventos
+        HTML, como <code>onclick, onmouseover, onscroll, etc.</code>. Porém, essa forma não é recomendada
+        pois mistura o HTML com o JavaScript.
       </p>
     </article>
   </main>
