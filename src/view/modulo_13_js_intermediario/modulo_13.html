@@ -269,6 +269,41 @@
         esse método não aceita um array como argumento.
       </p>
     </article>
+    
+    <article id="json" class="card">
+      <h2>JSON</h2>
+      <p>
+        JSON (JavaScript Object Notation) é um formato de dados que é utilizado para
+        representar objetos JavaScript em formato de texto. É muito utilizado para 
+        enviar e receber dados de servidores, pois é um formato
+        de dados leve e fácil de ser lido e interpretado. Além disso, JSON é um formato 
+        de dados independente de linguagem, ou seja, pode ser utilizado
+        em qualquer linguagem de programação.
+      </p>
+      <p>
+        JSON é composto por pares de chave e valor, onde a chave é uma string e o valor pode
+        ser um número, uma string, um booleano, um array, um objeto ou null.
+      </p>
+      <pre>
+        <code>
+          const pessoa = {
+            nome: 'Matheus',
+            idade: 25,
+            cidade: 'São Paulo'
+          };
+
+          const json = JSON.stringify(pessoa);
+          console.log(json); // {"nome":"Matheus","idade":25,"cidade":"São Paulo"}
+
+          const objeto = JSON.parse(json);
+          console.log(objeto); // {nome: 'Matheus', idade: 25, cidade: 'São Paulo'}
+        </code>
+      </pre>
+      <p>
+        O método <code>JSON.stringify()</code> converte um objeto JavaScript em uma string JSON.
+        O método <code>JSON.parse()</code> converte uma string JSON em um objeto JavaScript.
+      </p>
+    </article>
   </main>
 
   <footer id="footer">
