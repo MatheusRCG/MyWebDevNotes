@@ -200,6 +200,30 @@
         pois mistura o HTML com o JavaScript.
       </p>
     </article>
+
+    <article id="elementos-pai-filhos" class="card">
+      <h2>Elementos Pai e Filhos</h2>
+      <p>
+        Para acessar o elemento pai de um elemento HTML, você pode utilizar a propriedade
+        <code>parentElement</code> do objeto Element.
+      </p>
+      <pre>
+        <code>
+          const element = document.getElementById('elementId');
+          const parent = element.parentElement;
+        </code>
+      </pre>
+      <p>
+        Para acessar os elementos filhos de um elemento HTML, você pode utilizar a propriedade
+        <code>children</code> do objeto Element.
+      </p>
+      <pre>
+        <code>
+          const element = document.getElementById('elementId');
+          const children = element.children;
+        </code>
+      </pre>
+    </article>
   </main>
 
   <footer id="footer">
