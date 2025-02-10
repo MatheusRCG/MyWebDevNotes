@@ -31,12 +31,12 @@
     <article id="windown" class="card">
       <h2>Windown</h2>
       <p>
-        Windown é o objeto global do navegador, ele é o objeto que contém todos os outros 
-        objetos do navegador, como o document, history, location, navigator, screen, alert, 
+        Windown é o objeto global do navegador, ele é o objeto que contém todos os outros
+        objetos do navegador, como o document, history, location, navigator, screen, alert,
         confirm, prompt, etc.
       </p>
       <p>
-        Quando você declara uma variável sem o uso da palavra chave var, let ou const, ela 
+        Quando você declara uma variável sem o uso da palavra chave var, let ou const, ela
         é automaticamente atribuída ao objeto global, ou seja, ao objeto window.
       </p>
       <pre>
@@ -49,11 +49,11 @@
     <article id="document" class="card">
       <h2>document</h2>
       <p>
-        O objeto document é um objeto que representa o documento HTML que está sendo exibido 
+        O objeto document é um objeto que representa o documento HTML que está sendo exibido
         no navegador. Ele é um objeto filho do objeto window.
       </p>
       <p>
-        O objeto document é o principal objeto do DOM (Document Object Model), ele é o 
+        O objeto document é o principal objeto do DOM (Document Object Model), ele é o
         responsável por manipular o conteúdo HTML da página.
       </p>
       <pre>
@@ -66,8 +66,8 @@
     <article id="getElementById" class="card">
       <h2>Acessando Elementos</h2>
       <p>
-        Para acessar um elemento HTML através do JavaScript, você pode utilizar o método 
-        <code>getElementById()</code>, que recebe como parâmetro o id do elemento que 
+        Para acessar um elemento HTML através do JavaScript, você pode utilizar o método
+        <code>getElementById()</code>, que recebe como parâmetro o id do elemento que
         você deseja acessar.
       </p>
       <pre>
@@ -76,11 +76,11 @@
         </code>
       </pre>
       <p>
-        O método <code>getElementById()</code> retorna o elemento HTML que possui o id especificado, ou 
+        O método <code>getElementById()</code> retorna o elemento HTML que possui o id especificado, ou
         null caso não exista nenhum elemento com o id especificado.
       </p>
       <p>
-        Você também pode acessar um elemento HTML através de sua classe utilizando o 
+        Você também pode acessar um elemento HTML através de sua classe utilizando o
         <code>getElementsByClassName().</code>
       </p>
       <pre>
@@ -89,7 +89,8 @@
         </code>
       </pre>
       <p>
-        Outra forma de acessar um elemento HTML, é através de sua tag html utilizando o <code>getElementsByTagName()</code>.
+        Outra forma de acessar um elemento HTML, é através de sua tag html utilizando o
+        <code>getElementsByTagName()</code>.
       </p>
       <pre>
         <code>
@@ -97,8 +98,46 @@
         </code>
       </pre>
       <p>
-        O método <code>getElementsByTagName()</code> retorna uma coleção de elementos HTML que possuem a tag 
-        especificada, ou uma coleção vazia caso não exista nenhum elemento com a tag especificada.
+        O método <code>getElementsByTagName()</code> retorna uma coleção de elementos HTML que
+        possuem a tag especificada, ou uma coleção vazia caso não exista nenhum elemento com a
+        tag especificada.
+      </p>
+    </article>
+
+    <article id="querySelector" class="card">
+      <h2>Modificando elementos</h2>
+      <p>
+        Para modificar um elemento HTML, você pode utilizar as propriedades do objeto
+        Element, como <code>innerHTML, innerText, textContent</code>, etc.
+      </p>
+      <pre>
+        <code>
+          const element = document.getElementById('elementId');
+          element.innerHTML = 'Novo conteúdo';
+        </code>
+      </pre>
+      <p>
+        O código acima altera o conteúdo HTML do elemento com o id <code>elementId</code>
+        para 'Novo conteúdo'.
+      </p>
+      <p>
+        A diferença entre as propriedades <code>innerHTML, innerText e textContent</code> é que a
+        propriedade innerHTML retorna o conteúdo HTML do elemento, a propriedade innerText retorna
+        o conteúdo de texto do elemento, ja a propriedade textContent retorna o conteúdo de texto
+        do elemento incluindo os elementos filhos.
+      </p>
+      <p>
+        Você também pode modificar o estilo de um elemento HTML utilizando a propriedade style do
+        objeto Element.
+      </p>
+      <pre>
+        <code>
+          const element = document.getElementById('elementId');
+          element.style.color = 'red';
+        </code>
+      </pre>
+      <p>
+        O código acima altera a cor do texto do elemento com o id elementId para vermelho.
       </p>
     </article>
   </main>
