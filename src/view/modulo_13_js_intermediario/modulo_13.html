@@ -28,8 +28,78 @@
   </nav>
 
   <main id="content">
-    <article id="" class="card">
-      <h2>inicio</h2>
+    <article id="windown" class="card">
+      <h2>Windown</h2>
+      <p>
+        Windown é o objeto global do navegador, ele é o objeto que contém todos os outros 
+        objetos do navegador, como o document, history, location, navigator, screen, alert, 
+        confirm, prompt, etc.
+      </p>
+      <p>
+        Quando você declara uma variável sem o uso da palavra chave var, let ou const, ela 
+        é automaticamente atribuída ao objeto global, ou seja, ao objeto window.
+      </p>
+      <pre>
+        <code>
+          x = 10;
+          console.log(window.x); // 10
+        </code>
+      </pre>
+    </article>
+    <article id="document" class="card">
+      <h2>document</h2>
+      <p>
+        O objeto document é um objeto que representa o documento HTML que está sendo exibido 
+        no navegador. Ele é um objeto filho do objeto window.
+      </p>
+      <p>
+        O objeto document é o principal objeto do DOM (Document Object Model), ele é o 
+        responsável por manipular o conteúdo HTML da página.
+      </p>
+      <pre>
+        <code>
+          console.log(document); // document
+        </code>
+      </pre>
+    </article>
+
+    <article id="getElementById" class="card">
+      <h2>Acessando Elementos</h2>
+      <p>
+        Para acessar um elemento HTML através do JavaScript, você pode utilizar o método 
+        <code>getElementById()</code>, que recebe como parâmetro o id do elemento que 
+        você deseja acessar.
+      </p>
+      <pre>
+        <code>
+          const element = document.getElementById('elementId');
+        </code>
+      </pre>
+      <p>
+        O método <code>getElementById()</code> retorna o elemento HTML que possui o id especificado, ou 
+        null caso não exista nenhum elemento com o id especificado.
+      </p>
+      <p>
+        Você também pode acessar um elemento HTML através de sua classe utilizando o 
+        <code>getElementsByClassName().</code>
+      </p>
+      <pre>
+        <code>
+          const elements = document.getElementsByClassName('className');
+        </code>
+      </pre>
+      <p>
+        Outra forma de acessar um elemento HTML, é através de sua tag html utilizando o <code>getElementsByTagName()</code>.
+      </p>
+      <pre>
+        <code>
+          const elements = document.getElementsByTagName('tag');
+        </code>
+      </pre>
+      <p>
+        O método <code>getElementsByTagName()</code> retorna uma coleção de elementos HTML que possuem a tag 
+        especificada, ou uma coleção vazia caso não exista nenhum elemento com a tag especificada.
+      </p>
     </article>
   </main>
 
