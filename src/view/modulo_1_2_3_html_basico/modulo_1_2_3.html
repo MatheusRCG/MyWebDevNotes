@@ -5,124 +5,136 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HTML Básico</title>
-  
+
   <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-  <div id="header">
-    <a href="/">Início</a>
-    <h1>Módulo 1, 2 e 3 [HTML Básico]</h1>
-  </div>
-  <div id="content">
-    <div id="indice">
-      <h3>Índice</h3>
-      <ul>
-        <li>
-          <a href="#struct">Estrutura</a>
-        </li>
-        <li>
-          <a href="#titles">Títulos</a>
-        </li>
-        <li>
-          <a href="#paragrafos">Paragráfos, linhas, quebras e comentários</a>
-        </li>
-        <li>
-          <a href="#links">Links e Imagens</a>
-        </li>
-        <li>
-          <a href="#list">Listas</a>
-        </li>
-        <li>
-          <a href="#div">DIV's e ID's</a>
-        </li>
-      </ul>
-    </div>
-    <div id="struct">
-      <h2>Estrutura</h2>
+  <header id="top-bar">
+    <a href="/">
+      <img class="logo" src="../../Images/logo.png" alt="logo">
+    </a>
+    <h1>Módulo 1, 2 e 3 - HTML Básico</h1>
+  </header>
+
+  <nav id="nav">
+    <ul>
+      <li>
+        <a href="#struct-article">Estrutura Básica do HTML5</a>
+        <ul>
+          <li><a href="#elementos-section">Explicação dos Elementos</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#titles-article">Títulos</a>
+      </li>
+      <li>
+        <a href="#paragrafos-article">Parágrafos, Linhas, Quebras e Comentários</a>
+      </li>
+      <li>
+        <a href="#formatting-article">Formatação de Texto</a>
+      </li>
+      <li>
+        <a href="#links-article">Links</a>
+      </li>
+      <li>
+        <a href="#images-article">Imagens</a>
+        <ul>
+          <li><a href="#image-figcaption-section">Imagens com Legendas</a></li>
+          <li><a href="#image-link-section">Imagens com Links</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#list-article">Listas</a>
+        <ul>
+          <li><a href="#list-type-article">Tipos de Listas</a></li>
+          <li><a href="#list-customization-article">Personalização de Listas Ordenadas</a></li>
+          <li><a href="#list-sequence-article">Tipos de Numeração</a></li>
+          <li><a href="#list-hierarchy-article">Hierarquia em Listas</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#div-id-article">DIV's e ID's</a>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="content">
+    <article id="struct-article" class="card">
+      <h2>Estrutura Básica do HTML5</h2>
+      <p>Veja abaixo um exemplo da estrutura fundamental de um documento HTML5:</p>
       <pre>
-          <code>
-            &lt;html lang="pt-br"&gt;
-              &lt;head&gt;
-                &lt;meta charset="UTF-8" /&gt;
-                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
-                &lt;title&gt;Exemplo de código HTML5&lt;/title&gt;
-              &lt;/head&gt;
-              &lt;body&gt;
-                &lt;h1&gt;Titulo&lt;/h1&gt;
-                &lt;p&gt;Isso é um parágrafo.&lt;/p&gt;
-                &lt;!-- comentario --&gt;
-              &lt;/body&gt;
-            &lt;/html&gt;
-          </code>
-        </pre>
+        <code>
+          &lt;html lang="pt-br"&gt;
+            &lt;head&gt;
+              &lt;meta charset="UTF-8" /&gt;
+              &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+              &lt;title&gt;Exemplo de código HTML5&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+              &lt;h1&gt;Titulo&lt;/h1&gt;
+              &lt;p&gt;Isso é um parágrafo.&lt;/p&gt;
+              &lt;!-- comentario --&gt;
+            &lt;/body&gt;
+          &lt;/html&gt;
+        </code>
+      </pre>
 
-      <p>Essa é a estrutura basica do HTML5.</p>
+      <section id="elementos-section">
+        <h3>Explicação dos Elementos</h3>
+        <ul>
+          <li>
+            <code>&lt;html lang="pt-br"&gt;</code>: Define o início do documento HTML e
+            especifica o idioma do conteúdo (<code>lang="pt-br"</code> indica que a página
+            está em português do Brasil).
+          </li>
+          <li>
+            <code>&lt;head&gt;</code>: Contém metadados e informações essenciais para a página,
+            como título, estilos e links.
+          </li>
+          <li>
+            <code>&lt;meta charset="UTF-8" /&gt;</code>: Define a codificação de caracteres
+            como UTF-8, garantindo suporte a acentos e caracteres especiais.
+          </li>
+          <li>
+            <code>
+              &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+            </code>: Ajusta o comportamento da página em diferentes dispositivos.
+            <ul>
+              <li>
+                <code>width=device-width</code>: Define a largura da página igual à largura
+                do dispositivo.
+              </li>
+              <li>
+                <code>initial-scale=1.0</code>: Garante que a página seja carregada com zoom
+                padrão de 100%.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <code>&lt;title&gt;Exemplo de HTML5&lt;/title&gt;</code>: Define o título exibido
+            na aba do navegador.
+          </li>
+          <li>
+            <code>&lt;body&gt;</code>: Contém o conteúdo visível da página, como textos,
+            imagens e links.
+          </li>
+        </ul>
+      </section>
+    </article>
 
-      <ul>
-        <li>
-          Na primeira linha temos a tag <code>&lt;html&gt;</code> indicando que o documento é HTML seguido pelo
-          parametro <code>lang="pt-br</code>" que indica que a página será escrita em português do Brasil (perceba que
-          lang indica a linguagem em relação ao conteúdo e não em relação ao código).
-        </li>
-        <li>
-          Em seguida temos a abertuda da tag <code>&lt;head&gt;</code>, dentro dessa tag colocamos as informações meta,
-          title, links, stylesheets e etc.
-        </li>
-        <li>
-          No exemplo temos <code>&lt;meta charset="UTF-8"/&gt;</code>. A tag <code>&lt;meta&gt;</code> é uma tag que
-          abre e fecha em si mesma e fornece metadados sobre o documento (informações que descrevem outros dados e não
-          são exibidos diretamente na página, mas influenciam como a página é apresentada e interpretada). Nesse no
-          caso, indica que o conteúdo da pagina será escrito usando os padrões de digitação UTF-8.
-        </li>
-        <li>
-          Em sequência temos <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</code>
-          que é usada no HTML para controlar a forma como uma página web é exibida em diferentes dispositivos,
-          <ul>
-            <li>
-              O atributo <code>name</code> com o valor <code>"viewport"</code> especifica que esta meta tag está
-              definindo as propriedades da "janela de visualização" (viewport) da página.
-            </li>
-            <li>
-              O atributo <code>content</code> contém uma lista de propriedades e valores separados por vírgulas que
-              controlam a escala e a largura da viewport
-              <ul>
-                <li>
-                  <code>width=device-width</code> define a largura da viewport para ser igual à largura da tela do
-                  dispositivo. Isso significa que a largura da página será ajustada automaticamente para se adequar à
-                  largura do dispositivo em que está sendo visualizada. É especialmente útil para garantir que a página
-                  seja corretamente dimensionada em dispositivos móveis.
-                <li>
-                  Enquanto <code>initial-scale=1.0</code> define o nível inicial de zoom da página quando carregada pela
-                  primeira vez. Um valor de 1.0 significa que a página será exibida com um zoom de 100%, ou seja, sem
-                  ampliação ou redução.
-                </li>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      </li>
-      <li>
-        Por fim temos a tag <code>&lt;title&gt;Exemplo de código HTML5&lt;/title&gt;</code>, que dita qual o titulo da
-        página, esse tituço ficará escrito na aba do navegador.
-      </li>
-      <li>
-        Após fecharmos a tag <code>&lt;head&gt;</code>, é aberto a tag &lt;body&gt;, nesta ficará todo o conteúdo da
-        página. No exemplo temos um titulo, um parágrafo e um comentário, que serão explicados a seguir:
-      </li>
-      </ul>
-    </div>
 
-    <hr>
-    <div id="titles">
-      <h1>
-        Isso é um Título, é feito usando a tag "&lt;h1&gt;texto do título&lt;/h1&gt;" pra fazer o título da página
+    <article id="titles-article" class="card">
+      <h2>Títulos</h2>
+      <h1 style="color: #0808d8;">
+        Isso é um Título, é feito usando a tag <code>&lt;h1&gt;texto do título&lt;/h1&gt;</code> pra fazer o
+        título da página
       </h1>
       <h2>Titulos podem ter diferentes hierarquias</h2>
       <h3>Isso é feito usando a numeração que vem após o "h"</h3>
-      <h4>Por exemplo esse título foi feito usando &lt;h4&gt;título&lt;/h4&gt;</h4>
+      <h4>Por exemplo esse título foi feito usando <code>&lt;h4&gt;título&lt;/h4&gt;</code></h4>
       <h5>Você pode criar quantos titulos quiser para a página</h5>
-      <h6>Repetindo ou não o nível de hierarquia do título que vai de H1 até H6</h6>
+      <h6>Repetindo ou não o nível de hierarquia do título que vai de h1 até h6</h6>
 
       <h1>Título de nível 1</h1>
       <h2>Título de nível 2</h2>
@@ -130,37 +142,38 @@
       <h4>Título de nível 4</h4>
       <h5>Título de nível 5</h5>
       <h6>Título de nível 6</h6>
-    </div>
-    <hr>
-    <div id="paragrafos">
+    </article>
+
+    <article id="paragrafos-article" class="card">
       <h2>Paragráfos, linhas, quebras e comentários</h2>
 
-      <p>Isso é um paragráfo, é feito usando a tag <code>&lt;p&gt;</code> texto do parágrafo <code>&lt;/p&gt;</code></p>
-
-      <p>
-        Um paragrafo pode ser quebrado usando a tag <code>&lt;br&gt;</code> e linhas horizontais são feitas usando a tag
-        <code>&lt;hr&gt;</code>
+      <p>Isso é um paragráfo, é feito usando a tag
+        <code>&lt;p&gt;texto do parágrafo&lt;/p&gt;</code>
       </p>
-
       <p>
-        Comentarios são Textos no código que não aparecem na página (são feito para desenvolvedores lerem), em html,
-        comentarios são feito assim: <code>&lt;!-- seu comentario --&gt;</code>
+        Um paragrafo pode ser quebrado usando a tag <code>&lt;br&gt;</code> e linhas
+        horizontais são feitas usando a tag <code>&lt;hr&gt;</code> porém é mais indicado
+        que isso seja feito usando CSS
       </p>
+      <p>
+        Comentários são Textos no código que não aparecem na página
+        (são feito para desenvolvedores lerem). Em html,
+        comentários são feito assim: <code>&lt;!-- seu comentário --&gt;</code>
+      </p>
+    </article>
 
-      <hr>
-
+    <article id="formatting-article" class="card">
       <h2>Em html podemos fazer algumas formatações:</h2>
-
       <p>
         <b>Negrito:</b> <code>&lt;b&gt;texto&lt;/b&gt;</code>, tambem podemos usar a tag
         <code>&lt;strong&gt;texto&lt;/strong&gt;</code>, ambas tem o mesmo resultado visual porem usando
-        <code>strong</code> acrescenta um pouco mais de semantica (dizendo que o texto tem mais força) para o navegador
+        <code>strong</code> acrescenta um pouco mais de semântica (dizendo que o texto tem mais força) para o navegador
         e mecanismos de busca.
       </p>
       <p>
         <i>Italico:</i> <code>&lt;i&gt;texto&lt;/i&gt;</code> e tambem podemos usar a tag
-        <code>&lt;em&gt;texto&lt;/em&gt;</code>, ambas tem o mesmo resultado visual porem usando <code>em</code>
-        acrescenta um pouco mais de semantica (dizendo que o texto tem enfase) para o navegador e mecanismos de busca.
+        <code>&lt;em&gt;texto&lt;/em&gt;</code>, ambas tem o mesmo resultado visual porém usando <code>em</code>
+        acrescenta um pouco mais de semântica (dizendo que o texto tem ênfase) para o navegador e mecanismos de busca.
       </p>
       <p>
         <mark>Marcação:</mark> <code>&lt;mark&gt;texto&lt;/mark&gt;</code>, usado para deixar o texto marcado
@@ -170,41 +183,41 @@
         pouquinho menor, pode ser usado em notas de rodapé
       </p>
       <p>
-        <sub>Subscrito:</sub> <code>H&lt;sub&gt;2&lt;/sub&gt;</code>O Usado para deixar o texto subscrito
+        <sub>Subscrito:</sub> <code>H&lt;sub&gt;2&lt;/sub&gt;O</code> Usado para deixar o texto subscrito
         (H<sub>2</sub>O)
       </p>
       <p>
         <sup>Superscrito:</sup> <code>2&lt;sup&gt;2&lt;/sup&gt;</code>=4 Usado para deixar o texto subscrito
         (2<sup>2</sup>=4)
       </p>
-    </div>
-    <hr>
-    <div id="links">
-      <h2>Links e Imagens</h2>
+      </div>
+    </article>
 
+    <article id="links-article" class="card">
+      <h2>Links</h2>
       <p>
-        <a href="./modulo_1.html">Isso é um Link:</a>
-        Links são como meios de navegação entre paginas, cada link possui um endereço pra onde quer ir, e um texto.
+        <a href="https://www.google.com">Isso é um Link:</a>
+        Links são como meios de navegação entre páginas, cada link possuí um endereço pra onde quer ir, e um texto.
         assim:
         <br>
         <code>&lt;a href="./endereco"&gt;texto do link&lt;/a&gt;</code>
       </p>
       <p>
         <a href="https://www.google.com" target="_blank">Esse link abre o google em uma nova aba:</a> pra que isso seja
-        feito devemos colocar o parametro <code>target="_blank"</code> assim:
+        feito devemos colocar o parâmetro <code>target="_blank"</code> assim:
         <br>
         <code>&lt;a href="https://www.google.com" target="_blank"&gt;texto do link&lt;/a&gt;</code>
       </p>
       <p>
         Tel: <a href="tel:+5567992001234">+55 67 9 9200-1234:</a> Há a possibilidade de fazermos um link para um numero
-        de telefone, pra isso precisamos colocar <code>tel:</code> antes do numero no endereço do link ficando assim:
+        de telefone, pra isso precisamos colocar <code>tel:</code> antes do número no endereço do link ficando assim:
         <br>
         <code>&lt;a href="tel:+5567992001234"&gt;+55 67 9 9200-1234:&lt;/a&gt;</code>
       </p>
       <p>
         Whatsapp: <a href="https://wa.me/5567992001234" target="_blank">+55 67 9 9200-1234:</a>
         O whatapp tem a possibilidade de fazer links que direcionam para uma conversa, pra isso precisamos usar o padrão
-        <code>https://wa.me/numero-do-whatsapp</code>, o codigo fica assim:
+        <code>https://wa.me/numero-do-whatsapp</code>, o código fica assim:
         <br>
         <code>&lt;a https://wa.me/5567992001234" target="_blank"&gt;+55 67 9 9200-1234:&lt;/a&gt;</code>
       </p>
@@ -222,27 +235,34 @@
         <br>
         <code>&lt;a href="mailto:endereco_do_email@email.com"&gt;texto do email&lt;/a&gt;</code>
       </p>
-      <img src="./Images/html-logo.png" alt="Logo do HTML" width="75px">
+    </article>
+
+    <article id="images-article" class="card">
+      <h2>Imagens</h2>
       <p>
-        Imagens são inseridas através da tag <code>img</code>, nela temos o parametro <code>src</code> que será passado
-        o endereço da imagem (seja da internet ou dos próprios arquivos), outro parametro a ser passado é o
-        <code>alt</code> que é um texto alternativo normalmente descrevendo a imagem, esse texto aparecerá no caso do
-        endereço não ser encontrado. podemos tambem passar <code>width</code> e <code>height</code> para redimencionar a
-        imagem (porém é mais indicado que isso seja feito usando CSS)
-        <br>
+        Imagens são inseridas através da tag <code>img</code>, nela temos o parâmetro
+        <code>src</code> que será passado o endereço da imagem (seja da internet ou dos
+        próprios arquivos),
+      </p>
+      outro parâmetro a ser passado é o <code>alt</code> que é um
+      texto alternativo normalmente descrevendo a imagem, esse texto aparecerá no caso do
+      endereço não ser encontrado.
+      </p>
+      <p>
+        podemos tambem passar <code>width</code> e <code>height</code>
+        para redimencionar a imagem (porém é mais indicado que isso seja feito usando CSS)
         <code>&lt;img src="./Images/html-logo.png" alt="Logo do HTML"width="75px"&gt;</code>
       </p>
-      <figure>
-        <img src="./Images/html-logo.png" alt="Logo do HTML" width="75px">
-        <figcaption>
+      <img src="./Images/html-logo.png" alt="Logo do HTML" width="75px">
+
+      <section id="image-figcaption-section">
+        <h3>Imagens com legendas</h3>
+        <p>
           Imagens com legendas são feitas usando a tag <code>&lt;figure&gt;conteúdo&lt;/figure&gt;</code>
-        </figcaption>
-      </figure>
-      <p>
-        Dentro dessa tag colocamos a imagem com a tag <code>img</code> e a legenda é feita com
-        <code>&lt;figcaption&gt;legenda&lt;/figcaption&gt;</code>, o resultado fica assim:
-      </p>
-      <pre>
+          Dentro dessa tag colocamos a imagem com a tag <code>img</code> e a legenda é feita com
+          <code>&lt;figcaption&gt;legenda&lt;/figcaption&gt;</code>.
+        </p>
+        <pre>
           <code>
             &lt;figure&gt;
               &lt;img src="./Images/html-logo.png" alt="Logo do HTML" width="100px"&gt;
@@ -252,115 +272,123 @@
             &lt;/figure&gt;
           </code>
         </pre>
-      <a href="./index.html">
-        <img src="./Images/html-logo.png" alt="Logo do Html" width="75px">
-      </a>
-      <p>
-        É possivel também inserir uma imagem com link, pra isso precisamos colocar a tag <code>&lt;img&gt;</code> no
-        conteúdo da tag <code>&lt;a&gt;</code>, o codígo ficaria assim:
-      </p>
-      <pre>
-          <code>
-            &lt;a href="./endereco/do-link"&gt;
-              &lt;img src="./endereco/da/imagem.extencao" alt="texto alternativo"&gt;
-            &lt;/a&gt;
-          </code>
-        </pre>
-    </div>
-    <hr>
-    <div id="list">
-      <h2>Listas</h2>
+        <figure>
+          <img src="./Images/html-logo.png" alt="Logo do HTML" width="75px">
+          <figcaption>
+            Texto da legenda
+          </figcaption>
+        </figure>
+      </section>
 
-      <p>
-        Existem 2 Tipos de listas, as listas ordenadas e as não ordenadas:
-      </p>
-      <ol>
-        <li>
-          Listas ordenadas são feitas usando a tag <code>&lt;ol&gt;itens&lt;/ol&gt;</code>
-        </li>
-        <li>
-          Listas não ordenadas são feitas usando a tag <code>&lt;ul&gt;itens&lt;/ul&gt;</code>
-        </li>
-        <li>
-          Para inserir itens em ambas as listas precisamos usar a tag <code>&lt;li&gt;conteúdo&lt;/li&gt;</code>
-        </li>
-      </ol>
-      <ol reversed>
-        <li>
-          Para inverter a lista podemos usar o parametro <code>reversed</code>
-        </li>
-        <li>o codigo fica assim: <code>&lt;ol reversed&gt;itens&lt;/ol&gt;</code></li>
-      </ol>
-      <ol start="15">
-        <li>podemos tambem dizer onde a lista iniciará usando o parametro <code>start</code></li>
-        <li>o codigo fica assim: <code>&lt;ol start="15"&gt;itens&lt;/ol&gt;</code></li>
-      </ol>
-      <ol type="a">
-        <li>
-          Há a possibilidade também de dizer o tipo de lista que queremos usando <code>type</code>
-        </li>
-        <li>
-          o codigo fica assim: <code>&lt;ol type="a"&gt;itens&lt;/ol&gt;</code>
-        </li>
-        <li>
-          Os tipos de listas que podemos ter são:
-          <ol type="A">
-            <li>Alfabeto maiusculo usando <code>Type="A"</code></li>
-          </ol>
-          <ol type="a">
-            <li>Alfabeto minusculo usando <code>Type="a"</code></li>
-          </ol>
-          <ol type="I">
-            <li>Numeros romano maiusculo usando <code>Type="I"</code></li>
-          </ol>
-          <ol type="i">
-            <li>Numeros romano minusculo usando <code>Type="i"</code></li>
-          </ol>
-          <ol>
-            <li>E o que ja conhecemos que é o numeral</li>
-          </ol>
-        </li>
-        <li>
-          Pra fazer hierarquia de itens precisamos colocar uma lista dentro de outra, o código fica assim:
-        </li>
-      </ol>
-      <pre>
+      <section id="image-link-section">
+        <h3>Imagens com links</h3>
+        <a href="./index.html">
+          <img src="./Images/html-logo.png" alt="Logo do Html" width="75px">
+        </a>
+        <p>
+          É possivel também inserir uma imagem com link, pra isso precisamos colocar a tag <code>&lt;img&gt;</code> no
+          conteúdo da tag <code>&lt;a&gt;</code>, o codígo ficaria assim:
+        </p>
+        <pre>
+            <code>
+              &lt;a href="./endereco/do-link"&gt;
+                &lt;img src="./endereco/da/imagem.extencao" alt="texto alternativo"&gt;
+              &lt;/a&gt;
+            </code>
+          </pre>
+      </section>
+    </article>
+
+    <article id="list-article" class="card">
+      <h2>Listas em HTML</h2>
+      <p>O HTML possui dois tipos principais de listas: ordenadas e não ordenadas.</p>
+
+      <section id="list-type-article">
+        <h3>Tipos de Listas</h3>
+        <ul>
+          <li>
+            Listas ordenadas: Criadas com a tag <code>&lt;ol&gt;</code>, onde os itens são numerados automaticamente.
+          </li>
+          <li>
+            Listas não ordenadas: Criadas com a tag <code>&lt;ul&gt;</code>, onde os itens são marcados com símbolos.
+          </li>
+          <li>
+            Itens de lista: Em ambas, os itens são definidos com a tag <code>&lt;li&gt;conteúdo&lt;/li&gt;</code>.
+          </li>
+        </ul>
+      </section>
+
+      <section id="list-customization-article">
+        <h3>Personalização de Listas Ordenadas</h3>
+        <ul>
+          <li>
+            Inversão da ordem: Usando o atributo <code>reversed</code>, os itens são exibidos em ordem
+            decrescente.
+            <br>
+            Exemplo: <code>&lt;ol reversed&gt;itens&lt;/ol&gt;</code>
+          </li>
+          <li>
+            Definir o início da numeração: O atributo <code>start</code> define o número inicial da contagem.
+            <br>
+            Exemplo: <code>&lt;ol start="15"&gt;itens&lt;/ol&gt;</code>
+          </li>
+          <li>
+            Definir o tipo de marcador: O atributo <code>type</code> permite escolher diferentes estilos de
+            numeração.
+            <br>
+            Exemplo: <code>&lt;ol type="a"&gt;itens&lt;/ol&gt;</code>
+          </li>
+        </ul>
+      </section>
+
+      <section id="list-sequence-article">
+        <h3>Tipos de numeração</h3>
+        <ul>
+          <li><code>type="A"</code>: Alfabeto maiúsculo (A, B, C...)</li>
+          <li><code>type="a"</code>: Alfabeto minúsculo (a, b, c...)</li>
+          <li><code>type="I"</code>: Números romanos maiúsculos (I, II, III...)</li>
+          <li><code>type="i"</code>: Números romanos minúsculos (i, ii, iii...)</li>
+          <li>Padrão: Numeração decimal (1, 2, 3...)</li>
+        </ul>
+      </section>
+
+      <section id="list-hierarchy-article">
+        <h3>Hierarquia em Listas</h3>
+        <p>Para criar listas aninhadas (subníveis), basta inserir uma lista dentro de outra.</p>
+  
+        <pre>
           <code>
             &lt;ul&gt;
               &lt;li&gt;
-                item
+                Item principal
                 &lt;ul&gt;
-                  &lt;li&gt;
-                    item dentro do item
-                  &lt;/li&gt;
+                  &lt;li&gt;Item dentro do item&lt;/li&gt;
                 &lt;/ul&gt;
               &lt;/li&gt;
             &lt;/ul&gt;
           </code>
         </pre>
+  
+        <h4>Resultado:</h4>
+        <ul>
+          <li>
+            Item principal
+            <ul>
+              <li>Item dentro do item</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </article>
 
-      <h3>Resultado:</h3>
-      <ul>
-        <li>
-          item
-          <ul>
-            <li>
-              item dentro do item
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <hr>
-
-    <div id="div">
+    <article id="div-id-article" class="card">
       <h2>DIV's e ID's</h2>
       <p>
         A tag <code>&lt;div&gt;</code> cria um contêiner genérico que é utilizado para agrupar outros elementos HTML e
         aplicar estilos ou scripts a eles de forma conjunta. "Div" é uma abreviação de "division" (divisão)
       </p>
       <p>
-        Id's é um parametro adicionado a elementos html para que estes elementos possam ser posteriormente referenciados
+        Id's é um parâmetro adicionado a elementos html para que estes elementos possam ser posteriormente referenciados
       </p>
       <p>
         Aqui temos um exemplo de uma <code>&lt;div&gt;</code> junto com um <code>id</code> que contem uma lista de links
@@ -371,7 +399,7 @@
             &lt;div id="indice"&gt;
               &lt;ul>
                 &lt;li>
-                  &lt;a href="#nome_do_id"&gt;texto de referencia&lt;/a&gt;
+                  &lt;a href="#nome_do_id"&gt;texto de referência&lt;/a&gt;
                 &lt;/li&gt;
                 &lt;li&gt;
                   &lt;a href="#div_exemplo"&gt;Div Exemplo&lt;/a&gt;
@@ -392,7 +420,7 @@
         <div id="indice">
           <ul>
             <li>
-              <a href="#nome_do_id">texto de referencia</a>
+              <a href="#nome_do_id">texto de referência</a>
             </li>
             <li>
               <a href="#div_exemplo">Div Exemplo</a>
@@ -404,41 +432,24 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores provident odio ipsam? Natus architecto
             veritatis eligendi numquam accusantium expedita illum id, iure sapiente dolores omnis facere assumenda
             obcaecati recusandae vero! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, maxime hic,
-            nam alias consequatur eligendi eos explicabo ad blanditiis totam placeat cumque saepe praesentium commodi
-            eum enim sit. Sit, et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis odio, asperiores
-            numquam nam aliquam, soluta facere dicta quidem doloremque molestiae officiis iste, voluptatibus voluptates
+            n consequuntur, unde beatae, sunt deserunt magnam neque commodi
+            ex harum ipsam suscipit modi exercitationem! Nesciunt, tenetur. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. At, laudantium totam. Quidem, tenetur nemo sit aspernatur quo voluptatum culpa architecto
+            blanditiis placeat molestiae eum ullam, eveniet eius nulla nisi laborum!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores provident odio ipsam? Natus architecto
+            veritatis eligendi numquam accusantium expedita illum id, iure sapiente dolores omnis facere assumenda
+             consequuntur, unde beatae, sunt deserunt magnam neque commodi
+            ex harum ipsam suscipit modi exercitationem! Nesciunt, tenetur. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. At, laudantium totam. Quidem, tenetur nemo sit aspernatur quo voluptatum culpa architecto
+            blanditiis placeat molestiae eum ullam, eveniet eius nulla nisi laborum!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores provident odio ipsam? Natus architecto
+            veritatis eligenduidem doloremque molestiae officiis iste, voluptatibus voluptates
             quasi nulla corrupti libero aperiam! Esse! Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Distinctio ducimus quasi voluptatum qui non, consequuntur, unde beatae, sunt deserunt magnam neque commodi
             ex harum ipsam suscipit modi exercitationem! Nesciunt, tenetur. Lorem ipsum dolor sit amet consectetur
             adipisicing elit. At, laudantium totam. Quidem, tenetur nemo sit aspernatur quo voluptatum culpa architecto
             blanditiis placeat molestiae eum ullam, eveniet eius nulla nisi laborum!</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores provident odio ipsam? Natus architecto
-            veritatis eligendi numquam accusantium expedita illum id, iure sapiente dolores omnis facere assumenda
-            obcaecati recusandae vero! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, maxime hic,
-            nam alias consequatur eligendi eos explicabo ad blanditiis totam placeat cumque saepe praesentium commodi
-            eum enim sit. Sit, et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis odio, asperiores
-            numquam nam aliquam, soluta facere dicta quidem doloremque molestiae officiis iste, voluptatibus voluptates
-            quasi nulla corrupti libero aperiam! Esse! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Distinctio ducimus quasi voluptatum qui non, consequuntur, unde beatae, sunt deserunt magnam neque commodi
-            ex harum ipsam suscipit modi exercitationem! Nesciunt, tenetur. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. At, laudantium totam. Quidem, tenetur nemo sit aspernatur quo voluptatum culpa architecto
-            blanditiis placeat molestiae eum ullam, eveniet eius nulla nisi laborum!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores provident odio ipsam? Natus architecto
-            veritatis eligendi numquam accusantium expedita illum id, iure sapiente dolores omnis facere assumenda
-            obcaecati recusandae vero! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, maxime hic,
-            nam alias consequatur eligendi eos explicabo ad blanditiis totam placeat cumque saepe praesentium commodi
-            eum enim sit. Sit, et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis odio, asperiores
-            numquam nam aliquam, soluta facere dicta quidem doloremque molestiae officiis iste, voluptatibus voluptates
-            quasi nulla corrupti libero aperiam! Esse! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Distinctio ducimus quasi voluptatum qui non, consequuntur, unde beatae, sunt deserunt magnam neque commodi
-            ex harum ipsam suscipit modi exercitationem! Nesciunt, tenetur. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. At, laudantium totam. Quidem, tenetur nemo sit aspernatur quo voluptatum culpa architecto
-            blanditiis placeat molestiae eum ullam, eveniet eius nulla nisi laborum!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores provident odio ipsam? Natus architecto
-            veritatis eligendi numquam accusantium expedita illum id, iure sapiente dolores omnis facere assumenda
-            obcaecati recusandae vero! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, maxime hic,
-            nam alias consequatur eligendi eos explicabo ad blanditiis totam placeat cumque saepe praesentium commodi
-            eum enim sit. Sit, et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis odio, asperiores
             numquam nam aliquam, soluta facere dicta quidem doloremque molestiae officiis iste, voluptatibus voluptates
             quasi nulla corrupti libero aperiam! Esse! Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Distinctio ducimus quasi voluptatum qui non, consequuntur, unde beatae, sunt deserunt magnam neque commodi
@@ -473,8 +484,8 @@
         </div>
         </p>
       </div>
-    </div>
-  </div>
+    </article>
+  </main>
 </body>
 
 </html>
