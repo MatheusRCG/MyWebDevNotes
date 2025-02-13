@@ -6,136 +6,151 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Módulo 5 CSS Básico</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-  <div id="header">
-    <a href="/">Início</a>
+  <header id="top-bar">
+    <a href="/">
+      <img class="logo" src="../../Images/logo.png" alt="logo">
+    </a>
     <h1>Módulo 5 CSS Básico</h1>
-  </div>
+  </header>
 
-  <div id="content">
+  <nav id="nav">
+    <ul>
+      <li>
+        <a href="#css-types-article">Tipos de CSS</a>
+        <ul>
+          <li><a href="#inline-section">CSS Inline</a></li>
+          <li><a href="#internal-section">CSS Interno</a></li>
+          <li><a href="#external-section">CSS Externo</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#selectors-article">Elemento, Classes e Id's</a>
+      </li>
+      <li>
+        <a href="#selectors-article">Cores</a>
+        <ul>
+          <li><a href="#default-colors-section">Cores Padrões</a></li>
+          <li><a href="#rgb-colors-section">Cores usando RGB</a></li>
+          <li><a href="#opacity-section">Opacidade</a></li>
+          <li><a href="#hex-colors-section">Cores usando HEXdecimal</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#backgrounds-article">Backgrounds</a>
+        <ul>
+          <li><a href="#background-default-section">Background Padrão</a></li>
+          <li><a href="#background-cover-section">Background Cover</a></li>
+          <li><a href="#background-contain-section">Background Contain</a></li>
+          <li><a href="#background-position-section">Background Position</a></li>
+          <li><a href="#background-fixed-section">Background Fixed</a></li>
+          <li><a href="#background-gradient-section">Background Gradient</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#unit-measurements-article">Unidades de medidas</a>
+        <ul>
+          <li><a href="#pixel-section">Pixel</a></li>
+          <li><a href="#percentage-section">Porcentagem</a></li>
+          <li><a href="#view-port-section">Viewport</a></li>
+          <li><a href="#em-rem-section">Unidade de medida para Texto</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#text-adjust-article">Ajustes de Texto</a>
+        <ul>
+          <li><a href="#text-decoration-section">Text-decoration</a></li>
+          <li><a href="#text-transform-section">Text Transform</a></li>
+          <li><a href="#text-align-section">Text Align</a></li>
+          <li><a href="#spacing-section">letter-spacing</a></li>
+          <li><a href="#word-spacing-section">word-spacing</a></li>
+          <li><a href="#line-height-section">line-height</a></li>
+          <li><a href="#text-indent-section">text-indent</a></li>
+          <li><a href="#text-shadow-section">Text-Shadow</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#font-adjust-article">Ajuste de fonte</a>
+        <ul>
+          <li><a href="#font-family-section">Font Family</a></li>
+          <li><a href="#font-style-section">Font Style</a></li>
+          <li><a href="#font-weight">Font Weight</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#borders-article">Bordas</a>
+        <ul>
+          <li><a href="#border-section">Tipos de bordas</a></li>
+          <li><a href="#border-radius-section">Border Radius</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#margin-padding-article">Margin e Padding</a>
+        <ul>
+          <li><a href="#margin-section">Margin</a></li>
+          <li><a href="#padding-section">Padding</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#box-sizing-article">box sizing</a>
+      </li>
+      <li>
+        <a href="#overflow-article">Overflow</a>
+      </li>
+      <li>
+        <a href="#links-article">Links</a>
+        <ul>
+          <li><a href="#link-buttom-section">Link como Botão</a></li>
+          <li><a href="#link-hover-section">Hover</a></li>
+          <li><a href="#link-active-section">Active</a></li>
+          <li><a href="#link-visited-section">Visited</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#lists-article">Listas</a>
+        <ul>
+          <li><a href="#unordered-list-section">Listas Não Ordenadas</a></li>
+          <li><a href="#ordered-list-section">Listas Ordenadas</a></li>
+          <li><a href="#list_styling-section">Estilizando Listas</a></li>
+          <li><a href="#list-image-section">Estilizando Listas com Imagens</a></li>
+          <li><a href="#list-style-example-section">Lista estilizada</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 
-    <div id="indice">
-      <h3>Índice</h3>
-      <ul>
-        <li> 
-          <a href="#tiposCss">Tipos de Css</a>
-          <ul>
-            <li><a href="#inline">CSS Inline</a></li>
-            <li><a href="#interno">CSS Interno</a></li>
-            <li><a href="#externo">CSS Externo</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#elemento_classes_e_ids">Elemento, Classes e Id's</a>
-        </li>
-        <li>
-          <a href="#colors">Cores</a>
-          <ul>
-            <li><a href="#default_colors">Cores Padrões</a></li>
-            <li><a href="#rgb_colors">Cores usando RGB</a></li>
-            <li><a href="#rgba_colors">Opacidade</a></li>
-            <li><a href="#hex_colors">Cores usando HEXdecimal</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#backgrounds">Backgrounds</a>
-          <ul>
-            <li><a href="#backgroud_repeat_div">Background Padrão</a></li>
-            <li><a href="#background_cover_div">Background Cover</a></li>
-            <li><a href="#background_contain_div">Background Contain</a></li>
-            <li><a href="#background_position_div">Background Position</a></li>
-            <li><a href="#background_fixed_div">Background Fixed</a></li>
-            <li><a href="#background_color_gradient">Background Gradient</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#unitMeasurements">Unidades de medidas</a>
-          <ul>
-            <li><a href="#px_example">Pixel</a></li>
-            <li><a href="#%_exemple">Porcentagem</a></li>
-            <li><a href="#unitViewPort">Viewport</a></li>
-            <li><a href="#unitText">Unidade de medida para Texto</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#textAdjust">Ajustes de Texto</a>
-          <ul>
-            <li><a href="#text-decoration">Text-decoration</a></li>
-            <li><a href="#text-transfomr">Text Transform</a></li>
-            <li><a href="#alinhamento">Alinhamento de texto</a></li>
-            <li><a href="#styling">Embelezamento</a></li>
-            <li><a href="#indentation">Indentação</a></li>
-            <li><a href="#text-shadow">Text-Shadow</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#fontAdjust">Ajuste de Fonte</a>
-          <ul>
-            <li><a href="#font-family">Font Family</a></li>
-            <li><a href="#font-style">Font style</a></li>
-            <li><a href="#font-weight">Font Weight</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#border">Bordas</a>
-        </li>
-        <li>
-          <a href="#marginPadding">Margin e Padding</a>
-        </li>
-        <li>
-          <a href="#box-sizing">Box Sizing</a>
-        </li>
-        <li>
-          <a href="#overflow">Overflow</a>
-        </li>
-        <li>
-          <a href="#links">Links</a>
-        </li>
-        <li>
-          <a href="#listas">Listas</a>
-          <ul>
-            <li><a href="#unordered_list">Listas Não Ordenadas</a></li>
-            <li><a href="#ordered_list">Listas Ordenadas</a></li>
-            <li><a href="#list_styling">Estilizando Listas</a></li>
-            <li><a href="#custom_list_styling">Estilizando Listas com Imagens</a></li>
-            <li><a href="#listaBemEstilizada">Lista estilizada</a></li>
-          </ul>
-        </li>
-
-
-      </ul>
-    </div>
-
-    <p>
-      Para acrescentar estilo a nossa pagina usamos o CSS, basicamente temos 3 formas de usa-lo:
-    </p>
-
-    <div id="tiposCss">
+  <main id="content">
+    <article id="css-types-article" class="card">
       <h2>Tipos de CSS</h2>
+      <p>
+        Para acrescentar estilo a nossa página usamos o CSS, basicamente temos 3 formas de usa-lo:
+      </p>
       <p>
         O CSS pode ser usado de 3 formas, inline, interno e externo, cada uma dessas formas tem suas
         vantagens e desvantagens.
       </p>
 
-      <div id="inline">
+      <section id="inline-section">
         <h3>CSS Inline</h3>
         <p>
           Podemos adicionar um estilo na própria criação do elemento, pra isso usamos o parâmetro
-          <code>style="codigo css"</code>
+          <code>style="código css"</code>
         </p>
-
-        <h4>Código:</h4>
         <pre>
           <code>
-            &lt;p style="background-color: red; color: white;"&gt;texto do paragrafo&lt;/p&gt;
+            &lt;p style="background-color: red; color: white;"&gt;texto do parágrafo &lt;/p&gt;
           </code>
         </pre>
 
         <h4>Resultado:</h4>
-        <p class="red">texto do paragrafo</p>
+        <div class="result">
+
+          <p class="red">texto do parágrafo </p>
+        </div>
 
         <ul>
           <li>Para modificarmos a cor do fundo usamos: <code>background-color: cor_desejada</code></li>
@@ -143,16 +158,16 @@
           <li>Quando temos mais de uma modificação, separamos elas por <code>;</code> <br></li>
           <li>Com css podemos modificar muito mais do que apenas cores...</li>
         </ul>
-      </div>
+      </section>
 
-      <div id="interno">
+      <section id="internal-section">
         <h3>CSS Interno</h3>
         <p>
           Usar css direto no elemento nem sempre é interessante, uma vez que se tivermos
           diversos elementos que queremos que o mesmo estilo seja aplicado, teriamos que
           repetir o mesmo <code>style</code> na criação de todos, uma forma de contornar
           isso é usando o css interno, pra que isso seja feito, usamos a tag
-          <code>&lt;style&gt;codigo css&gt;/style&gt;</code> dentro da tag <code>head</code> de nossa página.
+          <code>&lt;style&gt;código css&gt;/style&gt;</code> dentro da tag <code>head</code> de nossa página.
         </p>
 
         <h4>Código:</h4>
@@ -167,34 +182,35 @@
               &lt;/style&gt;
             &lt;/head&gt;
             &lt;body&gt;
-              &lt;p&gt;texto do paragrafo 1&lt;/p&gt;
-              &lt;p&gt;texto do paragrafo 2&lt;/p&gt;
-              &lt;p&gt;texto do paragrafo 3&lt;/p&gt;
+              &lt;p&gt;texto do parágrafo  1&lt;/p&gt;
+              &lt;p&gt;texto do parágrafo  2&lt;/p&gt;
+              &lt;p&gt;texto do parágrafo  3&lt;/p&gt;
             &lt;/body&gt;
           </code>
         </pre>
 
         <h4>Resultado:</h4>
-        <p class="blue">texto do paragrafo 2</p>
-        <p class="blue">texto do paragrafo 1</p>
-        <p class="blue">texto do paragrafo 3</p>
+        <div class="result">
+          <p class="blue">texto do parágrafo 2</p>
+          <p class="blue">texto do parágrafo 1</p>
+          <p class="blue">texto do parágrafo 3</p>
+        </div>
 
-        <p>Dessa forma, todos os paragrafos dessa página teriam o mesmo estilo.
+        <p>Dessa forma, todos os parágrafo s dessa página teriam o mesmo estilo.
           Isso também poderia ser feito com outras tags html como
           <code>&lt;h1&gt;</code> ou <code>&lt;div&gt;</code> por exemplo.
         </p>
-      </div>
+      </section>
 
-      <div id="externo">
+      <section id="external-section">
         <h3>CSS Externo</h3>
         <p>
           Para usarmos o css externo precisamos criar um arquivo <code>.css</code>
-          que terá todo o codigo de estilo, depois precisamos usar a tag
+          que terá todo o código de estilo, depois precisamos usar a tag
           <code>&lt;link rel="stylesheet" href="./endereco_do_arquivo.css"&gt;</code>
           dentro do <code>&lt;head&gt;</code>
         </p>
 
-        <h4>Código:</h4>
         <h5>Arquivo style.css</h5>
         <pre>
           <code>
@@ -203,7 +219,7 @@
             }
           </code>
         </pre>
-        <h5>Arquivo pagina_1.html</h5>
+        <h5>Arquivo página_1.html</h5>
         <pre>
           <code>
             &lt;html&gt;
@@ -211,36 +227,40 @@
                 &lt;link rel="stylesheet" href="./style.css"&gt;
               &lt;/head&gt;
               &lt;body&gt;
-                &lt;p&gt;texto do paragrafo da página 1&lt;/p&gt;
+                &lt;p&gt;texto do parágrafo  da página 1&lt;/p&gt;
               &lt;/body&gt;
             &lt;/html&gt;
           </code>
         </pre>
-        <h5>Arquivo pagina_2.html</h5>
+        <h5>Arquivo página_2.html</h5>
         <pre>
-          &lt;html&gt;
+          <code>
+            &lt;html&gt;
               &lt;head&gt;
                 &lt;link rel="stylesheet" href="./style.css"&gt;
               &lt;/head&gt;
               &lt;body&gt;
-                &lt;p&gt;texto do paragrafo da página 2&lt;/p&gt;
+                &lt;p&gt;texto do parágrafo  da página 2&lt;/p&gt;
               &lt;/body&gt;
             &lt;/html&gt;
+          </code>
         </pre>
 
         <h4>Resultado:</h4>
-        <p class="yellow">texto do paragrafo da página 1</p>
-        <p class="yellow">texto do paragrafo da página 2</p>
+        <div class="result">
+          <p class="yellow">texto do parágrafo da página 1</p>
+          <p class="yellow">texto do parágrafo da página 2</p>
+        </div>
 
         <p>
-          Dessa forma, podemos usar o mesmo arquivo em quantas paginas <code>html</code>
+          Dessa forma, podemos usar o mesmo arquivo em quantas páginas <code>html</code>
           quisermos passando apenas o link do arquivo <code>css</code> dentro da tag
           <code>head</code> em cada uma das páginas.
         </p>
-      </div>
-    </div>
+      </section>
+    </article>
 
-    <div id="elemento_classes_e_ids">
+    <article id="selectors-article" class="card">
       <h2>Elemento, Classes e Id's</h2>
       <p>
         Além de modificar o estilo de tags html, podemos criar classes e id's
@@ -248,7 +268,6 @@
         elemento específico.
       </P>
 
-      <h3>Código</h3>
       <h4>Arquivo index.html</h4>
       <pre>
         <code>
@@ -257,9 +276,9 @@
               &lt;link rel="stylesheet" href="./style.css"&gt;
             &lt;/head&gt;
             &lt;body&gt;
-              &lt;p&gt;texto do paragrafo 1&lt;/p&gt;
-              &lt;p class="paragrafo"&gt;texto do paragrafo 2&lt;/p&gt;
-              &lt;p id="paragrafo_3"&gt;texto do paragrafo 3&lt;/p&gt;
+              &lt;p&gt;texto do parágrafo  1&lt;/p&gt;
+              &lt;p class="paragrafo"&gt;texto do parágrafo  2&lt;/p&gt;
+              &lt;p id="paragrafo _3"&gt;texto do parágrafo  3&lt;/p&gt;
             &lt;/body&gt;
           &lt;/html&gt;
         </code>
@@ -271,7 +290,7 @@
           p{
             background-color: yellow;
           }
-          .paragrafo{
+          .paragrafo {
             background-color: green;
           }
           #paragrafo_3{
@@ -282,12 +301,14 @@
       </pre>
 
       <h3>Resultado</h3>
-      <p class="yellow">texto do paragrafo 1</p>
-      <p class="green">texto do paragrafo 2</p>
-      <p class="blue">texto do paragrafo 3</p>
-    </div>
+      <div class="result">
+        <p class="yellow">texto do parágrafo 1</p>
+        <p class="green">texto do parágrafo 2</p>
+        <p class="blue">texto do parágrafo 3</p>
+      </div>
+    </article>
 
-    <div id="colors">
+    <article id="selectors-article" class="card">
       <h2>Cores</h2>
       <p>
         Para modificar a cor de fundo de um elemento usamos a propriedade
@@ -295,21 +316,23 @@
         usamos a propriedade <code>color: cor_desejada</code>
       </p>
 
-      <div id="default_colors">
+      <section id="default-colors-section">
         <h3>Cores Padrões</h3>
         <p>
           a primeira forma de modificar a cor é usando uma das cores padrões
           (red, blue, yellow, green, etc...) Ao todo são 140 cores prontas para serem usadas.
         </p>
         <pre>
-          <code>&lt;p style="background-color: yellow;"&gt;paragrafo amarelo&lt;/p&gt;</code>.
+          <code>&lt;p style="background-color: yellow;"&gt;parágrafo amarelo&lt;/p&gt;</code>.
         </pre>
 
         <h4>Resultado</h4>
-        <p class="yellow">paragrafo amarelo</p>
-      </div>
+        <div class="result">
+          <p class="yellow">parágrafo amarelo</p>
+        </div>
+      </section>
 
-      <div id="rgb_colors">
+      <section id="rgb-colors-section">
         <h3>Cores usando RGB</h3>
         <p>
           Outra forma de modificar a cor é usando o RGB, que é uma forma de representar
@@ -319,14 +342,16 @@
         </p>
 
         <pre>
-          <code>&lt;p style="background-color: rgb(255, 0, 0);"&gt;paragrafo vermelho&lt;/p&gt;</code>
+          <code>&lt;p style="background-color: rgb(255, 0, 0);"&gt;parágrafo vermelho&lt;/p&gt;</code>
         </pre>
 
         <h4>Resultado</h4>
-        <p class="red">paragrafo vermelho</p>
-      </div>
+        <div class="result">
+          <p class="red">parágrafo vermelho</p>
+        </div>
+      </section>
 
-      <div id="rgba_colors">
+      <section id="opacity-section">
         <h3>Opacidade</h3>
         <p>
           Podemos também modificar a opacidade da cor, para isso usamos o RGBA, que é
@@ -335,14 +360,16 @@
         </p>
         <pre>
           <code>
-            &lt;p style="background-color: rgba(0, 128, 0, 0.8);"&gt;paragrafo verde com opacidade&lt;/p&gt;
+            &lt;p style="background-color: rgba(0, 128, 0, 0.8);"&gt;parágrafo verde com opacidade&lt;/p&gt;
           </code>
         </pre>
         <h4>Resultado</h4>
-        <p style="background-color: rgba(0, 128, 0, 0.5)">paragrafo verde com opacidade</p>
-      </div>
+        <div class="result">
+          <p style="background-color: rgba(0, 128, 0, 0.5)">parágrafo verde com opacidade</p>
+        </div>
+      </section>
 
-      <div id="hex_colors">
+      <section id="hex-colors-section">
         <h3>Cores usando HEXdecimal</h3>
         <p>
           A ultima forma de modificar a cor é usando o HEX, que é uma forma de representar
@@ -352,22 +379,24 @@
         </p>
 
         <pre>
-          <code>&lt;p style="background-color: #00FF00;"&gt;paragrafo verde&lt;/p&gt;</code>
+          <code>&lt;p style="background-color: #00FF00;"&gt;parágrafo verde&lt;/p&gt;</code>
         </pre>
 
         <h4>Resultado</h4>
-        <p class="green">paragrafo verde</p>
-      </div>
-    </div>
+        <div class="result">
+          <p class="green">parágrafo verde</p>
+        </div>
+      </section>
+    </article>
 
-    <div id="backgrounds">
+    <article id="backgrounds-article" class="card">
       <h2>Backgrounds</h2>
       <p>
         Além de modificar a cor de fundo de um elemento, podemos adicionar imagens
         como fundo de um elemento.
       </p>
 
-      <div id="backgroud_repeat_div">
+      <section id="background-default-section">
         <h3>Background Padrão</h3>
         <img src="images/Ceramica.jpg" alt="imagem de ceramica">
         <p>
@@ -375,16 +404,16 @@
           <code>background-image: url('./endereco/da/imagem')</code> no <code>CSS</code>, o resultado fica assim:
         </p>
 
-        <div id="background_default_result"></div>
+        <div id="background-default-result" class="rectangle-1x4"></div>
 
         <p>
           Perceba que a imagem por padrão se repete tanto na vertical quanto na horizontal,
           isso acontece graças a propriedade <code>background-repeat</code>
           que tem como padrão o valor <code>repeat</code>
         </p>
-      </div>
+      </section>
 
-      <div id="background_cover_div">
+      <section id="background-cover-section">
         <h3>Background Cover</h3>
         <img src="./images/Fundo_abstrato.jpg" alt="imagem abstrata" style="height: 50px;">
         <p>
@@ -393,49 +422,50 @@
           seja maior que a imagem, ela não preencherá o espaço todo, utilizaremos então o parametro
           <code>background-size: cover</code> para que a imagem preencha toda a <code>div</code>
         </p>
-        <div id="background_cover_result"></div>
+        <div id="background-cover-result" class="rectangle-1x4"></div>
         <p>
-          Dessa forma a imagem não se repete nem na vertical nem na horizontal. Porem fica claro que a
+          Dessa forma a imagem não se repete nem na vertical nem na horizontal. Porém fica claro que a
           imagem está sendo cortada, isso acontece porque o tamanho da <code>div</code> não é proporcional
           ao da imagem.
         </p>
-      </div>
+      </section>
 
-      <div id="background_contain_div">
+      <section id="background-contain-section">
         <h3>Background Contain</h3>
         <p>
           Utilizando a mesma imagem e o mesmo tamanho de <code>div</code>, podemos fazer com
           que a imagem se ajuste ao tamanho da <code>div</code> usando a propriedade
           <code>background-size: contain</code>
         </p>
-        <div id="background_contain_result"></div>
+
+        <div id="background-contain-result" class="rectangle-1x4"></div>
 
         <p>
           A imagem se ajusta ao tamanho da <code>div</code> porém assim que a imagem alcançar a proporção
           da <code>div</code> ela começará a se repetir.
         </p>
-      </div>
+      </section>
 
-      <div id="background_position_div">
+      <section id="background-position-section">
         <h3>Background Position</h3>
-        <img src="./images/BackgroundImage.png" alt="log progBR" style="height: 50px;">
+        <img class="center" src="./images/BackgroundImage.png" alt="log progBR" style="height: 50px;">
         <p>
           Utilizando agora essa logo e o mesmo tamanho de <code>div</code>, agora com fundo amarelo,
           podemos dizer onde queremos que a imagem fique localizada na <code>div</code> usando a
-          propriedade <code>background-position: top left</code> somado ao
+          propriedade <code>background-position: bottom right</code> somado ao
           <code>background-repeat: no-repeat</code> para que a imagem fique no canto inferior direito,
           o resultado fica assim:
         </p>
-        <div id="background_position"></div>
-      </div>
+        <div id="background-position-result" class="yellow rectangle-1x4"></div>
+      </section>
 
-      <div id="background_fixed_div">
+      <section id="background-fixed-section">
         <h3>Background Fixed</h3>
         <p>
           Por fim, podemos fazer com que a imagem de um <code>background</code> fique fixo, enquanto rolamos a tela,
           pra isso usamos a propriedade <code>background-attachment: fixed</code>.
         </p>
-        <div id="background_fixed_example">
+        <div id="background-fixed-example">
           <h4>Foque no exemplo, ignore o texto</h4>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, eligendi possimus totam
@@ -449,9 +479,9 @@
             reprehenderit asperiores magnam quas enim nemo aut!</p>
           </p>
         </div>
-      </div>
+      </section>
 
-      <div id="background_color_gradient">
+      <section id="background-gradient-section">
         <h3>Background Gradient</h3>
         <p>
           Além de imagens, podemos usar gradientes como fundo de um elemento, formando um degrade com as cores, para
@@ -464,42 +494,42 @@
           Usando <code>background: linear-gradient(to right, red, yellow)</code> temos um degradê da equerda para a
           direita do vermelho ao amarelo
         </p>
-        <div id="background_gradient_example_1"></div>
+        <div id="to-right-background-gradient-result" class="rectangle-1x4"></div>
 
         <p>
           Usando <code>background: linear-gradient(to right, red, 20%, yellow)</code> podemos dizer onde iniciará a cor
           amarela, no exemplo ela começa em 20% da largura do elemento.
         </p>
-        <div id="background_gradient_example_2"></div>
+
+        <div id="to-right-initial-background-gradient-result" class="rectangle-1x4"></div>
 
         <p>
           Usando <code>background: linear-gradient(to right, red, yellow 20%)</code> podemos dizer onde ficará a parte
           mais forte da cor amarela, no exemplo ela começa/fica mais forte em 20% da largura do elemento.
         </p>
-        <div id="background_gradient_example_3"></div>
+        <div id="to-right-hard-background-gradient-result" class="rectangle-1x4"></div>
 
         <p>
           Usando <code>background: linear-gradient(to left bottom, red, yellow)</code> posso modificar a direção do
           degradê, nesse caso ele vai da direita para a esquerda e de cima para baixo.
         </p>
-        <div id="background_gradient_example_4"></div>
+        <div id="left-bottom-background-gradient-result" class="rectangle-1x4"></div>
 
         <p>
           Usando <code>background: linear-gradient(to right, red, rgb(0,200,0), #FFFF00)</code> posso selecionar mais de
           uma cor para o degradê. Alem disso posso passar rgb ou hex como cor.
         </p>
-        <div id="background_gradient_example_5"></div>
+        <div id="more-colors-background-gradient-result" class="rectangle-1x4"></div>
 
         <p>
           por fim se não for passado direção para o degradê, <code>background: linear-gradient(red, yellow)</code> ele
           será feito de cima para baixo. sendo equivalente a <code>to bottom</code> como direção
         </p>
-        <div id="background_gradient_example_6"></div>
-      </div>
+        <div id="nothing-background-gradient-result" class="rectangle-1x4"></div>
+      </section>
+    </article>
 
-    </div>
-
-    <div id="unitMeasurements">
+    <article id="unit-measurements-article" class="card">
       <h2>Unidades de medidas</h2>
       <p>
         Além de cores e imagens, podemos modificar o tamanho de um elemento, para isso usamos a propriedade
@@ -507,24 +537,24 @@
         <code>em</code>, <code>rem</code>, <code>%</code>, <code>vh</code> e <code>vw</code>.
       </p>
 
-      <div id="px_example">
+      <section id="pixel-section">
         <h3>Pixel</h3>
         <p>
           O <code>px</code> é a unidade de medida mais comum, ela é fixa e não muda de acordo com o
-          tamanho da tela. porem 2 telas podem ter o mesmo tamanho (cemtimetros) mas resoluções
-          diferentes, fazendo com que o mesmo elemento tenha tamanhos diferentes. ou seja, 50px em uma
-          tela de 800px de largura é diferente de 50px em uma tela de 1600px de largura quando visto
-          a olho nu.
+          tamanho da tela. porém 2 telas podem ter o mesmo tamanho (cemtimetros) mas resoluções
+          diferentes, fazendo com que o mesmo elemento tenha tamanhos diferentes em telas distintas. ou seja, 50px em
+          uma tela de 800px de largura é diferente de 50px em uma tela de 1600px
+          de largura quando visto a olho nu.
         </p>
         <pre>
           <code>
             &lt;div style="width: 100px; height: 100px"&gt;&lt;/div&gt;
           </code>
         </pre>
-        <div id="divBlue"></div>
-      </div>
+        <div id="div-blue"></div>
+      </section>
 
-      <div id="%_exemple">
+      <section id="percentage-section">
         <h3>Porcentagem</h3>
         <p>
           A porcentagem é uma unidade de medida relativa, ou seja, ela é calculada com base em
@@ -547,19 +577,19 @@
             }
           </code>
         </pre>
-        <div id="divRed">
-          <div id="divYellow"></div>
+        <div id="div-red">
+          <div class="div-yellow"></div>
         </div>
-        <div id="divBlue">
-          <div id="divYellow"></div>
+        <div id="div-blue">
+          <div class="div-yellow"></div>
         </div>
         <p>
           Perceba que a <code>div</code> amarela ocupa 50% do tamanho da <code>div</code> PAI tanto
           horizontalmente quanto verticalmente.
         </p>
-      </div>
+      </section>
 
-      <div id="unitViewPort">
+      <section id="view-port-section">
         <h3>Viewport</h3>
         <p>
           A unidade <code>vh</code> e <code>vw</code> são relativas ao tamanho da tela, <code>1vh</code>
@@ -581,11 +611,11 @@
               }
             </code>
           </pre>
-        <div id="divRedVP">
-          <div id="divYellow"></div>
+        <div id="div-red-view-port">
+          <div class="div-yellow"></div>
         </div>
-        <div id="divBlueVP">
-          <div id="divYellow"></div>
+        <div id="div-blue-view-port">
+          <div class="div-yellow"></div>
         </div>
         <p>
           Esse exemplo só pode ser observado a medida que a tela é redimensionada, pois as
@@ -594,14 +624,17 @@
           estarem relacionadas ao tamanho da tela e consequentemente a <code>div</code> amarela
           também muda de tamanho por estar usando a porcentagem relacionada a <code>div</code> pai.
         </p>
-      </div>
+      </section>
 
-      <div id="unitText">
+      <section id="em-rem-section">
         <h3>Unidade de medida para Texto</h3>
         <p>
           Podemos utilizar o pixel para definir o tamanho da fonte, mas também podemos usar o
-          <code>em</code> e o <code>rem</code>, o <code>em</code> é relativo ao tamanho da fonte do
-          elemento pai, já o <code>rem</code> é relativo ao tamanho da fonte do elemento raiz.
+          <code>em</code> e o <code>rem</code>.
+        </p>
+        <p></p>
+        O <code>em</code> é relativo ao tamanho da fonte do
+        elemento pai, já o <code>rem</code> é relativo ao tamanho da fonte do elemento raiz.
         </p>
         <pre>
           <code>
@@ -616,10 +649,11 @@
             }
           </code>
         </pre>
-        <div id="divRedText">
+
+        <div id="div-red-text">
           O texto dessa div está com 20px
-          <div id="divBlueText">O texto dessa div está com 2em = 40px</div>
-          <div id="divYellowText">O texto dessa div está com 2rem = 32px</div>
+          <div id="div-blue-text">O texto dessa div está com 2em = 40px</div>
+          <div id="div-yellow-text">O texto dessa div está com 2rem = 32px</div>
         </div>
         <p>
           Perceba que a <code>div</code> azul tem o dobro do tamanho da fonte da <code>div</code>
@@ -627,159 +661,226 @@
           <code>div</code> amarela tem o dobro do tamanho da fonte da <code>div</code> vermelha,
           pois o <code>rem</code> é relativo ao tamanho da fonte do elemento raiz que por padrão é 16px.
         </p>
-      </div>
-    </div>
+      </section>
+    </article>
 
-    <div id="textAdjust">
+    <article id="text-adjust-article" class="card">
       <h2>Ajustes de Texto</h2>
       <p>
-        Temos algumas modificações que podemos fazer no texto, como alinhamento, espaçamento,
+        Existem algumas modificações que podemos fazer no texto, como alinhamento, espaçamento,
         decoração, transformação e sombra.
       </p>
-      <div id="text-decoration">
+      <section id="text-decoration-section">
         <h3>Text-decoration</h3>
         <p>Usando a propriedade <code>text-decoration</code> temos os seguintes resultados pra cada valor
-          <code>text-decoration: valor</code>
+          <code>text-decoration: valor</code>:
         </p>
-        <p style="text-decoration: line-through;">Usando o valor <code>line-through</code> temos o
-          texto riscado
-        </p>
-        <p style="text-decoration: overline;">Usando o valor <code>overline</code> temos o texto com
-          sobrelinha
-        </p>
-        <p style="text-decoration: underline;">Usando o valor <code>underline</code> temos o texto
-          sublinhado
-        </p>
-      </div>
+        <ul>
+          <li>
+            <code>line-through</code>:
+            <span style="text-decoration: line-through;">
+              texto riscado
+            </span>
+          </li>
+          <li>
+            <code>overline</code>:
+            <span style="text-decoration: overline;">
+              texto com sobrelinha
+            </span>
+          </li>
+          <li>
+            <code>underline</code>:
+            <span style="text-decoration: underline;">
+              texto com sublinhado
+            </span>
 
-      <div id="text-transfomr">
+          </li>
+        </ul>
+      </section>
+
+      <section id="text-transform-section">
         <h3>Text Transform</h3>
         <p>
           Usando a propriedade <code>text-transform: valor</code> podemos modificar o texto de um
-          elemento, os valores possíveis são <code>uppercase</code>, <code>lowercase</code> e
-          <code>capitalize</code>.
+          elemento, os valores possíveis são:
         </p>
-        <p style="text-transform: uppercase;">Texto em maiúsculo (lowercase)</p>
-        <p style="text-transform: lowercase;">TEXTO EM MINÚSCULO (uppercase)</p>
-        <p style="text-transform: capitalize;">texto com a primeira letra de cada palavra em maiúsculo (capitalize)</p>
-      </div>
+        <ul>
+          <li>
+            <code>uppercase</code>:
+            <span style="text-transform: uppercase;">
+              texto em maiúsculo
+            </span>
+          </li>
+          <li>
+            <code>lowercase</code>:
+            <span style="text-transform: lowercase;">
+              TEXTO EM MINÚSCULO
+            </span>
+          </li>
+          <li>
+            <code>capitalize</code>:
+            <span style="text-transform: capitalize;">
+              texto com a primeira letra de cada palavra em maiúsculo
+            </span>
+          </li>
+        </ul>
+      </section>
 
-      <div id="alinhamento">
-        <h3>Alinhamento de texto</h3>
+      <section id="text-align-section">
+        <h3>Text Align</h3>
         <p>
           Podemos alinhar o texto de um elemento de 4 formas, usando a propriedade
           <code>text-align: valor</code> onde o valor pode ser <code>left</code>, <code>right</code>,
           <code>center</code> e <code>justify</code>.
         </p>
-        <h4>Texto alinhado a esquerda</h4>
-        <p style="text-align: left; width: 300px;">Lorem ipsum dolor sit amet consectetur, adipisicing
-          elit. Autem, aliquam suscipit neque aperiam repudiandae odio reiciendis cum quam impedit,
-          accusamus vitae itaque officia non totam. Cupiditate sunt voluptatem nemo possimus!
-        </p>
+        <div class="result" style="width: 300px; margin: auto;">
+          <h4>Texto alinhado a esquerda</h4>
+          <p style="text-align: left;">
+            Lorem ipsum dolor sit amet consectetur, adipisicing
+            elit. Autem, aliquam suscipit neque aperiam repudiandae odio reiciendis cum quam impedit,
+            accusamus vitae itaque officia non totam. Cupiditate sunt voluptatem nemo possimus!
+          </p>
 
-        <h4>Texto alinhado a direita</h4>
-        <p style="text-align: right; width: 300px;">Lorem ipsum dolor sit amet consectetur,
-          adipisicing elit. Autem, aliquam suscipit neque aperiam repudiandae odio reiciendis
-          cum quam impedit, accusamus vitae itaque officia non totam. Cupiditate sunt voluptatem
-          nemo possimus!
-        </p>
+          <h4>Texto alinhado a direita</h4>
+          <p style="text-align: right;">
+            Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. Autem, aliquam suscipit neque aperiam repudiandae odio reiciendis
+            cum quam impedit, accusamus vitae itaque officia non totam. Cupiditate sunt voluptatem
+            nemo possimus!
+          </p>
 
-        <h4>Texto centralizado</h4>
-        <p style="text-align: center; width: 300px;">Lorem ipsum dolor sit amet consectetur,
-          adipisicing elit. Autem, aliquam suscipit neque aperiam repudiandae odio reiciendis cum
-          quam impedit, accusamus vitae itaque officia non totam. Cupiditate sunt voluptatem nemo
-          possimus!
-        </p>
-        <h4>Texto Justificado</h4>
-        <p style="text-align: justify; width: 300px;">Lorem ipsum dolor sit amet consectetur,
-          adipisicing elit. Autem, aliquam suscipit neque aperiam repudiandae odio reiciendis cum
-          quam impedit, accusamus vitae itaque officia non totam. Cupiditate sunt voluptatem nemo
-          possimus!
-        </p>
-      </div>
-      <div id="styling">
-        <h3>Embelezamento</h3>
-        <h4>letter-spacing</h4>
+          <h4>Texto centralizado</h4>
+          <p style="text-align: center;">
+            Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. Autem, aliquam suscipit neque aperiam repudiandae odio reiciendis cum
+            quam impedit, accusamus vitae itaque officia non totam. Cupiditate sunt voluptatem nemo
+            possimus!
+          </p>
+          <h4>Texto Justificado</h4>
+          <p style="text-align: justify;">
+            Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. Autem, aliquam suscipit neque aperiam repudiandae odio reiciendis cum
+            quam impedit, accusamus vitae itaque officia non totam. Cupiditate sunt voluptatem nemo
+            possimus!
+          </p>
+        </div>
+      </section>
+
+      <section id="spacing-section">
+        <h3>letter-spacing</h3>
         <p>
           usando a propriedade <code>letter-spacing: valor</code> podemos aumentar ou diminuir o
           espaço entre as letras
         </p>
-        <p style="letter-spacing: -1px;">Texto com espaçamento reduzido entre as letras em -1px</p>
-        <p style="letter-spacing: 2px;">Texto com espaçamento aumentado entre as letras em 2px</p>
+        <ul>
+          <li>
+            <code>letter-spacing: -1px</code>:
+            <span style="letter-spacing: -1px;">
+              Valor negativo diminui o espaço entre as letras
+            </span>
+          <li>
+            <code>letter-spacing: 2px</code>:
+            <span style="letter-spacing: 2px;">
+              Valor positivo aumenta o espaço entre as letras
+            </span>
+          </li>
+          </li>
+        </ul>
+      </section>
 
-        <h4>word-spacing</h4>
+      <section id="word-spacing-section">
+        <h3>word-spacing</h3>
         <p>
           Usando a propriedade <code>word-spacing: valor</code> podemos aumentar ou diminuir o espaço
           entre as palavras
         </p>
-        <p style="word-spacing: -4px;">Texto com espaçamento reduzido entre as palavras em -4px</p>
-        <p style="word-spacing: 4px;">Texto com espaçamento aumentado entre as palavras em 4px</p>
+        <ul>
+          <li>
+            <code>word-spacing: -4px</code>:
+            <span style="word-spacing: -4px;">
+              Valor negativo diminui o espaço entre as palavras
+            </span>
+          </li>
+          <li>
+            <code>word-spacing: 4px</code>:
+            <span style="word-spacing: 4px;">
+              Valor positivo aumenta o espaço entre as palavras
+            </span>
+          </li>
+        </ul>
+      </section>
 
-        <h4>line-height</h4>
+      <section id="line-height-section">
+        <h3>line-height</h3>
         <p>
           Usando a propriedade <code>line-height: 2</code> podemos aumentar espaço entre as linhas
           em dobro, ou o quanto desejar dependendo do valor passado.
         </p>
-        <p style="line-height: 2; width: 400px;">Lorem ipsum dolor sit amet consectetur adipisicing
+        <p style="line-height: 2; width: 400px;" class="result">
+          Lorem ipsum dolor sit amet consectetur adipisicing
           elit. Consequuntur, eum magni nobis voluptatem sequi iure impedit maiores voluptatum
           distinctio quae molestiae in, cum labore illum voluptate deleniti accusamus! Temporibus,
           quas!
         </p>
-      </div>
+      </section>
 
-      <div id="indentation">
-        <h4>text-indent</h4>
+      <section id="text-indent-section">
+        <h3>text-indent</h3>
         <p>
           Usando a propriedade <code>text-indent: 50px</code> aumentamos o espaço
           da primeira linha de um parágrafo em 50px.
         </p>
-        <p style="text-indent: 50px; width: 400px;">Lorem ipsum dolor sit amet consectetur adipisicing
+        <p style="text-indent: 50px; width: 400px;" class="result">
+          Lorem ipsum dolor sit amet consectetur adipisicing
           elit. Consequuntur, eum magni nobis voluptatem sequi iure impedit maiores voluptatum
           distinctio quae molestiae in, cum labore illum voluptate deleniti accusamus! Temporibus, quas!
         </p>
-      </div>
+      </section>
 
-      <div id="text-shadow">
-        <h4>Text-Shadow</h4>
+      <section id="text-shadow-section">
+        <h3>Text-Shadow</h3>
         <p>
           Usando a propriedade <code>text-shadow: 3px 3px 2px gray</code> podemos adicionar uma sombra
           ao texto, onde o primeiro valor é a distancia horizontal, o segundo é a distancia vertical, o
           terceiro é o blur e o quarto é a cor da sombra.
         </p>
-        <p style="text-shadow: 3px 3px 2px gray; font-size: 2em;">Texto com sombra</p>
-      </div>
-    </div>
+        <p class="result" style="text-shadow: 3px 3px 2px gray; font-size: 2em; text-align: center;">
+          Texto com sombra
+        </p>
+      </section>
+    </article>
 
-    <div id="fontAdjust">
+    <article id="font-adjust-article" class="card">
       <h2>Ajuste de fonte</h2>
-
-      <div id="font-family">
+      <section id="font-family-section">
         <h3>Font Family</h3>
         <p>
           Podemos modificar a fonte de um elemento usando a propriedade <code>font-family: fonte</code>,
           podemos passar mais de uma fonte, caso a primeira não seja encontrada, a segunda será usada.
         </p>
+        <ul>
+          <li style="font-family: 'Times New Roman', Times, serif;">
+            Texto com fonte com serifa (<code>font-family: 'Times New Roman', Times, serif</code>)
+          </li>
+          <li style="font-family: Arial, sans-serif;">
+            Texto com fonte sem serifa (<code>font-family: Arial, sans-serif</code>)
+          </li>
+          <li style="font-family: 'Courier New', Courier, monospace;">
+            Texto com fonte monospace (<code>font-family: 'Courier New', Courier, monospace;</code>)
+          </li>
+        </ul>
+      </section>
 
-        <p style="font-family: 'Times New Roman', Times, serif;">
-          Texto com fonte com serifa (<code>font-family: 'Times New Roman', Times, serif</code>)</p>
-        <p style="font-family: Arial, sans-serif;">
-          Texto com fonte sem serifa (<code>font-family: Arial, sans-serif</code>)
-        </p>
-        <p style="font-family: 'Courier New', Courier, monospace;">
-          Texto com fonte monospace (<code>font-family: 'Courier New', Courier, monospace;</code>)
-        </p>
-      </div>
-
-      <div id="font-style">
+      <section id="font-style-section">
         <h3>Font Style</h3>
         <p>
           Usando a propriedade <code>font-style: italic</code> podemos modificar o estilo da fonte,
-          para italico
+          para itálico
         </p>
-        <p style="font-style: italic;">Texto em itálico</p>
-      </div>
+        <p style="font-style: italic;" class="result">Texto em itálico</p>
+      </section>
 
-      <div id="font-weight">
+      <section id="font-weight">
         <h3>Font Weight</h3>
         <p>
           Usando a propriedade <code>font-weight: valor</code> podemos modificar o peso da fonte,
@@ -787,37 +888,40 @@
           100 a 900, sendo 100 o mais fino e 900
           o mais grosso.
         </p>
-        <p style="font-weight: bold;">Texto em negrito usando <code>font-weight: bold</code></p>
-      </div>
-    </div>
+        <code>font-weight: bold</code>
+        <p class="result" style="font-weight: bold;">Texto em negrito</p>
+      </section>
+    </article>
 
-    <div id="border">
+    <article id="borders-article" class="card">
       <h2>Bordas</h2>
-      <div id="borderDefault">
+      <section id="border-section">
+        <h3>Tipos de bordas</h3>
         <p>
           Podemos adicionar bordas a um elemento usando a propriedade <code>border: valor</code>, onde
           o valor pode ser <code>largura</code>, <code>estilo</code> e <code>cor</code>.
         </p>
-        <div style="border: 2px solid red; display: inline-block; padding: 5px;">
+        <div style="border: 2px solid red; display: inline-block; padding: 5px; margin: 5px;">
           <p>esta borda foi adicionada usando <code>border: 2px solid red</code></p>
         </div>
-        <div style="border: 2px dashed red; display: inline-block; padding: 5px;">
+
+        <div style="border: 2px dashed red; display: inline-block; padding: 5px; margin: 5px;">
           <p>esta borda foi adicionada usando <code>border: 2px dashed red</code></p>
         </div>
 
-        <div style="border: 2px dotted red; display: inline-block; padding: 5px;">
+        <div style="border: 2px dotted red; display: inline-block; padding: 5px; margin: 5px;">
           <p>esta borda foi adicionada usando <code>border: 2px dotted red</code></p>
         </div>
-      </div>
+      </section>
 
-      <div id="borderRadius">
+      <section id="border-radius-section">
         <h3>Border Radius</h3>
         <p>
           Podemos arredondar as bordas de um elemento usando a propriedade <code>border-radius: valor</code>,
           onde o valor pode ser um número em <code>px</code> ou em <code>%</code>.
         </p>
-        <div style="border: 2px solid red; border-radius: 10px; display: inline-block; padding: 5px;">
-          <p>esta borda foi arredondada usando <code>border-radius: 10px</code></p>
+        <div style="border: 2px solid red; border-radius: 20px; display: inline-block; padding: 5px;">
+          <p>esta borda foi arredondada usando <code>border-radius: 20px</code></p>
         </div>
 
         <p>Podemos também criar uma elipse ou círculo com essa propriedade</p>
@@ -838,12 +942,12 @@
             <div style="border: 2px solid red; border-radius: 50%; width: 250px; height: 100px;"></div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </article>
 
-    <div id="marginPadding">
+    <article id="margin-padding-article" class="card">
       <h2>Margin e Padding</h2>
-      <div id="margin">
+      <section id="margin-section">
         <h3>Margin</h3>
         <p>
           A propriedade <code>margin</code> é usada para criar espaço ao redor dos elementos, fora das
@@ -857,8 +961,8 @@
         <div style="margin: 10px; border: 2px solid black; display: inline-block;">
           <p>Elemento 1</p>
         </div>
-        <div style="margin: 10px; border: 2px solid black; display: inline-block;">
-          <p>Estes elemento tem uma margem de 10px em todos os lados.</p>
+        <div style="margin: 10px; border: 2px solid black; display: inline-block; width: 300px; text-align: center;">
+          <p>elemento 2 <br> Estes elemento tem uma <br> margem de 10px em todos os lados.</p>
         </div>
         <div style="margin: 10px; border: 2px solid black; display: inline-block;">
           <p>elemento 3</p>
@@ -870,9 +974,9 @@
           <code>margin</code>. começando do topo e seguindo no sentido horário.
           <code>margin: 10px 20px 30px 40px</code>
         </p>
-      </div>
+      </section>
 
-      <div id="padding">
+      <section id="padding-section">
         <h3>Padding</h3>
         <p>
           A propriedade <code>padding</code> é usada para criar espaço ao redor do conteúdo dentro
@@ -894,10 +998,10 @@
           ou apenas apenas passando cada lado na propriedade <code>padding</code>. começando
           do topo e seguindo no sentido horário. <code>padding: 10px 20px 30px 40px</code>
         </p>
-      </div>
-    </div>
+      </section>
+    </article>
 
-    <div id="box-sizing">
+    <article id="box-sizing-article" class="card">
       <h2>box sizing</h2>
       <p>
         A propriedade <code>box-sizing</code> é usada para alterar o modelo de caixa padrão do CSS.
@@ -928,16 +1032,16 @@
           que o total seja 300px de largura e 300px de altura.
         </p>
       </div>
-    </div>
+    </article>
 
-    <div id="overflow">
+    <article id="overflow-article" class="card">
       <h2>Overflow</h2>
       <p>
         A propriedade <code>overflow</code> é usada para controlar o que acontece se o conteúdo de
         um elemento for maior do que a caixa que o contém. Ela pode ter os seguintes valores:
       </p>
       <ul>
-        <li><code>visible</code> - O conteúdo é exibido fora da caixa.</li>
+        <li><code>visible</code> - O conteúdo é exibido fora da caixa. (esse é o padrão)</li>
         <li><code>hidden</code> - O conteúdo é cortado e não é exibido fora da caixa.</li>
         <li><code>scroll</code> - O conteúdo é cortado, mas um scroll é adicionado para ver o resto
           do conteúdo.</li>
@@ -948,7 +1052,7 @@
         Usando <code>overflow: hidden</code> podemos fazer com que o conteúdo que ultrapassa a caixa
         seja cortada e não seja exibida fora da caixa.
       </p>
-      <div style="width: 200px; height: 100px; overflow: hidden; border: 2px solid black;">
+      <div style="width: 200px; height: 130px; overflow: hidden; border: 2px solid black;">
         <p>
           Este elemento tem uma largura de 200px e uma altura de 100px. O conteúdo que ultrapassa
           a caixa é cortado, mas usando o <code>overflow: auto</code>, um scroll é adicionado para
@@ -959,16 +1063,16 @@
         Usando <code>overflow: auto</code> podemos fazer com que o conteúdo que ultrapassa a caixa
         seja cortado e um scroll seja adicionado para ver o resto do conteúdo.
       </p>
-      <div style="width: 200px; height: 100px; overflow: auto; border: 2px solid black;">
+      <div style="width: 200px; height: 130px; overflow: auto; border: 2px solid black;">
         <p>
           Este elemento tem uma largura de 200px e uma altura de 100px. O conteúdo que ultrapassa
           a caixa é cortado, mas usando o <code>overflow: auto</code>, um scroll é adicionado para
           ver o resto do conteúdo e caso o conteúdo não ultrapasse a caixa, o scroll não é exibido.
         </p>
       </div>
-    </div>
+    </article>
 
-    <div id="links">
+    <article id="links-article" class="card">
       <h2>Links</h2>
       <p>
         Links são elementos que permitem que os usuários naveguem de uma página para outra e por isso
@@ -977,73 +1081,83 @@
         pseudo-classes do <code>css</code>, que são classes que não são definidas no <code>html</code>
         mas sim no <code>css</code> e são usadas para estilizar elementos em estados específicos.
       </p>
-      <p>Este é meu link estilizado para parecer um botão:</p>
 
-      <pre>
+      <section id="link-buttom-section">
+        <h3>Este é um código que estiliza um link para parecer um botão:</h3>
+        <pre>
+            <code>
+              a {
+                background-color: darkcyan;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                width: 200px;
+                border-radius: 20px;
+              }
+            </code>
+          </pre>
+        <a class="link-buttom-example" href="#nada">Olhe para mim</a>
+      </section>
+
+      <section id="link-hover-section" style="margin-top: 30px;">
+        <h3>Hover</h3>
+        <p>
+          Para modificar o estilo do link quando eu estiver passando o mouse por cima, usamos a
+          pseudo-classe <code>hover</code>
+        </p>
+        <pre>
           <code>
-            a {
-              background-color: darkcyan;
-              color: white;
-              text-align: center;
-              padding: 10px;
-              width: 200px;
-              border-radius: 20px;
+            a:hover {
+              background-color: darkgreen;
             }
           </code>
         </pre>
-      <a class="linkButtomExample" href="#nada">Olhe para mim</a>
+        <a class="link-buttom-example buttom-hover-example" href="#nada">Passe o mouse por cima</a>
+      </section>
 
-      <p>
-        Para modificar o estilo do link quando eu estiver passando o mouse por cima, usamos a
-        pseudo-classe <code>hover</code>
-      </p>
-      <pre>
-        <code>
-          a:hover {
-            background-color: darkgreen;
-          }
-        </code>
-      </pre>
-      <a class="linkButtomExample linkButtomExample2" href="#nada">Passe o mouse por cima</a>
+      <section id="link-active-section" style="margin-top: 30px;">
+        <h3>Active</h3>
+        <p>
+          Para modificar o estilo do link quando ele estiver ativo, usamos a pseudo-classe
+          <code>active</code>
+        </p>
+        <pre>
+          <code>
+            a:active {
+              background-color: darkred;
+            }
+          </code>
+        </pre>
+        <a class="link-buttom-example buttom-hover-example buttom-active-example" href="#nada">Clique em mim</a>
+      </section>
 
-      <p>
-        Para modificar o estilo do link quando ele estiver ativo, usamos a pseudo-classe
-        <code>active</code>
-      </p>
-      <pre>
-        <code>
-          a:active {
-            background-color: darkred;
-          }
-        </code>
-      </pre>
-      <a class="linkButtomExample linkButtomExample2 linkButtomExample3" href="#nada">Clique em mim</a>
+      <section id="link-visited-section" style="margin-top: 30px;">
+        <h3>Visited</h3>
+        <p>
+          Caso eu queira modificar o estilo do link quando ele estiver visitado, usamos a pseudo-classe
+          <code>visited</code>
+        </p>
+        <pre>
+          <code>
+            a:visited {
+              background-color: darkblue;
+            }
+          </code>
+        </pre>
+        <a class="link-buttom-example buttom-hover-example buttom-active-example buttom-visited-example" href="#nada">
+          Clique em mim novamente
+        </a>
+      </section>
+    </article>
 
-      <p>
-        Caso eu queira modificar o estilo do link quando ele estiver visitado, usamos a pseudo-classe
-        <code>visited</code>
-      </p>
-
-      <pre>
-        <code>
-          a:visited {
-            background-color: darkblue;
-          }
-        </code>
-      </pre>
-      <a class="linkButtomExample linkButtomExample2 linkButtomExample3 linkButtomExample4" href="#nada">
-        Clique em mim novamente
-      </a>
-    </div>
-
-    <div id="listas">
+    <article id="lists-article" class="card">
       <h2>Listas</h2>
       <p>
         Listas são usadas para agrupar itens relacionados. Existem dois tipos principais de listas
         em HTML: listas ordenadas e listas não ordenadas.
       </p>
 
-      <div id="unordered_list">
+      <section id="unordered-list-section">
         <h3>Listas Não Ordenadas</h3>
         <p>
           Listas não ordenadas são usadas para agrupar itens sem uma ordem específica. Elas são
@@ -1060,14 +1174,16 @@
           </code>
         </pre>
         <h4>Resultado:</h4>
-        <ul>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-        </ul>
-      </div>
+        <div class="result">
+          <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </ul>
+        </div>
+      </section>
 
-      <div id="ordered_list">
+      <section id="ordered-list-section">
         <h3>Listas Ordenadas</h3>
         <p>
           Listas ordenadas são usadas para agrupar itens em uma ordem específica. Elas são criadas
@@ -1084,83 +1200,80 @@
           </code>
         </pre>
         <h4>Resultado:</h4>
-        <ol>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-        </ol>
-      </div>
+        <div class="result">
+          <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </ol>
+        </div>
+      </section>
 
-      <div id="list_styling">
+      <section id="list_styling-section">
         <h3>Estilizando Listas</h3>
-
         <p>
           Podemos modificar o estilo das listas usando CSS. Por exemplo, modificar os marcadores
           das listas não ordenadas ou os números das listas ordenadas.
         </p>
 
         <h4>Listas Não Ordenadas</h4>
-        <div id="naoOrdenadaExemplo">
-          <div style="display: flex; gap: 10px;">
-            <div>
-              <h4>list-style-type: circle</h4>
-              <ul style="list-style-type: circle;">
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-              </ul>
-            </div>
-            <div>
-              <h4>list-style-type: square</h4>
-              <ul style="list-style-type: square;">
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-              </ul>
-            </div>
+        <div style="display: flex; gap: 25px; text-align: left;">
+          <div>
+            <code>list-style-type: circle</code>
+            <ul style="list-style-type: circle;">
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+            </ul>
+          </div>
+          <div>
+            <code>list-style-type: square</code>
+            <ul style="list-style-type: square;">
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+            </ul>
           </div>
         </div>
 
         <h4>Listas Ordenadas</h4>
-        <div id="naoOrdenadaExemplo" style="display: flex; gap: 10px;">
+        <div style="display: flex; gap: 25px; text-align: left;">
           <div>
-            <h4>list-style-type: upper-roman</h4>
+            <code>list-style-type: upper-roman</code>
             <ol style="list-style-type: upper-roman;">
               <li>Item 1</li>
               <li>Item 2</li>
               <li>Item 3</li>
             </ol>
           </div>
-
           <div>
-            <h4>list-style-type: lower-roman</h4>
+            <code>list-style-type: lower-roman</code>
             <ol style="list-style-type: lower-roman;">
               <li>Item 1</li>
               <li>Item 2</li>
               <li>Item 3</li>
             </ol>
           </div>
-
           <div>
-            <h4>list-style-type: decimal-leading-zero</h4>
+            <code>list-style-type: decimal-leading-zero</code>
             <ol style="list-style-type: decimal-leading-zero;">
               <li>Item 1</li>
               <li>Item 2</li>
               <li>Item 3</li>
             </ol>
           </div>
-
+        </div>
+        <div style="display: flex; gap: 25px; text-align: left;">
           <div>
-            <h4>list-style-type: lower-alpha</h4>
+            <code>list-style-type: lower-alpha</code>
             <ol style="list-style-type: lower-alpha;">
               <li>Item 1</li>
               <li>Item 2</li>
               <li>Item 3</li>
             </ol>
           </div>
-
           <div>
-            <h4>list-style-type: upper-alpha</h4>
+            <code>list-style-type: upper-alpha</code>
             <ol style="list-style-type: upper-alpha">
               <li>Item 1</li>
               <li>Item 2</li>
@@ -1179,19 +1292,19 @@
           </code>
         </pre>
         <h4>Resultado:</h4>
-        <ul style="list-style-type: none;">
+        <ul class="result" style="list-style-type: none;">
           <li>Item 1</li>
           <li>Item 2</li>
           <li>Item 3</li>
         </ul>
-      </div>
+      </section>
 
-      <div id="custom_list_styling">
+      <section id="list-image-section">
         <h3>Estilizando Listas com Imagens</h3>
         <p>
           Podemos usar imagens como marcadores de lista usando a propriedade
           <code>list-style-image</code> e passando o caminho da imagem. O problema é que essas
-          imagens não são responsivas, então é nescessário usar uma imagem do tamnho da fonte,
+          imagens não são responsivas, então é nescessário usar uma imagem do tamanho da fonte,
           no caso estamos usando uma fonte de 16px então precisamos de uma imagem de 16x16px.
         </p>
         <pre>
@@ -1202,14 +1315,16 @@
           </code>
         </pre>
         <h4>Resultado:</h4>
-        <ul style="list-style-image: url('./images/logo-16.png');">
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-        </ul>
-      </div>
+        <div class="result">
+          <ul style="list-style-image: url('./images/logo-16.png');">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+          </ul>
+        </div>
+      </section>
 
-      <div id="listaBemEstilizada">
+      <section id="list-style-example-section">
         <h3>Lista estilizada</h3>
         <p>
           Podemos estilizar as listas de várias maneiras, como alterar a cor, o tamanho e o
@@ -1245,14 +1360,14 @@
         </pre>
 
         <h4>Resultado:</h4>
-        <ul class="listaBemEstilizada">
+        <ul class="list-style-example">
           <li>Item 1</li>
           <li>Item 2</li>
           <li>Item 3</li>
         </ul>
-      </div>
-    </div>
-  </div>
+      </section>
+    </article>
+  </main>
 </body>
 
 </html>
