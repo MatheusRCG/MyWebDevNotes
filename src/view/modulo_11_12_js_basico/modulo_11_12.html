@@ -8,32 +8,125 @@
 
   <link rel="stylesheet" href="/style.css">
   <script>
-    // alert("Hello World!")  // descomentar quando finalizar a página
     console.log("Hello World!")
   </script>
 </head>
 
 <body>
   <header id="top-bar">
-    <a href="/">Voltar</a>
+    <a href="/">
+      <img class="logo" src="../../Images/logo.png" alt="logo">
+    </a>
     <h1>Módulo 11 e 12 - JavaScript Básico</h1>
-    <ul>
-      <li>Geral</li>
-      <li>Conteúdos</li>
-      <li>Projetos</li>
-    </ul>
   </header>
 
-  <nav id="index">
+  <nav id="nav">
     <ul>
       <li>
-
+        <a href="#hello-world-article">Hello World! JavaScript</a>
+        <ul>
+          <li><a href="#alert-section">alert</a></li>
+          <li><a href="#console-section">console.log</a></li>
+          <li><a href="#comments-section">comentários</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#algorithm-article">Algoritmo</a>
+      </li>
+      <li>
+        <a href="#variables-article">Variáveis em JavaScript</a>
+        <ul>
+          <li><a href="#data-types-section">Tipo de dados</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#arithmetic-operations-section">Operações Aritméticas</a>
+        <ul>
+          <li><a href="#module-section">Módulo</a></li>
+          <li><a href="#increment-decrement-section">Incremento e Decremento</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#assignment-article">Operador de Atribuições</a>
+      </li>
+      <li>
+        <a href="#comparison-article">Operadores de Comparação</a>
+      </li>
+      <li>
+        <a href="#logic-article">Operadores Lógicos</a>
+      </li>
+      <li>
+        <a href="#strings-article">Strings</a>
+        <ul>
+          <li><a href="#concatenation-section">Concatenação de Strings</a></li>
+          <li><a href="#length-section">Comprimento de uma String</a></li>
+          <li><a href="#substring-section">Extração de Substrings</a></li>
+          <li><a href="#search-section">Busca de Padrões</a></li>
+          <li><a href="#replace-section">Substituição de Texto</a></li>
+          <li><a href="#transform-section">Transformando string em números</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#Conditionals-article">Estruturas Condicionais</a>
+        <ul>
+          <li><a href="#if-section">if</a></li>
+          <li><a href="#else-section">else</a></li>
+          <li><a href="#else-if-section">else if</a></li>
+          <li><a href="#ternary-operator-section">Operador ternário</a></li>
+          <li><a href="#switch-section">switch</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#loops-article">Estrutura de Repetição</a>
+        <ul>
+          <li><a href="#for-section">for</a></li>
+          <li><a href="#while-section">while</a></li>
+          <li><a href="#do-while-section">do...while</a></li>
+          <li><a href="#for-in-section">for...in</a></li>
+          <li><a href="#for-of-section">for...of</a></li>
+          <li><a href="#break-continue-section">break e continue</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#arrays-article">Arrays</a>
+        <ul>
+          <li><a href="#creation-section">Criando um Array</a></li>
+          <li><a href="#access-section">Acessando Elementos de um Array</a></li>
+          <li><a href="#modification-section">Alterando Elementos de um Array</a></li>
+          <li><a href="#addition-section">Adicionando Elementos a um Array</a></li>
+          <li><a href="#removal-section">Removendo Elementos de um Array</a></li>
+          <li><a href="#iteration-section">Iterando sobre um Array</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#functions-article">Funções</a>
+        <ul>
+          <li><a href="#definition-section">Definindo uma Função</a></li>
+          <li><a href="#parameters-section">Funções com Parâmetros</a></li>
+          <li><a href="#return-section">Funções com Retorno</a></li>
+          <li><a href="#anonymous-functions-section">Funções Anônimas</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#objects-article">Objetos</a>
+        <ul>
+          <li><a href="#creation-section">Criando um Objeto</a></li>
+          <li><a href="#access-objects-section">Acessando Propriedades de um Objeto</a></li>
+          <li><a href="#changing-objects-section">Alterando Propriedades de um Objeto</a></li>
+          <li><a href="#methods-section">Métodos de um Objeto</a></li>
+          <li><a href="#constructors-section">Construtores</a></li>
+          <li><a href="#forEach-section">ForEach</a></li>
+          <li><a href="#date-section">Datas</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#let-const-article">Let e Const</a>
       </li>
     </ul>
   </nav>
 
   <main id="content">
-    <article id="displays" class="card">
+    <article id="hello-world-article" class="card">
       <h2>Hello World! JavaScript</h2>
 
       <p>
@@ -43,7 +136,7 @@
         rica e envolvente.
       </p>
 
-      <section id="alert">
+      <section id="alert-section">
         <h3>alert</h3>
         <p>
           O código abaixo exibe um alerta com a mensagem "Hello World!" ao carregar a página.
@@ -83,7 +176,8 @@
           </code>
         </pre>
       </section>
-      <section>
+
+      <section id="console-section">
         <h3>console.log</h3>
         <p>
           O método <code>console.log()</code> é usado para exibir mensagens no console do navegador.
@@ -108,7 +202,7 @@
         </p>
       </section>
 
-      <section id="comentarios">
+      <section id="comments-section">
         <h3>comentários</h3>
         <p>
           Os comentários são usados para documentar o código e torná-lo mais legível. Eles são
@@ -132,7 +226,7 @@
       </section>
     </article>
 
-    <article id="variaveis" class="card">
+    <article id="algorithm-article" class="card">
       <h2>algoritmo</h2>
       <p>
         Um algoritmo é um conjunto de instruções passo a passo para resolver um problema ou
@@ -171,7 +265,7 @@
       </ol>
     </article>
 
-    <article id="variaveis" class="card">
+    <article id="variables-article" class="card">
       <h2>Variaveis em JavaScript</h2>
 
       <p>
@@ -253,7 +347,7 @@
         </code>
       </pre>
 
-      <section id="tipodedados">
+      <section id="data-types-section">
         <h3>Tipo de dados</h3>
         <p>
           JavaScript é uma linguagem de programação dinamicamente tipada, o que significa que as
@@ -286,7 +380,7 @@
       </section>
     </article>
 
-    <article id="operacoes" class="card">
+    <article id="arithmetic-operations-section" class="card">
       <h2>Operações Aritméticas</h2>
       <p>
         JavaScript suporta várias operações aritméticas para realizar cálculos matemáticos.
@@ -328,7 +422,7 @@
           console.log(decremento); // Saída: 5
         </code>
       </pre>
-      <section id="module">
+      <section id="module-section">
         <h3>Módulo</h3>
         <p>
           O operador módulo (%) retorna o resto da divisão de um número pelo outro. Ele é útil para
@@ -346,7 +440,7 @@
             console.log(modulo); // Saída: 5
           </code>
       </section>
-      <section id="incremento-decremento">
+      <section id="increment-decrement-section">
         <h3>Incremento e Decremento</h3>
         <p>
           Os operadores de incremento (++) e decremento (--) são usados para adicionar ou subtrair 1
@@ -384,7 +478,7 @@
       </section>
     </article>
 
-    <article id="atribuicao" class="card">
+    <article id="assignment-article" class="card">
       <h2>operador de Atribuições</h2>
       <p>
         Em JavaScript, os operadores de atribuição combinados são usados para realizar uma
@@ -456,7 +550,7 @@
       </pre>
     </article>
 
-    <article id="condicionais" class="card">
+    <article id="comparison-article" class="card">
       <h2>Operadores de comparação</h2>
       <p>
         Os operadores de comparação são usados para comparar dois valores e retornar um valor
@@ -502,7 +596,7 @@
       </p>
     </article>
 
-    <article id="logic" class="card">
+    <article id="logic-article" class="card">
       <h2>Operadores Lógicos</h2>
       <p>
         Os operadores lógicos são usados para combinar expressões booleanas e retornar um valor
@@ -526,7 +620,7 @@
       </pre>
     </article>
 
-    <article id="strings" class="card">
+    <article id="strings-article" class="card">
       <h2>Strings</h2>
       <p>
         Uma string é uma sequência de caracteres, como "Hello World!". Em JavaScript, as strings
@@ -536,21 +630,24 @@
         Existem várias operações que podem ser realizadas em strings, como concatenação, extração
         de substrings, busca de padrões e substituição de texto.
       </p>
-      <h3>Concatenação de Strings</h3>
-      <p>
-        A concatenação de strings é a operação de combinar duas ou mais strings em uma única string.
-        Em JavaScript, a concatenação de strings é feita usando o operador de adição (+).
-      </p>
-      <pre>
-        <code>
-          var nome = "João";
-          var sobrenome = "Silva";
-          var nomeCompleto = nome + " " + sobrenome;
-          console.log(nomeCompleto); // Saída: João Silva
-        </code>
-      </pre>
 
-      <section id="length">
+      <section id="concatenation-section">
+        <h3>Concatenação de Strings</h3>
+        <p>
+          A concatenação de strings é a operação de combinar duas ou mais strings em uma única string.
+          Em JavaScript, a concatenação de strings é feita usando o operador de adição (+).
+        </p>
+        <pre>
+          <code>
+            var nome = "João";
+            var sobrenome = "Silva";
+            var nomeCompleto = nome + " " + sobrenome;
+            console.log(nomeCompleto); // Saída: João Silva
+          </code>
+        </pre>
+      </section>
+
+      <section id="length-section">
         <h3>Comprimento de uma String</h3>
         <p>
           O comprimento de uma string é o número de caracteres que ela contém. Em JavaScript, o
@@ -564,7 +661,7 @@
         </pre>
       </section>
 
-      <section id="substring">
+      <section id="substring-section">
         <h3>Extração de Substrings</h3>
         <p>
           Uma substring é uma parte de uma string. Em JavaScript, as substrings podem ser extraídas
@@ -582,7 +679,7 @@
         </pre>
       </section>
 
-      <section id="search">
+      <section id="search-section">
         <h3>Busca de Padrões</h3>
         <p>
           A busca de padrões em uma string é feita usando o método <code>indexOf()</code>.
@@ -602,7 +699,7 @@
         </pre>
       </section>
 
-      <section id="replace">
+      <section id="replace-section">
         <h3>Substituição de Texto</h3>
         <p>
           A substituição de texto em uma string é feita usando o método <code>replace()</code>.
@@ -617,7 +714,7 @@
         </pre>
       </section>
 
-      <section id="transform">
+      <section id="transform-section">
         <h3>Transformando string em numeros</h3>
         <p>
           Em JavaScript, é possível converter uma string em um número usando as funções
@@ -636,7 +733,7 @@
       </section>
     </article>
 
-    <article id="estruturas" class="card">
+    <article id="Conditionals-article" class="card">
       <h2>Estruturas Condicionais</h2>
       <p>
         As estruturas condicionais são usadas para tomar decisões com base em condições específicas.
@@ -652,7 +749,7 @@
         <li>switch: Executa um bloco de código com base em múltiplas condições.</li>
       </ul>
 
-      <section id="if">
+      <section id="if-section">
         <h3>if</h3>
         <p>
           A estrutura <code>if</code> é usada para executar um bloco de código se a condição
@@ -669,7 +766,7 @@
         </pre>
       </section>
 
-      <section id="else">
+      <section id="else-section">
         <h3>else</h3>
         <p>
           A estrutura <code>else</code> é usada para executar um bloco de código se a condição
@@ -688,7 +785,7 @@
         </pre>
       </section>
 
-      <section id="else-if">
+      <section id="else-if-section">
         <h3>else if</h3>
         <p>
           A estrutura <code>else if</code> é usada para executar um bloco de código se a
@@ -709,7 +806,7 @@
         </pre>
       </section>
 
-      <section id="ternary">
+      <section id="ternary-operator-section">
         <h3>Operador ternário</h3>
         <p>
           O operador ternário é uma forma abreviada de escrever uma estrutura condicional
@@ -729,7 +826,7 @@
         </pre>
       </section>
 
-      <section id="switch">
+      <section id="switch-section">
         <h3>switch</h3>
         <p>
           A estrutura <code>switch</code> é usada para executar um bloco de código com base
@@ -772,7 +869,7 @@
       </section>
     </article>
 
-    <article id="repeticao" class="card">
+    <article id="loops-article" class="card">
       <h2>Estrutura de Repetição</h2>
       <p>
         As estruturas de repetição são usadas para executar um bloco de código várias vezes.
@@ -788,7 +885,7 @@
         <li>for...in: Itera sobre as propriedades de um objeto.</li>
         <li>for...of: Itera sobre os elementos de um objeto iterável, como um array.</li>
       </ul>
-      <section id="for">
+      <section id="for-section">
         <h3>for</h3>
         <p>
           A estrutura <code>for</code> é usada para executar um bloco de código um número
@@ -803,7 +900,7 @@
         </pre>
       </section>
 
-      <section id="while">
+      <section id="while-section">
         <h3>while</h3>
         <p>
           A estrutura <code>while</code> é usada para executar um bloco de código enquanto a
@@ -821,7 +918,7 @@
         </pre>
       </section>
 
-      <section id="do-while">
+      <section id="do-while-section">
         <h3>do...while</h3>
         <p>
           A estrutura <code>do...while</code> é usada para executar um bloco de código pelo
@@ -839,7 +936,7 @@
         </pre>
       </section>
 
-      <section id="for-in">
+      <section id="for-in-section">
         <h3>for...in</h3>
         <p>
           A estrutura <code>for...in</code> é usada para iterar sobre as propriedades de um objeto.
@@ -855,7 +952,7 @@
         </pre>
       </section>
 
-      <section id="for-of">
+      <section id="for-of-section">
         <h3>for...of</h3>
         <p>
           A estrutura <code>for...of</code> é usada para iterar sobre os elementos de um objeto
@@ -872,7 +969,7 @@
         </pre>
       </section>
 
-      <section id="break-continue">
+      <section id="break-continue-section">
         <h3>break e continue</h3>
         <p>
           Os comandos <code>break</code> e <code>continue</code> são usados para controlar o
@@ -906,7 +1003,7 @@
       </section>
     </article>
 
-    <article id="arrays" class="card">
+    <article id="arrays-article" class="card">
       <h2>Arrays</h2>
       <p>
         Um array é uma coleção ordenada de valores, onde cada valor é identificado por um índice.
@@ -918,7 +1015,7 @@
         dinamicamente à medida que novos elementos são adicionados ou removidos.
       </p>
 
-      <section id="criacao">
+      <section id="creation-section">
         <h3>Criando um Array</h3>
         <p>
           Um array em JavaScript é criado usando colchetes [] e os elementos são separados
@@ -932,7 +1029,7 @@
         </pre>
       </section>
 
-      <section id="acesso">
+      <section id="access-section">
         <h3>Acessando Elementos de um Array</h3>
         <p>
           Os elementos de um array são acessados usando o índice do elemento, que começa em 0.
@@ -946,7 +1043,7 @@
         </pre>
       </section>
 
-      <section id="alteracao">
+      <section id="modification-section">
         <h3>Alterando Elementos de um Array</h3>
         <p>
           Os elementos de um array podem ser alterados atribuindo um novo valor ao índice do elemento.
@@ -960,7 +1057,7 @@
         </pre>
       </section>
 
-      <section id="adicao">
+      <section id="addition-section">
         <h3>Adicionando Elementos a um Array</h3>
         <p>
           Novos elementos podem ser adicionados a um array usando o método <code>push()</code>.
@@ -974,7 +1071,7 @@
         </pre>
       </section>
 
-      <section id="remocao">
+      <section id="removal-section">
         <h3>Removendo Elementos de um Array</h3>
         <p>
           Elementos de um array podem ser removidos usando o método <code>pop()</code>.
@@ -988,7 +1085,7 @@
         </pre>
       </section>
 
-      <section id="iteracao">
+      <section id="iteration-section">
         <h3>Iterando sobre um Array</h3>
         <p>
           Os elementos de um array podem ser iterados usando um loop <code>for</code> ou
@@ -1015,7 +1112,7 @@
       </section>
     </article>
 
-    <article id="funcoes" class="card">
+    <article id="functions-article" class="card">
       <h2>Funções</h2>
       <p>
         Uma função é um bloco de código projetado para executar uma tarefa específica.
@@ -1023,7 +1120,7 @@
         seguida pelo nome da função, parênteses e um bloco de código entre chaves.
       </p>
 
-      <section id="definicao">
+      <section id="definition-section">
         <h3>Definindo uma Função</h3>
 
         <pre>
@@ -1046,7 +1143,7 @@
         </pre>
       </section>
 
-      <section id="parametros">
+      <section id="parameters-section">
         <h3>Funções com Parâmetros</h3>
         <p>
           As funções podem receber valores de entrada chamados parâmetros.
@@ -1063,7 +1160,7 @@
         </pre>
       </section>
 
-      <section id="retorno">
+      <section id="return-section">
         <h3>Funções com Retorno</h3>
         <p>
           As funções podem retornar um valor usando a palavra-chave <code>return</code>.
@@ -1081,7 +1178,7 @@
         </pre>
       </section>
 
-      <section id="funcoes-anonimas">
+      <section id="anonymous-functions-section">
         <h3>funções anônimas</h3>
         <p>
           As funções anônimas são funções sem nome que podem ser atribuídas a variáveis ou
@@ -1099,7 +1196,7 @@
       </section>
     </article>
 
-    <article id="objetos" class="card">
+    <article id="objects-article" class="card">
       <h2>Objetos</h2>
       <p>
         Um objeto é uma coleção de propriedades, onde cada propriedade é uma chave-valor.
@@ -1107,7 +1204,7 @@
         acessá-los facilmente.
       </p>
 
-      <section id="criacao-objetos">
+      <section id="creation-section">
         <h3>Criando um Objeto</h3>
         <p>
           Um objeto em JavaScript é criado usando chaves {} e as propriedades são definidas
@@ -1124,7 +1221,7 @@
         </pre>
       </section>
 
-      <section id="acesso-objetos">
+      <section id="access-objects-section">
         <h3>Acessando Propriedades de um Objeto</h3>
         <p>
           As propriedades de um objeto podem ser acessadas usando a notação de ponto ou a
@@ -1141,7 +1238,7 @@
         </pre>
       </section>
 
-      <section id="alteracao-objetos">
+      <section id="changing-objects-section">
         <h3>Alterando Propriedades de um Objeto</h3>
         <p>
           As propriedades de um objeto podem ser alteradas atribuindo um novo valor à
@@ -1158,7 +1255,7 @@
         </pre>
       </section>
 
-      <section id="metodos-objetos">
+      <section id="methods-section">
         <h3>Métodos de um Objeto</h3>
         <p>
           Um método é uma função que é uma propriedade de um objeto. Os métodos são
@@ -1184,7 +1281,7 @@
         </p>
       </section>
 
-      <section id="construtores">
+      <section id="constructors-section">
         <h2>Construtores</h2>
         <p>
           Um construtor é uma função usada para criar novos objetos. Em JavaScript, os
@@ -1209,7 +1306,7 @@
         </p>
       </section>
 
-      <section id="forEach">
+      <section id="forEach-section">
         <h2>ForEach</h2>
         <p>
           O método <code>forEach()</code> é usado para executar uma função em cada elemento
@@ -1226,7 +1323,7 @@
         </pre>
       </section>
 
-      <section id="date">
+      <section id="date-section">
         <h2>Datas</h2>
         <p>
           Em JavaScript, as datas são representadas pelo objeto <code>Date</code>. O objeto
@@ -1269,7 +1366,7 @@
       </section>
     </article>
 
-    <article id="let-const" class="card">
+    <article id="let-const-article" class="card">
       <h3>Let e Const</h3>
       <p>
         Em JavaScript, as variáveis podem ser declaradas usando as palavras-chave <code>var</code>,
