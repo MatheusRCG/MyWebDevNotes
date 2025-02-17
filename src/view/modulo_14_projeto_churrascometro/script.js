@@ -8,8 +8,8 @@ let resultado = document.getElementById("result");
 
 function calcular() {
   let adultos = imputAdultos.value == "" ? 0 : parseInt(imputAdultos.value);
-  let criancas = imputAdultos.value == "" ? 0 : parseInt(imputCriancas.value);
-  let duracao = imputAdultos.value == "" ? 0 : parseInt(imputDuracao.value);
+  let criancas = imputCriancas.value == "" ? 0 : parseInt(imputCriancas.value);
+  let duracao = imputDuracao.value == "" ? 0 : parseInt(imputDuracao.value);
 
   if (duracao < 6) {
     var gm_carne = 400;
@@ -23,12 +23,7 @@ function calcular() {
 
   criancas *= 0.5;
 
-  console.log("kd", criancas);
-  console.log("ad", adultos);
-  console.log("car", gm_carne);
-
   let qtd_carne = (adultos + criancas) * gm_carne;
-  console.log("qtd:", qtd_carne);
   let qtd_cerveja = adultos * gm_cerveja;
   let qtd_bebida = (adultos + criancas) * gm_bebida;
 

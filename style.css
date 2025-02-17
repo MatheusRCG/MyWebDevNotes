@@ -1,64 +1,77 @@
-html,
-body {
+* {
   margin: 0;
   padding: 0;
 }
 
 body {
   font-family: "Segoe UI", Arial, sans-serif, monospace;
+  background-color: #f5f5f5;
 }
 
-h1 {
-  margin: 0;
-  color: #fff;
+article, section, div {
+  scroll-margin-top: 75px;
 }
-h2 {
-  margin: 0;
-}
+
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+  margin: 0.8em 0;
   color: #0808d8;
-  text-transform: capitalize;
+}
+
+p{
+  margin: 0.8em 0;
+  line-height: 1.5;
+}
+
+ul, ol {
+  margin: 1em 0;
+  padding-left: 40px;
+}
+
+li {
+  margin: 0.5em 0;
+  line-height: 1.5;
+}
+
+pre {
+  margin: 1em 0px;
 }
 
 #top-bar {
   position: sticky;
   top: 0;
   z-index: 1000;
+  padding: 10px 0;
   background-color: #080946;
   text-align: center;
   color: #fff;
 }
 
+#top-bar .logo {
+  height: 80%;
+  position: absolute;
+  left: 2%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
 #top-bar h1 {
   display: inline;
-}
-
-
-#top-bar a {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
   color: #fff;
-  text-decoration: none;
 }
 
-#top-bar ul {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-#top-bar ul li {
-  display: inline;
+#nav {
+  width: 23%;
+  max-height: 70%;
+  overflow: auto; 
+  position: fixed;
+  top: 65px;
+  float: left;
+  background-color: #fff;
 }
 
 #content {
@@ -72,6 +85,7 @@ h6 {
   margin: 20px auto;
   border-radius: 5px;
   text-align: justify;
+  background-color: #fff;
 }
 
 .card:hover {
@@ -118,4 +132,17 @@ pre code {
 
 #footer a {
   text-decoration: none;
+}
+
+.btn-example {
+    margin: 10px;
+    border: none;
+    background-color: lightskyblue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-example:hover {
+  background-color: lightgreen;
 }

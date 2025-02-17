@@ -26,6 +26,19 @@
       background-color: green;
     }
 
+    .btn-show-hidden-div {
+      margin: 10px;
+      border: none;
+      background-color: aquamarine;
+      padding: 5px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .btn-show-hidden-div:hover {
+      background-color: lightblue;
+    }
+
     @media screen and (max-width: 600px){
       .responsivity-box {
         background-color: red;
@@ -35,42 +48,44 @@
 </head>
 
 <body>
-  <div id="top-bar">
-    <a href="/">Voltar</a>
+  <header id="top-bar">
+    <a href="/">
+      <img class="logo" src="../../Images/logo.png" alt="logo">
+    </a>
     <h1>Módulo 8 - CSS Intermediário</h1>
-    <ul>
-      <li>Geral</li>
-      <li>Conteúdos</li>
-      <li>Projetos</li>
-    </ul>
-  </div>
+  </header>
 
-  <div id="index">
+  <nav id="nav">
     <ul>
       <li>
-        <a href="#displays">Tipos de Display</a>
+        <a href="#displays-article">Tipos de Display</a>
         <ul>
-          <li><a href="#display_block">Display Block</a></li>
-          <li><a href="#display_inline">Display Inline</a></li>
-          <li><a href="#display_inline_block">Display Inline-Block</a></li>
-          <li><a href="#display_none">Display None</a></li>
+          <li><a href="#display-block-section">Display Block</a></li>
+          <li><a href="#display-inline-section">Display Inline</a></li>
+          <li><a href="#display-inline-block-section">Display Inline-Block</a></li>
+          <li><a href="#display-none-section">Display None</a></li>
         </ul>
       </li>
       <li>
-        <a href="#positions">Tipos de Position</a>
+        <a href="#positions-article">Tipos de Posicionamentos</a>
         <ul>
-          <li><a href="#position_static">Position Static</a></li>
-          <li><a href="#position_relative">Position Relative</a></li>
-          <li><a href="#position_absolute">Position Absolute</a></li>
-          <li><a href="#position_fixed">Position Fixed</a></li>
-          <li><a href="#position_sticky">Position Sticky</a></li>
+          <li><a href="#position-static-section">Position Static</a></li>
+          <li><a href="#position-relative-section">Position Relative</a></li>
+          <li><a href="#position-absolute-section">Position Absolute</a></li>
+          <li><a href="#position-fixed-section">Position Fixed</a></li>
+          <li><a href="#position-sticky-section">Position Sticky</a></li>
+          <li><a href="#float-section">Float</a></li>
+          <li><a href="#vertical-position">Centralizando Verticalmente</a></li>
         </ul>
       </li>
+      <li>
+        <a href="#responsivity-article">Responsividade</a>
+      </li>
     </ul>
-  </div>
+  </nav>
 
-  <div id="content">
-    <div id="displays" class="card">
+  <main id="content">
+    <article id="displays-article" class="card">
       <h2>Tipos de Display</h2>
       <p>
         A propriedade <code>display</code> define como um elemento é exibido na página. Existem vários
@@ -79,7 +94,7 @@
       </p>
 
 
-      <div id="display_block">
+      <section id="display-block-section">
         <h3>Display Block</h3>
         <p>
           Um elemento com <code>display: block</code> ocupa toda a largura disponível e começa em
@@ -93,10 +108,12 @@
             &lt;/div&gt;
           </code>
         </pre>
-        <div style="display: block; background-color: lightblue;">Elemento Block</div>
-      </div>
+        <div class="result">
+          <div style="display: block; background-color: lightblue;">Elemento Block</div>
+        </div>
+      </section>
 
-      <div id="display_inline">
+      <section id="display-inline-section">
         <h3>Display Inline</h3>
         <p>
           Um elemento com <code>display: inline</code> ocupa apenas a largura necessária e não
@@ -110,10 +127,12 @@
             &lt;/span&gt;
           </code>
         </pre>
-        <span style="display: inline; background-color: lightblue;">Elemento Inline</span>
-      </div>
+        <div class="result">
+          <span style="display: inline; background-color: lightblue;">Elemento Inline</span>
+        </div>
+      </section>
 
-      <div id="display_inline_block">
+      <section id="display-inline-block-section">
         <h3>Display Inline-Block</h3>
         <p>
           Um elemento com <code>display: inline-block</code> é semelhante ao inline, mas permite
@@ -126,11 +145,15 @@
             &lt;/div&gt;
           </code>
         </pre>
-        <div style="display: inline-block; width: 100px; height: 50px; background-color: lightblue;">Elemento
-          Inline-Block</div>
-      </div>
+        <div class="result">
+          <div style="display: inline-block; width: 100px; height: 50px; background-color: lightblue;">
+            Elemento
+            Inline-Block
+          </div>
+        </div>
+      </section>
 
-      <div id="display_none">
+      <section id="display-none-section">
         <h3>Display None</h3>
         <p>
           Um elemento com <code>display: none</code> não é exibido na página e não ocupa espaço.
@@ -140,12 +163,10 @@
             &lt;div style="display: none;"&gt;Elemento None&lt;/div&gt;
           </code>
         </pre>
-        <div style="display: none;">Elemento None</div>
-        <p>O elemento acima não é exibido na página.</p>
-      </div>
-    </div>
+      </section>
+    </article>
 
-    <div id="positions" class="card">
+    <article id="positions-article" class="card">
       <h2>Tipos de Posicionamentos</h2>
       <p>
         A propriedade <code>position</code> define como um elemento é posicionado na página. Existem
@@ -153,7 +174,7 @@
         <code>relative</code>, <code>absolute</code>, <code>fixed</code> e <code>sticky</code>.
       </p>
 
-      <div id="position_static">
+      <section id="position-static-section">
         <h3>Position Static</h3>
         <p>
           Um elemento com <code>position: static</code> é posicionado de acordo com o fluxo normal
@@ -171,9 +192,9 @@
           <div class="box blue"></div>
           <div class="box green"></div>
         </div>
-      </div>
+      </section>
 
-      <div id="position_relative">
+      <section id="position-relative-section">
         <h3>Position Relative</h3>
         <p>
           Um elemento com <code>position: relative</code> é posicionado de acordo com o fluxo normal
@@ -195,9 +216,9 @@
           </div>
           <div class="box green"></div>
         </div>
-      </div>
+      </section>
 
-      <div id="position_absolute">
+      <section id="position-absolute-section">
         <h3>Position Absolute</h3>
         <p>
           Um elemento com <code>position: absolute</code> é posicionado em relação ao seu ancestral
@@ -219,9 +240,9 @@
           </div>
           <div class="box green"></div>
         </div>
-      </div>
+      </section>
 
-      <div id="position_fixed">
+      <section id="position-fixed-section">
         <h3>Position Fixed</h3>
         <p>
           Um elemento com <code>position: fixed</code> é posicionado em relação à janela do navegador
@@ -236,16 +257,19 @@
             }
           </code>
         </pre>
-        <button onclick="document.getElementById('result-position-fixed').style.visibility = 'visible';">
-          Mostrar div azul
-        </button>
-
-        <div id="result-position-fixed"
+        <div id="position-fixed-result"
           style="visibility: hidden; position: fixed; right: 0; top: 50px; background-color: blue; width: 100px; height: 100px;">
         </div>
-      </div>
 
-      <div id="position_sticky">
+        <button class="btn-show-hidden-div" onclick="document.getElementById('position-fixed-result').style.visibility = 'visible';">
+          Mostrar div azul
+        </button>
+        <button class="btn-show-hidden-div" onclick="document.getElementById('position-fixed-result').style.visibility = 'hidden';">
+          esconder div azul
+        </button>
+      </section>
+
+      <section id="position-sticky-section">
         <h3>Position Sticky</h3>
         <p>
           Um elemento com <code>position: sticky</code> alterna entre <code>relative</code> e
@@ -267,9 +291,9 @@
             <div class="box green"></div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div id="float">
+      <section id="float-section">
         <h3>Float</h3>
         <p>
           A propriedade <code>float</code> é usada para alinhar elementos lado a lado. Ela pode
@@ -294,17 +318,20 @@
             minima dolores aliquid. Veniam ratione error non!
           </p>
         </div>
-      </div>
+      </section>
 
-      <div id="vertical-position">
+      <section id="vertical-position">
         <h3>Centralizando Verticalmente</h3>
-        <p id="explicacao">
+        <p>
           Para centralizar um elemento verticalmente, podemos usar a propriedade <code>position</code>
           com o valor <code>absolute</code> e as propriedades <code>top</code> e <code>left</code>
-          com o valor de 50% para centralizar, nisso teremos o ponto inicial do objeto centralizado,
-          alinharmos o centro do objeto com a centralização usamos o <code>transform</code> com o valor
+          com o valor de 50% para centralizar, nisso teremos o ponto inicial do objeto centralizado.
+        </p>
+        <p>
+          Então para alinharmos o centro do objeto usamos o <code>transform</code> com o valor
           <code>translate</code> passando o eixo vertical e horizontal (é possivel usar somente
-          <code>translateY</code> ou <code>translateX</code>, mas nunca os dois ao mesmo tempo).
+          <code>translateY</code> ou <code>translateX</code>, mas nunca os dois ao mesmo tempo 
+          a não ser com o <code>translate</code> normal).
         </p>
         <pre>
           <code>
@@ -320,9 +347,10 @@
           <div class="box blue" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
           </div>
         </div>
-      </div>
-    </div>
-    <div id="responsivity" class="card">
+      </section>
+    </article>
+
+    <article id="responsivity-article" class="card">
       <h2>Responsividade</h2>
       <p>
         Responsividade é a capacidade de um site se adaptar a diferentes tamanhos de tela. Para
@@ -346,8 +374,9 @@
       <div class="result">
         <div class="box blue responsivity-box"></div>
       </div>
-    </div>
-  </div>
+    </article>
+  </main>
+
   <div id="footer">
     <a href="https://github.com/MatheusRCG" target="_blank">
       <img src="/src/Images/github-logo.png" alt="logo github">
