@@ -11,24 +11,20 @@
 
 <body>
   <header id="top-bar">
-    <a href="/">Voltar</a>
+    <a href="/">
+      <img class="logo" src="../../Images/logo.png" alt="logo">
+    </a>
     <h1>Módulo 13 - JS Intermediário</h1>
-    <ul>
-      <li>Geral</li>
-      <li>Conteúdos</li>
-      <li>Projetos</li>
-    </ul>
   </header>
 
   <nav id="index">
     <ul>
-      <li>
-      </li>
+
     </ul>
   </nav>
 
   <main id="content">
-    <article id="windown" class="card">
+    <article id="windown-article" class="card">
       <h2>Windown</h2>
       <p>
         Windown é o objeto global do navegador, ele é o objeto que contém todos os outros
@@ -46,7 +42,7 @@
         </code>
       </pre>
     </article>
-    <article id="document" class="card">
+    <article id="document-article" class="card">
       <h2>document</h2>
       <p>
         O objeto document é um objeto que representa o documento HTML que está sendo exibido
@@ -63,48 +59,59 @@
       </pre>
     </article>
 
-    <article id="getElementById" class="card">
+    <article id="get-element-article" class="card">
       <h2>Acessando Elementos</h2>
-      <p>
-        Para acessar um elemento HTML através do JavaScript, você pode utilizar o método
-        <code>getElementById()</code>, que recebe como parâmetro o id do elemento que
-        você deseja acessar.
-      </p>
-      <pre>
-        <code>
-          const element = document.getElementById('elementId');
-        </code>
-      </pre>
-      <p>
-        O método <code>getElementById()</code> retorna o elemento HTML que possui o id especificado, ou
-        null caso não exista nenhum elemento com o id especificado.
-      </p>
-      <p>
-        Você também pode acessar um elemento HTML através de sua classe utilizando o
-        <code>getElementsByClassName().</code>
-      </p>
-      <pre>
-        <code>
-          const elements = document.getElementsByClassName('className');
-        </code>
-      </pre>
-      <p>
-        Outra forma de acessar um elemento HTML, é através de sua tag html utilizando o
-        <code>getElementsByTagName()</code>.
-      </p>
-      <pre>
-        <code>
-          const elements = document.getElementsByTagName('tag');
-        </code>
-      </pre>
-      <p>
-        O método <code>getElementsByTagName()</code> retorna uma coleção de elementos HTML que
-        possuem a tag especificada, ou uma coleção vazia caso não exista nenhum elemento com a
-        tag especificada.
-      </p>
+      <section id="get-element-by-id-section">
+        <h3>getElementById</h3>
+        <p>
+          Para acessar um elemento HTML através do JavaScript, você pode utilizar o método
+          <code>getElementById()</code>, que recebe como parâmetro o id do elemento que
+          você deseja acessar.
+        </p>
+        <pre>
+          <code>
+            const element = document.getElementById('elementId');
+          </code>
+        </pre>
+        <p>
+          O método <code>getElementById()</code> retorna o elemento HTML que possui o id especificado, ou
+          null caso não exista nenhum elemento com o id especificado.
+        </p>
+      </section>
+
+      <section id="get-element-by-class-section">
+        h3>getElementsByClassName</h3>
+        <p>
+          Você também pode acessar um elemento HTML através de sua classe utilizando o
+          <code>getElementsByClassName().</code>
+        </p>
+        <pre>
+          <code>
+            const elements = document.getElementsByClassName('className');
+          </code>
+        </pre>
+      </section>
+
+      <section id="get-element-by-tag-section">
+        <h3>getElementsByTagName</h3>
+        <p>
+          Outra forma de acessar um elemento HTML, é através de sua tag html utilizando o
+          <code>getElementsByTagName()</code>.
+        </p>
+        <pre>
+          <code>
+            const elements = document.getElementsByTagName('tag');
+          </code>
+        </pre>
+        <p>
+          O método <code>getElementsByTagName()</code> retorna uma coleção de elementos HTML que
+          possuem a tag especificada, ou uma coleção vazia caso não exista nenhum elemento com a
+          tag especificada.
+        </p>
+      </section>
     </article>
 
-    <article id="modfy" class="card">
+    <article id="modfy-elements-article" class="card">
       <h2>Modificando elementos</h2>
       <p>
         Para modificar um elemento HTML, você pode utilizar as propriedades do objeto
@@ -141,7 +148,7 @@
       </p>
     </article>
 
-    <article id="envents" class="card">
+    <article id="envents-article" class="card">
       <h2>eventos</h2>
       <p>
         Eventos são ações que ocorrem em um elemento HTML, como um clique, um hover, um scroll, etc.
@@ -201,7 +208,7 @@
       </p>
     </article>
 
-    <article id="elementos-pai-filhos" class="card">
+    <article id="parent-child-article" class="card">
       <h2>Elementos Pai e Filhos</h2>
       <p>
         Para acessar o elemento pai de um elemento HTML, você pode utilizar a propriedade
@@ -225,7 +232,7 @@
       </pre>
     </article>
 
-    <article id="biblioteca-math" class="card">
+    <article id="math-library-article" class="card">
       <h2>Biblioteca Math</h2>
       <p>
         A biblioteca Math é uma biblioteca nativa do JavaScript que contém métodos matemáticos
@@ -270,7 +277,7 @@
       </p>
     </article>
 
-    <article id="json" class="card">
+    <article id="json-article" class="card">
       <h2>JSON</h2>
       <p>
         JSON (JavaScript Object Notation) é um formato de dados que é utilizado para
@@ -305,78 +312,94 @@
       </p>
     </article>
 
-    <article id="local-storage" class="card">
+    <article id="local-storage-article" class="card">
       <h2>Persistência de dados</h2>
       <p>
         O Local Storage é uma forma de armazenar dados no navegador do usuário. Os dados
         armazenados no Local Storage ficam disponíveis mesmo após o usuário fechar o navegador
         ou desligar o computador.
       </p>
-      <p>
-        Para armazenar dados no Local Storage, você pode utilizar o método <code>setItem()</code>,
-        que recebe como parâmetro o nome da chave e o valor que você deseja armazenar.
-      </p>
-      <pre>
-        <code>
-          localStorage.setItem('nome', 'Matheus');
-        </code>
-      </pre>
-      <p>
-        Para recuperar dados do Local Storage, você pode utilizar o método <code>getItem()</code>,
-        que recebe como parâmetro o nome da chave que você deseja recuperar.
-      </p>
-      <pre>
-        <code>
-          const nome = localStorage.getItem('nome');
-          console.log(nome); // Matheus
-        </code>
-      </pre>
-      <p>
-        Para remover um item do Local Storage, você pode utilizar o método <code>removeItem()</code>,
-        que recebe como parâmetro o nome da chave que você deseja remover.
-      </p>
-      <pre>
-        <code>
-          localStorage.removeItem('nome');
-        </code>
-      </pre>
-      <p>
-        Para remover todos os itens do Local Storage, você pode utilizar o método <code>clear()</code>.
-      </p>
-      <pre>
-        <code>
-          localStorage.clear();
-        </code>
-      </pre>
-      <p>
-        O Local Storage armazena os dados em pares chave-valor, onde a chave e o valor são
-        strings. Para armazenar objetos no Local Storage, você deve convertê-los para JSON
-        utilizando o método <code>JSON.stringify()</code>.
-      </p>
-      <pre>
-        <code>
-          const pessoa = {
-            nome: 'Matheus',
-            idade: 25,
-            cidade: 'São Paulo'
-          };
 
-          localStorage.setItem('pessoa', JSON.stringify(pessoa));
-        </code>
-      </pre>
-      <p>
-        Para recuperar um objeto do Local Storage, você deve converter a string JSON para um
-        objeto JavaScript utilizando o método <code>JSON.parse()</code>.
-      </p>
-      <pre>
-        <code>
-          const pessoa = JSON.parse(localStorage.getItem('pessoa'));
-          console.log(pessoa); // {nome: 'Matheus', idade: 25, cidade: 'São Paulo'}
-        </code>
-      </pre>
+      <section id="set-item-section">
+        <h3>Armazenando</h3>
+        <p>
+          Para armazenar dados no Local Storage, você pode utilizar o método <code>setItem()</code>,
+          que recebe como parâmetro o nome da chave e o valor que você deseja armazenar.
+        </p>
+        <pre>
+          <code>
+            localStorage.setItem('nome', 'Matheus');
+          </code>
+        </pre>
+      </section>
+
+      <section id="get-item-section">
+        <h3>Recuperando</h3>
+        <p>
+          Para recuperar dados do Local Storage, você pode utilizar o método <code>getItem()</code>,
+          que recebe como parâmetro o nome da chave que você deseja recuperar.
+        </p>
+        <pre>
+          <code>
+            const nome = localStorage.getItem('nome');
+            console.log(nome); // Matheus
+          </code>
+        </pre>
+      </section>
+
+      <section id="remove-item-section">
+        <h3>Removendo</h3>
+        <p>
+          Para remover um item do Local Storage, você pode utilizar o método <code>removeItem()</code>,
+          que recebe como parâmetro o nome da chave que você deseja remover.
+        </p>
+        <pre>
+          <code>
+            localStorage.removeItem('nome');
+          </code>
+        </pre>
+        <p>
+          Para remover todos os itens do Local Storage, você pode utilizar o método <code>clear()</code>.
+        </p>
+        <pre>
+          <code>
+            localStorage.clear();
+          </code>
+        </pre>
+      </section>
+
+      <section id="store-objects-section">
+        <h3>Armazenando Objetos</h3>
+        <p>
+          O Local Storage armazena os dados em pares chave-valor, onde a chave e o valor são
+          strings. Para armazenar objetos no Local Storage, você deve convertê-los para JSON
+          utilizando o método <code>JSON.stringify()</code>.
+        </p>
+        <pre>
+          <code>
+            const pessoa = {
+              nome: 'Matheus',
+              idade: 25,
+              cidade: 'São Paulo'
+            };
+  
+            localStorage.setItem('pessoa', JSON.stringify(pessoa));
+          </code>
+        </pre>
+        <p>
+          Para recuperar um objeto do Local Storage, você deve converter a string JSON para um
+          objeto JavaScript utilizando o método <code>JSON.parse()</code>.
+        </p>
+        <pre>
+          <code>
+            const pessoa = JSON.parse(localStorage.getItem('pessoa'));
+            console.log(pessoa); // {nome: 'Matheus', idade: 25, cidade: 'São Paulo'}
+          </code>
+        </pre>
+      </section>
     </article>
 
-    <article id="timer-intervalo" class="card">
+    <article id="timer-interval-article" class="card">
       <h2>Timer e Intervalo</h2>
       <p>
         O JavaScript possui dois métodos para execut
@@ -418,7 +441,7 @@
         </code>
       </pre>
 
-      <section id="contador-segundos">
+      <section id="seconds-counter-section">
         <h3>Contador Segundos</h3>
         <pre>
           <code>
@@ -452,9 +475,9 @@
           </code>
         </pre>
         <h4 id="numero">0 segundos</h4>
-        <button id="iniciar">iniciar</button>
-        <button id="parar">parar</button>
-        <button id="zerar">zerar</button>
+        <button class="btn-example" id="iniciar">iniciar</button>
+        <button class="btn-example" id="parar">parar</button>
+        <button class="btn-example" id="zerar">zerar</button>
 
         <script>
           const numero = document.getElementById('numero');

@@ -133,3 +133,16 @@ pre code {
 #footer a {
   text-decoration: none;
 }
+
+.btn-example {
+    margin: 10px;
+    border: none;
+    background-color: lightskyblue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-example:hover {
+  background-color: lightgreen;
+}
