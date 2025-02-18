@@ -74,6 +74,18 @@ pre {
   background-color: #fff;
 }
 
+#nav ul {
+  list-style: none;
+}
+
+#nav a {
+  text-decoration: none;
+}
+
+#nav a:visited {
+  color: #0808d8;
+}
+
 #content {
   width: 60%;
   margin: auto;
@@ -145,4 +157,56 @@ pre code {
 
 .btn-example:hover {
   background-color: lightgreen;
+}
+
+.link-list-section {
+  margin: 20px 0;
+  background-color: #fff;
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #00000050;
+}
+
+.link-list-section h2 {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.link-list-section p {
+  text-align: justify;
+  font-size: 1.2rem;
+}
+
+.link-list-section ul {
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.link-list-section a {
+  width: 250px;
+  height: 150px;
+  border-radius: 25px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.5rem;
+  background: linear-gradient(to right, #004aad, #cb6ce6 );
+  color: #fff;
+}
+
+.link-list-section a:hover {
+  background: linear-gradient(to top, #004aad, #cb6ce6 );
+  box-shadow: 8px 8px 8px #00000050;
 }
