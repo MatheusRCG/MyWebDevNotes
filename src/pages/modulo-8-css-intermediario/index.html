@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS Intermediário</title>
-  <link rel="icon" href="../../Images/icon.png" type="image/png">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="../../images/icon.png" type="image/png">
+  <link rel="stylesheet" href="../../css/main.css">
 
   <style>
     .box {
@@ -39,7 +39,7 @@
       background-color: lightblue;
     }
 
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 600px) {
       .responsivity-box {
         background-color: red;
       }
@@ -50,7 +50,7 @@
 <body>
   <header id="top-bar">
     <a href="/">
-      <img class="logo" src="../../Images/logo.png" alt="logo">
+      <img class="logo" src="../../images/logo.png" alt="logo">
     </a>
     <h1>CSS Intermediário</h1>
   </header>
@@ -261,10 +261,12 @@
           style="visibility: hidden; position: fixed; right: 0; top: 50px; background-color: blue; width: 100px; height: 100px;">
         </div>
 
-        <button class="btn-show-hidden-div" onclick="document.getElementById('position-fixed-result').style.visibility = 'visible';">
+        <button class="btn-show-hidden-div"
+          onclick="document.getElementById('position-fixed-result').style.visibility = 'visible';">
           Mostrar div azul
         </button>
-        <button class="btn-show-hidden-div" onclick="document.getElementById('position-fixed-result').style.visibility = 'hidden';">
+        <button class="btn-show-hidden-div"
+          onclick="document.getElementById('position-fixed-result').style.visibility = 'hidden';">
           esconder div azul
         </button>
       </section>
@@ -330,7 +332,7 @@
         <p>
           Então para alinharmos o centro do objeto usamos o <code>transform</code> com o valor
           <code>translate</code> passando o eixo vertical e horizontal (é possivel usar somente
-          <code>translateY</code> ou <code>translateX</code>, mas nunca os dois ao mesmo tempo 
+          <code>translateY</code> ou <code>translateX</code>, mas nunca os dois ao mesmo tempo
           a não ser com o <code>translate</code> normal).
         </p>
         <pre>
@@ -379,10 +381,10 @@
 
   <div id="footer">
     <a href="https://github.com/MatheusRCG" target="_blank">
-      <img src="/src/Images/github-logo.png" alt="logo github">
+      <img src="/src/images/github-logo.png" alt="logo github">
     </a>
     <a href="https://www.linkedin.com/in/matheusrcg/" target="_blank">
-      <img src="/src/Images/linkedin-logo.png" alt="linkedin logo">
+      <img src="/src/images/linkedin-logo.png" alt="linkedin logo">
     </a>
   </div>
 </body>
