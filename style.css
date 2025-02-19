@@ -8,7 +8,9 @@ body {
   background-color: #f5f5f5;
 }
 
-article, section, div {
+article,
+section,
+div {
   scroll-margin-top: 75px;
 }
 
@@ -22,12 +24,13 @@ h6 {
   color: #0808d8;
 }
 
-p{
+p {
   margin: 0.8em 0;
   line-height: 1.5;
 }
 
-ul, ol {
+ul,
+ol {
   margin: 1em 0;
   padding-left: 40px;
 }
@@ -47,6 +50,7 @@ pre {
   z-index: 1000;
   padding: 10px 0;
   background-color: #080946;
+  background: linear-gradient(to right, #004aad, #5de0e6);
   text-align: center;
   color: #fff;
 }
@@ -67,11 +71,23 @@ pre {
 #nav {
   width: 23%;
   max-height: 70%;
-  overflow: auto; 
+  overflow: auto;
   position: fixed;
   top: 65px;
   float: left;
   background-color: #fff;
+}
+
+#nav ul {
+  list-style: none;
+}
+
+#nav a {
+  text-decoration: none;
+}
+
+#nav a:visited {
+  color: #0808d8;
 }
 
 #content {
@@ -119,13 +135,13 @@ pre code {
 
 #footer {
   padding: 6px 0 2px 0;
-  background-color: #080946;
+  background: linear-gradient(to right, #004aad, #5de0e6);
   text-align: center;
 }
 
 #footer img {
   width: 40px;
-  background-color: white; 
+  background-color: white;
   border-radius: 50%;
   margin: 0 5px;
 }
@@ -135,14 +151,72 @@ pre code {
 }
 
 .btn-example {
-    margin: 10px;
-    border: none;
-    background-color: lightskyblue;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
+  margin: 10px;
+  border: none;
+  background-color: lightskyblue;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .btn-example:hover {
   background-color: lightgreen;
+}
+
+/* Página principal */
+.link-list-section {
+  margin: 20px 0;
+  background-color: #fff;
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #00000050;
+}
+
+.link-list-section h2 {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.link-list-section p {
+  text-align: justify;
+  font-size: 1.2rem;
+}
+
+.link-list-section ul {
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.link-list-section a {
+  width: 250px;
+  height: 150px;
+  border-radius: 25px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.5rem;
+  background: linear-gradient(to right, #004aad, #5de0e6);
+  color: #fff;
+  text-shadow: 2px 2px 4px #00000050;
+
+}
+
+.link-list-section a:hover {
+  transform: scale(1.08);
+  background: linear-gradient(to top, #004aad, #5de0e6);
+  box-shadow: 5px 5px 8px #00000050;
+  text-shadow: 4px 4px 4px #00000050;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, text-shadow 0.4s ease;
 }
