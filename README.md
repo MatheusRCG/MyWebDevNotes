@@ -16,22 +16,22 @@ O site é dividido em duas seções principais:
 
 A seção de módulos apresenta os tópicos abordados no curso, seguindo a ordem em que foram ensinados. Cada link leva às anotações e exemplos práticos do respectivo módulo.
 
-- [HTML Básico](./src/view/modulo_1_2_3_html_basico/index.html)
-- [CSS Básico](./src/view/modulo_5_css_basico/index.html)
-- [CSS Intermediário](./src/view/modulo_8_css-intermediario/index.html)
-- [HTML Intermediário](./src/view/modulo_9_html_intermediario/index.html)
-- [JavaScript Básico](./src/view/modulo_11_12_js_basico/index.html)
-- [JavaScript Intermediário](./src/view/modulo_13_js_intermediario/index.html)
+- [HTML Básico](./src/pages/modulo-1-2-3-html-basico/index.html)
+- [CSS Básico](./src/pages/modulo-5-css-basico/index.html)
+- [CSS Intermediário](./src/pages/modulo-8-css-intermediario/index.html)
+- [HTML Intermediário](./src/pages/modulo-9-html-intermediario/index.html)
+- [JavaScript Básico](./src/pages/modulo-11-12-js-basico/index.html)
+- [JavaScript Intermediário](./src/pages/modulo-13-js-intermediario/index.html)
 
 ### 🎨 Projetos
 
 Esta seção lista os projetos desenvolvidos durante o curso, permitindo visualizar na prática a aplicação dos conceitos aprendidos.
 
-- [Currículo (HTML Básico)](./src/view/modulo_4_projeto_curriculo/index.html)
-- [Página de Conteúdo (CSS Básico)](./src/view/modulo_6_projeto_pag_conteudo/index.html)
-- [Página de Receitas (CSS Básico)](./src/view/modulo_7_projeto_pag_de_receitas/index.html)
-- [Página de Captura (HTML Intermediário)](./src/view/modulo_10_projeto_pag_captura/index.html)
-- [Churrascômetro (JS Intermediário)](./src/view/modulo_14_projeto_churrascometro/index.html)
+- [Currículo (HTML Básico)](./src/pages/modulo-4-projeto-curriculo/index.html)
+- [Página de Conteúdo (CSS Básico)](./src/pages/modulo-6-projeto-pag-conteudo/index.html)
+- [Página de Receitas (CSS Básico)](./src/pages/modulo-7-projeto-pag-de-receitas/index.html)
+- [Página de Captura (HTML Intermediário)](./src/pages/modulo-9-html-intermediario/index.html)
+- [Churrascômetro (JS Intermediário)](./src/pages/modulo-14-projeto-churrascometro/index.html)
 
 ## 🔧 Como Usar
 
@@ -50,4 +50,3 @@ Esta seção lista os projetos desenvolvidos durante o curso, permitindo visuali
 Este projeto serve como um guia de aprendizado e revisão, ajudando na fixação dos conceitos de desenvolvimento web adquiridos ao longo do curso **ProgramadorBR**.
 
 Sinta-se à vontade para explorar! 🚀
-
