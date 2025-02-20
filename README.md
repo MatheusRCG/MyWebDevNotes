@@ -37,11 +37,11 @@ Esta seção lista os projetos desenvolvidos durante o curso, permitindo visuali
 
 1. Clone o repositório:
    ```sh
-   git clone https://github.com/MatheusRCG/Curso_ProgramadorBr.git
+   git clone https://github.com/MatheusRCG/Curso-Programador-Br.git
    ```
 2. Navegue até o diretório do projeto:
    ```sh
-   cd Curso_ProgramadorBr
+   cd Curso-Programador-Br
    ```
 3. Abra o arquivo `index.html` no navegador.
 
