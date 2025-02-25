@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Avançado</title>
   <link rel="stylesheet" href="../../css/main.css">
 </head>
+
 <body>
   <header id="top-bar">
     <a href="/">
@@ -14,7 +16,174 @@
     <h1>HTML Avançado</h1>
   </header>
 
-  <main>
+  <nav id="nav">
+    <ul>
+
+    </ul>
+  </nav>
+
+  <main id="content">
+    <article id="attributes-article" class="card">
+      <h2>Criando atributos</h2>
+      <section id="setAttribute-section">
+        <h3>SetAttribute</h3>
+        <p>
+          A função <code>setAttribute</code> é usada para adicionar ou modificar atributos de um elemento HTML. Ela
+          recebe
+          dois parâmetros: o nome do atributo e o valor que você deseja atribuir a ele.
+        </p>
+        <pre>
+          <code>
+            const elemento = document.getElementById('meuElemento');
+            elemento.setAttribute('class', 'minhaClasse');
+          </code>
+        </pre>
+        <p>
+          No exemplo acima, estamos selecionando um elemento com o id <code>meuElemento</code> e adicionando a ele uma
+          classe chamada <code>minhaClasse</code>.
+        </p>
+        <p>
+          Você também pode usar <code>setAttribute</code> para modificar atributos existentes. Por exemplo, para alterar
+          o
+          valor de um atributo <code>src</code> de uma imagem:
+        </p>
+        <pre>
+          <code>
+            const imagem = document.getElementById('minhaImagem');
+            imagem.setAttribute('src', 'novoCaminho/paraImagem.png');
+          </code>
+        </pre>
+        <p>
+          No exemplo acima, estamos alterando o atributo <code>src</code> de uma imagem para um novo caminho.
+        </p>
+        <p>
+          A função <code>setAttribute</code> é muito útil quando você precisa manipular dinamicamente os atributos dos
+          elementos HTML usando JavaScript.
+        </p>
+      </section>
+      <section>
+        <h3>getAttribute</h3>
+        <p>
+          A função <code>getAttribute</code> é usada para obter o valor de um atributo de um elemento HTML. Ela recebe
+          um
+          parâmetro: o nome do atributo que você deseja obter.
+        </p>
+        <pre>
+          <code>
+            const elemento = document.getElementById('meuElemento');
+            const classe = elemento.getAttribute('class');
+            console.log(classe);
+          </code>
+        </pre>
+        <p>
+          No exemplo acima, estamos selecionando um elemento com o id <code>meuElemento</code> e obtendo o valor de seu
+          atributo <code>class</code>. Em seguida, estamos imprimindo esse valor no console.
+        </p>
+        <p>
+          A função <code>getAttribute</code> é útil quando você precisa acessar os valores dos atributos dos elementos
+          HTML usando JavaScript.
+        </p>
+      </section>
+      <section>
+        <h3>removeAttribute</h3>
+        <p>
+          A função <code>removeAttribute</code> é usada para remover um atributo de um elemento HTML. Ela recebe um
+          parâmetro: o nome do atributo que você deseja remover.
+        </p>
+        <pre>
+          <code>
+            const elemento = document.getElementById('meuElemento');
+            elemento.removeAttribute('class');
+          </code>
+        </pre>
+        <p>
+          No exemplo acima, estamos selecionando um elemento com o id <code>meuElemento</code> e removendo seu atributo
+          <code>class</code>.
+        </p>
+        <p>
+          A função <code>removeAttribute</code> é útil quando você precisa remover dinamicamente os atributos dos
+          elementos HTML usando JavaScript.
+        </p>
+      </section>
+      <section>
+        <h3>dataset</h3>
+        <p>
+          A propriedade <code>dataset</code> é usada para acessar os atributos de dados de um elemento HTML. Ela retorna
+          um objeto que contém todos os atributos de dados do elemento.
+        </p>
+        <pre>
+          <code>
+            const elemento = document.getElementById('meuElemento');
+            const valor = elemento.dataset.meuAtributo;
+            console.log(valor);
+          </code>
+        </pre>
+        <p>
+          No exemplo acima, estamos selecionando um elemento com o id <code>meuElemento</code> e acessando o valor de
+          seu
+          atributo de dados <code>meuAtributo</code>. Em seguida, estamos imprimindo esse valor no console.
+        </p>
+        <p>
+          A propriedade <code>dataset</code> é útil quando você precisa acessar os atributos de dados dos elementos HTML
+          usando JavaScript.
+        </p>
+      </section>
+    </article>
+    <article id="video-article" class="card">
+      <h2>Vídeo</h2>
+      <section id="add-video-section">
+        <h3>Adicionando um vídeo</h3>
+        <p>
+          Para adicionar um vídeo em uma página HTML, você pode usar a tag <code>&lt;video&gt;</code>. Esta tag permite
+          que você incorpore vídeos diretamente em suas páginas web.
+        </p>
+        <pre>
+          <code>
+            &lt;video src="caminho/para/video.mp4" controls&gt;
+              Seu navegador não suporta a tag de vídeo.
+            &lt;/video&gt;
+          </code>
+        </pre>
+        <p>
+          No exemplo acima, estamos adicionando um vídeo com o caminho especificado e ativando os controles padrão do
+          navegador.
+        </p>
+      </section>
+
+      <section id="video-attributes-section">
+        <h3>Atributos de Vídeo</h3>
+        <p>
+          A tag <code>&lt;video&gt;</code> suporta vários atributos que permitem controlar o comportamento e a aparência
+          do vídeo. Aqui estão alguns dos principais atributos:
+        </p>
+        <ul>
+          <li><code>src</code>: Especifica o caminho para o arquivo de vídeo.</li>
+          <li><code>controls</code>: Adiciona controles de reprodução ao vídeo, como play, pause e volume.</li>
+          <li><code>autoplay</code>: Faz com que o vídeo comece a ser reproduzido automaticamente quando a página é
+            carregada.</li>
+          <li><code>loop</code>: Faz com que o vídeo seja reproduzido em loop contínuo.</li>
+          <li><code>preload</code>: Especifica se o vídeo deve ser carregado automaticamente quando a página é
+            carregada. Pode ter os seguintes valores:
+            <ul>
+              <li><code>auto</code>: O vídeo será carregado automaticamente.</li>
+              <li><code>metadata</code>: Apenas os metadados do vídeo serão carregados.</li>
+              <li><code>none</code>: O vídeo não será carregado automaticamente.</li>
+            </ul>
+          </li>
+          <li><code>width</code>: Define a largura do vídeo em pixels.</li>
+          <li><code>poster</code>: Especifica uma imagem a ser mostrada enquanto o vídeo não está sendo reproduzido.
+          </li>
+        </ul>
+        <p>Exemplo de uso dos atributos:</p>
+        <pre>
+          <code>
+            &lt;video src="caminho/para/video.mp4" controls autoplay loop preload="auto" width="600" poster="caminho/para/poster.jpg"&gt;
+              Seu navegador não suporta a tag de vídeo.
+            &lt;/video&gt;
+          </code>
+        </pre>
+      </section>
+    </article>
 
   </main>
 
@@ -26,6 +195,7 @@
       <img src="../../images/linkedin-logo.png" alt="linkedin logo">
     </a>
   </footer>
-  
+
 </body>
+
 </html>
