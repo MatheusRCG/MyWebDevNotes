@@ -191,8 +191,8 @@
     <article id="iframe-article" class="card">
       <h2>Iframe</h2>
       <p>
-        A tag <code>&lt;iframe&gt;</code> é usada para incorporar conteúdo de outras fontes em uma página HTML. 
-        Isso pode incluir outros documentos HTML, vídeos, mapas e muito mais. A tag <code>&lt;iframe&gt;</code> 
+        A tag <code>&lt;iframe&gt;</code> é usada para incorporar conteúdo de outras fontes em uma página HTML.
+        Isso pode incluir outros documentos HTML, vídeos, mapas e muito mais. A tag <code>&lt;iframe&gt;</code>
         cria uma janela embutida que exibe o conteúdo especificado pelo atributo <code>src</code>.
       </p>
       <p>
@@ -203,7 +203,7 @@
       &lt;iframe src="https://www.example.com" width="600" height="400" frameborder="0"&gt;&lt;/iframe&gt;
         </code>
       </pre>
-      
+
       <section id="iframe-video-section">
         <h3>video com iframe</h3>
         <p>
@@ -217,12 +217,8 @@
           </code>
         </pre>
         <div class="result">
-          <iframe
-            width="100%"
-            height="315" 
-            src="https://www.youtube.com/embed/mf-MBod9K_I?si=9DiT00UERTTaLigc" 
-            frameborder="0"
-            allowfullscreen>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/mf-MBod9K_I?si=9DiT00UERTTaLigc"
+            frameborder="0" allowfullscreen>
           </iframe>
         </div>
       </section>
@@ -230,7 +226,7 @@
     <article id="audio-article" class="card">
       <h2>Áudio</h2>
       <p>
-        A tag <code>&lt;audio&gt;</code> é usada para incorporar arquivos de áudio em uma página HTML. 
+        A tag <code>&lt;audio&gt;</code> é usada para incorporar arquivos de áudio em uma página HTML.
         Isso permite que você adicione música, efeitos sonoros e outros tipos de áudio ao seu site.
       </p>
       <p>
@@ -244,12 +240,239 @@
         </code>
       </pre>
       <div class="result">
-        <audio  controls>
+        <audio controls>
           <source src="./audio/MEDLEY-LEÃO-DE-JUDÁ-MORADA.mp3" type="audio/mpeg">
         </audio>
       </div>
     </article>
+    <article id="canvas-article" class="card">
+      <h2>Canvas</h2>
+      <p>
+        A tag <code>&lt;canvas&gt;</code> é usada para desenhar gráficos, animações e outros elementos visuais em uma
+        página HTML.
+        Você pode usar JavaScript para manipular o conteúdo do <code>&lt;canvas&gt;</code> e criar
+        gráficos interativos e animações.
+      </p>
+      <h4>index.html</h4>
+      <pre>
+        <code>
+          &lt;canvas id="meuCanvas" width="200" height="100" style="background-color: white;&gt;&lt;/canvas&gt;
+        </code>
+      </pre>
+      <h4>script.js</h4>
+      <pre>
+        <code>
+          const canvas = document.getElementById('canvas-example-squares');
+          const ctx = canvas.getContext('2d');
+          ctx.moveTo(0, 0);
+          ctx.lineTo(100, 50);
+          ctx.lineTo(200, 0);
+          ctx.strokeStyle= '#0000FF';
+          ctx.lineWidth = 3;
+          ctx.stroke();
+        </code>
+      </pre>
+      <ul>
+        <li><code>getContext('2d')</code>: Retorna um objeto de contexto que permite desenhar no
+          <code>&lt;canvas&gt;</code>.
+        </li>
+        <li><code>moveTo(x, y)</code>: Move o ponto de desenho para as coordenadas especificadas.</li>
+        <li><code>lineTo(x, y)</code>: Desenha uma linha do ponto atual para as coordenadas especificadas.</li>
+        <li><code>stroke()</code>: Desenha a linha especificada.</li>
+        <li><code>strokeStyle</code>: Especifica a cor da linha.</li>
+        <li><code>lineWidth</code>: Especifica a largura da linha em pixels.</li>
+      </ul>
+      <h4>Resultado</h4>
+      <div class="result">
+        <canvas id="canvas-example-squares" width="200" height="100" style="background-color: white;"></canvas>
+      </div>
+      <section id="canvas-rectangle-section">
+        <h3>Desenhando um retângulo</h3>
+        <p>
+          Para desenhar um retângulo em um <code>&lt;canvas&gt;</code>, você pode usar os métodos
+          <code>fillRect(x, y, width, height)</code> e <code>strokeRect(x, y, width, height)</code>.
+        </p>
+        <pre>
+          <code>
+            const canvas = document.getElementById('meuCanvas');
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#00FFFF';
+            ctx.fillRect(10, 10, 100, 50);
+            ctx.strokeStyle = '#0000FF';
+            ctx.lineWidth = 3;
+            ctx.strokeRect(10, 10, 100, 50);
+          </code>
+        </pre>
+        <div class="result">
+          <canvas id="canvas-example-rectangle" width="200" height="100" style="background-color: white;"></canvas>
+        </div>
+        <ul>
+          <li>
+            <code>fillStyle</code>: Especifica a cor de preenchimento do retângulo.
+          </li>
+          <li>
+            <code>fillRect(x, y, width, height)</code>: Desenha um retângulo preenchido nas coordenadas especificadas.
+          </li>
+          <li>
+            <code>strokeRect(x, y, width, height)</code>: Desenha um retângulo sem preenchimento nas coordenadas
+            especificadas.
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Inicio e fim do caminho</h2>
+        <p>
+          Para desenhar formas complexas em um <code>&lt;canvas&gt;</code>, você pode usar os métodos
+          <code>beginPath()</code> e <code>closePath()</code>.
+        </p>
+        <pre>
+          <code>
+            const canvas = document.getElementById('meuCanvas');
+            const ctx = canvas.getContext('2d');
+            ctx.beginPath();
+            ctx.beginPath();
+            ctx.moveTo(50, 50);
+            ctx.lineTo(100, 50);
+            ctx.lineTo(100, 100);
+            ctx.closePath();
+            ctx.strokeStyle = "#FF0000";
+            ctx.lineWidth = 3;
+            ctx.stroke();
 
+            ctx.beginPath();
+            ctx.moveTo(75, 25);
+            ctx.lineTo(150, 75);
+            ctx.strokeStyle = "#FF00FF";
+            ctx.lineWidth = 3;
+            ctx.stroke();
+          </code>
+        </pre>
+        <div class="result">
+          <canvas id="canvas-example-path" width="200" height="100" style="background-color: white;"></canvas>
+        </div>
+        <ul>
+          <li>
+            <code>beginPath()</code>: Inicia um novo caminho.
+          </li>
+          <li>
+            <code>closePath()</code>: Fecha o caminho atual.
+          </li>
+        </ul>
+      </section>
+      <section id="canvas-circle-section">
+        <h2>Círculo</h2>
+        <p>
+          Para desenhar um círculo em um <code>&lt;canvas&gt;</code>, você pode usar o método
+          <code>arc(x, y, raio, startAngle, endAngle, anticlockwise)</code>.
+        </p>
+        <pre>
+          <code>
+            const canvas = document.getElementById('meuCanvas');
+            const ctx = canvas.getContext('2d');
+
+            let x = 100
+            let y = 75
+            let radius = 50
+            let startAngle = 0
+            let endAngle = 2 * Math.PI
+
+            ctx.beginPath();
+            ctx.arc(x, y, radius, startAngle, endAngle);
+            ctx.fillStyle = '#FF0000';
+            ctx.fill();
+          </code>
+        </pre>
+        <div class="result">
+          <canvas id="canvas-example-circle" width="200" height="150" style="background-color: white;"></canvas>
+        </div>
+        <ul>
+          <li>
+            <code>arc(x, y, raio, startAngle, endAngle, anticlockwise)</code>: Desenha um arco de círculo nas
+            coordenadas
+            especificadas.
+          </li>
+          <li>
+            <code>fillStyle</code>: Especifica a cor de preenchimento do círculo.
+          </li>
+          <li>
+            <code>fill()</code>: Preenche o círculo com a cor especificada.
+          </li>
+        </ul>
+      </section>
+      <section id="canvas-animation-section">
+        <h3>Animações</h3>
+        <p>
+          Você pode criar animações em um <code>&lt;canvas&gt;</code> usando JavaScript. Para criar uma animação, você
+          precisa
+          desenhar o conteúdo do <code>&lt;canvas&gt;</code> repetidamente em intervalos regulares.
+        </p>
+        <h4>capturando o elemento e criando o objeto circle</h4>
+        <pre>
+          <code>
+            const canvasAnimation = document.getElementById("canvas-example-animation");
+            const ctxAnimation = canvasAnimation.getContext("2d");
+
+            let circle = {
+              x: 100,
+              y: 75,
+              radius: 50,
+              start: 0,
+              end: 0,
+              counterclockwise: false,
+            };
+          </code>
+        </pre>
+        <h4>Função pra desenhar o círculo</h4>
+        <pre>
+          <code>
+            function drawCircle(circle) {
+              ctxAnimation.beginPath();
+              ctxAnimation.rect(0, 0, 200, 150);
+              ctxAnimation.fillStyle = "#FFFFFF";
+              ctxAnimation.fill();
+
+              ctxAnimation.beginPath();
+              ctxAnimation.fillStyle = "#FF00FF";
+              ctxAnimation.arc(
+                circle.x,
+                circle.y,
+                circle.radius,
+                circle.start,
+                circle.end,
+                circle.counterclockwise
+              );
+              ctxAnimation.fill();
+            }
+          </code>
+        </pre>
+        <h4>Função pra animar o desenho do círculo</h4>
+        <pre>
+          <code>
+            setInterval(function () {
+              circle.end += 0.5;
+            
+              if (circle.end &gt;= 2 * Math.PI) {
+                circle.end = 0;
+                circle.counterclockwise = !circle.counterclockwise;
+              }
+            
+              drawCircle(circle);
+            }, 100);
+          </code>
+        </pre>
+        <p>
+          Usamos o <code>setInterval</code> para chamar a função <code>drawCircle</code> a cada 100 milissegundos.
+          Dentro da função, verificamos se o círculo está sendo desenhado no sentido horário ou anti-horário e ajustamos
+          o ângulo de acordo. Quando o círculo atinge 2 * Math.PI (um círculo completo), mudamos a direção do desenho.
+          Isso cria um efeito de animação de círculo aparecendo e sumindo.
+        </p>
+        <div class="result">
+          <canvas id="canvas-example-animation" width="200" height="150" style="background-color: white;"></canvas>
+        </div>
+      </section>
+    </article>
+
+    <script src="./modulo-15.js"></script>
   </main>
 
   <footer id="footer">
