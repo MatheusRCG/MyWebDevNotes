@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Avançado</title>
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header id="top-bar">
+    <a href="/">
+      <img class="logo" src="../../images/logo.png" alt="logo">
+    </a>
+    <h1>CSS Avançado</h1>
+  </header>
+
+  <nav id="nav">
+    <ul>
+
+    </ul>
+  </nav>
+
+  <main id="content">
+    <article id="article" class="card">
+      <h2>Pseudo Elementos</h2>
+      <p>
+        Pseudo-elementos são palavras-chave adicionadas a seletores que permitem que você estilize partes específicas de
+        um elemento. Eles são usados para aplicar estilos a partes de um elemento que não podem ser acessadas
+        diretamente pelo HTML.
+      </p>
+
+      <section id="first-line-section">
+        <h3>::first-line</h3>
+        <p>
+          O pseudo-elemento <code>::first-line</code> é usado para aplicar estilos à primeira 
+          linha de um bloco de texto.
+        </p>
+        <pre>
+          <code>
+            p::first-line {
+              font-weight: bold;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <p class="example-first-line">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nam saepe sit nemo eligendi aliquid
+            voluptate laudantium dolore eaque quisquam obcaecati vero, impedit, nostrum beatae. Illo architecto iusto
+            voluptates? Praesentium.
+          </p>
+        </div>
+      </section>
+
+      <section id="first-letter-section">
+        <h3>::first-letter</h3>
+        <p>
+          O pseudo-elemento <code>::first-letter</code> é usado para aplicar estilos à primeira 
+          letra de um bloco de texto.
+        </p>
+        <pre>
+          <code>
+            p::first-letter {
+              font-size: 2em;
+              color: green;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <p class="example-first-letter">Esta é a primeira letra de um parágrafo que está sendo estilizada com
+            ::first-letter.</p>
+        </div>
+      </section>
+
+      <section id="after-section">
+        <h3>::after</h3>
+        <p>
+          O pseudo-elemento <code>::after</code> é usado para inserir conteúdo depois do 
+          conteúdo de um elemento.
+        </p>
+        <pre>
+          <code>
+            li {
+              list-style: none;
+            }
+
+            li::after {
+              content: "'-'";
+              color: green;
+              font-size: 1.2em;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <ul class="example-after">
+            <li>
+              item 1
+            </li>
+            <li>
+              item 2
+            </li>
+            <li>
+              item 3
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="before-section">
+        <h3>::before</h3>
+        <p>
+          O pseudo-elemento <code>::before</code> é usado para inserir conteúdo antes do 
+          conteúdo de um elemento.
+        </p>
+        <pre>
+          <code>
+            li {
+              list-style: none;
+            }
+            
+            li::before {
+              content: "";
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              background-image: url(./images/google-logo.png);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <ul class="example-before">
+            <li>
+              item 1
+            </li>
+            <li>
+              item 2
+            </li>
+            <li>
+              item 3
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="selection-section">
+        <h3>Selection</h3>
+        <p>
+          O pseudo-elemento <code>::selection</code> é usado para estilizar o texto selecionado 
+          pelo usuário.
+        </p>
+        <pre>
+          <code>
+            ::selection {
+              background-color: green;
+              color: white;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <p class="example-selection">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nam saepe sit nemo eligendi aliquid
+            voluptate laudantium dolore eaque quisquam obcaecati vero, impedit, nostrum beatae. Illo architecto iusto
+            voluptates? Praesentium.
+          </p>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <footer id="footer">
+    <a href="https://github.com/MatheusRCG" target="_blank">
+      <img src="../../images/github-logo.png" alt="logo github">
+    </a>
+    <a href="https://www.linkedin.com/in/matheusrcg/" target="_blank">
+      <img src="../../images/linkedin-logo.png" alt="linkedin logo">
+    </a>
+  </footer>
+</body>
+
+</html>

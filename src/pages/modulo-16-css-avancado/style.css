@@ -1,0 +1,34 @@
+.example-first-line::first-line {
+  font-weight: bold;
+}
+
+.example-first-letter::first-letter {
+  font-size: 2em;
+  color: green;
+}
+
+.example-before, .example-after {
+  list-style: none;
+}
+
+.example-after li::after {
+  content: "'-'";
+  color: green;
+  font-size: 1.2em;
+}
+
+.example-before li::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(./images/google-logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.example-selection::selection {
+  background-color: green;
+  color: white;
+}
