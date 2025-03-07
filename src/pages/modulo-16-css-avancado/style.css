@@ -75,3 +75,13 @@
   color: white;
   background-color: blue;
 }
+
+/* -- Função Calc -- */
+
+.example-calc-width div {
+  width: calc(100% - 100px);
+  margin: auto;
+  background-color: blue;
+  color: white;
+  text-align: center;
+}
