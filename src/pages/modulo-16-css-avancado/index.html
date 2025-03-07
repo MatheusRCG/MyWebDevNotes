@@ -636,6 +636,138 @@
         sejam reutilizadas em qualquer parte do CSS.
       </p>
     </article>
+
+    <article id="flexbox-article" class="card">
+      <h2>FlexBox</h2>
+      <p>
+        O Flexbox é um modelo de layout unidimensional que permite criar layouts
+        complexos e flexíveis sem usar floats ou layouts baseados em grade.
+      </p>
+      <p>
+        Para usar o Flexbox, você precisa definir um elemento pai como um
+        <code>container flex</code> defindo o <code>display</code> como
+        <code>flex</code>. Isso transforma todos os filhos diretos desse
+        elemento em <code>itens flexíveis</code>.
+      </p>
+      <section id="flex-direction-section">
+        <h3>Flex Direction</h3>
+        <p>
+          A propriedade <code>flex-direction</code> é usada para definir a direção
+          principal dos itens flexíveis. Pode ser <code>row</code> (valor padrão),
+          <code>row-reverse</code>, <code>column</code> ou <code>column-reverse</code>.
+        </p>
+        <pre>
+          <code>
+            .container {
+              display: flex;
+              flex-direction: row;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="example-flex-direction">
+            <div class="item quadrado">Item
+              1</div>
+            <div class="item quadrado">Item 2</div>
+            <div class="item quadrado">Item 3</div>
+          </div>
+        </div>
+      </section>
+      <section id="flex-wrap-section">
+        <h3>Flex Wrap</h3>
+        <p>
+          A propriedade <code>flex-wrap</code> é usada para definir se os itens flexíveis
+          devem ser dispostos em uma única linha ou várias linhas.
+        </p>
+        <p>
+          Usando como valor <code>wrap</code>, os itens flexíveis são dispostos em
+          uma única linha, mas se o espaço for insuficiente, eles serão quebrados em
+          várias linhas. caso não seja passado nenhum valor para a propriedade, o
+          valor padrão é <code>nowrap</code>.
+        </p>
+        <pre>
+          <code>
+            .container {
+              display: flex;
+              flex-wrap: wrap;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="example-flex-wrap">
+            <div class="item quadrado">Item 1</div>
+            <div class="item quadrado">Item 2</div>
+            <div class="item quadrado">Item 3</div>
+            <div class="item quadrado">Item 4</div>
+            <div class="item quadrado">Item 5</div>
+            <div class="item quadrado">Item 7</div>
+            <div class="item quadrado">Item 8</div>
+            <div class="item quadrado">Item 9</div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3>Justify-content</h3>
+        <p>
+          A propriedade <code>justify-content</code> é usada para alinhar os
+          itens flexíveis ao longo do eixo principal do contêiner flexível.
+          Os valores possíveis para <code>justify-content</code> são:
+        </p>
+        <ul>
+          <li><code>flex-start</code> (valor padrão): Alinha os itens ao início do contêiner.</li>
+          <li><code>flex-end</code>: Alinha os itens ao final do contêiner.</li>
+          <li><code>center</code>: Alinha os itens ao centro do contêiner.</li>
+          <li><code>space-between</code>: Distribui os itens com espaço igual entre eles.</li>
+          <li><code>space-around</code>: Distribui os itens com espaço igual ao redor deles.</li>
+          <li><code>space-evenly</code>: Distribui os itens com espaço igual entre eles e nas extremidades.</li>
+        </ul>
+        <pre>
+          <code>
+            .container {
+              display: flex;
+              justify-content: space-evenly;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="example-justify-content">
+            <div class="item quadrado">Item 1</div>
+            <div class="item quadrado">Item 2</div>
+            <div class="item quadrado">Item 3</div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3>Align Itens</h3>
+        <p>
+          A propriedade <code>align-items</code> é usada para alinhar os itens
+          flexíveis ao longo do eixo transversal do contêiner flexível.
+          Os valores possíveis para <code>align-items</code> são:
+        </p>
+        <ul>
+          <li><code>stretch</code> (valor padrão): Estica os itens para preencher o contêiner.</li>
+          <li><code>flex-start</code>: Alinha os itens ao início do contêiner.</li>
+          <li><code>flex-end</code>: Alinha os itens ao final do contêiner.</li>
+          <li><code>center</code>: Alinha os itens ao centro do contêiner.</li>
+          <li><code>baseline</code>: Alinha os itens à linha de base do contêiner.</li>
+        </ul>
+        <pre>
+          <code>
+            .container {
+              display: flex;
+              align-items: center;
+            }
+          </code>
+        </pre>
+        <div class="result altura-maior">
+          <div class="example-align-items">
+            <div class="item quadrado">Item 1</div>
+            <div class="item quadrado">Item 2</div>
+            <div class="item quadrado">Item 3</div>
+          </div>
+        </div>
+      </section>
+    </article>
   </main>
 
   <footer id="footer">
