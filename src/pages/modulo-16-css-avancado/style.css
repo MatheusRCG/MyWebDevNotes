@@ -51,19 +51,20 @@
 }
 
 .example-nth-child p:nth-child(even) {
-  color: green;
+  background-color: green;
 }
 
 .example-nth-child p:nth-child(odd) {
-  color: purple;
+  background-color: purple;
 }
 
 .example-nth-child p:nth-child(2) {
-  color: red;
+  color: white;
 }
 
 .example-nth-child p:nth-child(3n) {
   color: orange;
+  font-weight: bold;
 }
 
 .example-nth-of-type p:nth-of-type(2) {
