@@ -32,3 +32,45 @@
   background-color: green;
   color: white;
 }
+
+/* -- Pseudo-Classes -- */
+.example-first-last-child p:first-child {
+  color: blue;
+}
+
+.example-first-last-child p:last-child {
+  color: red;
+}
+
+.example-first-last-of-type h2:first-of-type {
+  color: green;
+}
+
+.example-first-last-of-type h2:last-of-type {
+  color: purple;
+}
+
+.example-nth-child p:nth-child(even) {
+  color: green;
+}
+
+.example-nth-child p:nth-child(odd) {
+  color: purple;
+}
+
+.example-nth-child p:nth-child(2) {
+  color: red;
+}
+
+.example-nth-child p:nth-child(3n) {
+  color: orange;
+}
+
+.example-nth-of-type p:nth-of-type(2) {
+  color: teal;
+}
+
+.example-focus input:focus {
+  color: white;
+  background-color: blue;
+}
