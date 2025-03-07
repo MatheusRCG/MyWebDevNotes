@@ -85,3 +85,28 @@
   color: white;
   text-align: center;
 }
+
+/* -- Transformações -- */
+.quadrado {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+}
+
+.example-rotate {
+  transform: rotate(45deg);
+}
+
+.example-scale {
+  transform: scale(0.75);
+}
+
+.example-translate {
+  transform: translate(50px, 10px);
+}
+
+.example-skew {
+  transform: skew(20deg, 10deg);
+}

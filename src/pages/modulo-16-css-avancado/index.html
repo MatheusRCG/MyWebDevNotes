@@ -515,7 +515,94 @@
           </div>
         </div>
       </section>
+    </article>
+    <article id="transforms-article" class="card">
+      <h2>Transformações</h2>
+      <p>
+        As transformações CSS são usadas para alterar a aparência de um elemento, 
+        como rotação, escala, translação e inclinação.
+      </p>
+      <section id="rotate-section">
+        <h3>Rotacionar</h3>
+        <p>
+          A propriedade <code>transform: rotate()</code> é usada para rotacionar um 
+          elemento em graus.
+        </p>
+        <pre>
+          <code>
+            div {
+              transform: rotate(45deg);
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="example-rotate quadrado">
+            Rotacionado
+          </div>
+        </div>
+      </section>
+      <section id="scale-section">
+        <h3>Escalar</h3>
+        <p>
+          A propriedade <code>transform: scale()</code> é usada para aumentar ou diminuir 
+          o tamanho de um elemento.
+        </p>
+        <pre>
+          <code>
+            div {
+              transform: scale(0.75);
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="quadrado">
+            Elemento Original
+          </div>
+          <div class="example-scale quadrado">
+            Elemento Escalado
+          </div>
+        </div>
+      </section>
 
+      <section id="translate-section">
+        <h3>Transladar</h3>
+        <p>
+          A propriedade <code>transform: translate()</code> é usada para mover um 
+          elemento de sua posição original.
+        </p>
+        <pre>
+          <code>
+            div {
+              transform: translate(50px, 10px);
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="example-translate quadrado">
+            Transladado
+          </div>
+        </div>
+      </section>
+
+      <section id="skew-section">
+        <h3>Inclinar</h3>
+        <p>
+          A propriedade <code>transform: skew()</code> é usada para inclinar um 
+          elemento ao longo dos eixos X e Y.
+        </p>
+        <pre>
+          <code>
+            div {
+              transform: skew(20deg, 10deg);
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="example-skew quadrado">
+            Inclinado
+          </div>
+        </div>
+      </section>
     </article>
   </main>
 
