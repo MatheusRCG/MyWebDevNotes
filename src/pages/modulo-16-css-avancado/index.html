@@ -24,8 +24,8 @@
   </nav>
 
   <main id="content">
-    <article id="article" class="card">
-      <h2>Pseudo Elementos</h2>
+    <article id="pseudo-elements-artivle" class="card">
+      <h2>Pseudo-Elementos</h2>
       <p>
         Pseudo-elementos são palavras-chave adicionadas a seletores que permitem que você estilize partes específicas de
         um elemento. Eles são usados para aplicar estilos a partes de um elemento que não podem ser acessadas
@@ -168,7 +168,126 @@
           </p>
         </div>
       </section>
+    </article>
+    <article id="selectors-article" class="card">
+      <h2>Selectores</h2>
+      <p>
+        Os seletores são usados para selecionar elementos HTML com base em seus atributos, classes, IDs, tipos, etc.
+      </p>
+      <section id="basic-selectors-section">
+        <h3>Seletores Básicos</h3>
+        <p>
+          Os seletores básicos são usados para selecionar elementos HTML com base em seus nomes de tag, classes e IDs.
+        </p>
+        <pre>
+          <code>
+            /* Seletor de tag */
+            p {
+              color: blue;
+            }
 
+            /* Seletor de classe */
+            .example-class {
+              color: red;
+            }
+
+            /* Seletor de ID */
+            #example-id {
+              color: green;
+            }
+          </code>
+        </pre>
+        <ul>
+          <li>
+            <code>p</code> seleciona todos os elementos <code>p</code>.
+          </li>
+          <li>
+            <code>.example-class</code> seleciona todos os elementos com a classe <code>example-class</code>.
+          </li>
+          <li>
+            <code>#example-id</code> seleciona o elemento com o ID <code>example-id</code>.
+          </li>
+      </section>
+
+      <section id="combinator-selectors-section">
+        <h3>Seletores Combinadores</h3>
+        <p>
+          Os seletores combinadores são usados para selecionar elementos com base na relação entre eles.
+        </p>
+        <pre>
+          <code>
+            /* Seletor de filho direto */
+            div > p {
+              color: purple;
+            }
+
+            /* Seletor de todos os descendentes */
+            div p {
+              color: orange;
+            }
+
+            /* Seletor de irmão adjacente */
+            h1 + p {
+              color: pink;
+            }
+
+            /* Seletor de irmãos gerais */
+            h1 ~ p {
+              color: brown;
+            }
+          </code>
+        </pre>
+        <ul>
+          <li>
+            <code>div > p</code> seleciona todos os <code>p</code> que são filhos diretos de 
+            um <code>div</code>.
+          </li>
+          <li>
+            <code>div p</code> Seleciona todos os elementos que são descendentes de um elemento específico, não importando o quão profundamente eles estão aninhados.
+          </li>
+          <li>
+            <code>h1 + p</code> seleciona o <code>p</code> que vem imediatamente após um <code>h1</code>.
+          </li>
+          <li>
+            <code>h1 ~ p</code> seleciona todos os <code>p</code> que são irmãos de um <code>h1</code> e que aparecem depois dele.
+          </li>
+        </ul>
+      </section>
+
+      <section id="attribute-selectors-section">
+        <h3>Seletores de Atributo</h3>
+        <p>
+          Os seletores de atributo são usados para selecionar elementos com base em seus atributos e valores de atributos.
+        </p>
+        <pre>
+          <code>
+            /* Seletor de atributo */
+            [title] {
+              color: teal;
+            }
+
+            /* Seletor de atributo com valor específico */
+            [title="example"] {
+              color: navy;
+            }
+
+            /* Seletor de atributo contendo valor */
+            [title*="ex"] {
+              color: olive;
+            }
+          </code>
+        </pre>
+        <ul>
+          <li>
+            <code>[title]</code> seleciona todos os elementos que têm um atributo <code>title</code>.
+          </li>
+          <li>
+            <code>[title="example"]</code> seleciona todos os elementos que têm um atributo <code>title</code> com o valor <code>example</code>.
+          </li>
+          <li>
+            <code>[title*="ex"]</code> seleciona todos os elementos que têm um atributo <code>title</code> com um valor que contém a substring <code>ex</code>.
+          </li>
+      </section>
     </article>
   </main>
 
