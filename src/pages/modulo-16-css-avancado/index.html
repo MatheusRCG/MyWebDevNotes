@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Avançado</title>
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header id="top-bar">
+    <a href="/">
+      <img class="logo" src="../../images/logo.png" alt="logo">
+    </a>
+    <h1>CSS Avançado</h1>
+  </header>
+
+  <nav id="nav">
+    <ul>
+      <li>
+        <a href="#pseudo-elements-artivle">Pseudo-Elementos</a>
+        <ul>
+          <li><a href="#first-line-section">::first-line</a></li>
+          <li><a href="#first-letter-section">::first-letter</a></li>
+          <li><a href="#after-section">::after</a></li>
+          <li><a href="#before-section">::before</a></li>
+          <li><a href="#selection-section">::selection</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#selectors-article">Selectores</a>
+        <ul>
+          <li><a href="#basic-selectors-section">Seletores Básicos</a></li>
+          <li><a href="#combinator-selectors-section">Seletores Combinadores</a></li>
+          <li><a href="#attribute-selectors-section">Seletores de Atributo</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#pseudo-class-article">Pseudo-Classes</a>
+        <ul>
+          <li><a href="#first-last-child-section">:first-child e :last-child</a></li>
+          <li><a href="#first-last-of-type-section">:first-of-type e :last-of-type</a></li>
+          <li><a href="#nth-child-section">:nth-child</a></li>
+          <li><a href="#nth-of-type-section">:nth-of-type</a></li>
+          <li><a href="#focus-section">:focus</a></li>
+          <li><a href="#pseudo-classes-vs-pseudo-elements">Diferença entre Pseudo-Classes e Pseudo-Elementos</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#calc-article">Função Calc</a>
+        <ul>
+          <li><a href="#calc-width-section">Calculando Largura</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#transforms-article">Transformações</a>
+        <ul>
+          <li><a href="#rotate-section">Rotacionar</a></li>
+          <li><a href="#scale-section">Escalar</a></li>
+          <li><a href="#translate-section">Transladar</a></li>
+          <li><a href="#skew-section">Inclinar</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#variables-article">Variaveis</a>
+      </li>
+      <li>
+        <a href="#flexbox-article">FlexBox</a>
+        <ul>
+          <li><a href="#flex-direction-section">Flex Direction</a></li>
+          <li><a href="#flex-wrap-section">Flex Wrap</a></li>
+          <li><a href="#align-content-section">Align Content</a></li>
+          <li><a href="#flex-grow-shrink-section">Grow / Shrink</a></li>
+          <li><a href="#flex-order-section">Order</a></li>
+          <li><a href="#flex-align-self-section">Align Self</a></li>
+          <li><a href="#flexbox-frog-section">Flexbox Frog</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#grid-article">Grid</a>
+        <ul>
+          <li><a href="#grid-template-columns-section">Grid Template Columns</a></li>
+          <li><a href="#grid-template-rows-section">Grid Template Rows</a></li>
+          <li><a href="#grid-template-section">Grid Template</a></li>
+          <li><a href="#grid-gap-section">Grid Gap</a></li>
+          <li><a href="#grid-justify-align-section">Grid Justify e Align Items</a></li>
+          <li><a href="#grid-justify-align-content-section">Grid Justify e Align Content</a></li>
+          <li><a href="#grid-area-section">Grid Area</a></li>
+          <li><a href="#grid-column-row-start-end-section">Grid Colum e Row Start e End</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="content">
+    <article id="pseudo-elements-artivle" class="card">
+      <h2>Pseudo-Elementos</h2>
+      <p>
+        Pseudo-elementos são palavras-chave adicionadas a seletores que permitem que
+        você estilize partes específicas de
+        um elemento. Eles são usados para aplicar estilos a partes de um elemento que
+        não podem ser acessadas
+        diretamente pelo HTML.
+      </p>
+
+      <section id="first-line-section">
+        <h3>::first-line</h3>
+        <p>
+          O pseudo-elemento <code>::first-line</code> é usado para aplicar estilos à primeira
+          linha de um bloco de texto.
+        </p>
+        <pre>
+          <code>
+            p::first-line {
+              font-weight: bold;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <p class="example-first-line">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Veritatis nam saepe sit nemo eligendi aliquid
+            voluptate laudantium dolore eaque quisquam obcaecati vero,
+            impedit, nostrum beatae. Illo architecto iusto
+            voluptates? Praesentium.
+          </p>
+        </div>
+      </section>
+
+      <section id="first-letter-section">
+        <h3>::first-letter</h3>
+        <p>
+          O pseudo-elemento <code>::first-letter</code> é usado para aplicar estilos à primeira
+          letra de um bloco de texto.
+        </p>
+        <pre>
+          <code>
+            p::first-letter {
+              font-size: 2em;
+              color: green;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <p class="example-first-letter">
+            Esta é a primeira letra de um parágrafo que está sendo estilizada
+            com ::first-letter.
+          </p>
+        </div>
+      </section>
+
+      <section id="after-section">
+        <h3>::after</h3>
+        <p>
+          O pseudo-elemento <code>::after</code> é usado para inserir conteúdo depois do
+          conteúdo de um elemento.
+        </p>
+        <pre>
+          <code>
+            li {
+              list-style: none;
+            }
+
+            li::after {
+              content: "'-'";
+              color: green;
+              font-size: 1.2em;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <ul class="example-after">
+            <li>
+              item 1
+            </li>
+            <li>
+              item 2
+            </li>
+            <li>
+              item 3
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="before-section">
+        <h3>::before</h3>
+        <p>
+          O pseudo-elemento <code>::before</code> é usado para inserir conteúdo antes do
+          conteúdo de um elemento.
+        </p>
+        <pre>
+          <code>
+            li {
+              list-style: none;
+            }
+            
+            li::before {
+              content: "";
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              background-image: url(./images/google-logo.png);
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <ul class="example-before">
+            <li>
+              item 1
+            </li>
+            <li>
+              item 2
+            </li>
+            <li>
+              item 3
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="selection-section">
+        <h3>Selection</h3>
+        <p>
+          O pseudo-elemento <code>::selection</code> é usado para estilizar o texto selecionado
+          pelo usuário.
+        </p>
+        <pre>
+          <code>
+            ::selection {
+              background-color: green;
+              color: white;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <p class="example-selection">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Veritatis nam saepe sit nemo eligendi aliquid
+            voluptate laudantium dolore eaque quisquam obcaecati vero,
+            impedit, nostrum beatae. Illo architecto iusto
+            voluptates? Praesentium.
+          </p>
+        </div>
+      </section>
+    </article>
+    <article id="selectors-article" class="card">
+      <h2>Selectores</h2>
+      <p>
+        Os seletores são usados para selecionar elementos HTML com base em seus atributos,
+        classes, IDs, tipos, etc.
+      </p>
+      <section id="basic-selectors-section">
+        <h3>Seletores Básicos</h3>
+        <p>
+          Os seletores básicos são usados para selecionar elementos HTML com base em seus
+          nomes de tag, classes e IDs.
+        </p>
+        <pre>
+          <code>
+            /* Seletor de tag */
+            p {
+              color: blue;
+            }
+
+            /* Seletor de classe */
+            .example-class {
+              color: red;
+            }
+
+            /* Seletor de ID */
+            #example-id {
+              color: green;
+            }
+          </code>
+        </pre>
+        <ul>
+          <li>
+            <code>p</code> seleciona todos os elementos <code>p</code>.
+          </li>
+          <li>
+            <code>.example-class</code> seleciona todos os elementos com a classe
+            <code>example-class</code>.
+          </li>
+          <li>
+            <code>#example-id</code> seleciona o elemento com o ID <code>example-id</code>.
+          </li>
+      </section>
+
+      <section id="combinator-selectors-section">
+        <h3>Seletores Combinadores</h3>
+        <p>
+          Os seletores combinadores são usados para selecionar elementos com base na relação
+          entre eles.
+        </p>
+        <pre>
+          <code>
+            /* Seletor de filho direto */
+            div > p {
+              color: purple;
+            }
+
+            /* Seletor de todos os descendentes */
+            div p {
+              color: orange;
+            }
+
+            /* Seletor de irmão adjacente */
+            h1 + p {
+              color: pink;
+            }
+
+            /* Seletor de irmãos gerais */
+            h1 ~ p {
+              color: brown;
+            }
+          </code>
+        </pre>
+        <ul>
+          <li>
+            <code>div > p</code> seleciona todos os <code>p</code> que são filhos diretos de
+            um <code>div</code>.
+          </li>
+          <li>
+            <code>div p</code> Seleciona todos os elementos que são descendentes de um
+            elemento específico, não importando o quão profundamente eles estão aninhados.
+          </li>
+          <li>
+            <code>h1 + p</code> seleciona o <code>p</code> que vem imediatamente após um
+            <code>h1</code>.
+          </li>
+          <li>
+            <code>h1 ~ p</code> seleciona todos os <code>p</code> que são irmãos de um
+            <code>h1</code> e que aparecem depois dele.
+          </li>
+        </ul>
+      </section>
+
+      <section id="attribute-selectors-section">
+        <h3>Seletores de Atributo</h3>
+        <p>
+          Os seletores de atributo são usados para selecionar elementos com base em seus
+          atributos e valores de atributos.
+        </p>
+        <pre>
+          <code>
+            /* Seletor de atributo */
+            [title] {
+              color: teal;
+            }
+
+            /* Seletor de atributo com valor específico */
+            [title="example"] {
+              color: navy;
+            }
+
+            /* Seletor de atributo contendo valor */
+            [title*="ex"] {
+              color: olive;
+            }
+          </code>
+        </pre>
+        <ul>
+          <li>
+            <code>[title]</code> seleciona todos os elementos que têm um atributo
+            <code>title</code>.
+          </li>
+          <li>
+            <code>[title="example"]</code> seleciona todos os elementos que têm um atributo
+            <code>title</code> com o valor <code>example</code>.
+          </li>
+          <li>
+            <code>[title*="ex"]</code> seleciona todos os elementos que têm um atributo
+            <code>title</code> com um valor que contém a substring <code>ex</code>.
+          </li>
+      </section>
+    </article>
+    <article id="pseudo-class-article" class="card">
+      <h2>Pseudo-Classes</h2>
+      <p>
+        Pseudo-classes são palavras-chave adicionadas a seletores que especificam um
+        estado especial do elemento a ser
+        selecionado.
+      </p>
+      <section id="first-last-child-section">
+        <h3>:first-child e :last-child</h3>
+        <p>
+          As pseudo-classes <code>:first-child</code> e <code>:last-child</code> são usadas
+          para selecionar o primeiro e o último filho de um elemento pai, respectivamente.
+        </p>
+        <pre>
+          <code>
+            /* Seleciona o primeiro filho */
+            p:first-child {
+              color: blue;
+            }
+
+            /* Seleciona o último filho */
+            p:last-child {
+              color: red;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="example-first-last-child">
+            <p>Primeiro parágrafo</p>
+            <p>Parágrafo do meio</p>
+            <p>Último parágrafo</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="first-last-of-type-section">
+        <h3>:first-of-type e :last-of-type</h3>
+        <p>
+          As pseudo-classes <code>:first-of-type</code> e <code>:last-of-type</code>
+          são usadas para selecionar o primeiro e o último elemento de um tipo específico
+          dentro de um elemento pai, respectivamente.
+        </p>
+        <pre>
+          <code>
+            /* Seleciona o primeiro elemento do tipo */
+            h2:first-of-type {
+              color: green;
+            }
+
+            /* Seleciona o último elemento do tipo */
+            h2:last-of-type {
+              color: purple;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="example-first-last-of-type">
+            <p>Primeiro parágrafo</p>
+            <h2>Primeiro título</h2>
+            <p>Parágrafo do meio</p>
+            <h2>Último título</h2>
+            <p>Último parágrafo</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="nth-child-section">
+        <h3>:nth-child</h3>
+        <p>
+          A pseudo-classe <code>:nth-child</code> é usada para selecionar um ou mais
+          filhos com base em sua posição no elemento pai. Pode usar fórmulas como
+          <code>2n</code>, <code>3n</code>, <code>odd</code> (ímpar) e <code>even</code> (par).
+        </p>
+        <pre>
+          <code>
+            /* Seleciona todos os filhos em posições pares */
+            p:nth-child(even) {
+              background-color: green;
+            }
+
+            /* Seleciona todos os filhos em posições ímpares */
+            p:nth-child(odd) {
+              background-color: purple;
+            }
+
+            /* Seleciona especificamente o segundo elemento */
+            p:nth-child(2) {
+              color: white;
+            }
+
+            /* Seleciona cada terceiro filho */
+            p:nth-child(3n) {
+              color: orange;
+              font-weight: bold;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="example-nth-child">
+            <p>Filho 1</p>
+            <p>Filho 2</p>
+            <p>Filho 3</p>
+            <p>Filho 4</p>
+            <p>Filho 5</p>
+            <p>Filho 6</p>
+            <p>Filho 7</p>
+            <p>Filho 8</p>
+            <p>Filho 9</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="nth-of-type-section">
+        <h3>:nth-of-type</h3>
+        <p>
+          A pseudo-classe <code>:nth-of-type</code> é usada para selecionar um ou mais
+          filhos com base em sua posição entre elementos do mesmo tipo no elemento pai.
+        </p>
+        <pre>
+          <code>
+            /* Seleciona todos os segundos elementos do tipo */
+            p:nth-of-type(2) {
+              color: teal;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="example-nth-of-type">
+            <p>Primeiro parágrafo</p>
+            <p>Segundo parágrafo</p>
+            <p>Terceiro parágrafo</p>
+            <p>Quarto parágrafo</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="focus-section">
+        <h3>:focus</h3>
+        <p>
+          A pseudo-classe <code>:focus</code> é usada para selecionar um elemento que
+          está em foco, como um campo de entrada de texto.
+        </p>
+        <pre>
+          <code>
+            input:focus {
+              color: white;
+              background-color: blue;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="example-focus">
+            <input type="text" placeholder="Clique aqui para focar">
+          </div>
+        </div>
+      </section>
+
+      <section id="pseudo-classes-vs-pseudo-elements">
+        <h3>Diferença entre Pseudo-Classes e Pseudo-Elementos</h3>
+        <p>
+          Pseudo-classes são usadas para selecionar elementos com base em seu estado ou
+          posição no DOM, enquanto pseudo-elementos são usados para estilizar partes
+          específicas de um elemento.
+        </p>
+        <ul>
+          <li>
+            <strong>Pseudo-Classes:</strong> <code>:hover</code>, <code>:focus</code>,
+            <code>:nth-child</code>, etc.
+          </li>
+          <li>
+            <strong>Pseudo-Elementos:</strong> <code>::before</code>, <code>::after</code>,
+            <code>::first-line</code>, etc.
+          </li>
+        </ul>
+      </section>
+    </article>
+    <article id="calc-article" class="card">
+      <h2>Função Calc</h2>
+      <p>
+        A função <code>calc()</code> é usada para realizar cálculos matemáticos em
+        propriedades CSS.
+      </p>
+      <section id="calc-width-section">
+        <h3>Calculando Largura</h3>
+        <p>
+          A função <code>calc()</code> pode ser usada para calcular a largura de um
+          elemento com base em valores fixos e relativos.
+        </p>
+        <pre>
+          <code>
+            div {
+              width: calc(100% - 100px);
+              margin: auto;
+              background-color: blue;
+              color: white;
+              text-align: center;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="example-calc-width">
+            <div>
+              Largura calculada
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+    <article id="transforms-article" class="card">
+      <h2>Transformações</h2>
+      <p>
+        As transformações CSS são usadas para alterar a aparência de um elemento,
+        como rotação, escala, translação e inclinação.
+      </p>
+      <section id="rotate-section">
+        <h3>Rotacionar</h3>
+        <p>
+          A propriedade <code>transform: rotate()</code> é usada para rotacionar um
+          elemento em graus.
+        </p>
+        <pre>
+          <code>
+            div {
+              transform: rotate(45deg);
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="example-rotate quadrado">
+            Rotacionado
+          </div>
+        </div>
+      </section>
+      <section id="scale-section">
+        <h3>Escalar</h3>
+        <p>
+          A propriedade <code>transform: scale()</code> é usada para aumentar ou diminuir
+          o tamanho de um elemento.
+        </p>
+        <pre>
+          <code>
+            div {
+              transform: scale(0.75);
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="quadrado">
+            Elemento Original
+          </div>
+          <div class="example-scale quadrado">
+            Elemento Escalado
+          </div>
+        </div>
+      </section>
+
+      <section id="translate-section">
+        <h3>Transladar</h3>
+        <p>
+          A propriedade <code>transform: translate()</code> é usada para mover um
+          elemento de sua posição original.
+        </p>
+        <pre>
+          <code>
+            div {
+              transform: translate(50px, 10px);
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="example-translate quadrado">
+            Transladado
+          </div>
+        </div>
+      </section>
+
+      <section id="skew-section">
+        <h3>Inclinar</h3>
+        <p>
+          A propriedade <code>transform: skew()</code> é usada para inclinar um
+          elemento ao longo dos eixos X e Y.
+        </p>
+        <pre>
+          <code>
+            div {
+              transform: skew(20deg, 10deg);
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="example-skew quadrado">
+            Inclinado
+          </div>
+        </div>
+      </section>
+    </article>
+    <article id="variables-article" class="card">
+      <h2>Variaveis</h2>
+      <p>
+        As variáveis CSS são usadas para armazenar valores que podem ser reutilizados
+        em todo o documento.
+      </p>
+      <p>
+        São criadas usando a propriedade <code>--nome-variavel</code>
+        dentro de <code>:root</code> e são acessadas usando a função <code>var()</code>.
+      </p>
+      <pre>
+        <code>
+          :root {
+            --cor-primaria: blue;
+            --cor-secundaria: green;
+          }
+
+          div {
+            background-color: var(--cor-primaria);
+            color: var(--cor-secundaria);
+          }
+        </code>
+      </pre>
+      <p>
+        Essas variáveis são criadas dentro de <code>:root</code> porque
+        <code>:root</code> é um pseudo-seletor que representa o elemento
+        raiz do documento, geralmente o elemento <code>&lt;html&gt;</code>.
+        Isso significa que as variáveis definidas dentro de <code>:root</code>
+        estarão disponíveis globalmente em todo o documento, permitindo que
+        sejam reutilizadas em qualquer parte do CSS.
+      </p>
+    </article>
+
+    <article id="flexbox-article" class="card">
+      <h2>FlexBox</h2>
+      <p>
+        O Flexbox é um modelo de layout unidimensional que permite criar layouts
+        complexos e flexíveis sem usar floats ou layouts baseados em grade.
+      </p>
+      <p>
+        Para usar o Flexbox, você precisa definir um elemento pai como um
+        <code>container flex</code> defindo o <code>display</code> como
+        <code>flex</code>. Isso transforma todos os filhos diretos desse
+        elemento em <code>itens flexíveis</code>.
+      </p>
+      <section id="flex-direction-section">
+        <h3>Flex Direction</h3>
+        <p>
+          A propriedade <code>flex-direction</code> é usada para definir a direção
+          principal dos itens flexíveis. Pode ser <code>row</code> (valor padrão),
+          <code>row-reverse</code>, <code>column</code> ou <code>column-reverse</code>.
+        </p>
+        <pre>
+          <code>
+            .container {
+              display: flex;
+              flex-direction: row;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="example-flex-direction">
+            <div class="item quadrado">Item
+              1</div>
+            <div class="item quadrado">Item 2</div>
+            <div class="item quadrado">Item 3</div>
+          </div>
+        </div>
+      </section>
+      <section id="flex-wrap-section">
+        <h3>Flex Wrap</h3>
+        <p>
+          A propriedade <code>flex-wrap</code> é usada para definir se os itens flexíveis
+          devem ser dispostos em uma única linha ou várias linhas.
+        </p>
+        <p>
+          Usando como valor <code>wrap</code>, os itens flexíveis são dispostos em
+          uma única linha, mas se o espaço for insuficiente, eles serão quebrados em
+          várias linhas. caso não seja passado nenhum valor para a propriedade, o
+          valor padrão é <code>nowrap</code>.
+        </p>
+        <pre>
+          <code>
+            .container {
+              display: flex;
+              flex-wrap: wrap;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="example-flex-wrap largura-fixa">
+            <div class="item quadrado">Item 1</div>
+            <div class="item quadrado">Item 2</div>
+            <div class="item quadrado">Item 3</div>
+            <div class="item quadrado">Item 4</div>
+            <div class="item quadrado">Item 5</div>
+            <div class="item quadrado">Item 7</div>
+            <div class="item quadrado">Item 8</div>
+            <div class="item quadrado">Item 9</div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3>Justify-content</h3>
+        <p>
+          A propriedade <code>justify-content</code> é usada para alinhar os
+          itens flexíveis ao longo do eixo principal do contêiner flexível.
+          Os valores possíveis para <code>justify-content</code> são:
+        </p>
+        <ul>
+          <li><code>flex-start</code> (valor padrão): Alinha os itens ao início do contêiner.</li>
+          <li><code>flex-end</code>: Alinha os itens ao final do contêiner.</li>
+          <li><code>center</code>: Alinha os itens ao centro do contêiner.</li>
+          <li><code>space-between</code>: Distribui os itens com espaço igual entre eles.</li>
+          <li><code>space-around</code>: Distribui os itens com espaço igual ao redor deles.</li>
+          <li><code>space-evenly</code>: Distribui os itens com espaço igual entre eles e nas extremidades.</li>
+        </ul>
+        <pre>
+          <code>
+            .container {
+              display: flex;
+              justify-content: space-evenly;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="example-justify-content">
+            <div class="item quadrado">Item 1</div>
+            <div class="item quadrado">Item 2</div>
+            <div class="item quadrado">Item 3</div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3>Align Itens</h3>
+        <p>
+          A propriedade <code>align-items</code> é usada para alinhar os itens
+          flexíveis ao longo do eixo transversal do contêiner flexível.
+          Os valores possíveis para <code>align-items</code> são:
+        </p>
+        <ul>
+          <li><code>stretch</code> (valor padrão): Estica os itens para preencher o contêiner.</li>
+          <li><code>flex-start</code>: Alinha os itens ao início do contêiner.</li>
+          <li><code>flex-end</code>: Alinha os itens ao final do contêiner.</li>
+          <li><code>center</code>: Alinha os itens ao centro do contêiner.</li>
+          <li><code>baseline</code>: Alinha os itens à linha de base do contêiner.</li>
+        </ul>
+        <pre>
+          <code>
+            .container {
+              display: flex;
+              align-items: center;
+            }
+          </code>
+        </pre>
+        <div class="result altura-maior">
+          <div class="example-align-items altura-maior">
+            <div class="item quadrado">Item 1</div>
+            <div class="item quadrado">Item 2</div>
+            <div class="item quadrado">Item 3</div>
+          </div>
+        </div>
+      </section>
+      <section id="align-content-section">
+        <h3>Align Content</h3>
+        <p>
+          A propriedade <code>align-content</code> é usada para alinhar as linhas
+          de itens flexíveis ao longo do eixo transversal do contêiner flexível.
+        </p>
+        <p>
+          Os valores possíveis para <code>align-content</code> são:
+        </p>
+        <ul>
+          <li><code>stretch</code> (valor padrão): Estica as linhas para preencher o contêiner.</li>
+          <li><code>flex-start</code>: Alinha as linhas ao início do contêiner.</li>
+          <li><code>flex-end</code>: Alinha as linhas ao final do contêiner.</li>
+          <li><code>center</code>: Alinha as linhas ao centro do contêiner.</li>
+          <li><code>space-between</code>: Distribui as linhas com espaço igual entre elas.</li>
+          <li><code>space-around</code>: Distribui as linhas com espaço igual ao redor delas.</li>
+          <li><code>space-evenly</code>: Distribui as linhas com espaço igual entre elas e nas extremidades.</li>
+        </ul>
+        <pre>
+          <code>
+            .container {
+              display: flex;
+              flex-wrap: wrap;
+              align-content: space-evenly;
+            }
+          </code>
+        </pre>
+        <div class="result altura-maior example-align-content ">
+          <div class="largura-fixa example-align-content altura-maior">
+            <div class="item quadrado">Item 1</div>
+            <div class="item quadrado">Item 2</div>
+            <div class="item quadrado">Item 3</div>
+            <div class="item quadrado">Item 4</div>
+            <div class="item quadrado">Item 5</div>
+            <div class="item quadrado">Item 6</div>
+            <div class="item quadrado">Item 7</div>
+          </div>
+        </div>
+      </section>
+      <section id="flex-grow-shrink-section">
+        <h3>Grow / Shrink</h3>
+        <p>
+          As propriedades <code>flex-grow</code> e <code>flex-shrink</code> são usadas
+          para definir como os itens flexíveis devem crescer ou encolher para preencher
+          o espaço disponível. Ambos aceitam valores numéricos, onde 0 significa que o
+          item não deve crescer ou encolher e valores maiores significam que o item deve
+          crescer ou encolher proporcionalmente mais.
+        </p>
+        <p>
+          A propriedade <code>flex-grow</code> define a capacidade de um item flexível
+          de crescer em relação aos outros itens flexíveis no contêiner.
+        </p>
+        <p>
+          A propriedade <code>flex-shrink</code> define a capacidade de um item flexível
+          de encolher em relação aos outros itens flexíveis no contêiner.
+        </p>
+        <pre>
+          <code>
+            .item {
+              flex-grow: 1;
+              flex-shrink: 1;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="example-flex-grow-shrink">
+            <div class="item-flex-grow-shrink quadrado">Item 1</div>
+            <div class="item-flex-grow-shrink quadrado">Item 2</div>
+            <div class="item-flex-grow-shrink quadrado">Item 3</div>
+          </div>
+        </div>
+      </section>
+      <section id="flex-order-section">
+        <h3>Order</h3>
+        <p>
+          A propriedade <code>order</code> é usada para definir a ordem dos itens
+          flexíveis em um contêiner flexível. Por padrão, todos os itens têm um valor
+          de ordem de 0, mas isso pode ser alterado para um valor inteiro positivo
+          ou negativo para reorganizar os itens.
+        </p>
+        <pre>
+          <code>
+            .item-1 {
+              order: 3;
+            }
+            .item-2 {
+              order: 1;
+            }
+            .item-3 {
+              order: 2;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="example-flex-order">
+            <div class="flex-order-item-1 quadrado">Item 1</div>
+            <div class="flex-order-item-2 quadrado">Item 2</div>
+            <div class="flex-order-item-3 quadrado">Item 3</div>
+          </div>
+      </section>
+      <section id="flex-align-self-section">
+        <h3>Align Self</h3>
+        <p>
+          A propriedade <code>align-self</code> é usada para alinhar um item flexível
+          ao longo do eixo transversal do contêiner flexível, substituindo o valor
+          de <code>align-items</code> definido no contêiner.
+        </p>
+        <p>
+          Os valores possíveis para <code>align-self</code> são os mesmos que para
+          <code>align-items</code>.
+        </p>
+        <pre>
+          <code>
+            .item-2 {
+              align-self: flex-end;
+            }
+          </code>
+        </pre>
+        <div class="result example-flex-align-self altura-maior">
+          <div class=" quadrado">Item 1</div>
+          <div class="item-align-self quadrado">Item 2</div>
+          <div class="quadrado">Item 3</div>
+        </div>
+      </section>
+      <section id="flexbox-frog-section">
+        <h3>Flexbox Frog</h3>
+        <p>
+          O Flexbox Froggy é um jogo que ajuda a aprender sobre o Flexbox
+          brincando. O objetivo é ajudar o sapo a atravessar o lago e chegar
+          até a margem oposta.
+        </p>
+        <div class="result">
+          <a href="https://flexboxfroggy.com/" target="_blank">
+            <img src="./images/flexbox-froggy.png" alt="Flexbox Froggy" style="width: 100%;">
+          </a>
+        </div>
+      </section>
+    </article>
+    <article id="grid-article" class="card">
+      <h2>Grid</h2>
+      <p>
+        O CSS Grid Layout é um sistema de layout bidimensional que permite criar
+        layouts complexos e flexíveis sem usar floats ou layouts baseados em grade.
+      </p>
+      <p>
+        Para usar o Grid, você precisa definir um elemento pai como um
+        <code>container grid</code> definindo o <code>display</code> como
+        <code>grid</code>. Isso transforma todos os filhos diretos desse
+        elemento em <code>itens de grade</code>.
+      </p>
+      <section id="grid-template-columns-section">
+        <h3>Grid Template Columns</h3>
+        <p>
+          A propriedade <code>grid-template-columns</code> é usada para definir
+          o número e a largura das colunas em um contêiner de grade.
+        </p>
+        <pre>
+          <code>
+            .container {
+              display: grid;
+              grid-template-columns: 20% 50% 30%;
+              grid-gap: 1px;
+            }
+          </code>
+        </pre>
+        <div class="result example-grid-template-columns">
+          <div class="item-grid-example">Item 1</div>
+          <div class="item-grid-example">Item 2</div>
+          <div class="item-grid-example">Item 3</div>
+        </div>
+      </section>
+      <section id="grid-template-rows-section">
+        <h3>Grid Template Rows</h3>
+        <p>
+          A propriedade <code>grid-template-rows</code> é usada para definir
+          o número e a altura das linhas em um contêiner de grade.
+        </p>
+        <pre>
+          <code>
+            .container {
+              display: grid;
+              grid-template-rows: 100px 200px 100px;
+              grid-gap: 1px;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="example-grid-template-rows">
+            <div class="item quadrado">Item 1</div>
+            <div class="item quadrado">Item 2</div>
+            <div class="item quadrado">Item 3</div>
+          </div>
+        </div>
+      </section>
+      <section id="grid-template-section">
+        <h3>Grid Template</h3>
+        <p>
+          A propriedade <code>grid-template</code> é uma propriedade abreviada
+          que combina <code>grid-template-rows</code> e <code>grid-template-columns</code>.
+        </p>
+        <p>
+          Também é possível definir o grid usando a unidades de medida <code>fr</code>, que é uma unidade de medida
+          flexível que distribui o espaço disponível proporcionalmente. Por exemplo, <code>1fr 2fr 1fr</code> distribui
+          o espaço disponível em 4 partes, onde a primeira e a terceira partes têm o mesmo tamanho e a segunda parte tem
+          o dobro do tamanho.
+        </p>
+        <pre>
+          <code>
+            .container {
+              display: grid;
+              grid-template: 2fr 1fr / 1fr 2fr 1fr
+            }
+          </code>
+        </pre>
+        <div class="result example-grid-template">
+          <div class="quadrado">Item 1</div>
+          <div class="quadrado">Item 2</div>
+          <div class="quadrado">Item 3</div>
+          <div class="quadrado">Item 4</div>
+          <div class="quadrado">Item 5</div>
+        </div>
+      </section>
+      <section id="grid-gap-section">
+        <h3>Grid Gap</h3>
+        <p>
+          A propriedade <code>grid-gap</code> é usada para definir o espaço entre
+          as linhas e colunas em um contêiner de grade.
+        </p>
+        <pre>
+          <code>
+            .container {
+              display: grid;
+              grid-template-rows: 100px 200px 100px;
+              grid-gap: 1px;
+            }
+          </code>
+        </pre>
+        <div class="result example-gap">
+          <div class="quadrado">Item 1</div>
+          <div class="quadrado">Item 2</div>
+          <div class="quadrado">Item 3</div>
+        </div>
+        <p>
+          É possivel definir um valor diferente para as linhas e colunas
+          usando a propriedade <code>grid-row-gap</code> e <code>grid-column-gap</code>.
+        </p>
+      </section>
+      <section id="grid-justify-align-section">
+        <h3>Grid Justify e Align Items</h3>
+        <p>
+          As propriedades <code>justify-items</code> e <code>align-items</code> são
+          usadas para alinhar os itens de grade ao longo do eixo principal e transversal
+          do contêiner de grade, respectivamente.
+        </p>
+        <pre>
+          <code>
+            .container {
+              display: grid;
+              grid-template: auto auto / auto auto;
+              justify-items: center;
+              align-items: center;
+            }
+          </code>
+        </pre>
+        <div class="result example-grid-justify-align-items altura-maior">
+          <div class="quadrado">Item 1</div>
+          <div class="quadrado">Item 2</div>
+          <div class="quadrado">Item 3</div>
+          <div class="quadrado">Item 4</div>
+        </div>
+      </section>
+      <section id="grid-justify-align-content-section">
+        <h3>Grid Justify e Align Content</h3>
+        <p>
+          As propriedades <code>justify-content</code> e <code>align-content</code> são
+          usadas para alinhar as linhas de grade ao longo do eixo principal e transversal
+          do contêiner de grade, respectivamente.
+        </p>
+        <pre>
+          <code>
+            .container {
+              display: grid;
+              grid-template: auto auto / auto auto;
+              justify-content: center;
+              align-content: center;
+            }
+          </code>
+        </pre>
+        <div class="result example-grid-justify-align-content altura-maior">
+          <div class="quadrado">Item 1</div>
+          <div class="quadrado">Item 2</div>
+          <div class="quadrado">Item 3</div>
+          <div class="quadrado">Item 4</div>
+        </div>
+      </section>
+      <section id="grid-area-section">
+        <h3>Grid Area</h3>
+        <p>
+          A propriedade <code>grid-area</code> é usada para definir o nome de uma
+          área de grade e especificar onde um item de grade deve ser colocado.
+        </p>
+        <pre>
+          <code>
+            .item-1 {
+              grid-area: header;
+            }
+
+            .item-2 {
+              grid-area: main;
+            }
+
+            .item-3 {
+              grid-area: sidebar;
+            }
+
+            .item-4 {
+              grid-area: footer;
+            }
+
+            .container {
+              display: grid;
+              grid-template-areas:
+                'header header header'
+                'sidebar main main'
+                'footer footer footer';
+              gap: 1px;
+            }
+          </code>
+        </pre>
+        <div class="result example-grid-area">
+          <div class="bg-blue item-grid-area-1">Header</div>
+          <div class="bg-green item-grid-area-2">Main</div>
+          <div class="bg-red item-grid-area-3">Sidebar</div>
+          <div class="bg-purple item-grid-area-4">Footer</div>
+        </div>
+      </section>
+      <section id="grid-column-row-start-end-section">
+        <h3>Grid Colum e Row Start e End</h3>
+        <p>
+          As propriedades <code>grid-column-start</code>, <code>grid-column-end</code>,
+          <code>grid-row-start</code> e <code>grid-row-end</code> são usadas para
+          definir onde um item de grade deve começar e terminar em relação às linhas
+          e colunas de grade.
+        </p>
+        <pre>
+          <code>
+            .container {
+              display: grid;
+              gap: 1px;
+              color: white;
+              text-align: center;
+            }
+            
+            .item-1 {
+              grid-column-start: 1;
+              grid-column-end: span 3;
+            }
+            
+            .item-2 {
+              grid-column-start: 2;
+              grid-column-end: span 2;
+            }
+            
+            .item-3 {
+              grid-row-start: 2;
+            }
+            
+            .item-4 {
+              grid-row-start: 3;
+              grid-column-end: span 3;
+            }
+          </code>
+        </pre>
+        <div class="result example-grid-column-row-start-end-container">
+          <div class="example-grid-column-row-start-end-item-1 bg-blue">Header</div>
+          <div class="example-grid-column-row-start-end-item-2 bg-green">Main</div>
+          <div class="example-grid-column-row-start-end-item-3 bg-red">Sidebar</div>
+          <div class="example-grid-column-row-start-end-item-4 bg-purple">Footer</div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer id="footer">
+    <a href="https://github.com/MatheusRCG" target="_blank">
+      <img src="../../images/github-logo.png" alt="logo github">
+    </a>
+    <a href="https://www.linkedin.com/in/matheusrcg/" target="_blank">
+      <img src="../../images/linkedin-logo.png" alt="linkedin logo">
+    </a>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,304 @@
+/* -- Usado nos exemplos -- */
+.quadrado {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  margin: 2px;
+}
+
+.altura-maior {
+  min-height: 300px;
+}
+
+.largura-fixa {
+  border: 1px solid gray;
+  max-width: 550px;
+}
+
+.bg-blue {
+  background-color: blue;
+}
+.bg-green {
+  background-color: green;
+}
+.bg-red {
+  background-color: red;
+}
+.bg-purple {
+  background-color: purple;
+}
+
+/* -- Usado no exemplo de seletores -- */
+
+.example-first-line::first-line {
+  font-weight: bold;
+}
+
+.example-first-letter::first-letter {
+  font-size: 2em;
+  color: green;
+}
+
+.example-before, .example-after {
+  list-style: none;
+}
+
+.example-after li::after {
+  content: "'-'";
+  color: green;
+  font-size: 1.2em;
+}
+
+.example-before li::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(./images/google-logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.example-selection::selection {
+  background-color: green;
+  color: white;
+}
+
+/* -- Pseudo-Classes -- */
+.example-first-last-child p:first-child {
+  color: blue;
+}
+
+.example-first-last-child p:last-child {
+  color: red;
+}
+
+.example-first-last-of-type h2:first-of-type {
+  color: green;
+}
+
+.example-first-last-of-type h2:last-of-type {
+  color: purple;
+}
+
+.example-nth-child p:nth-child(even) {
+  background-color: green;
+}
+
+.example-nth-child p:nth-child(odd) {
+  background-color: purple;
+}
+
+.example-nth-child p:nth-child(2) {
+  color: white;
+}
+
+.example-nth-child p:nth-child(3n) {
+  color: orange;
+  font-weight: bold;
+}
+
+.example-nth-of-type p:nth-of-type(2) {
+  color: teal;
+}
+
+.example-focus input:focus {
+  color: white;
+  background-color: blue;
+}
+
+/* -- Função Calc -- */
+
+.example-calc-width div {
+  width: calc(100% - 100px);
+  margin: auto;
+  background-color: blue;
+  color: white;
+  text-align: center;
+}
+
+/* -- Transformações -- */
+.example-rotate {
+  transform: rotate(45deg);
+}
+
+.example-scale {
+  transform: scale(0.75);
+}
+
+.example-translate {
+  transform: translate(50px, 10px);
+}
+
+.example-skew {
+  transform: skew(20deg, 10deg);
+}
+
+/* -- FlexBox -- */
+.example-flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.example-flex-container .item {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+}
+
+.example-flex-direction {
+  display: flex;
+  flex-direction: row;
+}
+
+.example-flex-wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.example-justify-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.example-align-items {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.example-align-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+}
+
+.example-flex-grow-shrink {
+  display: flex;
+
+}
+
+.item-flex-grow-shrink {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.example-flex-order {
+  display: flex;
+}
+
+.flex-order-item-1 {
+  order: 3;
+}
+.flex-order-item-2 {
+  order: 1;
+}
+.flex-order-item-3 {
+  order: 2;
+}
+
+.example-flex-align-self {
+  display: flex;
+}
+
+.item-align-self {
+  align-self: flex-end;
+}
+
+/* -- Grid -- */
+.item-grid-example {
+  background-color: blue;
+  color: white;
+  text-align: center;
+}
+
+.example-grid-template-columns {
+  display: grid;
+  grid-template-columns: 20% 50% 30%;
+  gap: 1px;
+}
+
+.example-grid-template-rows {
+  display: grid;
+  grid-template-rows: 100px 200px 100px;
+  gap: 1px;
+}
+
+.example-gap {
+  display: grid;
+  gap: 15px;
+}
+
+.example-grid-template {
+  display: grid;
+  grid-template: 2fr 1fr / 1fr 2fr 1fr
+}
+
+.example-grid-justify-align-items {
+  display: grid;
+  grid-template: auto auto / auto auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.example-grid-justify-align-content {
+  display: grid;
+  grid-template: auto auto / auto auto;
+  justify-content: center;
+  align-content: center;
+}
+
+.item-grid-area-1 {
+  grid-area: header;
+}
+.item-grid-area-2 {
+  grid-area: main;
+}
+.item-grid-area-3 {
+  grid-area: sidebar;
+}
+.item-grid-area-4 {
+  grid-area: footer;
+}
+.example-grid-area {
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'sidebar main main'
+    'footer footer footer';
+  gap: 1px;
+  color: white;
+  text-align: center;
+}
+
+.example-grid-column-row-start-end-container {
+  display: grid;
+  gap: 1px;
+  color: white;
+  text-align: center;
+}
+
+.example-grid-column-row-start-end-item-1 {
+  grid-column-start: 1;
+  grid-column-end: span 3;
+}
+
+.example-grid-column-row-start-end-item-2 {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+}
+
+.example-grid-column-row-start-end-item-3 {
+  grid-row-start: 2;
+}
+
+.example-grid-column-row-start-end-item-4 {
+  grid-row-start: 3;
+  grid-column-end: span 3;
+}
