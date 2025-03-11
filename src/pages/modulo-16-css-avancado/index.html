@@ -694,7 +694,7 @@
           </code>
         </pre>
         <div class="result">
-          <div class="example-flex-wrap">
+          <div class="example-flex-wrap largura-fixa">
             <div class="item quadrado">Item 1</div>
             <div class="item quadrado">Item 2</div>
             <div class="item quadrado">Item 3</div>
@@ -760,11 +760,148 @@
           </code>
         </pre>
         <div class="result altura-maior">
-          <div class="example-align-items">
+          <div class="example-align-items altura-maior">
             <div class="item quadrado">Item 1</div>
             <div class="item quadrado">Item 2</div>
             <div class="item quadrado">Item 3</div>
           </div>
+        </div>
+      </section>
+      <section id="align-content-section">
+        <h2>Align Content</h2>
+        <p>
+          A propriedade <code>align-content</code> é usada para alinhar as linhas
+          de itens flexíveis ao longo do eixo transversal do contêiner flexível.
+        </p>
+        <p>
+          Os valores possíveis para <code>align-content</code> são:
+        </p>
+        <ul>
+          <li><code>stretch</code> (valor padrão): Estica as linhas para preencher o contêiner.</li>
+          <li><code>flex-start</code>: Alinha as linhas ao início do contêiner.</li>
+          <li><code>flex-end</code>: Alinha as linhas ao final do contêiner.</li>
+          <li><code>center</code>: Alinha as linhas ao centro do contêiner.</li>
+          <li><code>space-between</code>: Distribui as linhas com espaço igual entre elas.</li>
+          <li><code>space-around</code>: Distribui as linhas com espaço igual ao redor delas.</li>
+          <li><code>space-evenly</code>: Distribui as linhas com espaço igual entre elas e nas extremidades.</li>
+        </ul>
+        <pre>
+          <code>
+            .container {
+              display: flex;
+              flex-wrap: wrap;
+              align-content: space-evenly;
+            }
+          </code>
+        </pre>
+        <div class="result altura-maior example-align-content ">
+          <div class="largura-fixa example-align-content altura-maior">
+            <div class="item quadrado">Item 1</div>
+            <div class="item quadrado">Item 2</div>
+            <div class="item quadrado">Item 3</div>
+            <div class="item quadrado">Item 4</div>
+            <div class="item quadrado">Item 5</div>
+            <div class="item quadrado">Item 6</div>
+            <div class="item quadrado">Item 7</div>
+          </div>
+        </div>
+      </section>
+      <section id="flex-grow-shrink-section">
+        <h2>Grow / Shrink</h2>
+        <p>
+          As propriedades <code>flex-grow</code> e <code>flex-shrink</code> são usadas
+          para definir como os itens flexíveis devem crescer ou encolher para preencher
+          o espaço disponível. Ambos aceitam valores numéricos, onde 0 significa que o
+          item não deve crescer ou encolher e valores maiores significam que o item deve
+          crescer ou encolher proporcionalmente mais.
+        </p>
+        <p>
+          A propriedade <code>flex-grow</code> define a capacidade de um item flexível
+          de crescer em relação aos outros itens flexíveis no contêiner.
+        </p>
+        <p>
+          A propriedade <code>flex-shrink</code> define a capacidade de um item flexível
+          de encolher em relação aos outros itens flexíveis no contêiner.
+        </p>
+        <pre>
+          <code>
+            .item {
+              flex-grow: 1;
+              flex-shrink: 1;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="example-flex-grow-shrink">
+            <div class="item-flex-grow-shrink quadrado">Item 1</div>
+            <div class="item-flex-grow-shrink quadrado">Item 2</div>
+            <div class="item-flex-grow-shrink quadrado">Item 3</div>
+          </div>
+        </div>
+      </section>
+      <section id="flex-order-section">
+        <h2>Order</h2>
+        <p>
+          A propriedade <code>order</code> é usada para definir a ordem dos itens
+          flexíveis em um contêiner flexível. Por padrão, todos os itens têm um valor
+          de ordem de 0, mas isso pode ser alterado para um valor inteiro positivo
+          ou negativo para reorganizar os itens.
+        </p>
+        <pre>
+          <code>
+            .item-1 {
+              order: 3;
+            }
+            .item-2 {
+              order: 1;
+            }
+            .item-3 {
+              order: 2;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="example-flex-order">
+            <div class="flex-order-item-1 quadrado">Item 1</div>
+            <div class="flex-order-item-2 quadrado">Item 2</div>
+            <div class="flex-order-item-3 quadrado">Item 3</div>
+          </div>
+      </section>
+      <section id="flex-align-self-section">
+        <h2>Align Self</h2>
+        <p>
+          A propriedade <code>align-self</code> é usada para alinhar um item flexível
+          ao longo do eixo transversal do contêiner flexível, substituindo o valor
+          de <code>align-items</code> definido no contêiner.
+        </p>
+        <p>
+          Os valores possíveis para <code>align-self</code> são os mesmos que para
+          <code>align-items</code>.
+        </p>
+        <pre>
+          <code>
+            .item-2 {
+              align-self: flex-end;
+            }
+          </code>
+        </pre>
+        <div class="result example-flex-align-self altura-maior">
+          <div class=" quadrado">Item 1</div>
+          <div class="item-align-self quadrado">Item 2</div>
+          <div class="quadrado">Item 3</div>
+        </div>
+      </section>
+      <section id="flexbox-frog-section">
+        <h2>Flexbox Frog</h2>
+        <p>
+          O Flexbox Froggy é um jogo que ajuda a aprender sobre o Flexbox
+          brincando. O objetivo é ajudar o sapo a atravessar o lago e chegar
+          até a margem oposta.
+        </p>
+        <div class="result">
+          <a href="https://flexboxfroggy.com/" target="_blank">
+            <img src="./images/flexbox-froggy.png" alt="Flexbox Froggy" style="width: 100%;">
+          </a>
         </div>
       </section>
     </article>
