@@ -17,6 +17,21 @@
   max-width: 550px;
 }
 
+.bg-blue {
+  background-color: blue;
+}
+.bg-green {
+  background-color: green;
+}
+.bg-red {
+  background-color: red;
+}
+.bg-purple {
+  background-color: purple;
+}
+
+/* -- Usado no exemplo de seletores -- */
+
 .example-first-line::first-line {
   font-weight: bold;
 }
@@ -194,4 +209,96 @@
 
 .item-align-self {
   align-self: flex-end;
+}
+
+/* -- Grid -- */
+.item-grid-example {
+  background-color: blue;
+  color: white;
+  text-align: center;
+}
+
+.example-grid-template-columns {
+  display: grid;
+  grid-template-columns: 20% 50% 30%;
+  gap: 1px;
+}
+
+.example-grid-template-rows {
+  display: grid;
+  grid-template-rows: 100px 200px 100px;
+  gap: 1px;
+}
+
+.example-gap {
+  display: grid;
+  gap: 15px;
+}
+
+.example-grid-template {
+  display: grid;
+  grid-template: 2fr 1fr / 1fr 2fr 1fr
+}
+
+.example-grid-justify-align-items {
+  display: grid;
+  grid-template: auto auto / auto auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.example-grid-justify-align-content {
+  display: grid;
+  grid-template: auto auto / auto auto;
+  justify-content: center;
+  align-content: center;
+}
+
+.item-grid-area-1 {
+  grid-area: header;
+}
+.item-grid-area-2 {
+  grid-area: main;
+}
+.item-grid-area-3 {
+  grid-area: sidebar;
+}
+.item-grid-area-4 {
+  grid-area: footer;
+}
+.example-grid-area {
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'sidebar main main'
+    'footer footer footer';
+  gap: 1px;
+  color: white;
+  text-align: center;
+}
+
+.example-grid-column-row-start-end-container {
+  display: grid;
+  gap: 1px;
+  color: white;
+  text-align: center;
+}
+
+.example-grid-column-row-start-end-item-1 {
+  grid-column-start: 1;
+  grid-column-end: span 3;
+}
+
+.example-grid-column-row-start-end-item-2 {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+}
+
+.example-grid-column-row-start-end-item-3 {
+  grid-row-start: 2;
+}
+
+.example-grid-column-row-start-end-item-4 {
+  grid-row-start: 3;
+  grid-column-end: span 3;
 }

@@ -768,7 +768,7 @@
         </div>
       </section>
       <section id="align-content-section">
-        <h2>Align Content</h2>
+        <h3>Align Content</h3>
         <p>
           A propriedade <code>align-content</code> é usada para alinhar as linhas
           de itens flexíveis ao longo do eixo transversal do contêiner flexível.
@@ -807,7 +807,7 @@
         </div>
       </section>
       <section id="flex-grow-shrink-section">
-        <h2>Grow / Shrink</h2>
+        <h3>Grow / Shrink</h3>
         <p>
           As propriedades <code>flex-grow</code> e <code>flex-shrink</code> são usadas
           para definir como os itens flexíveis devem crescer ou encolher para preencher
@@ -840,7 +840,7 @@
         </div>
       </section>
       <section id="flex-order-section">
-        <h2>Order</h2>
+        <h3>Order</h3>
         <p>
           A propriedade <code>order</code> é usada para definir a ordem dos itens
           flexíveis em um contêiner flexível. Por padrão, todos os itens têm um valor
@@ -868,7 +868,7 @@
           </div>
       </section>
       <section id="flex-align-self-section">
-        <h2>Align Self</h2>
+        <h3>Align Self</h3>
         <p>
           A propriedade <code>align-self</code> é usada para alinhar um item flexível
           ao longo do eixo transversal do contêiner flexível, substituindo o valor
@@ -892,7 +892,7 @@
         </div>
       </section>
       <section id="flexbox-frog-section">
-        <h2>Flexbox Frog</h2>
+        <h3>Flexbox Frog</h3>
         <p>
           O Flexbox Froggy é um jogo que ajuda a aprender sobre o Flexbox
           brincando. O objetivo é ajudar o sapo a atravessar o lago e chegar
@@ -902,6 +902,249 @@
           <a href="https://flexboxfroggy.com/" target="_blank">
             <img src="./images/flexbox-froggy.png" alt="Flexbox Froggy" style="width: 100%;">
           </a>
+        </div>
+      </section>
+    </article>
+    <article id="grid-article" class="card">
+      <h2>Grid</h2>
+      <p>
+        O CSS Grid Layout é um sistema de layout bidimensional que permite criar
+        layouts complexos e flexíveis sem usar floats ou layouts baseados em grade.
+      </p>
+      <p>
+        Para usar o Grid, você precisa definir um elemento pai como um
+        <code>container grid</code> definindo o <code>display</code> como
+        <code>grid</code>. Isso transforma todos os filhos diretos desse
+        elemento em <code>itens de grade</code>.
+      </p>
+      <section id="grid-template-columns-section">
+        <h3>Grid Template Columns</h3>
+        <p>
+          A propriedade <code>grid-template-columns</code> é usada para definir
+          o número e a largura das colunas em um contêiner de grade.
+        </p>
+        <pre>
+          <code>
+            .container {
+              display: grid;
+              grid-template-columns: 20% 50% 30%;
+              grid-gap: 1px;
+            }
+          </code>
+        </pre>
+        <div class="result example-grid-template-columns">
+          <div class="item-grid-example">Item 1</div>
+          <div class="item-grid-example">Item 2</div>
+          <div class="item-grid-example">Item 3</div>
+        </div>
+      </section>
+      <section id="grid-template-rows-section">
+        <h3>Grid Template Rows</h3>
+        <p>
+          A propriedade <code>grid-template-rows</code> é usada para definir
+          o número e a altura das linhas em um contêiner de grade.
+        </p>
+        <pre>
+          <code>
+            .container {
+              display: grid;
+              grid-template-rows: 100px 200px 100px;
+              grid-gap: 1px;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="example-grid-template-rows">
+            <div class="item quadrado">Item 1</div>
+            <div class="item quadrado">Item 2</div>
+            <div class="item quadrado">Item 3</div>
+          </div>
+        </div>
+      </section>
+      <section id="grid-template-section">
+        <h3>Grid Template</h3>
+        <p>
+          A propriedade <code>grid-template</code> é uma propriedade abreviada
+          que combina <code>grid-template-rows</code> e <code>grid-template-columns</code>.
+        </p>
+        <p>
+          Também é possível definir o grid usando a unidades de medida <code>fr</code>, que é uma unidade de medida
+          flexível que distribui o espaço disponível proporcionalmente. Por exemplo, <code>1fr 2fr 1fr</code> distribui
+          o espaço disponível em 4 partes, onde a primeira e a terceira partes têm o mesmo tamanho e a segunda parte tem
+          o dobro do tamanho.
+        </p>
+        <pre>
+          <code>
+            .container {
+              display: grid;
+              grid-template: 2fr 1fr / 1fr 2fr 1fr
+            }
+          </code>
+        </pre>
+        <div class="result example-grid-template">
+          <div class="quadrado">Item 1</div>
+          <div class="quadrado">Item 2</div>
+          <div class="quadrado">Item 3</div>
+          <div class="quadrado">Item 4</div>
+          <div class="quadrado">Item 5</div>
+        </div>
+      </section>
+      <section id="grid-gap-section">
+        <h3>Grid Gap</h3>
+        <p>
+          A propriedade <code>grid-gap</code> é usada para definir o espaço entre
+          as linhas e colunas em um contêiner de grade.
+        </p>
+        <pre>
+          <code>
+            .container {
+              display: grid;
+              grid-template-rows: 100px 200px 100px;
+              grid-gap: 1px;
+            }
+          </code>
+        </pre>
+        <div class="result example-gap">
+          <div class="quadrado">Item 1</div>
+          <div class="quadrado">Item 2</div>
+          <div class="quadrado">Item 3</div>
+        </div>
+        <p>
+          É possivel definir um valor diferente para as linhas e colunas
+          usando a propriedade <code>grid-row-gap</code> e <code>grid-column-gap</code>.
+        </p>
+      </section>
+      <section id="grid-justify-align-section">
+        <h3>Grid Justify e Align Items</h3>
+        <p>
+          As propriedades <code>justify-items</code> e <code>align-items</code> são
+          usadas para alinhar os itens de grade ao longo do eixo principal e transversal
+          do contêiner de grade, respectivamente.
+        </p>
+        <pre>
+          <code>
+            .container {
+              display: grid;
+              grid-template: auto auto / auto auto;
+              justify-items: center;
+              align-items: center;
+            }
+          </code>
+        </pre>
+        <div class="result example-grid-justify-align-items altura-maior">
+          <div class="quadrado">Item 1</div>
+          <div class="quadrado">Item 2</div>
+          <div class="quadrado">Item 3</div>
+          <div class="quadrado">Item 4</div>
+        </div>
+      </section>
+      <section id="grid-justify-align-content-section">
+        <h3>Grid Justify e Align Content</h3>
+        <p>
+          As propriedades <code>justify-content</code> e <code>align-content</code> são
+          usadas para alinhar as linhas de grade ao longo do eixo principal e transversal
+          do contêiner de grade, respectivamente.
+        </p>
+        <pre>
+          <code>
+            .container {
+              display: grid;
+              grid-template: auto auto / auto auto;
+              justify-content: center;
+              align-content: center;
+            }
+          </code>
+        </pre>
+        <div class="result example-grid-justify-align-content altura-maior">
+          <div class="quadrado">Item 1</div>
+          <div class="quadrado">Item 2</div>
+          <div class="quadrado">Item 3</div>
+          <div class="quadrado">Item 4</div>
+        </div>
+      </section>
+      <section id="grid-area-section">
+        <h3>Grid Area</h3>
+        <p>
+          A propriedade <code>grid-area</code> é usada para definir o nome de uma
+          área de grade e especificar onde um item de grade deve ser colocado.
+        </p>
+        <pre>
+          <code>
+            .item-1 {
+              grid-area: header;
+            }
+
+            .item-2 {
+              grid-area: main;
+            }
+
+            .item-3 {
+              grid-area: sidebar;
+            }
+
+            .item-4 {
+              grid-area: footer;
+            }
+
+            .container {
+              display: grid;
+              grid-template-areas:
+                'header header header'
+                'sidebar main main'
+                'footer footer footer';
+              gap: 1px;
+            }
+          </code>
+        </pre>
+        <div class="result example-grid-area">
+          <div class="bg-blue item-grid-area-1">Header</div>
+          <div class="bg-green item-grid-area-2">Main</div>
+          <div class="bg-red item-grid-area-3">Sidebar</div>
+          <div class="bg-purple item-grid-area-4">Footer</div>
+        </div>
+      </section>
+      <section id="grid-column-row-start-end-section">
+        <h3>Grid Colum e Row Start e End</h3>
+        <p>
+          As propriedades <code>grid-column-start</code>, <code>grid-column-end</code>,
+          <code>grid-row-start</code> e <code>grid-row-end</code> são usadas para
+          definir onde um item de grade deve começar e terminar em relação às linhas
+          e colunas de grade.
+        </p>
+        <pre>
+          <code>
+            .container {
+              display: grid;
+              gap: 1px;
+              color: white;
+              text-align: center;
+            }
+            
+            .item-1 {
+              grid-column-start: 1;
+              grid-column-end: span 3;
+            }
+            
+            .item-2 {
+              grid-column-start: 2;
+              grid-column-end: span 2;
+            }
+            
+            .item-3 {
+              grid-row-start: 2;
+            }
+            
+            .item-4 {
+              grid-row-start: 3;
+              grid-column-end: span 3;
+            }
+          </code>
+        </pre>
+        <div class="result example-grid-column-row-start-end-container">
+          <div class="example-grid-column-row-start-end-item-1 bg-blue">Header</div>
+          <div class="example-grid-column-row-start-end-item-2 bg-green">Main</div>
+          <div class="example-grid-column-row-start-end-item-3 bg-red">Sidebar</div>
+          <div class="example-grid-column-row-start-end-item-4 bg-purple">Footer</div>
         </div>
       </section>
     </article>
