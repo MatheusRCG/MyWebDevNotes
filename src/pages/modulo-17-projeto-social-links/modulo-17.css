@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+:root {
+  --primary-color: #fff;
+  --secondary-color: #919193;
+  --gradient-start-color: #5578BA;
+  --gradient-end-color: #40A376;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Sora", sans-serif;
+  color: var(--primary-color);
+}
+
+.fundo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/background.jpg);
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+}
+
+.conteiner {
+  height: 450px;
+  width: 360px;
+  display: grid;
+  grid-template-rows: 2fr 2fr 1fr;
+}
+
+/* -- header -- */
+.profile {
+  width: 80px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, var(--gradient-start-color), var(--gradient-end-color));
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 2em;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+h2 {
+  color: var(--secondary-color);
+  font-size: 0.8em;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+/* -- main -- */
+main {
+  background-color: blue;
+}
+
+
+footer {
+  background-color: green;
+}
