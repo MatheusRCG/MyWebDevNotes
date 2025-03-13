@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link rel="icon" href="../../images/icon.png" type="image/png">
   <link rel="stylesheet" href="../../css/main.css">
 </head>
+
 <body>
   <header id="top-bar">
     <a href="/">
@@ -22,8 +24,169 @@
   </nav>
 
   <main id="content">
-    <article id="" class="card">
-      
+    <article id="strict-mode-article" class="card">
+      <h2>Strict Mode</h2>
+      <p>
+        O <code>strict mode</code> é uma funcionalidade do JavaScript que permite que você coloque seu
+        código em um modo estrito. Isso ajuda a identificar erros silenciosos, melhorar a
+        otimização e evitar o uso de algumas funcionalidades que são consideradas más práticas.
+      </p>
+      <p>
+        Para ativar o <code>strict mode</code> em um arquivo JavaScript, basta adicionar a linha
+        <code>"use strict";</code> no início do arquivo ou no início de uma função.
+      </p>
+      <pre>
+        <code>
+          "use strict";
+          // Código JavaScript aqui
+        </code>
+      </pre>
+      <p>
+        Quando o <code>strict mode</code> está ativado, algumas mudanças ocorrem no comportamento
+        do JavaScript:
+      </p>
+      <ul>
+        <li>Variáveis devem ser declaradas antes de serem usadas.</li>
+        <li>Não é permitido deletar variáveis, funções ou argumentos.</li>
+        <li>Não é permitido duplicar nomes de parâmetros em funções.</li>
+        <li>Não é permitido usar palavras reservadas como nomes de variáveis.</li>
+      </ul>
+      <p>
+        O <code>strict mode</code> é uma boa prática para garantir que seu código JavaScript seja
+        mais seguro e menos propenso a erros.
+      </p>
+    </article>
+    <article id="this-bind-article" class="card">
+      <h2>This e Bind</h2>
+      <p>
+        O <code>this</code> é uma palavra-chave especial em JavaScript que se refere ao objeto atual.
+        O valor de <code>this</code> depende de como uma função é chamada.
+      </p>
+      <p>
+        Quando uma função é chamada como um método de um objeto, o valor de <code>this</code> é o
+        objeto em que a função é chamada.
+      </p>
+      <pre>
+        <code>
+          const person = {
+            firstName: "John",
+            lastName: "Doe",
+            fullName: function() {
+              return this.firstName + " " + this.lastName;
+            }
+          };
+          console.log(person.fullName()); // John Doe
+        </code>
+      </pre>
+      <p>
+        No entanto, quando uma função é chamada como uma função normal, o valor de
+        <code>this</code> é o objeto global (no navegador, o objeto global é "window").
+      </p>
+      <pre>
+        <code>
+          function myFunction() {
+            return this;
+          }
+          console.log(myFunction()); // window
+        </code>
+      </pre>
+      <p>
+        Para resolver esse problema, você pode usar o método <code>bind</code> para definir o
+        valor de <code>this</code> para uma função.
+      </p>
+      <pre>
+        <code>
+          const person = {
+            firstName: "John",
+            lastName: "Doe"
+          };
+          function fullName() {
+            return this.firstName + " " + this.lastName;
+          }
+          const fullNameBound = fullName.bind(person);
+          console.log(fullNameBound()); // John Doe
+        </code>
+      </pre>
+      <p>
+        O método <code>bind</code> cria uma nova função que, quando chamada, tem o valor de
+        <code>this</code> definido para o primeiro argumento passado para o método <code>bind</code>.
+      </p>
+    </article>
+    <article id="arrow-functions-article" class="card">
+      <h2>Arrow Functions</h2>
+      <p>
+        As <code>arrow functions</code> são uma nova sintaxe introduzida no ECMAScript 6 para
+        criar funções de forma mais concisa.
+      </p>
+      <p>
+        A sintaxe de uma <code>arrow functions</code> é a seguinte:
+      </p>
+      <pre>
+        <code>
+          const add = (a, b) =&gt; {
+            return a + b;
+          };
+          console.log(add(1, 2)); // 3
+        </code>
+      </pre>
+      <p>
+        Se a função tiver apenas uma instrução, você pode omitir as chaves e a
+        palavra-chave <code>return</code>.
+      </p>
+      <pre>
+        <code>
+          const add = (a, b) =&gt; a + b;
+          console.log(add(1, 2)); // 3
+        </code>
+      </pre>
+      <p>
+        As <code>arrow functions</code> têm algumas diferenças em relação às
+        funções tradicionais:
+      </p>
+      <ul>
+        <li>O valor de <code>this</code> é herdado do escopo pai.</li>
+        <li>Não têm a palavra-chave "arguments".</li>
+        <li>Não podem ser usadas como construtores.</li>
+      </ul>
+      <p>
+        As <code>arrow functions</code> são úteis para escrever código mais conciso e
+        legível em JavaScript.
+      </p>
+    </article>
+    <article id="callback-article" class="card">
+      <h2>Callback</h2>
+      <p>
+        Um <code>callback</code> é uma função que é passada como argumento para outra função
+        e é executada após a conclusão
+        de uma operação assíncrona.
+      </p>
+      <p>
+        Os <code>callbacks</code> são amplamente utilizados em JavaScript para lidar 
+        com operações assíncronas, como requisições AJAX, eventos de temporização
+        e manipulação de arquivos.
+      </p>
+      <pre>
+        <code>
+          function fetchData(callback) {
+            setTimeout(() =&gt; {
+              const data = "Hello, world!";
+              callback(data);
+            }, 1000);
+          }
+          function displayData(data) {
+            console.log(data);
+          }
+          fetchData(displayData); // Hello, world!
+        </code>
+      </pre>
+      <p>
+        Neste exemplo, a função <code>fetchData</code> recebe um <code>callback</code> como argumento e
+        chama o <code>callback</code> após um atraso de 1 segundo.
+      </p>
+      <p>
+        Os <code>callback</code> são uma parte fundamental da programação assíncrona em JavaScript
+        e são uma maneira eficaz de lidar com operações que não são imediatamente concluídas.
+      </p>
     </article>
   </main>
 
@@ -35,7 +198,8 @@
       <img src="/src/images/linkedin-logo.png" alt="linkedin logo">
     </a>
   </footer>
-  
+
   <script src="./modulo-18.js"></script>
 </body>
+
 </html>
