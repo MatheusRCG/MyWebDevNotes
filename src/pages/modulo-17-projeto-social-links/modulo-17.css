@@ -28,8 +28,7 @@
 .conteiner {
   height: 450px;
   width: 360px;
-  display: grid;
-  grid-template-rows: 2fr 2fr 1fr;
+  padding: 5px;
 }
 
 /* -- header -- */
@@ -50,7 +49,7 @@ h2 {
   color: var(--secondary-color);
   font-size: 0.8em;
   font-weight: 400;
-  margin-top: 10px;
+  margin: 10px 0;
 }
 
 /* -- main -- */
@@ -70,12 +69,23 @@ h2 {
   text-decoration: none;
 }
 
-.item img {
+.item img, footer img {
   width: 30px;
   height: 30px;
 }
 
-
+/* -- footer -- */
 footer {
-  background-color: green;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer a {
+  background: linear-gradient(90deg, var(--gradient-start-color), var(--gradient-end-color));
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
