@@ -220,6 +220,42 @@
         JavaScript e são amplamente utilizadas em bibliotecas e frameworks modernos.
       </p>
     </article>
+    <article id="async-await-article" class="card">
+      <h2>Async e Await</h2>
+      <p>
+        O <code>async</code> e <code>await</code> são recursos do JavaScript introduzidos no ECMAScript 8
+        para simplificar o uso de <code>promises</code
+      </p>
+      <p>
+        A palavra-chave <code>async</code> é usada para declarar uma função assíncrona que retorna
+        uma <code>promise</code>.
+      </p>
+      <pre>
+        <code>
+          async function fetchData() {
+            return new Promise((resolve, reject) =&gt; {
+              setTimeout(() =&gt; {
+                const data = "Hello, world!";
+                resolve(data);
+              }, 1000);
+            });
+          }
+          async function displayData() {
+            const data = await fetchData();
+            console.log(data);
+          }
+          displayData(); // Hello, world!
+        </code>
+      </pre>
+      <p>
+        Neste exemplo, a função <code>fetchData</code> é declarada como uma função assíncrona
+        e a palavra-chave <code>await</code> é usada para esperar que a <code>promise</code> seja resolvida.
+      </p>
+      <p>
+        O <code>async</code> e <code>await</code> são uma maneira mais limpa e legível de lidar com
+        operações assíncronas em JavaScript e são amplamente utilizados em código moderno.
+      </p>
+    </article>
   </main>
 
   <footer id="footer">
