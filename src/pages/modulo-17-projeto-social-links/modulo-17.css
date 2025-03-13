@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+:root {
+  --primary-color: #fff;
+  --secondary-color: #919193;
+  --gradient-start-color: #5578BA;
+  --gradient-end-color: #40A376;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Sora", sans-serif;
+  color: var(--primary-color);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/background.jpg);
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+}
+
+.conteiner {
+  max-width: 400px;
+  padding: 10px;
+}
+
+/* -- header -- */
+.profile {
+  width: 80px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, var(--gradient-start-color), var(--gradient-end-color));
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 2em;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+h2 {
+  color: var(--secondary-color);
+  font-size: 0.8em;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+/* -- main -- */
+li {
+  background: linear-gradient(90deg, var(--gradient-start-color), var(--gradient-end-color));
+  width: 100%;
+  height: 50px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding: 10px 25px;
+  list-style: none;
+}
+
+.item a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+
+.item img, footer img {
+  width: 30px;
+  height: 30px;
+}
+
+/* -- footer -- */
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer a {
+  background: linear-gradient(90deg, var(--gradient-start-color), var(--gradient-end-color));
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
