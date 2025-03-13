@@ -161,7 +161,7 @@
         de uma operação assíncrona.
       </p>
       <p>
-        Os <code>callbacks</code> são amplamente utilizados em JavaScript para lidar 
+        Os <code>callbacks</code> são amplamente utilizados em JavaScript para lidar
         com operações assíncronas, como requisições AJAX, eventos de temporização
         e manipulação de arquivos.
       </p>
@@ -186,6 +186,38 @@
       <p>
         Os <code>callback</code> são uma parte fundamental da programação assíncrona em JavaScript
         e são uma maneira eficaz de lidar com operações que não são imediatamente concluídas.
+      </p>
+    </article>
+    <article id="promises-article" class="card">
+      <h2>Promises</h2>
+      <p>
+        As <code>promises</code> são um recurso do JavaScript introduzido no ECMAScript 6 para
+        lidar com operações assíncronas de forma mais limpa e legível.
+      </p>
+      <p>
+        Uma <code>promise</code> representa um valor que pode estar disponível agora, no futuro
+        ou nunca.
+      </p>
+      <pre>
+        <code>
+          const fetchData = new Promise((resolve, reject) =&gt; {
+            setTimeout(() =&gt; {
+              const data = "Hello, world!";
+              resolve(data);
+            }, 1000);
+          });
+          fetchData.then(data =&gt; {
+            console.log(data);
+          }); // Hello, world!
+        </code>
+      </pre>
+      <p>
+        Neste exemplo, a <code>promise</code> <code>fetchData</code> é criada com uma função executora
+        que chama a função <code>resolve</code> após um atraso de 1 segundo.
+      </p>
+      <p>
+        As <code>promises</code> são uma maneira poderosa de lidar com operações assíncronas em
+        JavaScript e são amplamente utilizadas em bibliotecas e frameworks modernos.
       </p>
     </article>
   </main>
