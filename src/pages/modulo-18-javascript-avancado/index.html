@@ -357,6 +357,34 @@
         de forma concisa e legível.
       </p>
     </article>
+    <article id="Reduce-article" class="card">
+      <h2>Reduce</h2>
+      <p>
+        O método <code>reduce</code> é um método de array em JavaScript que reduz um array a um único valor.
+      </p>
+      <p>
+        O método <code>reduce</code> executa uma função fornecida para cada elemento do array
+        (da esquerda para a direita) e acumula o resultado em um valor único.
+      </p>
+      <pre>
+        <code>
+          const numbers = [1, 2, 3, 4, 5];
+          
+          function soma(acumulador, numero) {
+            return acumulador + numero;
+          }
+
+          console.log(numbers.reduce(soma, 0)); // 15
+        </code>
+      </pre>
+      <p>
+        Neste exemplo, o método <code>reduce</code> é usado para somar todos os números do array.
+      </p>
+      <p>
+        O método <code>reduce</code> é uma maneira poderosa de transformar arrays em um único valor
+        e é amplamente utilizado em operações de agregação de dados.
+      </p>      
+    </article>
   </main>
 
   <footer id="footer">
