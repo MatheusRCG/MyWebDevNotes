@@ -300,6 +300,41 @@
         os números ao quadrado do array original.
       </p>
     </article>
+    <article id="value-reference-article" class="card">
+      <h2>Valor vs Referência</h2>
+      <p>
+        Em JavaScript, os tipos de dados primitivos (como números, strings e booleanos) são
+        passados por valor, enquanto os objetos (como arrays e objetos) são passados por referência.
+      </p>
+      <p>
+        Quando um tipo de dado primitivo é passado para uma função, uma cópia do valor é passada,
+        o que significa que a função não pode modificar o valor original.
+      </p>
+      <pre>
+        <code>
+          let x = 10;
+          function increment(x) {
+            x++;
+          }
+          increment(x);
+          console.log(x); // 10
+        </code>
+      </pre>
+      <p>
+        No entanto, quando um objeto é passado para uma função, uma referência ao objeto é passada,
+        o que significa que a função pode modificar o objeto original.
+      </p>
+      <pre>
+        <code>
+          let person = { name: "John" };
+          function changeName(person) {
+            person.name = "Jane";
+          }
+          changeName(person);
+          console.log(person.name); // Jane
+        </code>
+      </pre>
+    </article>
   </main>
 
   <footer id="footer">
