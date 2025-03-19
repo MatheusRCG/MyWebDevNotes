@@ -391,13 +391,11 @@
     <article id="fetch-article" class="card">
       <h2>Fetch</h2>
       <p>
-        A API <code>fetch()</code> é uma forma moderna e simplificada de fazer 
+        A API <code>fetch()</code> é uma forma moderna e simplificada de fazer
         requisições HTTP de forma assíncrona em JavaScript.
-        Ela substitui o antigo <code>XMLHttpRequest</code> e é baseada em 
+        Ela substitui o antigo <code>XMLHttpRequest</code> e é baseada em
         <code>promises</code>, tornando o código mais legível e fácil de manter.
       </p>
-
-      <p>Veja um exemplo básico de uso:</p>
 
       <pre>
         <code>
@@ -425,9 +423,108 @@
       </p>
 
       <p>
-        A API <code>fetch()</code> é muito utilizada em aplicações web modernas para 
+        A API <code>fetch()</code> é muito utilizada em aplicações web modernas para
         consumir APIs e trocar informações com servidores remotos.
       </p>
+    </article>
+    <article id="try-catch-article" class="card">
+      <h2>Try Catch</h2>
+      <p>
+        O bloco <code>try...catch</code> é uma forma de lidar com exceções em JavaScript.
+        Ele permite que você tente executar um bloco de código e capture qualquer erro que ocorra.
+      </p>
+      <p>
+        O bloco <code>try</code> contém o código que pode lançar uma exceção, enquanto
+        o bloco <code>catch</code> contém o código que lida com a exceção.
+      </p>
+      <pre>
+        <code>
+          try {
+            // Código que pode lançar uma exceção
+            let result = riskyOperation();
+            console.log(result);
+          } catch (error) {
+            // Código que lida com a exceção
+            console.error("Ocorreu um erro:", error.message);
+          }
+        </code>
+      </pre>
+      <p>
+        No exemplo acima, se a função <code>riskyOperation</code> lançar uma exceção,
+        o controle será passado para o bloco <code>catch</code>, onde a mensagem de erro
+        será exibida no console.
+      </p>
+
+      <h3>Um exemplo mais simples</h3>
+      <pre>
+        <code>
+          try {
+            console.log(nome); // Erro: nome is not defined
+          } catch (error) {
+            console.error("Ocorreu um erro:", error.message);
+          }
+          console.log("Operação concluída.");
+        </code>
+      </pre>
+      <p>
+        No exemplo acima, se a variável <code>nome</code> não estiver definida,
+        uma exceção será lançada e o controle será passado para o bloco <code>catch</code>,
+        onde a mensagem de erro será exibida no console.
+      </p>
+
+      <section id="finally-section">
+        <h3>Finally</h3>
+        <p>
+          Você também pode usar o bloco <code>finally</code> para executar código que
+          deve ser executado independentemente de uma exceção ter sido lançada ou não.
+        </p>
+        <pre>
+          <code>
+            try {
+              // Código que pode lançar uma exceção
+              let result = riskyOperation();
+              console.log(result);
+            } catch (error) {
+              // Código que lida com a exceção
+              console.error("Ocorreu um erro:", error.message);
+            } finally {
+              // Código que será executado sempre
+              console.log("Operação concluída.");
+            }
+          </code>
+        </pre>
+        <p>
+          O bloco <code>finally</code> é útil para liberar recursos ou realizar outras
+          operações de limpeza, independentemente do sucesso ou falha do bloco <code>try</code>.
+        </p>
+      </section>
+      <section id="throw-section">
+        <h3>throw</h3>
+        <p>
+          Além de capturar exceções, você também pode lançar exceções manualmente em
+          JavaScript usando a palavra-chave <code>throw</code>.
+        </p>
+        <pre>
+          <code>
+            function divide(a, b) {
+              if (b === 0) {
+                throw new Error("Divisão por zero!");
+              }
+              return a / b;
+            }
+            
+            try {
+              console.log(divide(10, 0));
+            } catch (error) {
+              console.error("Ocorreu um erro:", error.message);
+            }
+          </code>
+        </pre>
+        <p>
+          Neste exemplo, a função <code>divide</code> lança uma exceção se o divisor for zero.
+          A exceção é capturada no bloco <code>catch</code> e a mensagem de erro é exibida no console.
+        </p>
+      </section>
     </article>
   </main>
 
