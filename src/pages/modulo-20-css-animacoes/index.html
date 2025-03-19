@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Animações</title>
+  <link rel="icon" href="../../images/icon.png" type="image/png">
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="modulo-20.css">
+</head>
+
+<body>
+  <header id="top-bar">
+    <a href="/">
+      <img class="logo" src="../../images/logo.png" alt="logo">
+    </a>
+    <h1>CSS Animações</h1>
+  </header>
+
+  <nav id="nav">
+    <ul>
+      <li><a href="#keyframes-article">Keyframes</a>
+        <ul>
+          <li><a href="#animation-properties-section">Propriedades de Animação</a></li>
+          <li><a href="#animation-example-section">Exemplo Completo</a></li>
+        </ul>
+      </li>
+      <li><a href="#transitions-article">Transitions</a>
+        <ul>
+          <li><a href="#transition-properties-section">Propriedades de Transição</a></li>
+          <li><a href="#transition-example-section">Exemplo Completo</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="content">
+    <article id="keyframes-article" class="card">
+      <h2>Keyframes</h2>
+      <p>
+        A propriedade <code>@keyframes</code> é usada para criar animações em CSS.
+        Ela permite que você defina um conjunto de estilos que serão aplicados a
+        um elemento em diferentes pontos do tempo durante a animação.
+      </p>
+      <p>
+        A sintaxe básica para definir uma animação com <code>@keyframes</code> é a seguinte:
+      </p>
+      <pre>
+        <code>
+          @keyframes nome-da-animacao {
+            0% {
+              /* estilos iniciais */
+            }
+            100% {
+              /* estilos finais */
+            }
+          }
+        </code>
+      </pre>
+      <p>
+        Você pode usar porcentagens para definir os pontos intermediários da animação. Por exemplo:
+      </p>
+      <pre>
+        <code>
+          @keyframes exemplo {
+            0% {
+              opacity: 0;
+            }
+            50% {
+              opacity: 0.5;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+        </code>
+      </pre>
+      <p>
+        Para aplicar a animação a um elemento, você usa a propriedade <code>animation</code>:
+      </p>
+      <pre>
+        <code>
+          .meu-elemento {
+            animation: exemplo 2s infinite;
+          }
+        </code>
+      </pre>
+      <p>
+        No exemplo acima, a animação <code>exemplo</code> será aplicada ao elemento com a classe
+        <code>meu-elemento</code>, durando 2 segundos e repetindo infinitamente.
+      </p>
+      <section id="animation-properties-section">
+        <h3>Propriedades de Animação</h3>
+        <p>
+          Existem várias propriedades que você pode usar para controlar a animação:
+        </p>
+        <ul>
+          <li><code>animation-name</code>: Nome da animação definida com <code>@keyframes</code>.</li>
+          <li><code>animation-duration</code>: Duração da animação (ex: 2s para 2 segundos).</li>
+          <li><code>animation-timing-function</code>: Função de tempo da animação:
+            <ul>
+              <li><code>linear</code>: A animação tem uma velocidade constante.</li>
+              <li><code>ease</code>: A animação começa devagar, acelera no meio e desacelera no final.</li>
+              <li><code>ease-in</code>: A animação começa devagar e acelera no final.</li>
+              <li><code>ease-out</code>: A animação começa rápida e desacelera no final.</li>
+              <li><code>ease-in-out</code>: A animação começa e termina devagar, mas é rápida no meio.</li>
+            </ul>
+          </li>
+          <li>
+            <code>animation-delay</code>: Atraso antes do início da animação
+            (ex: <code>2s</code> para 2 segundos).
+          </li>
+          <li><code>animation-iteration-count</code>: Número de vezes que a animação será repetida:
+            <ul>
+              <li><code>infinite</code>: A animação será repetida indefinidamente.</li>
+              <li>
+                <code>n</code>: Um número específico de repetições
+                (ex: <code>3</code> para repetir 3 vezes).
+              </li>
+            </ul>
+          </li>
+          <li><code>animation-direction</code>: Direção da animação:
+            <ul>
+              <li><code>normal</code>: A animação é executada na direção normal.</li>
+              <li><code>reverse</code>: A animação é executada na direção inversa.</li>
+              <li>
+                <code>alternate</code>: A animação alterna entre a direção normal
+                e inversa a cada ciclo.
+              </li>
+              <li>
+                <code>alternate-reverse</code>: A animação alterna entre a
+                direção inversa e normal a cada ciclo.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <code>animation-fill-mode</code>: Define o estilo aplicado ao
+            elemento quando a animação não está em execução:
+            <ul>
+              <li><code>none</code>: Nenhum estilo é aplicado fora do tempo de execução da animação.</li>
+              <li><code>forwards</code>: O estilo final da animação é aplicado após a conclusão.</li>
+              <li><code>backwards</code>: O estilo inicial da animação é aplicado antes do início.</li>
+              <li><code>both</code>: Ambos os estilos inicial e final são aplicados.</li>
+            </ul>
+          </li>
+          <li><code>animation-play-state</code>: Estado da animação:
+            <ul>
+              <li><code>running</code>: A animação está em execução.</li>
+              <li><code>paused</code>: A animação está pausada.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section id="animation-example-section">
+        <h3>Exemplo Completo</h3>
+        <p>
+          Aqui está um exemplo completo de uma animação usando
+          <code>@keyframes</code> e as propriedades de animação:
+        </p>
+        <pre>
+          <code>
+            @keyframes mover {
+              0% {
+                left: 0;
+              }
+              50% {
+                transform: translateX(-100%);
+                left: 100%;
+              }
+              100% {
+                left: 0;
+              }
+            }
+            
+            .animacao {
+              position: relative;
+              width: 50px;
+              height: 50px;
+              background-color: red;
+              animation: mover 3s ease-in-out infinite;
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="animacao"></div>
+        </div>
+        <p>
+          Nesse exemplo usamos a propriedade <code>animation</code> mesclando
+          as propriedades <code>animation-name</code>, <code>animation-duration</code>,
+          <code>animation-timing-function</code> e <code>animation-iteration-count</code>.
+        </p>
+      </section>
+    </article>
+    <article id="transitions-article" class="card">
+      <h2>Transitions</h2>
+      <p>
+        A propriedade <code>transition</code> é usada para criar
+        transições suaves entre os estados de um elemento. Ela
+        permite que você defina a duração, o tempo e outros aspectos da transição.
+      </p>
+      <p>
+        A sintaxe básica para definir uma transição é a seguinte:
+      </p>
+      <pre>
+        <code>
+          .meu-elemento {
+            transition: propriedade duração função-tempo atraso;
+          }
+        </code>
+      </pre>
+      <p>
+        Por exemplo, para criar uma transição suave na propriedade
+        <code>background-color</code> de um elemento, você pode usar:
+      </p>
+      <pre>
+        <code>
+          .meu-elemento {
+            transition: background-color 2s ease-in-out;
+          }
+        </code>
+      </pre>
+      <p>
+        No exemplo acima, a transição da propriedade
+        <code>background-color</code> durará 2 segundos
+        e usará a função de tempo <code>ease-in-out</code>.
+      </p>
+
+      <section id="transition-properties-section">
+        <h3>Propriedades de Transição</h3>
+        <p>
+          Existem várias propriedades que você pode usar para controlar a transição:
+        </p>
+        <ul>
+          <li>
+            <code>transition-property</code>: A propriedade que será animada
+            (ex: <code>background-color</code>).
+          </li>
+          <li><code>transition-duration</code>: Duração da transição (ex: 2s para 2 segundos).</li>
+          <li><code>transition-timing-function</code>: Função de tempo da transição:
+            <ul>
+              <li><code>linear</code>: A transição tem uma velocidade constante.</li>
+              <li><code>ease</code>: A transição começa devagar, acelera no meio e desacelera no final.</li>
+              <li><code>ease-in</code>: A transição começa devagar e acelera no final.</li>
+              <li><code>ease-out</code>: A transição começa rápida e desacelera no final.</li>
+              <li><code>ease-in-out</code>: A transição começa e termina devagar, mas é rápida no meio.</li>
+            </ul>
+          </li>
+          <li>
+            <code>transition-delay</code>: Atraso antes do início da transição
+            (ex: <code>2s</code> para 2 segundos).
+          </li>
+        </ul>
+      </section>
+
+      <section id="transition-example-section">
+        <h3>Exemplo Completo</h3>
+        <p>
+          Aqui está um exemplo completo de uma transição usando a propriedade <code>transition</code>:
+        </p>
+        <pre>
+          <code>
+            .caixa {
+              width: 100px;
+              height: 100px;
+              background-color: blue;
+              transition: background-color 2s ease-in-out, transform 2s ease-in-out;
+            }
+
+            .caixa:hover {
+              background-color: green;
+              transform: rotate(45deg);
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="caixa"></div>
+        </div>
+        <p>
+          Nesse exemplo, a cor de fundo da caixa mudará de azul para
+          verde e a caixa girará 45 graus quando o mouse
+          passar sobre ela, com uma transição suave de 2 segundos.
+        </p>
+      </section>
+    </article>
+  </main>
+
+  <footer id="footer">
+    <a href="https://github.com/MatheusRCG" target="_blank">
+      <img src="/src/images/github-logo.png" alt="logo github">
+    </a>
+    <a href="https://www.linkedin.com/in/matheusrcg/" target="_blank">
+      <img src="/src/images/linkedin-logo.png" alt="linkedin logo">
+    </a>
+  </footer>
+</body>
+
+</html>
