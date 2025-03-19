@@ -18,3 +18,15 @@
   background-color: red;
   animation: mover 3s ease-in-out infinite;
 }
+
+.caixa {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  transition: background-color 2s ease-in-out, transform 2s ease-in-out;
+}
+
+.caixa:hover {
+  background-color: green;
+  transform: rotate(45deg);
+}

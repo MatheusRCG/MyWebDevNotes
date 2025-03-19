@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSS Animações</title>
   <link rel="icon" href="../../images/icon.png" type="image/png">
   <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="modulo-20.css">
 </head>
+
 <body>
   <header id="top-bar">
     <a href="/">
@@ -253,6 +256,22 @@
               transition: background-color 2s ease-in-out, transform 2s ease-in-out;
             }
 
+            .caixa:hover {
+              background-color: green;
+              transform: rotate(45deg);
+            }
+          </code>
+        </pre>
+        <div class="result">
+          <div class="caixa"></div>
+        </div>
+        <p>
+          Nesse exemplo, a cor de fundo da caixa mudará de azul para
+          verde e a caixa girará 45 graus quando o mouse
+          passar sobre ela, com uma transição suave de 2 segundos.
+        </p>
+      </section>
+    </article>
   </main>
 
   <footer id="footer">
@@ -264,4 +283,5 @@
     </a>
   </footer>
 </body>
+
 </html>
