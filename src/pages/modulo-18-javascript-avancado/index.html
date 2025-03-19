@@ -386,7 +386,48 @@
       <p>
         O método <code>reduce</code> é uma maneira poderosa de transformar arrays em um único valor
         e é amplamente utilizado em operações de agregação de dados.
-      </p>      
+      </p>
+    </article>
+    <article id="fetch-article" class="card">
+      <h2>Fetch</h2>
+      <p>
+        A API <code>fetch()</code> é uma forma moderna e simplificada de fazer 
+        requisições HTTP de forma assíncrona em JavaScript.
+        Ela substitui o antigo <code>XMLHttpRequest</code> e é baseada em 
+        <code>promises</code>, tornando o código mais legível e fácil de manter.
+      </p>
+
+      <p>Veja um exemplo básico de uso:</p>
+
+      <pre>
+        <code>
+          fetch("https://api.example.com/data") // Faz uma requisição GET para a URL fornecida
+            .then(response => {
+              if (!response.ok) {
+                throw new Error("Erro na requisição: " + response.status);
+              }
+              return response.json(); // Converte a resposta para JSON
+            })
+            .then(data => {
+              console.log("Dados recebidos:", data); // Exibe os dados no console
+            })
+            .catch(error => {
+              console.error("Erro ao buscar os dados:", error); // Trata erros
+            });
+        </code>
+      </pre>
+
+      <p>
+        No código acima, o método <code>fetch()</code> faz uma requisição para a API.
+        Primeiro, verificamos se a resposta foi bem-sucedida com <code>response.ok</code>.
+        Depois, transformamos os dados para JSON e os exibimos no console.
+        Caso ocorra algum erro, ele será tratado no bloco <code>catch()</code>.
+      </p>
+
+      <p>
+        A API <code>fetch()</code> é muito utilizada em aplicações web modernas para 
+        consumir APIs e trocar informações com servidores remotos.
+      </p>
     </article>
   </main>
 
