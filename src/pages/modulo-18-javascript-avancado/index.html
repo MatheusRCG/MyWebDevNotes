@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Avançado</title>
+  <link rel="icon" href="../../images/icon.png" type="image/png">
+  <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+  <header id="top-bar">
+    <a href="/">
+      <img class="logo" src="../../images/logo.png" alt="logo">
+    </a>
+    <h1>Javascript Avançado</h1>
+  </header>
+
+  <nav id="nav">
+    <ul>
+      <li>
+        <a href="#strict-mode-article">Strict Mode</a>
+      </li>
+      <li>
+        <a href="#this-bind-article">This e Bind</a>
+      </li>
+      <li>
+        <a href="#arrow-functions-article">Arrow Functions</a>
+      </li>
+      <li>
+        <a href="#callback-article">Callback</a>
+      </li>
+      <li>
+        <a href="#promises-article">Promises</a>
+      </li>
+      <li>
+        <a href="#async-await-article">Async e Await</a>
+      </li>
+      <li>
+        <a href="#filter-article">Filter</a>
+      </li>
+      <li>
+        <a href="#map-reduce-article">Map e Reduce</a>
+      </li>
+      <li>
+        <a href="#value-reference-article">Valor vs Referência</a>
+      </li>
+      <li>
+        <a href="#spread-operator-article">Spread Operator</a>
+      </li>
+      <li>
+        <a href="#Reduce-article">Reduce</a>
+      </li>
+      <li>
+        <a href="#fetch-article">Fetch</a>
+      </li>
+      <li>
+        <a href="#try-catch-article">Try Catch</a>
+        <ul>
+          <li><a href="#finally-section">Finally</a></li>
+          <li><a href="#throw-section">throw</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="content">
+    <article id="strict-mode-article" class="card">
+      <h2>Strict Mode</h2>
+      <p>
+        O <code>strict mode</code> é uma funcionalidade do JavaScript que permite que você coloque seu
+        código em um modo estrito. Isso ajuda a identificar erros silenciosos, melhorar a
+        otimização e evitar o uso de algumas funcionalidades que são consideradas más práticas.
+      </p>
+      <p>
+        Para ativar o <code>strict mode</code> em um arquivo JavaScript, basta adicionar a linha
+        <code>"use strict";</code> no início do arquivo ou no início de uma função.
+      </p>
+      <pre>
+        <code>
+          "use strict";
+          // Código JavaScript aqui
+        </code>
+      </pre>
+      <p>
+        Quando o <code>strict mode</code> está ativado, algumas mudanças ocorrem no comportamento
+        do JavaScript:
+      </p>
+      <ul>
+        <li>Variáveis devem ser declaradas antes de serem usadas.</li>
+        <li>Não é permitido deletar variáveis, funções ou argumentos.</li>
+        <li>Não é permitido duplicar nomes de parâmetros em funções.</li>
+        <li>Não é permitido usar palavras reservadas como nomes de variáveis.</li>
+      </ul>
+      <p>
+        O <code>strict mode</code> é uma boa prática para garantir que seu código JavaScript seja
+        mais seguro e menos propenso a erros.
+      </p>
+    </article>
+    <article id="this-bind-article" class="card">
+      <h2>This e Bind</h2>
+      <p>
+        O <code>this</code> é uma palavra-chave especial em JavaScript que se refere ao objeto atual.
+        O valor de <code>this</code> depende de como uma função é chamada.
+      </p>
+      <p>
+        Quando uma função é chamada como um método de um objeto, o valor de <code>this</code> é o
+        objeto em que a função é chamada.
+      </p>
+      <pre>
+        <code>
+          const person = {
+            firstName: "John",
+            lastName: "Doe",
+            fullName: function() {
+              return this.firstName + " " + this.lastName;
+            }
+          };
+          console.log(person.fullName()); // John Doe
+        </code>
+      </pre>
+      <p>
+        No entanto, quando uma função é chamada como uma função normal, o valor de
+        <code>this</code> é o objeto global (no navegador, o objeto global é "window").
+      </p>
+      <pre>
+        <code>
+          function myFunction() {
+            return this;
+          }
+          console.log(myFunction()); // window
+        </code>
+      </pre>
+      <p>
+        Para resolver esse problema, você pode usar o método <code>bind</code> para definir o
+        valor de <code>this</code> para uma função.
+      </p>
+      <pre>
+        <code>
+          const person = {
+            firstName: "John",
+            lastName: "Doe"
+          };
+          function fullName() {
+            return this.firstName + " " + this.lastName;
+          }
+          const fullNameBound = fullName.bind(person);
+          console.log(fullNameBound()); // John Doe
+        </code>
+      </pre>
+      <p>
+        O método <code>bind</code> cria uma nova função que, quando chamada, tem o valor de
+        <code>this</code> definido para o primeiro argumento passado para o método <code>bind</code>.
+      </p>
+    </article>
+    <article id="arrow-functions-article" class="card">
+      <h2>Arrow Functions</h2>
+      <p>
+        As <code>arrow functions</code> são uma nova sintaxe introduzida no ECMAScript 6 para
+        criar funções de forma mais concisa.
+      </p>
+      <p>
+        A sintaxe de uma <code>arrow functions</code> é a seguinte:
+      </p>
+      <pre>
+        <code>
+          const add = (a, b) =&gt; {
+            return a + b;
+          };
+          console.log(add(1, 2)); // 3
+        </code>
+      </pre>
+      <p>
+        Se a função tiver apenas uma instrução, você pode omitir as chaves e a
+        palavra-chave <code>return</code>.
+      </p>
+      <pre>
+        <code>
+          const add = (a, b) =&gt; a + b;
+          console.log(add(1, 2)); // 3
+        </code>
+      </pre>
+      <p>
+        As <code>arrow functions</code> têm algumas diferenças em relação às
+        funções tradicionais:
+      </p>
+      <ul>
+        <li>O valor de <code>this</code> é herdado do escopo pai.</li>
+        <li>Não têm a palavra-chave "arguments".</li>
+        <li>Não podem ser usadas como construtores.</li>
+      </ul>
+      <p>
+        As <code>arrow functions</code> são úteis para escrever código mais conciso e
+        legível em JavaScript.
+      </p>
+    </article>
+    <article id="callback-article" class="card">
+      <h2>Callback</h2>
+      <p>
+        Um <code>callback</code> é uma função que é passada como argumento para outra função
+        e é executada após a conclusão
+        de uma operação assíncrona.
+      </p>
+      <p>
+        Os <code>callbacks</code> são amplamente utilizados em JavaScript para lidar
+        com operações assíncronas, como requisições AJAX, eventos de temporização
+        e manipulação de arquivos.
+      </p>
+      <pre>
+        <code>
+          function fetchData(callback) {
+            setTimeout(() =&gt; {
+              const data = "Hello, world!";
+              callback(data);
+            }, 1000);
+          }
+          function displayData(data) {
+            console.log(data);
+          }
+          fetchData(displayData); // Hello, world!
+        </code>
+      </pre>
+      <p>
+        Neste exemplo, a função <code>fetchData</code> recebe um <code>callback</code> como argumento e
+        chama o <code>callback</code> após um atraso de 1 segundo.
+      </p>
+      <p>
+        Os <code>callback</code> são uma parte fundamental da programação assíncrona em JavaScript
+        e são uma maneira eficaz de lidar com operações que não são imediatamente concluídas.
+      </p>
+    </article>
+    <article id="promises-article" class="card">
+      <h2>Promises</h2>
+      <p>
+        As <code>promises</code> são um recurso do JavaScript introduzido no ECMAScript 6 para
+        lidar com operações assíncronas de forma mais limpa e legível.
+      </p>
+      <p>
+        Uma <code>promise</code> representa um valor que pode estar disponível agora, no futuro
+        ou nunca.
+      </p>
+      <pre>
+        <code>
+          const fetchData = new Promise((resolve, reject) =&gt; {
+            setTimeout(() =&gt; {
+              const data = "Hello, world!";
+              resolve(data);
+            }, 1000);
+          });
+          fetchData.then(data =&gt; {
+            console.log(data);
+          }); // Hello, world!
+        </code>
+      </pre>
+      <p>
+        Neste exemplo, a <code>promise</code> <code>fetchData</code> é criada com uma função executora
+        que chama a função <code>resolve</code> após um atraso de 1 segundo.
+      </p>
+      <p>
+        O método <code>then</code> é usado para lidar com o valor resolvido da <code>promise</code>.
+      </p>
+      <p>
+        As <code>promises</code> são uma maneira poderosa de lidar com operações assíncronas em
+        JavaScript e são amplamente utilizadas em bibliotecas e frameworks modernos.
+      </p>
+    </article>
+    <article id="async-await-article" class="card">
+      <h2>Async e Await</h2>
+      <p>
+        O <code>async</code> e <code>await</code> são recursos do JavaScript introduzidos no ECMAScript 8
+        para simplificar o uso de <code>promises</code>.
+      </p>
+      <p>
+        A palavra-chave <code>async</code> é usada para declarar uma função assíncrona que retorna
+        uma <code>promise</code>.
+      </p>
+      <pre>
+        <code>
+          async function fetchData() {
+            return new Promise((resolve, reject) =&gt; {
+              setTimeout(() =&gt; {
+                const data = "Hello, world!";
+                resolve(data);
+              }, 1000);
+            });
+          }
+          async function displayData() {
+            const data = await fetchData();
+            console.log(data);
+          }
+          displayData(); // Hello, world!
+        </code>
+      </pre>
+      <p>
+        Neste exemplo, a função <code>fetchData</code> é declarada como uma função assíncrona
+        e a palavra-chave <code>await</code> é usada para esperar que a <code>promise</code> seja resolvida.
+      </p>
+      <p>
+        O <code>async</code> e <code>await</code> são uma maneira mais limpa e legível de lidar com
+        operações assíncronas em JavaScript e são amplamente utilizados em código moderno.
+      </p>
+    </article>
+    <article id="filter-article" class="card">
+      <h2>Filter</h2>
+      <p>
+        O método <code>filter</code> é um método de array em JavaScript que cria um novo array
+        com todos os elementos que passam em um teste implementado por uma função fornecida.
+      </p>
+      <pre>
+        <code>
+          const numbers = [1, 2, 3, 4, 5];
+          const evenNumbers = numbers.filter(number =&gt; number % 2 === 0);
+          console.log(evenNumbers); // [2, 4]
+        </code>
+      </pre>
+      <p>
+        Neste exemplo, o método <code>filter</code> é usado para criar um novo array com
+        os números pares do array original.
+      </p>
+      <p>
+        O método <code>filter</code> é uma maneira eficaz de filtrar elementos de um array
+        com base em uma condição específica.
+      </p>
+    </article>
+    <article id="map-reduce-article" class="card">
+      <h2>Map e Reduce</h2>
+      <p>
+        O método <code>map</code> é um método de array em JavaScript
+        que permitem transformar arrays de forma eficiente.
+      </p>
+      <p>
+        O método <code>map</code> cria um novo array com os resultados de chamar uma função
+        para cada elemento do array.
+      </p>
+      <pre>
+        <code>
+          const numbers = [1, 2, 3, 4, 5];
+          const squaredNumbers = numbers.map(number =&gt; number * number);
+          console.log(squaredNumbers); // [1, 4, 9, 16, 25]
+        </code>
+      </pre>
+      <p>
+        Neste exemplo, o método <code>map</code> é usado para criar um novo array com
+        os números ao quadrado do array original.
+      </p>
+    </article>
+    <article id="value-reference-article" class="card">
+      <h2>Valor vs Referência</h2>
+      <p>
+        Em JavaScript, os tipos de dados primitivos (como números, strings e booleanos) são
+        passados por valor, enquanto os objetos (como arrays e objetos) são passados por referência.
+      </p>
+      <p>
+        Quando um tipo de dado primitivo é passado para uma função, uma cópia do valor é passada,
+        o que significa que a função não pode modificar o valor original.
+      </p>
+      <pre>
+        <code>
+          let x = 10;
+          function increment(x) {
+            x++;
+          }
+          increment(x);
+          console.log(x); // 10
+        </code>
+      </pre>
+      <p>
+        No entanto, quando um objeto é passado para uma função, uma referência ao objeto é passada,
+        o que significa que a função pode modificar o objeto original.
+      </p>
+      <pre>
+        <code>
+          let person = { name: "John" };
+          function changeName(person) {
+            person.name = "Jane";
+          }
+          changeName(person);
+          console.log(person.name); // Jane
+        </code>
+      </pre>
+    </article>
+    <article id="spread-operator-article" class="card">
+      <h2>Spread Operator</h2>
+      <p>
+        O <code>spread operator</code> é uma nova sintaxe introduzida no ECMAScript 6 para
+        espalhar elementos de um array ou objeto.
+      </p>
+      <p>
+        O <code>spread operator</code> é representado por três pontos (<code>...</code>) e pode ser
+        usado para copiar elementos de um array ou objeto para outro array ou objeto.
+      </p>
+      <pre>
+        <code>
+          const numbers = [1, 2, 3];
+          const newNumbers = [...numbers, 4, 5];
+          console.log(newNumbers); // [1, 2, 3, 4, 5]
+        </code>
+      </pre>
+      <p>
+        O <code>spread operator</code> é uma maneira eficaz de combinar arrays e objetos em JavaScript
+        de forma concisa e legível.
+      </p>
+    </article>
+    <article id="Reduce-article" class="card">
+      <h2>Reduce</h2>
+      <p>
+        O método <code>reduce</code> é um método de array em JavaScript que reduz um array a um único valor.
+      </p>
+      <p>
+        O método <code>reduce</code> executa uma função fornecida para cada elemento do array
+        (da esquerda para a direita) e acumula o resultado em um valor único.
+      </p>
+      <pre>
+        <code>
+          const numbers = [1, 2, 3, 4, 5];
+          
+          function soma(acumulador, numero) {
+            return acumulador + numero;
+          }
+
+          console.log(numbers.reduce(soma, 0)); // 15
+        </code>
+      </pre>
+      <p>
+        Neste exemplo, o método <code>reduce</code> é usado para somar todos os números do array.
+      </p>
+      <p>
+        O método <code>reduce</code> é uma maneira poderosa de transformar arrays em um único valor
+        e é amplamente utilizado em operações de agregação de dados.
+      </p>
+    </article>
+    <article id="fetch-article" class="card">
+      <h2>Fetch</h2>
+      <p>
+        A API <code>fetch()</code> é uma forma moderna e simplificada de fazer
+        requisições HTTP de forma assíncrona em JavaScript.
+        Ela substitui o antigo <code>XMLHttpRequest</code> e é baseada em
+        <code>promises</code>, tornando o código mais legível e fácil de manter.
+      </p>
+
+      <pre>
+        <code>
+          fetch("https://api.example.com/data") // Faz uma requisição GET para a URL fornecida
+            .then(response => {
+              if (!response.ok) {
+                throw new Error("Erro na requisição: " + response.status);
+              }
+              return response.json(); // Converte a resposta para JSON
+            })
+            .then(data => {
+              console.log("Dados recebidos:", data); // Exibe os dados no console
+            })
+            .catch(error => {
+              console.error("Erro ao buscar os dados:", error); // Trata erros
+            });
+        </code>
+      </pre>
+
+      <p>
+        No código acima, o método <code>fetch()</code> faz uma requisição para a API.
+        Primeiro, verificamos se a resposta foi bem-sucedida com <code>response.ok</code>.
+        Depois, transformamos os dados para JSON e os exibimos no console.
+        Caso ocorra algum erro, ele será tratado no bloco <code>catch()</code>.
+      </p>
+
+      <p>
+        A API <code>fetch()</code> é muito utilizada em aplicações web modernas para
+        consumir APIs e trocar informações com servidores remotos.
+      </p>
+    </article>
+    <article id="try-catch-article" class="card">
+      <h2>Try Catch</h2>
+      <p>
+        O bloco <code>try...catch</code> é uma forma de lidar com exceções em JavaScript.
+        Ele permite que você tente executar um bloco de código e capture qualquer erro que ocorra.
+      </p>
+      <p>
+        O bloco <code>try</code> contém o código que pode lançar uma exceção, enquanto
+        o bloco <code>catch</code> contém o código que lida com a exceção.
+      </p>
+      <pre>
+        <code>
+          try {
+            // Código que pode lançar uma exceção
+            let result = riskyOperation();
+            console.log(result);
+          } catch (error) {
+            // Código que lida com a exceção
+            console.error("Ocorreu um erro:", error.message);
+          }
+        </code>
+      </pre>
+      <p>
+        No exemplo acima, se a função <code>riskyOperation</code> lançar uma exceção,
+        o controle será passado para o bloco <code>catch</code>, onde a mensagem de erro
+        será exibida no console.
+      </p>
+
+      <h3>Um exemplo mais simples</h3>
+      <pre>
+        <code>
+          try {
+            console.log(nome); // Erro: nome is not defined
+          } catch (error) {
+            console.error("Ocorreu um erro:", error.message);
+          }
+          console.log("Operação concluída.");
+        </code>
+      </pre>
+      <p>
+        No exemplo acima, se a variável <code>nome</code> não estiver definida,
+        uma exceção será lançada e o controle será passado para o bloco <code>catch</code>,
+        onde a mensagem de erro será exibida no console.
+      </p>
+
+      <section id="finally-section">
+        <h3>Finally</h3>
+        <p>
+          Você também pode usar o bloco <code>finally</code> para executar código que
+          deve ser executado independentemente de uma exceção ter sido lançada ou não.
+        </p>
+        <pre>
+          <code>
+            try {
+              // Código que pode lançar uma exceção
+              let result = riskyOperation();
+              console.log(result);
+            } catch (error) {
+              // Código que lida com a exceção
+              console.error("Ocorreu um erro:", error.message);
+            } finally {
+              // Código que será executado sempre
+              console.log("Operação concluída.");
+            }
+          </code>
+        </pre>
+        <p>
+          O bloco <code>finally</code> é útil para liberar recursos ou realizar outras
+          operações de limpeza, independentemente do sucesso ou falha do bloco <code>try</code>.
+        </p>
+      </section>
+      <section id="throw-section">
+        <h3>throw</h3>
+        <p>
+          Além de capturar exceções, você também pode lançar exceções manualmente em
+          JavaScript usando a palavra-chave <code>throw</code>.
+        </p>
+        <pre>
+          <code>
+            function divide(a, b) {
+              if (b === 0) {
+                throw new Error("Divisão por zero!");
+              }
+              return a / b;
+            }
+            
+            try {
+              console.log(divide(10, 0));
+            } catch (error) {
+              console.error("Ocorreu um erro:", error.message);
+            }
+          </code>
+        </pre>
+        <p>
+          Neste exemplo, a função <code>divide</code> lança uma exceção se o divisor for zero.
+          A exceção é capturada no bloco <code>catch</code> e a mensagem de erro é exibida no console.
+        </p>
+      </section>
+    </article>
+  </main>
+
+  <footer id="footer">
+    <a href="https://github.com/MatheusRCG" target="_blank">
+      <img src="/src/images/github-logo.png" alt="logo github">
+    </a>
+    <a href="https://www.linkedin.com/in/matheusrcg/" target="_blank">
+      <img src="/src/images/linkedin-logo.png" alt="linkedin logo">
+    </a>
+  </footer>
+
+  <script src="./modulo-18.js"></script>
+</body>
+
+</html>
