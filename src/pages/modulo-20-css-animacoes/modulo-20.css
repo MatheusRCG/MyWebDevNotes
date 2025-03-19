@@ -1,0 +1,20 @@
+@keyframes mover {
+  0% {
+    left: 0;
+  }
+  50% {
+    transform: translateX(-100%);
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.animacao {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  animation: mover 3s ease-in-out infinite;
+}
