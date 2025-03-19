@@ -44,3 +44,11 @@ body {
   left: 0px;
   right: 0px;
 }
+
+.buttom {
+  width: 100px;
+  margin: auto;
+  padding: 10px;
+  background-color: lightblue;
+  cursor: pointer;
+}

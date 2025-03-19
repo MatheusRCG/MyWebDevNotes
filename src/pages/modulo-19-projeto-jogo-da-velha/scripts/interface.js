@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   let squares = document.querySelectorAll('.square');
+  let restartButton = document.getElementById('restart');
 
   squares.forEach((square) => {
     square.addEventListener('click', handleClick);
   })
 
+  restartButton.addEventListener('click', restart);
 });
 
 function handleClick(event) {
@@ -22,10 +24,22 @@ function handleClick(event) {
   updateSquare(position);
 }
 
-
-
-function updateSquare() {
+function updateSquare(position) {
   let square = document.getElementById(position.toString());
   let symbol = board[position];
   square.innerHTML = `<div class='${symbol}'></div>`;
+}
+
+function restart() {
+  console.log('reiniciando');
+  
+  board = ["", "", "", "", "", "", "", "", ""];
+  playerTime = 0;
+  gameOver = false;
+
+  let squares = document.querySelectorAll('.square');
+
+  squares.forEach((square) => {
+    square.innerHTML = '';
+  })
 }
