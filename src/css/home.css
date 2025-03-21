@@ -1,41 +1,43 @@
-
 /* -- HOME PAGE -- */
 
-.link-list-section {
-  margin: 20px 0;
+main {
+  margin-top: 60px;
+}
+
+.card {
   background-color: #fff;
   width: 80%;
-  margin: 20px auto;
+  margin: 90px auto;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px #00000050;
 }
 
-.link-list-section h2 {
+.card h2 {
   text-align: center;
   font-size: 1.8rem;
 }
 
-.link-list-section p {
+.card p {
   text-align: justify;
   font-size: 1.2rem;
 }
 
-.link-list-section ul {
+.card ul {
   margin: 0;
   padding: 10px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  justify-content: space-evenly;
+  gap: 10px;
 }
 
-.link-list-section a {
+.card a {
   width: 250px;
   height: 150px;
   border-radius: 25px;
   padding: 10px;
-  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,11 +49,10 @@
   background: linear-gradient(to right, #004aad, #5de0e6);
   color: #fff;
   text-shadow: 2px 2px 4px #00000050;
-
 }
 
-.link-list-section a:hover {
-  transform: scale(1.08);
+.card a:hover {
+  transform: scale(1.1);
   background: linear-gradient(to top, #004aad, #5de0e6);
   box-shadow: 5px 5px 8px #00000050;
   text-shadow: 4px 4px 4px #00000050;
