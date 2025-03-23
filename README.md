@@ -1,4 +1,4 @@
-# Web Dev Notes
+# My Web Dev Notes
 
 Este repositório contém um site criado para organizar e compartilhar minhas anotações do curso **ProgramadorBR**. O objetivo é facilitar a revisão e o aprofundamento dos conceitos aprendidos, proporcionando acesso rápido às informações essenciais de cada módulo e aos projetos desenvolvidos ao longo do curso.
 
