@@ -4,13 +4,16 @@ const CARD = "card";
 const ICON = "icon";
 const FLIP = "flip";
 
+let restartbutton = document.getElementById("restart");
+restartbutton.addEventListener("click", restart);
+
 function startGame() {
   initializeBoard(game.createCards());
 }
 
 function initializeBoard(cards) {
   let board = document.getElementById("game-board");
-
+  board.innerHTML = "";
   cards.forEach((card) => {
     let cardElement = document.createElement("div");
     cardElement.id = card.id;
@@ -70,6 +73,13 @@ function unflipedCards() {
 
   firstCard.classList.remove(FLIP);
   secondCard.classList.remove(FLIP);
+}
+
+function restart() {
+  game.clearCards();
+  startGame();
+  let gameOverLayer = document.getElementById("game-over");
+  gameOverLayer.style.display = "none";
 }
 
 startGame();

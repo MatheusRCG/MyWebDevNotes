@@ -24,7 +24,7 @@ let game = {
     });
 
     this.cards = this.cards.flat();
-    // this.shuffleCards();
+    this.shuffleCards();
     return this.cards;
   },
 
