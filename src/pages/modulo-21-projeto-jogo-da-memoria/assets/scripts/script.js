@@ -1,30 +1,30 @@
-let techs = [ 
-  'bootstrap',
-  'css',
-  'electron',
-  'firebase',
-  'html',
-  'javascript',
-  'jquery',
-  'mongo',
-  'node',
-  'react',
-]
+let techs = [
+  "bootstrap",
+  "css",
+  "electron",
+  "firebase",
+  "html",
+  "javascript",
+  "jquery",
+  "mongo",
+  "node",
+  "react",
+];
 
 function startGame() {
-  cards = createCards(techs)
-  shuffleCards(cards)
-  console.log(cards)
+  cards = createCards(techs);
+  shuffleCards(cards);
+  console.log(cards);
 }
 
 function createCards(techs) {
-  let cards = []
+  let cards = [];
 
-  for (let tech of techs) {
-    cards.push(createPair(tech))
-  }
+  cards.forEach((tech) => {
+    cards.push(createPair(tech));
+  });
 
-  return (cards.flat())
+  return cards.flat();
 }
 
 function createPair(tech) {
@@ -32,18 +32,18 @@ function createPair(tech) {
     {
       id: createID(tech),
       icon: tech,
-      flipped: false
+      flipped: false,
     },
     {
       id: createID(tech),
       icon: tech,
-      flipped: false
-    }
-  ]
+      flipped: false,
+    },
+  ];
 }
 
 function createID(tech) {
-  return tech + parseInt(Math.random() * 1000)
+  return tech + parseInt(Math.random() * 1000);
 }
 
 function shuffleCards(cards) {
@@ -51,10 +51,13 @@ function shuffleCards(cards) {
   let randomIndex = 0;
 
   while (currentIndex !== 0) {
-    randomIndex = Math.floor(Math.random() * currentIndex); 
+    randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex--;
-    [cards[randomIndex], cards[currentIndex]] = [cards[currentIndex], cards[randomIndex]];
+    [cards[randomIndex], cards[currentIndex]] = [
+      cards[currentIndex],
+      cards[randomIndex],
+    ];
   }
 }
 
-startGame()
+startGame();
