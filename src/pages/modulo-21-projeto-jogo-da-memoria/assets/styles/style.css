@@ -16,6 +16,8 @@ body {
 .card {
   width: 150px;
   height: 150px;
+  position: relative;
+  transition: transform 0.5s;
 }
 
 .card-front, .card-back {
@@ -24,16 +26,24 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
   border-radius: 20px;
   box-shadow: 10px 10px 10px var(--color-shawdow);
+  backface-visibility: hidden;
 }
 
 .card-front {
   background-color: var(--color-primary);
+  transform: rotateY(180deg);
 }
 
 .card-back {
   color: var(--color-primary);
   background-color: var(--color-secondary);
   font-size: 1.8rem;
+}
+
+.flip {
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
 }
