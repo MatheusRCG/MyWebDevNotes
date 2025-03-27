@@ -108,6 +108,8 @@ function createCardFace(face, card, cardElement) {
   cardElement.appendChild(cardElementFace);
 }
 
-function flipCard() {}
+function flipCard() {
+  this.classList.add("flip");
+}
 
 startGame();
