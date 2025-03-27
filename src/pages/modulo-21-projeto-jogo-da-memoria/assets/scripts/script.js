@@ -65,13 +65,6 @@ function shuffleCards(cards) {
   }
 }
 
-/*
-  inicializar tabuleiro
-    criar cada card dentro de tabuleiro
-  criar a carta front e back
-  criar o evento de click
-*/
-
 function initializeBoard(cards) {
   let board = document.getElementById("game-board");
 
