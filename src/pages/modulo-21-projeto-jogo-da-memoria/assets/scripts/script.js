@@ -2,6 +2,7 @@ const FRONT = "card-front";
 const BACK = "card-back";
 const CARD = "card";
 const ICON = "icon";
+const FLIP = "flip";
 
 function startGame() {
   initializeBoard(game.createCards());
@@ -44,7 +45,27 @@ function createCardFace(face, card, cardElement) {
 }
 
 function flipCard() {
-  this.classList.add("flip");
+  console.log("carta clicada",this);
+  
+  if (game.setCard(this.id)) {
+    this.classList.add(FLIP);
+    if (game.checkMatch()) {
+      game.clearCards(true);
+    } else {
+      setTimeout(() => {
+        unflipedCards();
+        game.clearCards(false);
+      }, 1000);
+    }
+  }
+}
+
+function unflipedCards() {
+  let firstCard = document.getElementById(game.firstCard.id);
+  let secondCard = document.getElementById(game.secondCard.id);
+
+  firstCard.classList.remove(FLIP);
+  secondCard.classList.remove(FLIP);
 }
 
 startGame();
