@@ -17,6 +17,17 @@
 
 body {
   font-family: 'Righteous', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#game-board {
+  max-width: 700px;
+  display: grid;
+  grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+  gap: 15px;
 }
 
 .card {
