@@ -45,17 +45,17 @@ function createCardFace(face, card, cardElement) {
 }
 
 function flipCard() {
-  console.log("carta clicada",this);
-  
   if (game.setCard(this.id)) {
     this.classList.add(FLIP);
-    if (game.checkMatch()) {
-      game.clearCards(true);
-    } else {
-      setTimeout(() => {
-        unflipedCards();
-        game.clearCards(false);
-      }, 1000);
+    if (game.secondCard) {
+      if (game.checkMatch()) {
+        game.clearCards();
+      } else {
+        setTimeout(() => {
+          unflipedCards();
+          game.unflipedCards();
+        }, 1000);
+      }
     }
   }
 }

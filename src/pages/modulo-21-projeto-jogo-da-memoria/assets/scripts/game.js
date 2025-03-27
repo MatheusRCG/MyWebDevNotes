@@ -70,37 +70,29 @@ let game = {
     
     if(!this.firstCard) {
       this.firstCard = card;
+      this.firstCard.flipped = true;
       return true;
     } else {
       this.secondCard = card;
+      this.secondCard.flipped = true;
       this.lockMode = true;
       return true;
     }
   },
 
   checkMatch: function () {
-    
     return this.firstCard.icon === this.secondCard.icon;
   },
 
-  clearCards: function (metch) {
-    if (metch) {
-      this.firstCard.flipped = true;
-      this.secondCard.flipped = true;
-    } else {
-      this.firstCard.flipped = false;
-      this.secondCard.flipped = false;
-    }
+  clearCards: function () {
     this.firstCard = null;
     this.secondCard = null;
     this.lockMode = false;
   },
+
+  unflipedCards: function () {
+    this.firstCard.flipped = false;
+    this.secondCard.flipped = false;
+    this.clearCards();
+  }
 };
-
-
-/*
-  setar a carta
-  travar o jogo
-  verificar se as cartas batem
-  retornar true
-*/
