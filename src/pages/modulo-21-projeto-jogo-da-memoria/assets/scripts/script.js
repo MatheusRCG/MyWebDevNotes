@@ -50,6 +50,10 @@ function flipCard() {
     if (game.secondCard) {
       if (game.checkMatch()) {
         game.clearCards();
+        if (game.checkGameOver()) {
+          let gameOverLayer = document.getElementById("game-over");
+          gameOverLayer.style.display = "flex";
+        }
       } else {
         setTimeout(() => {
           unflipedCards();

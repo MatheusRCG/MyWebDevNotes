@@ -24,7 +24,7 @@ let game = {
     });
 
     this.cards = this.cards.flat();
-    this.shuffleCards();
+    // this.shuffleCards();
     return this.cards;
   },
 
@@ -94,5 +94,9 @@ let game = {
     this.firstCard.flipped = false;
     this.secondCard.flipped = false;
     this.clearCards();
-  }
+  },
+
+  checkGameOver: function () {
+    return this.cards.filter((card) => !card.flipped).length === 0;
+  },
 };

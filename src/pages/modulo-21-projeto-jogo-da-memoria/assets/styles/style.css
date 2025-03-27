@@ -31,8 +31,8 @@ body {
 }
 
 .card {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   position: relative;
   transition: transform 0.5s;
 }
@@ -53,12 +53,14 @@ body {
 .card-front {
   background-color: var(--color-primary);
   transform: rotateY(180deg);
+  cursor: arrow;
 }
 
 .card-back {
   color: var(--color-primary);
   background-color: var(--color-secondary);
   font-size: 1.8rem;
+  cursor: pointer;
 }
 
 .flip {
