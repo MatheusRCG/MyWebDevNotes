@@ -2,10 +2,10 @@
 
 body {
   display: grid;
-  grid-template-areas: 
-  "header header header"
-  "nav main main"
-  "footer footer footer";
+  grid-template-areas:
+    "header header header"
+    "nav main main"
+    "footer footer footer";
   grid-template-rows: auto 1fr auto;
   grid-template-columns: auto 1fr;
   min-height: 100vh;
@@ -21,12 +21,10 @@ pre {
   margin: 1em 0px;
 }
 
-
 /* -- HEADER -- */
 #top-bar {
   grid-area: header;
 }
-
 
 /* -- NAV -- */
 #nav {
@@ -41,6 +39,7 @@ pre {
   padding: 20px;
   background-color: #fff;
   box-sizing: border-box;
+  transition: transform 0.3s ease-in-out;
 }
 
 #nav ul {
@@ -55,6 +54,23 @@ pre {
   color: #0808d8;
 }
 
+#nav.hidden {
+  transform: translateX(-100%);
+}
+
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  height: 80%;
+  position: absolute;
+  left: 2%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
 
 /* -- MAIN -- */
 #content {
@@ -103,7 +119,6 @@ pre code {
   border-radius: 5px;
 }
 
-
 /* -- FOOTER -- */
 #footer {
   grid-area: footer;
@@ -120,4 +135,42 @@ pre code {
 
 .btn-example:hover {
   background-color: lightgreen;
+}
+
+@media (max-width: 900px) {
+  :root {
+    font-size: 14px;
+  }
+  
+  #top-bar .logo {
+    height: 80%;
+    position: absolute;
+    left: 93%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #menu-toggle {
+    display: inline-block;
+  }
+
+  #nav {
+    width: 100%;
+    transform: translateX(-100%);
+  }
+
+  #nav.visible {
+    transform: translateX(0);
+  }
+
+  #content {
+    margin-top: 60px;
+    padding: 0 20px 20px 20px;
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .card {
+    width: 98%;
+  }
 }
